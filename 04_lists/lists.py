@@ -122,10 +122,20 @@ fruits = ['apple', 'banana', 'orange', 'mango', 'lemon']
 fruits.reverse()
 print(fruits) # ['lemon', 'mango', 'orange', 'banana', 'apple']
 
-# sort
+# 정렬
+# sort(): 리스트 정렬 (원본 데이터 변경)
 fruits = ['apple', 'banana', 'orange', 'mango', 'lemon']
 fruits.sort()
 print(fruits) # ['apple', 'banana', 'lemon', 'mango', 'orange']
 fruits.sort(reverse=True)
 print(fruits) # ['orange', 'mango', 'lemon', 'banana', 'apple']
+
+# sorted(): 리스트 정렬 (원본 데이터 유지)
+fruits = ['apple', 'banana', 'orange', 'mango', 'lemon']
+new_fruits = sorted(fruits)
+print(fruits) # ['apple', 'banana', 'orange', 'mango', 'lemon']
+print(new_fruits) # ['apple', 'banana', 'lemon', 'mango', 'orange']
+new_fruits = sorted(fruits, reverse=True)
+print(fruits) # ['apple', 'banana', 'orange', 'mango', 'lemon']
+print(new_fruits) # ['orange', 'mango', 'lemon', 'banana', 'apple']
  
