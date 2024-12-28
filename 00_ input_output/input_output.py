@@ -60,9 +60,9 @@ print(type(number_list[0])) # <class 'int'>
 
 # 출력 형식 지정
 # sep 파라미터 (출력값 사이에 넣을 문자열을 선언)
-# 기본값(공백): sep = ''
-print('apple', 'banana', 'cherry') # apple banana cherry
-print('apple', 'banana', 'cherry', sep = ', ') # apple, banana, cherry
+# 기본값(공백): sep = ' '
+print('apple', 'banana', 'orange') # apple banana orange
+print('apple', 'banana', 'orange', sep = ', ') # apple, banana, orange
 
 # end 파라미터
 # end 는 출력의 끝에 넣을 문자열을 지정
@@ -71,9 +71,8 @@ print('Hello', end = ' ') # Hello
 print('World') # Hello World
 
 # 두 개의 입력을 받아 정수로 변환하고 몫과 나머지를 출력
-a, b = map(int, input().split())
-print(a // b, a % b)
-
+x, y = map(int, input().split()) # 입력: 9 4
+print(x // y, x % y) # 2 1
 
 # 빠른 입력: import sys, input = sys.stdin.readline
 # input() 은 표준 입력을 읽어 개행 문자를 제거한 문자열을 반환합니다.
