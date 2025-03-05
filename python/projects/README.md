@@ -1,1 +1,34 @@
+# 🚀 Python Projects
 
+이 폴더는 Python 학습 과정에서 진행한 **실습 프로젝트**를 보관하는 공간입니다.  
+기능별 단위 예제는 `examples/`에서 관리하고, 이곳은 **조금 더 완성도 있는 작은 프로젝트**를 저장합니다.  
+각 프로젝트는 독립 실행 가능하며, 프로젝트별 구성/설명은 각각의 `README.md`에서 확인할 수 있습니다.
+
+---
+
+## 📋 프로젝트 목록
+
+| 번호 | 프로젝트명 | 설명 | 링크 |
+|---|---|---|---|
+| 01 | 미니 계산기 | 사칙연산 기능 구현 CLI 프로그램 | [mini-calculator](./mini-calculator) |
+| 02 | 할일 관리 CLI | 텍스트 기반 TODO 리스트 관리 | [todo-cli](./todo-cli) |
+| 03 | 회원가입 & 로그인 | 파일 기반 사용자 정보 저장/인증 | [simple-auth](./simple-auth) |
+| 04 | 로그 분석기 | 서버 로그 파일 분석 및 통계 출력 | [log-analyzer](./log-analyzer) |
+| 05 | 외부 API 클라이언트 | 공공 API 데이터 수집 및 저장 | [api-client](./api-client) |
+
+---
+
+## 📁 디렉터리 구조 예시
+
+```text
+projects/
+├── mini-calculator/
+│   ├── main.py
+│   └── README.md
+├── todo-cli/
+│   ├── todo.py
+│   └── README.md
+├── simple-auth/
+│   ├── auth.py
+│   └── README.md
+...
