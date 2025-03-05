@@ -31,3 +31,10 @@
 | 09 | 간단한 MVC 패턴 실습 | [mvc.md](./notes/mvc.md) |
 |10 | 트러블슈팅 모음 | [troubleshooting.md](./troubleshooting/troubleshooting.md) |
 
+---
+
+## 📚 참고 자료
+
+- [PHP 공식 문서](https://www.php.net/manual/en/)
+- [PHP The Right Way](https://phptherightway.com/)
+- [Awesome PHP](https://github.com/ziadoz/awesome-php)
