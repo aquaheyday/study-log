@@ -13,7 +13,6 @@
 | [examples](./examples) | 기능별 예제 코드 모음 |
 | [projects](./projects) | 실습 프로젝트 모음 |
 | [troubleshooting](./troubleshooting) | 에러/이슈 및 해결법 정리 |
-| [templates](./templates) | 새 파일 작성할 때 쓸 템플릿 모음 |
 
 ---
 
