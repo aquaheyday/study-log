@@ -13,7 +13,6 @@
 | [examples](./examples) | 문법/기능별 예제 코드 모음 |
 | [projects](./projects) | 실습 프로젝트 (미니 프로젝트, 클론코딩 등) |
 | [troubleshooting](./troubleshooting) | 에러 및 트러블슈팅 기록 |
-| [templates](./templates) | 새 파일 작성 시 사용하는 템플릿 모음 |
 
 ---
 
