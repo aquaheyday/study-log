@@ -1,7 +1,8 @@
-# 🐍 Python Archive
+# 🌐 Language Archive
 
-이 레포는 파이썬 학습 과정에서 정리한 개념, 예제 코드, 실습 프로젝트, 트러블슈팅 경험 등을 보관하는 아카이브입니다.  
-기본 문법부터 고급 기능, 실무에서 만난 문제 해결 과정까지 폭넓게 다룹니다.
+이 레포는 다양한 프로그래밍 언어 학습 과정에서 정리한 자료와 실습 예제를 보관하는 아카이브입니다.  
+각 언어별로 독립된 폴더를 가지고 있으며, 해당 언어의 개념 정리, 예제 코드, 실습 프로젝트 등을 관리합니다.  
+공통으로 필요한 개발 환경 구성, 알고리즘, Git 같은 내용은 `common/` 폴더에 따로 정리합니다.
 
 ---
 
@@ -9,52 +10,34 @@
 
 | 폴더명 | 설명 |
 |---|---|
-| [notes](./notes) | 개념 정리 및 학습 노트 |
-| [examples](./examples) | 기능별 예제 코드 모음 |
-| [projects](./projects) | 실습 프로젝트 모음 |
-| [troubleshooting](./troubleshooting) | 에러/이슈 및 해결법 정리 |
-| [templates](./templates) | 새 파일 작성할 때 쓸 템플릿 모음 |
+| [python](./python) | Python 학습 및 실습 자료 |
+| [java](./java) | Java 학습 및 실습 자료 |
+| [go](./go) | Go 학습 및 실습 자료 |
+| [javascript](./javascript) | JavaScript 학습 및 실습 자료 |
+| [common](./common) | 언어 공통 내용 (Git, Docker, 알고리즘 등) |
+| [templates](./templates) | 공통 템플릿 (새 노트, 새 예제 작성용) |
+
 
 ---
 
-## 📖 주요 학습 주제
+## 📖 common 폴더 구성
 
-| 주제 | 설명 | 링크 |
-|---|---|---|
-| 기본 문법 | 자료형, 제어문 등 기초 문법 정리 | [기본문법.md](./notes/기본문법.md) |
-| 자료구조 | 리스트, 딕셔너리, 집합 등 | [자료구조.md](./notes/자료구조.md) |
-| 객체지향 | 클래스, 상속, 다형성 | [객체지향.md](./notes/객체지향.md) |
-| 유용한 팁 | 알아두면 좋은 트릭 모음 | [파이썬팁.md](./notes/파이썬팁.md) |
-
-|회차|제목|설명|
-|------|---|---|
-|00|input_output|입력 과 출력|
-|01|variables|변수|
-|02|operators|연산자|
-|03|strings|문자열|
-|04|lists|list 배열|
-|05|tuples|tuple 배열|
-|06|sets|set 배열|
-|07|dictionaries|딕셔너리|
-|08|conditionals|조건문|
-|09|loops|반복문|
-|10|functions|함수|
-|11|list_comprehension|반복문을 이용한 list 생성 방법|
+| 파일명 | 내용 |
+|---|---|
+| git.md | 공통 Git 학습 정리 (브랜치 전략, 커밋 컨벤션 등) |
+| docker.md | 언어와 무관하게 공통으로 필요한 Docker 개념 정리 |
+| algorithm.md | 언어 상관없이 알고리즘 문제 풀이 및 패턴 정리 |
+| development-environment.md | VSCode, 터미널 세팅 등 공통 개발환경 정리 |
 
 ---
 
-## 📑 활용법
-1. 학습 정리는 `notes`에 기록
-2. 기능별 예제 코드는 `examples`에 저장
-3. 실습 프로젝트는 `projects`에 폴더 단위로 관리
-4. 에러/트러블슈팅은 `troubleshooting`에 기록
-5. 새 파일 작성할 때는 `templates` 활용
+## ✅ 작성 가이드
 
----
+- 각 언어 학습 흐름은 `README.md`에 정리 (순서 & 추천 자료 등)
+- notes는 **개념 정리 중심**, examples는 **문법/기능 예제**
+- projects는 실전 프로젝트 (미니 프로젝트, 챌린지 등)
+- troubleshooting은 개발 중 겪은 문제와 해결 방법 기록
+- 템플릿은 새로운 노트/예제 작성 시 복붙해서 빠르게 시작
 
-## 📚 참고 자료
-- [Python 공식 문서](https://docs.python.org/3/)
-- [Awesome Python](https://github.com/vinta/awesome-python)
 
----
 
