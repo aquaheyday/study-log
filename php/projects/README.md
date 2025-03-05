@@ -15,3 +15,42 @@
 | 03 | 회원가입 & 로그인 | 세션/쿠키 활용 로그인 구현 | [auth-system](./auth-system) |
 | 04 | 파일 업로드 기능 | 업로드/저장/확장자 검증 | [file-uploader](./file-uploader) |
 | 05 | 외부 API 연동 | 공공 데이터 API 연동 실습 | [api-client](./api-client) |
+
+---
+
+## 📁 프로젝트 디렉터리 구조 예시
+
+```text
+projects/
+├── mini-board/
+│   ├── index.php
+│   ├── view.php
+│   ├── write.php
+│   ├── delete.php
+│   ├── db.php
+│   └── README.md
+├── todo-app/
+│   ├── index.php
+│   ├── add.php
+│   ├── delete.php
+│   ├── session.php
+│   └── README.md
+├── auth-system/
+│   ├── login.php
+│   ├── register.php
+│   ├── logout.php
+│   ├── auth.php
+│   └── README.md
+├── file-uploader/
+│   ├── upload.php
+│   ├── form.php
+│   ├── file_check.php
+│   └── README.md
+├── api-client/
+│   ├── fetch_data.php
+│   ├── config.php
+│   ├── process.php
+│   └── README.md
+├── laravel/
+|   ├── project/
+|
