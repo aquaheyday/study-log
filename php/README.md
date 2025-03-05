@@ -20,48 +20,14 @@
 
 | 단계 | 학습 주제 | 링크 |
 |---|---|---|
-| 1️⃣ | 기본 문법 (변수, 자료형, 제어문) | [basic-syntax.md](./notes/basic-syntax.md) |
-| 2️⃣ | 함수와 스코프 | [functions.md](./notes/functions.md) |
-| 3️⃣ | 배열과 연관 배열 | [arrays.md](./notes/arrays.md) |
-| 4️⃣ | 폼 처리와 슈퍼글로벌 | [forms.md](./notes/forms.md) |
-| 5️⃣ | 파일 입출력 | [file-handling.md](./notes/file-handling.md) |
-| 6️⃣ | 세션과 쿠키 | [session-cookie.md](./notes/session-cookie.md) |
-| 7️⃣ | 데이터베이스 연동 (PDO) | [database.md](./notes/database.md) |
-| 8️⃣ | 에러 처리와 예외 | [error-handling.md](./notes/error-handling.md) |
-| 9️⃣ | 간단한 MVC 패턴 실습 | [mvc.md](./notes/mvc.md) |
-| 🔟 | 트러블슈팅 모음 | [troubleshooting.md](./troubleshooting/troubleshooting.md) |
-
----
-
-## 📂 기본 폴더 구조 예시
-
-```text
-php/
-├── README.md                    # 현재 파일
-├── notes/                        # 개념 정리
-│   ├── basic-syntax.md
-│   ├── functions.md
-│   └── ...
-├── examples/                     # 문법별 예제 코드
-│   ├── variables.php
-│   ├── loops.php
-│   └── ...
-├── projects/                     # 실습 프로젝트
-│   ├── mini-board/
-│   │   ├── README.md
-│   │   ├── index.php
-│   │   └── ...
-│   ├── simple-crud/
-│   │   ├── README.md
-│   │   ├── index.php
-│   │   └── ...
-├── troubleshooting/              # 문제 해결 기록
-│   ├── file-upload-error.md
-│   ├── session-timeout.md
-│   └── ...
-└── templates/                    # 작성 템플릿
-    ├── note-template.md
-    ├── example-template.md
-    ├── project-readme-template.md
-    └── troubleshooting-template.md
+| 01 | 기본 문법 (변수, 자료형, 제어문) | [basic-syntax.md](./notes/basic-syntax.md) |
+| 02 | 함수와 스코프 | [functions.md](./notes/functions.md) |
+| 03 | 배열과 연관 배열 | [arrays.md](./notes/arrays.md) |
+| 04 | 폼 처리와 슈퍼글로벌 | [forms.md](./notes/forms.md) |
+| 05 | 파일 입출력 | [file-handling.md](./notes/file-handling.md) |
+| 06 | 세션과 쿠키 | [session-cookie.md](./notes/session-cookie.md) |
+| 07 | 데이터베이스 연동 (PDO) | [database.md](./notes/database.md) |
+| 08 | 에러 처리와 예외 | [error-handling.md](./notes/error-handling.md) |
+| 09 | 간단한 MVC 패턴 실습 | [mvc.md](./notes/mvc.md) |
+|10 | 트러블슈팅 모음 | [troubleshooting.md](./troubleshooting/troubleshooting.md) |
 
