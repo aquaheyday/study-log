@@ -50,8 +50,8 @@
 ### 4. [POST] 로그인
 ![로그인 POST](docs/assets/images/로그인.png)
 
-### 5. [GET] 방목록
-![방목록 GET](docs/assets/images/방목록.png)
+### 5. [GET] 방목록 조회
+![방목록 조회 GET](docs/assets/images/방목록조회.png)
 
 ---
 
