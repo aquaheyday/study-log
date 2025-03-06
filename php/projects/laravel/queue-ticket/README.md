@@ -48,7 +48,7 @@
 |모니터 표시|모니터에서 현재 호출번호 표시|
 
 ### 1. 로그인 화면
-![로그인 화면](docs/assets/로그인.png)
+![로그인 화면](docs/assets/images/로그인화면.png)
 
 ### 2. 키오스크 화면
 ![키오스크 화면](docs/assets/images/키오스크.gif)
