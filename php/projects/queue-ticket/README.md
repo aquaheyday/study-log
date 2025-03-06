@@ -94,10 +94,10 @@ CREATE TABLE `P_NUMBER` (
 <img src="docs/assets/gifs/키오스크.gif" width="600">
 
 ### 3. 관리자 호출 화면
-![호출 화면](docs/assets/images/호출.gif)
+<img src="docs/assets/gifs/호출.gif" width="600">
 
 ### 4. 모니터 화면
-![모니터 화면](docs/assets/images/모니터.gif)
+<img src="docs/assets/gifs/모니터.gif" width="600">
 
 ---
 
