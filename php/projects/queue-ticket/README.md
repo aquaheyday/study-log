@@ -38,6 +38,46 @@
 
 ---
 
+## 📊 Database Table Structure
+
+### 1. P_MEMBER 테이블 (시스템 사용자 관리)
+
+```sql
+CREATE TABLE `P_MEMBER` (
+    `SEQ` INT(11) NOT NULL AUTO_INCREMENT,
+    `BRANCH` VARCHAR(50) NOT NULL COMMENT '지점정보',
+    `ID` VARCHAR(100) NULL DEFAULT NULL COMMENT '사용자 ID',
+    `PASSWORD` VARCHAR(100) NULL DEFAULT NULL COMMENT '비밀번호',
+    `ACCOUNT_TYPE` VARCHAR(10) NULL DEFAULT '01' COMMENT '01:상담창구,02:키오스크,03:호출알림프론트',
+    `NO` VARCHAR(10) NULL DEFAULT NULL COMMENT '자리번호 (상담창구용)',
+    `REG_DATE` DATETIME NULL DEFAULT current_timestamp() COMMENT '등록일시',
+    PRIMARY KEY (`SEQ`) USING BTREE,
+    INDEX `BRANCH` (`BRANCH`) USING BTREE
+);
+```
+
+### 2. P_NUMBER 테이블 (상담 대기번호 관리)
+
+```sql
+CREATE TABLE `P_NUMBER` (
+    `SEQ` INT(11) NOT NULL AUTO_INCREMENT,
+    `BRANCH` VARCHAR(50) NOT NULL COMMENT '지점정보',
+    `COUNTRY` VARCHAR(10) NOT NULL COMMENT '국가정보',
+    `NO` VARCHAR(50) NOT NULL COMMENT '상담번호',
+    `STATUS` VARCHAR(10) NOT NULL DEFAULT '01' COMMENT '01:대기,02:진행중,03:완료',
+    `COUNTRY_COUNSEL` VARCHAR(10) NULL DEFAULT NULL COMMENT '호출번호',
+    `ADMIN_ID` VARCHAR(50) NULL DEFAULT NULL COMMENT '관리자 ID',
+    `ADMIN_NO` VARCHAR(10) NULL DEFAULT NULL COMMENT '관리자 자리 번호',
+    `DATE` DATE NULL DEFAULT NULL COMMENT '상담일',
+    `END_TIME` TIME NULL DEFAULT NULL COMMENT '상담 완료 시간',
+    `REG_DATE` DATETIME NULL DEFAULT current_timestamp() COMMENT '등록일시',
+    `MOD_DATE` DATETIME NULL DEFAULT NULL COMMENT '수정일시',
+    PRIMARY KEY (`SEQ`) USING BTREE
+);
+```
+
+---
+
 ## 📲 기능 시연 이미지
 
 |화면|설명|
@@ -48,7 +88,7 @@
 | 모니터 | 모니터에서 현재 호출 번호 표시 |
 
 ### 1. 로그인 화면
-![로그인 화면](docs/assets/images/로그인화면.png)
+![로그인 화면](docs/assets/images/로그인.png)
 
 ### 2. 키오스크 화면
 ![키오스크 화면](docs/assets/images/키오스크.gif)
@@ -70,3 +110,4 @@ git clone https://github.com/your-repo/queue-ticket.git
 cd queue-ticket
 cp .env.example .env
 ```
+
