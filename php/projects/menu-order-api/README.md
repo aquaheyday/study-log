@@ -1,22 +1,63 @@
-#### 개요
-사내 문화 개선 프로젝트
-막내의 커피 심부름 문화를 개선하여 여러 팀원들이 소통할 수 있는 장을 마련하여 보다 돈독한 팀관계 형성을 목적으로 한 프로젝트
+# 🍽️ Team Menu Order API
 
-#### 사용방법
-1. 메뉴 접수를 위한 방을 생성한다.
-2. 방 비밀번호 또는 초대 링크를 통해 접속하여 각자 메뉴를 접수한다.
-3. 접수가 끝난 후 방을 마감하면 랜덤으로 배달원이 배정된다.
+팀원들이 각자 메뉴를 접수하고, 랜덤으로 배달 담당을 선정하는 시스템입니다.  
 
-#### 구축정보
-1. AWS EC2  인스턴스 생성 및 Load Balancers를 이용한 ssl 인증서 적용, Route 53 가비아 구매 도메인 연동
-2. Docker 를 이용하여 proxy, api, web, db서버 구축 (nginx, mysql)
-3. Laravel + MySql 을 이용해 RESTful API를 구축하기 위해 노력하였습니다.
-4. ios, aos, web 을 구축하기 위해 flutter 를 사용하였습니다.
+---
 
-## docker-compose 를 이용한 proxy, web, api 세팅
+## 📌 프로젝트 소개
 
-#### 버전 정보
-|server|type|version
-|api|nginx|1.25.1
-|api|php|8.1-fpm
-|api|mysql|8.0
+### 주요 기능
+| 기능 | 설명 |
+|---|---|
+| 로그인 | 팀별 계정으로 로그인 후 메뉴 접수방 생성 |
+| 메뉴 접수방 생성 | 팀원들이 함께 참여할 접수방 생성 |
+| 메뉴 접수 | 각자 원하는 메뉴 선택 및 접수 |
+| 접수 마감 | 접수 종료 후 배달 담당 랜덤 선정 |
+| 주문 내역 확인 | 모든 팀원이 접수 결과 확인 가능 |
+
+---
+
+## 🛠️ 기술 스택
+
+| 구분 | 사용 기술 |
+|---|---|
+| Backend | Laravel 10 |
+| Frontend | Flutter (iOS, Android, Web) |
+| Database | MySQL |
+| Infrastructure | Docker + AWS EC2 (Route 53 도메인 연결 및 SSL 인증) |
+| 기타 | docker-compose로 컨테이너 관리 |
+
+---
+
+## 📲 기능 시연 이미지
+
+|화면|설명|
+|---|---|
+| 로그인 | 팀 계정 로그인 화면 |
+| 메뉴 접수방 생성 | 접수방 생성 및 팀원 초대 |
+| 메뉴 접수 화면 | 팀원들이 각자 메뉴 접수 |
+| 배달원 선정 화면 | 접수 종료 후 랜덤으로 배달 담당 선정 |
+
+### 1. 로그인 화면
+<img src="docs/assets/images/login.png" width="600">
+
+### 2. 메뉴 접수방 생성
+<img src="docs/assets/images/room_create.png" width="600">
+
+### 3. 메뉴 접수 화면
+<img src="docs/assets/gifs/menu_order.gif" width="600">
+
+### 4. 배달원 선정 화면
+<img src="docs/assets/gifs/delivery_pick.gif" width="600">
+
+---
+
+## 📦 설치 및 실행 방법
+
+### 1. 클론 및 환경 설정
+
+```bash
+git clone https://github.com/your-repo/team-menu-order.git
+cd team-menu-order
+cp .env.example .env
+```
