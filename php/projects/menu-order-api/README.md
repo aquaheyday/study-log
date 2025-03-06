@@ -47,8 +47,11 @@
 ### 3. [POST] 비밀번호 찾기
 ![비밀번호 찾기 POST](docs/assets/images/비밀번호찾기.png)
 
-### 4. 배달원 선정 화면
+### 4. [POST] 로그인
+![로그인 POST](docs/assets/images/로그인.png)
 
+### 5. [GET] 방목록
+![방목록 GET](docs/assets/images/방목록.png)
 
 ---
 
