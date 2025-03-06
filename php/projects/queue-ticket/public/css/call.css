@@ -1,0 +1,104 @@
+/* 전체 페이지 기본 설정 */
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* 전체 감싸는 div */
+body > div {
+    width: 100%;
+    max-width: 1200px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+
+/* 나라별 영역 */
+body > div > div {
+    margin-bottom: 16px;
+    padding: 12px;
+    background-color: #e9f5ff;
+    border: 1px solid #cce7ff;
+    border-radius: 8px;
+}
+
+/* 나라명 */
+body > div > div > span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+/* 대기자 리스트 영역 */
+div[class$="_list"] {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+/* 개별 대기자 정보 */
+div[class$="_list"] > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* 대기번호 */
+div[class$="_list"] p:first-child {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff5722;
+    margin: 0;
+}
+
+/* 상담사 정보 */
+div[class$="_list"] p:last-child {
+    font-size: 14px;
+    color: #555;
+    margin: 0;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    body > div {
+        padding: 15px;
+    }
+
+    div[class$="_list"] > div {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    div[class$="_list"] p:first-child {
+        font-size: 18px;
+    }
+
+    div[class$="_list"] p:last-child {
+        font-size: 12px;
+    }
+}

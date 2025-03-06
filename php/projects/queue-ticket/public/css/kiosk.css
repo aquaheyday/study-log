@@ -1,0 +1,147 @@
+/* 전체 페이지 기본 설정 */
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+/* 전체 감싸는 div */
+body > div {
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* 각 국가별 영역 */
+body > div > div {
+    margin-bottom: 16px;
+    padding: 12px;
+    background-color: #f1f5f9;
+    border: 1px solid #dbe2e8;
+    border-radius: 8px;
+}
+
+/* 대기번호 표시 */
+p {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 10px;
+}
+
+/* 대기번호 숫자 강조 */
+span {
+    color: #007bff;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+/* 호출 버튼 스타일 */
+button.callBtn {
+    width: 100%;
+    padding: 16px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 8px;
+}
+
+button.callBtn:hover {
+    background-color: #0056b3;
+}
+
+/* 모바일 대응 - 화면 너비 좁을 때 */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    body > div {
+        padding: 15px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    span {
+        font-size: 26px;
+    }
+
+    button.callBtn {
+        font-size: 18px;
+        padding: 12px 0;
+    }
+}
+
+
+/* 알럿 전체 배경 (뒷배경 흐리게) */
+.custom-alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* 알럿 박스 */
+.custom-alert-content {
+    background-color: #fff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    min-width: 300px;
+    max-width: 80%;
+}
+
+/* 텍스트 */
+.custom-alert-content p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 16px;
+    line-height: 1.5;
+}
+
+/* 확인 버튼 */
+.custom-alert-content button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.custom-alert-content button:hover {
+    background-color: #0056b3;
+}
+
+/* 숨기기 클래스 */
+.hidden {
+    display: none;
+}
+
