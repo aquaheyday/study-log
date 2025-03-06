@@ -1,4 +1,4 @@
-# 🍽️ Team Menu Order API
+# 🍽️ Menu Order API
 
 팀원들이 각자 메뉴를 접수하고, 랜덤으로 배달 담당을 선정하는 시스템입니다.  
 
