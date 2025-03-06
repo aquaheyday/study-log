@@ -88,10 +88,10 @@ CREATE TABLE `P_NUMBER` (
 | 모니터 | 모니터에서 현재 호출 번호 표시 |
 
 ### 1. 로그인 화면
-![로그인 화면](docs/assets/images/로그인.png)
+<img src="docs/assets/images/로그인.png" width="600">
 
 ### 2. 키오스크 화면
-![키오스크 화면](docs/assets/images/키오스크.gif)
+<img src="docs/assets/gifs/키오스크.gif" width="600">
 
 ### 3. 관리자 호출 화면
 ![호출 화면](docs/assets/images/호출.gif)
