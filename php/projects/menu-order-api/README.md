@@ -50,8 +50,26 @@
 ### 4. [POST] 로그인
 ![로그인 POST](docs/assets/images/로그인.png)
 
-### 5. [GET] 방목록 조회
+### 5. [GET] 방목록
 ![방목록 조회 GET](docs/assets/images/방목록조회.png)
+
+### 6. [GET] 차트 정보
+![방목록 차트 GET](docs/assets/images/방목록차트.png)
+
+### 7. [GET] 방목록 탑 10
+![방목록 탑 10 GET](docs/assets/images/방목록탑10.png)
+
+### 8. [POST] 방생성
+![방생성 POST](docs/assets/images/방생성.png)
+
+### 9. [GET] 특정 방 조회
+![특정 방 조회 GET](docs/assets/images/방조회.png)
+
+### 10. [PUT] 방 상태 변경
+![방 상태 변경 PUT](docs/assets/images/방상태변경.png)
+
+### 11. [DELETE] 방 삭제
+![방 삭제 DELETE](docs/assets/images/방삭제.png)
 
 ---
 
