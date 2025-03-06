@@ -91,7 +91,7 @@ CREATE TABLE `P_NUMBER` (
 <img src="docs/assets/images/로그인.png" width="600">
 
 ### 2. 키오스크 화면
-<img src="docs/assets/gifs/키오스크.gif" width="600">
+<img src="docs/assets/gifs/키오스크v2.gif" width="600">
 
 ### 3. 관리자 호출 화면
 <img src="docs/assets/gifs/호출.gif" width="600">
