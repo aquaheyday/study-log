@@ -38,14 +38,14 @@
 | 메뉴 접수 화면 | 팀원들이 각자 메뉴 접수 |
 | 배달원 선정 화면 | 접수 종료 후 랜덤으로 배달 담당 선정 |
 
-### 1. [POST]회원가입
+### 1. [POST] 회원가입
 ![회원가입 POST](docs/assets/images/회원가입.png)
 
-### 2. [POST]이메일 찾기
-![회원가입 POST](docs/assets/images/이메일찾기.png)
+### 2. [POST] 이메일 찾기
+![이메일 찾기 POST](docs/assets/images/이메일찾기.png)
 
-### 3. 메뉴 접수 화면
-
+### 3. [POST] 비밀번호 찾기
+![비밀번호 찾기 POST](docs/assets/images/비밀번호찾기.png)
 
 ### 4. 배달원 선정 화면
 
