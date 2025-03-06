@@ -1,64 +1,62 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# 📥 queue-ticket
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+대기표 발급 및 호출 시스템 (Laravel 기반)
 
-## About Laravel
+테블릿에서 대기표를 접수하고, 관리자가 웹 사이트에서 번호를 호출하면 모니터 화면에 호출된 번호를 표시하는 시스템입니다.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📌 프로젝트 소개
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 주요 기능
+| 기능 | 설명 |
+|---|---|
+| 대기표 발급 | 아이패드에서 대기표 발급 및 접수 |
+| 번호 호출 | 관리자가 관리 페이지에서 대기자 호출 |
+| 실시간 모니터링 | 모니터 화면에서 현재 호출 번호 및 대기 번호 표시 |
+| 접수 현황 확인 | 관리자 페이지에서 실시간 접수 현황 확인 |
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🛠️ 기술 스택
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+| 구분 | 사용 기술 |
+|---|---|
+| Framework | Laravel 10 |
+| Frontend | Blade, Tailwind CSS |
+| Database | MySQL |
+| Realtime | Laravel Echo, Pusher |
+| 기타 | Docker (로컬 개발 환경 구성) |
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## 📐 시스템 구성도
+[아이패드] --> [서버 (Laravel)] --> [관리자 페이지] + [모니터 화면]
 
-### Premium Partners
+- 아이패드: 대기표 접수 화면 (QR코드로 접속 가능)
+- 관리자: 대기번호 호출 및 현황 확인
+- 모니터: 현재 호출 번호 및 다음 대기번호 표시 (풀스크린 디스플레이)
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+---
 
-## Contributing
+## 📲 기능 시연 이미지
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+|화면|설명|
+|---|---|
+|대기표 발급|아이패드에서 터치로 접수|
+|관리자 호출|관리자가 대기번호 호출|
+|모니터 표시|모니터에서 현재 호출번호 표시|
 
-## Code of Conduct
+*(실제 이미지 캡처 삽입 추천)*
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## 📦 설치 및 실행 방법
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 1. 클론 및 환경 설정
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+git clone https://github.com/your-repo/queue-ticket.git
+cd queue-ticket
+cp .env.example .env
+```
