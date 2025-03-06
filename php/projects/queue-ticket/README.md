@@ -22,10 +22,9 @@
 
 | 구분 | 사용 기술 |
 |---|---|
-| Framework | Laravel 8.* |
+| Framework | Laravel 8 |
 | Frontend | Blade |
 | Database | MySQL |
-| 기타 | Docker (로컬 개발 환경 구성) |
 
 ---
 
@@ -106,7 +105,7 @@ CREATE TABLE `P_NUMBER` (
 ### 1. 클론 및 환경 설정
 
 ```bash
-git clone https://github.com/your-repo/queue-ticket.git
+git clone https://github.com/aquaheyday/language-archive.git language-archive/php/projects/queue-ticket/
 cd queue-ticket
 cp .env.example .env
 ```
