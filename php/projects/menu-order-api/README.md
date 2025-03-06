@@ -22,21 +22,12 @@
 | 구분 | 사용 기술 |
 |---|---|
 | Backend | Laravel 10 |
-| Frontend | Flutter (iOS, Android, Web) |
 | Database | MySQL |
-| Infrastructure | Docker + AWS EC2 (Route 53 도메인 연결 및 SSL 인증) |
 | 기타 | docker-compose로 컨테이너 관리 |
 
 ---
 
 ## 📲 기능 시연 이미지
-
-|화면|설명|
-|---|---|
-| 로그인 | 팀 계정 로그인 화면 |
-| 메뉴 접수방 생성 | 접수방 생성 및 팀원 초대 |
-| 메뉴 접수 화면 | 팀원들이 각자 메뉴 접수 |
-| 배달원 선정 화면 | 접수 종료 후 랜덤으로 배달 담당 선정 |
 
 ### 1. [POST] 회원가입
 ![회원가입 POST](docs/assets/images/회원가입.png)
@@ -96,7 +87,7 @@
 ### 1. 클론 및 환경 설정
 
 ```bash
-git clone https://github.com/your-repo/team-menu-order.git
-cd team-menu-order
+git clone https://github.com/aquaheyday/language-archive.git language-archive/php/projects/menu-order-api/
+cd menu-order-api
 cp .env.example .env
 ```
