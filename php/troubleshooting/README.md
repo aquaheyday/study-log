@@ -35,4 +35,11 @@ troubleshooting/
 ├── session-loss.md
 ├── pdo-connection-error.md
 └── headers-already-sent.md
+```
+
+---
+
+## 📚 참고 자료
+- 
+
 
