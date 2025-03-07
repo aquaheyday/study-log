@@ -40,3 +40,9 @@
 ## 📚 참고 자료
 - [Flutter 공식 문서](https://docs.flutter.dev/)
 - [Flutter Awesome](https://github.com/Solido/awesome-flutter)
+
+---
+
+## 📢 업데이트 로그
+- 2025-03-07: 초기 구성 완료
+- 새로운 예제 추가 시 목록 업데이트 예정
