@@ -11,20 +11,3 @@
 | 번호 | 프로젝트명 | 설명 | 링크 |
 |---|---|---|---|
 | 01 | 택배/요금제/문의 관리 | 택배사 정보, 요금제, 문의사항을 관리하는 FastAPI 기반 서비스 | [delivery-api-server](./delivery-api-server) |
-
----
-
-## 📁 디렉터리 구조 예시
-
-```text
-projects/
-├── mini-calculator/
-│   ├── main.py
-│   └── README.md
-├── todo-cli/
-│   ├── todo.py
-│   └── README.md
-├── simple-auth/
-│   ├── auth.py
-│   └── README.md
-...
