@@ -10,7 +10,7 @@
 
 | 번호 | 프로젝트명 | 설명 | 링크 |
 |---|---|---|---|
-| 01 | 미니 계산기 | 사칙연산 기능 구현 CLI 프로그램 | [mini-calculator](./mini-calculator) |
+| 01 | 택배/요금제/문의 관리 | 택배사 정보, 요금제, 문의사항을 관리하는 FastAPI 기반 서비스 | [delivery-api-server](./mini-calculator) |
 | 02 | 할일 관리 CLI | 텍스트 기반 TODO 리스트 관리 | [todo-cli](./todo-cli) |
 | 03 | 회원가입 & 로그인 | 파일 기반 사용자 정보 저장/인증 | [simple-auth](./simple-auth) |
 | 04 | 로그 분석기 | 서버 로그 파일 분석 및 통계 출력 | [log-analyzer](./log-analyzer) |
