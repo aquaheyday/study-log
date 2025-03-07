@@ -12,8 +12,8 @@
 | 기능 | 설명 |
 |---|---|
 | 로그인 | 부여된 계정 권한에 따라 페이지 노출 |
-| 대기표 발급 | 키오스크에서 대기표 발급 및 접수 |
-| 번호 호출 | 관리자가 관리 페이지에서 대기자 호출 |
+| 대기번호 발급 | 키오스크에서 대기표 발급 및 접수 |
+| 대기번호 호출 | 관리자가 관리 페이지에서 대기자 호출 |
 | 실시간 모니터링 | 모니터 화면에서 현재 호출 번호 및 대기 번호 표시 |
 
 ---
@@ -22,10 +22,9 @@
 
 | 구분 | 사용 기술 |
 |---|---|
-| Framework | Laravel 8.* |
+| Framework | Laravel 8 |
 | Frontend | Blade |
 | Database | MySQL |
-| 기타 | Docker (로컬 개발 환경 구성) |
 
 ---
 
@@ -91,7 +90,7 @@ CREATE TABLE `P_NUMBER` (
 <img src="docs/assets/images/로그인.png" width="600">
 
 ### 2. 키오스크 화면
-<img src="docs/assets/gifs/키오스크v2.gif" width="600">
+<img src="docs/assets/gifs/키오스크.gif" width="600">
 
 ### 3. 관리자 호출 화면
 <img src="docs/assets/gifs/호출.gif" width="600">
@@ -106,7 +105,7 @@ CREATE TABLE `P_NUMBER` (
 ### 1. 클론 및 환경 설정
 
 ```bash
-git clone https://github.com/your-repo/queue-ticket.git
+git clone https://github.com/aquaheyday/language-archive.git language-archive/php/projects/queue-ticket/
 cd queue-ticket
 cp .env.example .env
 ```
