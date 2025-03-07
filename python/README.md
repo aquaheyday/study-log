@@ -39,3 +39,9 @@
 ## 📚 참고 자료
 - [Python 공식 문서](https://docs.python.org/3/)
 - [Awesome Python](https://github.com/vinta/awesome-python)
+
+---
+
+## 📢 업데이트 로그
+- 2025-03-06: 초기 구성 완료
+- 새로운 예제 추가 시 목록 업데이트 예정
