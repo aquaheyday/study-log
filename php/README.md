@@ -39,6 +39,8 @@
 - [PHP The Right Way](https://phptherightway.com/)
 - [Awesome PHP](https://github.com/ziadoz/awesome-php)
 
+---
+
 ## 📢 업데이트 로그
-- 2025-03-07: 초기 구성 완료
+- 2025-03-06: 초기 구성 완료
 - 새로운 예제 추가 시 목록 업데이트 예정
