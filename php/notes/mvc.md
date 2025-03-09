@@ -106,4 +106,3 @@ http://localhost/project_root/index.php?controller=Home&action=index
 ---
 
 이 간단한 MVC 구조를 기반으로 기능을 확장하면 PHP 웹 애플리케이션을 체계적으로 개발할 수 있습니다. 😊
-```
