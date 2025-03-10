@@ -7,20 +7,20 @@
 
 ## 📋 예제 목록
 
-| 번호 | 파일명 | 주제 |
-|---|---|---|
-| 01 | [01_input_output.py](./01_input_output.py) | 입출력 기본 |
-| 02 | [02_variables.py](./02_variables.py) | 변수 |
-| 03 | [03_operators.py](./03_operators.py) | 연산자 |
-| 04 | [04_strings.py](./04_strings.py) | 문자열 |
-| 05 | [05_lists.py](./05_lists.py) | 리스트 |
-| 06 | [06_tuples.py](./06_tuples.py) | 튜플 |
-| 07 | [07_sets.py](./07_sets.py) | 집합 |
-| 08 | [08_dictionaries.py](./08_dictionaries.py) | 딕셔너리 |
-| 09 | [09_conditionals.py](./09_conditionals.py) | 조건문 |
-| 10 | [10_loops.py](./10_loops.py) | 반복문 |
-| 11 | [11_functions.py](./11_functions.py) | 함수 |
-| 12 | [12_list_comprehension.py](./12_list_comprehension.py) | 리스트 컴프리헨션 |
+| 번호 | 주제 | 파일명 | 설명 |
+|---|---|---|---|
+| 01 | 입출력 기본 | [input_output.py](./input_output.py) | 표준 입력 및 출력 예제 |
+| 02 | 변수 | [variables.py](./variables.py) | 변수 선언 및 사용 예제 |
+| 03 | 연산자 | [operators.py](./operators.py) | 산술, 비교, 논리 연산자 활용 예제 |
+| 04 | 문자열 | [strings.py](./strings.py) | 문자열 다루기 및 메서드 활용 |
+| 05 | 리스트 | [lists.py](./lists.py) | 리스트 생성, 조작 및 메서드 활용 |
+| 06 | 튜플 | [tuples.py](./tuples.py) | 변경 불가능한 튜플의 활용 |
+| 07 | 집합 | [sets.py](./sets.py) | 집합 연산 및 활용 예제 |
+| 08 | 딕셔너리 | [dictionaries.py](./dictionaries.py) | 키-값 쌍을 저장하는 딕셔너리 활용 |
+| 09 | 조건문 | [conditionals.py](./conditionals.py) | if-elif-else 문 활용 예제 |
+| 10 | 반복문 | [loops.py](./loops.py) | for 및 while 반복문 예제 |
+| 11 | 함수 | [functions.py](./functions.py) | 함수 정의, 매개변수, 반환값 예제 |
+| 12 | 리스트 컴프리헨션 | [list_comprehension.py](./list_comprehension.py) | 리스트 컴프리헨션 활용 예제 |
 
 ---
 
