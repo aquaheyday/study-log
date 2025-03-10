@@ -1,4 +1,3 @@
-
 # Single line comment
 text = 'Hello, World!'
 print(text) # Hello, World!
