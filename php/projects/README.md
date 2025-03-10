@@ -11,7 +11,4 @@
 | 번호 | 프로젝트명 | 설명 | 링크 |
 |---|---|---|---|
 | 01 | 대기표 발급 및 호출 시스템 | 키오스크에서 대기표를 접수하고, 관리자가 고객번호를 호출하면 대기실 모니터 화면에 호출된 번호가 표시되는 시스템 | [queue-ticket](./queue-ticket) |
-| 02 | 간단한 TODO 앱 | 세션 기반 할일 관리 | [todo-app](./todo-app) |
-| 03 | 회원가입 & 로그인 | 세션/쿠키 활용 로그인 구현 | [auth-system](./auth-system) |
-| 04 | 파일 업로드 기능 | 업로드/저장/확장자 검증 | [file-uploader](./file-uploader) |
-| 05 | 외부 API 연동 | 공공 데이터 API 연동 실습 | [api-client](./api-client) |
+| 02 | 메뉴 접수 API | 방을 생성하여 개인 메뉴를 접수하는 RESTful API | [menu-order-api](./menu-order-api) |
