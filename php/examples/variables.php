@@ -15,7 +15,7 @@ echo "이름: $name, 나이: $age, 키: $height, 학생 여부: $isStudent";
 // 2. 자료형 종류 및 확인 (gettype())
 $var1 = "Hello";   // 문자열
 $var2 = 10;        // 정수
-$var3 = 10.5;      // 실
+$var3 = 10.5;      // 실수
 $var4 = true;      // 불리언
 $var5 = array(1, 2, 3); // 배열
 
