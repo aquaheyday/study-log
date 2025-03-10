@@ -13,6 +13,9 @@
 | [python](./python) | Python 학습 및 실습 자료 |
 | [java](./java) | Java 학습 및 실습 자료 |
 | [go](./go) | Go 학습 및 실습 자료 |
+| [php](./php) | PHP 학습 및 실습 자료 |
+| [flutter](./flutter) | Flutter 학습 및 실습 자료 |
+| [react](./react) | React 학습 및 실습 자료 |
 | [javascript](./javascript) | JavaScript 학습 및 실습 자료 |
 | [common](./common) | 언어 공통 내용 (Git, Docker, 알고리즘 등) |
 | [templates](./templates) | 공통 템플릿 (새 노트, 새 예제 작성용) |
