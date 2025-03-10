@@ -29,7 +29,6 @@
 | 07 | 데이터베이스 연동 (PDO) | [database.md](./notes/database.md) |
 | 08 | 에러 처리와 예외 | [error-handling.md](./notes/error-handling.md) |
 | 09 | 간단한 MVC 패턴 실습 | [mvc.md](./notes/mvc.md) |
-|10 | 트러블슈팅 모음 | [troubleshooting.md](./troubleshooting/troubleshooting.md) |
 
 ---
 
