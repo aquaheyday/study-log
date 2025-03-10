@@ -9,6 +9,8 @@ function sayHello($name) {
 sayHello("Alice"); // Hello, Alice!
 ```
 
+---
+
 ## 2. 지역 변수(Local Scope)
 ```php
 function localScopeExample() {
@@ -19,6 +21,8 @@ function localScopeExample() {
 localScopeExample();
 // echo $localVar; // 오류 발생: $localVar는 함수 내부에서만 접근 가능
 ```
+
+---
 
 ## 3. 전역 변수(Global Scope)
 ```php
@@ -31,6 +35,8 @@ function globalScopeExample() {
 
 globalScopeExample();
 ```
+
+---
 
 ## 4. 정적 변수(Static Scope)
 ```php
@@ -45,6 +51,8 @@ staticExample(); // Count: 2
 staticExample(); // Count: 3
 ```
 
+---
+
 ## 5. 함수 내 변수 범위 확인
 ```php
 function checkScope() {
@@ -56,6 +64,8 @@ checkScope();
 // echo $insideVar; // 오류 발생: 함수 외부에서는 접근 불가
 ```
 
+---
+
 ## 6. 익명 함수(Anonymous Function) 및 클로저(Closure)
 ```php
 $greet = function($name) {
@@ -64,6 +74,8 @@ $greet = function($name) {
 
 echo $greet("Bob") . "\n";
 ```
+
+---
 
 ## 7. 클로저(Closure)에서 외부 변수 사용 (use 키워드 활용)
 ```php
