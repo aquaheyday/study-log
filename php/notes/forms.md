@@ -3,6 +3,8 @@
 ## 1. PHP 폼 처리 개요
 PHP에서 폼 데이터를 처리할 때 `$_GET`, `$_POST`, `$_REQUEST`와 같은 슈퍼글로벌 변수를 사용합니다.
 
+---
+
 ## 2. HTML 폼 예제
 ```html
 <form action="process.php" method="post">
@@ -16,6 +18,8 @@ PHP에서 폼 데이터를 처리할 때 `$_GET`, `$_POST`, `$_REQUEST`와 같�
 </form>
 ```
 
+---
+
 ## 3. `$_POST`를 이용한 폼 데이터 처리
 ```php
 // process.php
@@ -27,6 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "이메일: " . $email;
 }
 ```
+
+---
 
 ## 4. `$_GET`을 이용한 데이터 전송
 ```html
@@ -44,6 +50,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 }
 ```
 
+---
+
 ## 5. `$_REQUEST`를 이용한 데이터 처리
 `$_REQUEST`는 `$_GET`과 `$_POST`를 모두 포함하는 배열입니다.
 ```php
@@ -52,12 +60,16 @@ if (!empty($_REQUEST["name"])) {
 }
 ```
 
+---
+
 ## 6. `$_SERVER`를 이용한 요청 확인
 ```php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "폼이 POST 방식으로 제출되었습니다.";
 }
 ```
+
+---
 
 ## 7. 파일 업로드 처리 (`$_FILES`)
 HTML 폼에서 파일을 업로드하려면 `enctype="multipart/form-data"`를 추가해야 합니다.
