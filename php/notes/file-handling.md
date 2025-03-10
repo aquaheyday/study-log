@@ -11,6 +11,8 @@ if ($file) {
 }
 ```
 
+---
+
 ## 2. 파일 읽기 (`fread`, `fgets`, `file_get_contents`)
 ```php
 // 전체 파일 읽기
@@ -39,6 +41,8 @@ $content = file_get_contents("example.txt");
 echo $content;
 ```
 
+---
+
 ## 3. 파일 쓰기 (`fwrite`, `file_put_contents`)
 ```php
 // 파일에 쓰기
@@ -54,6 +58,8 @@ if ($file) {
 file_put_contents("example.txt", "Hello, PHP!");
 ```
 
+---
+
 ## 4. 파일 추가 쓰기 (`a` 모드)
 ```php
 $file = fopen("example.txt", "a");
@@ -62,6 +68,8 @@ if ($file) {
     fclose($file);
 }
 ```
+
+---
 
 ## 5. 파일 삭제 (`unlink`)
 ```php
@@ -73,6 +81,8 @@ if (file_exists("example.txt")) {
 }
 ```
 
+---
+
 ## 6. 파일 존재 여부 확인 (`file_exists`)
 ```php
 if (file_exists("example.txt")) {
@@ -82,12 +92,16 @@ if (file_exists("example.txt")) {
 }
 ```
 
+---
+
 ## 7. 파일 크기 확인 (`filesize`)
 ```php
 if (file_exists("example.txt")) {
     echo "파일 크기: " . filesize("example.txt") . " 바이트";
 }
 ```
+
+---
 
 ## 8. 파일 복사 및 이동 (`copy`, `rename`)
 ```php
@@ -98,10 +112,14 @@ copy("example.txt", "copy_example.txt");
 rename("copy_example.txt", "moved_example.txt");
 ```
 
+---
+
 ## 9. 파일 및 디렉토리 권한 변경 (`chmod`)
 ```php
 chmod("example.txt", 0644); // 읽기/쓰기 권한 변경
 ```
+
+---
 
 ## 10. 디렉토리 생성 및 삭제 (`mkdir`, `rmdir`)
 ```php
