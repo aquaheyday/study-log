@@ -1,10 +1,13 @@
 # PHP 간단한 MVC 패턴
 
 ## 1. MVC 패턴 개요
+
 MVC(Model-View-Controller)는 애플리케이션의 구조를 체계적으로 분리하는 디자인 패턴입니다.
 - **Model**: 데이터 및 비즈니스 로직을 관리
 - **View**: 사용자 인터페이스(UI) 및 출력 처리
 - **Controller**: 사용자의 요청을 처리하고 Model과 View를 연결
+
+---
 
 ## 2. 프로젝트 구조
 ```
@@ -22,12 +25,16 @@ MVC(Model-View-Controller)는 애플리케이션의 구조를 체계적으로 �
 │   └── Router.php      # 라우팅 처리
 ```
 
+---
+
 ## 3. `index.php` (메인 진입점)
 ```php
 require_once 'core/Router.php';
 $router = new Router();
 $router->run();
 ```
+
+---
 
 ## 4. `core/Router.php` (라우팅 처리)
 ```php
@@ -53,6 +60,8 @@ class Router {
 }
 ```
 
+---
+
 ## 5. `controllers/HomeController.php` (컨트롤러)
 ```php
 require_once "models/User.php";
@@ -65,6 +74,8 @@ class HomeController {
 }
 ```
 
+---
+
 ## 6. `models/User.php` (모델)
 ```php
 class User {
@@ -76,6 +87,8 @@ class User {
     }
 }
 ```
+
+---
 
 ## 7. `views/home.php` (뷰)
 ```php
@@ -94,6 +107,8 @@ class User {
 </body>
 </html>
 ```
+
+---
 
 ## 8. 실행 방법
 웹 브라우저에서 다음과 같이 실행합니다:
