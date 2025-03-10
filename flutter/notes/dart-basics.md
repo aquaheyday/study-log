@@ -9,6 +9,7 @@ Flutter는 Google에서 개발한 오픈소스 UI 프레임워크로, 하나의 
 Flutter는 Dart 언어를 사용합니다.
 
 ### 변수 선언
+
 ```dart
 void main() {
   var name = 'Flutter';  // 타입 추론
@@ -22,6 +23,7 @@ void main() {
 ```
 
 ### 조건문
+
 ```dart
 void main() {
   int number = 10;
@@ -35,6 +37,7 @@ void main() {
 ```
 
 ### 반복문
+
 ```dart
 void main() {
   for (int i = 0; i < 5; i++) {
@@ -50,6 +53,7 @@ void main() {
 ```
 
 ### 함수 선언
+
 ```dart
 int add(int a, int b) {
   return a + b;
@@ -64,6 +68,7 @@ void main() {
 ---
 
 ## 3. Flutter 기본 위젯
+
 Flutter에서 UI는 위젯(Widget)으로 구성됩니다. 위젯은 화면을 구성하는 기본 단위이며, 모든 요소(텍스트, 버튼, 레이아웃 등)가 위젯입니다.
 
 위젯은 크게 두 가지로 나뉩니다.
@@ -94,7 +99,7 @@ class MyApp extends StatelessWidget {
 ```
 
 ### StatefulWidget
-StatefulWidget은 변경 가능한 상태를 가지며, setState()를 호출하여 UI를 업데이트할 수 있습니다.
+`StatefulWidget`은 변경 가능한 상태를 가지며, `setState()`를 호출하여 UI를 업데이트할 수 있습니다.
 
 ```dart
 import 'package:flutter/material.dart';
@@ -148,6 +153,7 @@ class _CounterScreenState extends State<CounterScreen> {
 ```
 
 ### 기본 앱 구조
+
 ```dart
 import 'package:flutter/material.dart';
 
@@ -170,8 +176,10 @@ class MyApp extends StatelessWidget {
 
 ### 주요 위젯
 
-#### Text
+#### `Text`
+
 텍스트를 화면에 표시하는 위젯입니다.
+
 ```dart
 Text(
   'Hello, Flutter!',
@@ -179,8 +187,10 @@ Text(
 )
 ```
 
-#### Cotainer
+#### `Cotainer`
+
 컨테이너는 박스 형태의 위젯으로, 크기, 배경색, 패딩 등을 설정할 수 있습니다.
+
 ```dart
 Container(
   width: 200,
@@ -190,8 +200,10 @@ Container(
 )
 ```
 
-#### Colunm & Row
-위젯을 수직(Column)으로 배치하는 레이아웃 위젯입니다.
+#### `Colunm`
+
+위젯을 `수직(Column)`으로 배치하는 레이아웃 위젯입니다.
+
 ```dart
 Column(
   mainAxisAlignment: MainAxisAlignment.center,
@@ -202,8 +214,10 @@ Column(
 )
 ```
 
-#### Row
-위젯을 수평(Row)으로 배치하는 레이아웃 위젯입니다.
+#### `Row`
+
+위젯을 `수평(Row)`으로 배치하는 레이아웃 위젯입니다.
+
 ```dart
 Row(
   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -215,8 +229,10 @@ Row(
 )
 ```
 
-#### ElevatedButton
+#### `ElevatedButton`
+
 클릭할 수 있는 버튼을 생성합니다.
+
 ```dart
 ElevatedButton(
   onPressed: () {
@@ -226,8 +242,10 @@ ElevatedButton(
 )
 ```
 
-#### Image
+#### `Image`
+
 이미지를 표시하는 위젯입니다.
+
 ```dart
 Image.network(
   'https://flutter.dev/images/flutter-logo-sharing.png',
@@ -245,8 +263,11 @@ Image.asset(
 
 
 ### 사용자 입력 위젯
-#### TextField
+
+#### `TextField`
+
 사용자가 텍스트를 입력할 수 있도록 하는 위젯입니다.
+
 ```dart
 TextField(
   decoration: InputDecoration(
@@ -256,8 +277,10 @@ TextField(
 )
 ```
 
-#### Checkbox
+#### `Checkbox`
+
 체크박스를 생성합니다.
+
 ```dart
 Checkbox(
   value: true,
@@ -267,8 +290,10 @@ Checkbox(
 )
 ```
 
-#### Switch
+#### `Switch`
+
 스위치를 생성합니다.
+
 ```dart
 Switch(
   value: true,
@@ -278,8 +303,10 @@ Switch(
 )
 ```
 
-#### Slider
+#### `Slider`
+
 슬라이더를 생성합니다.
+
 ```dart
 Slider(
   value: 0.5,
@@ -293,8 +320,8 @@ Slider(
 
 ---
 
-### 4. 상태 관리 (StatefulWidget)
-Flutter는 StatelessWidget과 StatefulWidget을 사용하여 UI를 구성합니다.
+### 4. 상태 관리 (`StatefulWidget`)
+Flutter는 `StatelessWidget`과 `StatefulWidget`을 사용하여 UI를 구성합니다.
 
 ```dart
 import 'package:flutter/material.dart';
@@ -350,6 +377,7 @@ class _CounterScreenState extends State<CounterScreen> {
 ---
 
 ## 5. 네비게이션 (페이지 이동)
+
 ```dart
 Navigator.push(
   context,
@@ -363,6 +391,7 @@ Navigator.pop(context);
 ---
 
 ## 6. API 호출 (HTTP 요청)
+
 ```dart
 import 'package:http/http.dart' as http;
 import 'dart:convert';
