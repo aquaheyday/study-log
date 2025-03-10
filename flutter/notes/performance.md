@@ -36,7 +36,7 @@ class MyWidget extends StatelessWidget {
 ---
 
 ### 1.3 `ListView.builder()` 사용하기
-대량의 리스트 데이터를 효율적으로 렌더링하려면 **`ListView.builder()`**를 사용하세요.
+대량의 리스트 데이터를 효율적으로 렌더링하려면 `ListView.builder()`를 사용하세요.
 
 ```dart
 ListView.builder(
