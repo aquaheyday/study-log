@@ -20,11 +20,11 @@
 
 | 주제 | 설명 | 링크 |
 |---|---|---|
-| 기본 문법 | Dart 기본 문법 및 Flutter 기초 구성 | [기본문법.md](./notes/기본문법.md) |
-| 위젯 구성 | Stateless/Stateful 위젯, 레이아웃 구성법 | [위젯.md](./notes/위젯.md) |
-| 상태관리 | Provider, Riverpod, Bloc 등 비교 | [상태관리.md](./notes/상태관리.md) |
-| 네트워크 | HTTP 통신 및 에러 처리 패턴 | [네트워크.md](./notes/네트워크.md) |
-| 유용한 팁 | 개발 편의 도구, 성능 개선 팁 | [플러터팁.md](./notes/플러터팁.md) |
+| 기본 문법 & 위젯 기초 | Dart 기본 문법, Stateless, Stateful 위젯 차이와 활용법 | [dart-basics.md](./notes/dart-basics.md) |
+| 레이아 구성 | Row, Column, Flex, Stack 등 레이아웃 패턴 | [layout.md](./notes/layout.md) |
+| 상태관리 기본 | setState, Provider, Riverpod 등 비교 | [state-management.md](./notes/state-management.md) |
+| 네트워크 통신 | HTTP 요청, Dio 사용법 및 에러 핸들링 | [networking.md](./notes/networking.md) |
+| 유용한 팁 | 환경설정, 디버깅, 배포 관련 팁 | [tips.md](./notes/tips.md) |
 
 ---
 
