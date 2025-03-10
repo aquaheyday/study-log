@@ -10,16 +10,11 @@ Flutter 기본 위젯부터, 네트워크 통신, 상태관리 패턴까지 다�
 
 | 번호 | 주제 | 파일명 | 설명 |
 |---|---|---|---|
-| 01 | 기본 레이아웃 | [basic_layout.dart](./basic_layout.dart) | Row, Column, Container 기본 구성 |
-| 02 | 버튼 및 이벤트 핸들링 | [button_event.dart](./button_event.dart) | 버튼 클릭 이벤트 처리 |
-| 03 | 리스트뷰 구성 | [listview_example.dart](./listview_example.dart) | 리스트뷰 데이터 표시 |
-| 04 | 상태관리 기본 | [simple_state.dart](./simple_state.dart) | setState를 활용한 상태관리 |
-| 05 | Provider 상태관리 | [provider_example.dart](./provider_example.dart) | Provider 패턴 적용 예제 |
-| 06 | 폼 입력 처리 | [form_example.dart](./form_example.dart) | TextField, Form 위젯 사용법 |
-| 07 | 네트워크 요청 | [http_example.dart](./http_example.dart) | Dio 활용 REST API 요청 |
-| 08 | 애니메이션 기본 | [animation_example.dart](./animation_example.dart) | 애니메이션 컨트롤러 기초 |
-| 09 | 네비게이션 관리 | [navigation_example.dart](./navigation_example.dart) | Navigator 활용 화면 이동 |
-| 10 | 테마 설정 | [theme_example.dart](./theme_example.dart) | 라이트/다크 모드 적용 |
+| 01 | 기본 레이아웃 | [basic_layout.dart](./basic_layout.dart) | `Button`, `Column`, `Container` 기본 구성 |
+| 02 | 카운터 앱 | [counter_app.dart](./counter_app.dart) | `StatefulWidget`을 활용한 카운터 앱 |
+| 03 | HTTP 요청 | [http_request.dart](./http_request.dart) | REST API 요청(GET) 예제 |
+| 04 | 폼 유효성 검사 | [form_validation.dart](./form_validation.dart) | `TextFormField`와 `Form`을 사용한 입력값 유효성 검사 |
+| 05 | 갤러리/카메라 이미지 선택 | [image_picker.dart](./image_picker.dart) | 갤러리에서 이미지 선택하기 또는 카메라에서 사진 촬영 가능 |
 
 ---
 
