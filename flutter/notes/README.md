@@ -19,7 +19,7 @@
 | 08 | 에러 처리 및 디버깅 | [error-handling.md](./error-handling.md) | 에러 로그, 디버깅 도구, 크래시 리포팅 |
 | 09 | 성능 최적화 | [performance.md](./performance.md) | Rebuild 최소화, 이미지 최적화 등 팁 모음 |
 | 10 | 플러그인 활용 | [plugins.md](./plugins.md) | 필수 추천 플러그인 및 사용법 정리 |
-| 11 | 기타 유용한 팁 | [tips.md](./tips.md) | 환경설정, 디버깅, 배포 관련 팁 |
+| 11 | 유용한 팁 | [tips.md](./tips.md) | 환경설정, 디버깅, 배포 관련 팁 |
 
 ---
 
