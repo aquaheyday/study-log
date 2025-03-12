@@ -1,0 +1,635 @@
+basePath: /
+definitions:
+  models.DeleteFranchiseUserLeadsRequest:
+    properties:
+      ids:
+        items:
+          type: integer
+        type: array
+    type: object
+  models.DeleteFranchiseUserLeadsResponse:
+    properties:
+      rows_affected:
+        type: integer
+    type: object
+  models.ErrorResponse400:
+    properties:
+      code:
+        example: 400
+        type: integer
+      message:
+        type: string
+    type: object
+  models.ErrorResponse500:
+    properties:
+      code:
+        example: 500
+        type: integer
+      message:
+        type: string
+    type: object
+  models.FranchiseUserLeads:
+    properties:
+      birth_date:
+        type: string
+      branch_location:
+        type: string
+      created_at:
+        type: string
+      gender:
+        type: string
+      id:
+        type: string
+      inquiry:
+        type: string
+      name:
+        type: string
+      phone_number:
+        type: string
+    type: object
+  models.FranchiseUserLeadsInsertResponse:
+    properties:
+      inserted_id:
+        type: integer
+    type: object
+  models.FranchiseUserLeadsPagination:
+    properties:
+      current_page:
+        type: integer
+      inquiries:
+        items:
+          $ref: '#/definitions/models.FranchiseUserLeads'
+        type: array
+      limit:
+        type: integer
+      total_items:
+        type: integer
+      total_pages:
+        type: integer
+    type: object
+  models.LoginRequest:
+    properties:
+      email:
+        type: string
+      password:
+        type: string
+    type: object
+  models.LoginResponse:
+    properties:
+      approved_count:
+        type: integer
+      pending_count:
+        type: integer
+      rejected_count:
+        type: integer
+      token:
+        type: string
+    type: object
+  models.MenuItem:
+    properties:
+      id:
+        type: integer
+      level:
+        type: integer
+      name:
+        type: string
+      parent_id:
+        type: string
+      role:
+        type: string
+      sort:
+        type: integer
+      url:
+        type: string
+    type: object
+  models.Permission:
+    properties:
+      description:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+      role:
+        type: string
+      sort:
+        type: integer
+      type:
+        type: string
+    type: object
+  models.PermissionApprovalRequest:
+    properties:
+      request_id:
+        type: string
+      status:
+        default: approved
+        enum:
+        - approved
+        - rejected
+        example: approved
+        type: string
+    required:
+    - status
+    type: object
+  models.PermissionApprovalsRequests:
+    properties:
+      email:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+      requested_at:
+        type: string
+      role:
+        type: string
+      status:
+        type: string
+      type:
+        type: string
+    type: object
+  models.PermissionApprovalsRequestsPagination:
+    properties:
+      current_page:
+        type: integer
+      limit:
+        type: integer
+      requests:
+        items:
+          $ref: '#/definitions/models.PermissionApprovalsRequests'
+        type: array
+      total_items:
+        type: integer
+      total_pages:
+        type: integer
+    type: object
+  models.PermissionGroups:
+    properties:
+      description:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+      permissions:
+        items:
+          type: integer
+        type: array
+      sort:
+        type: integer
+    type: object
+  models.SuccessResponse:
+    properties:
+      data:
+        description: '`omitempty`: 값이 없을 경우 JSON에서 제외'
+      message:
+        type: string
+    type: object
+  models.TokenResponse:
+    properties:
+      token:
+        type: string
+    type: object
+  models.UserInsertRequest:
+    properties:
+      email:
+        type: string
+      id:
+        type: string
+      is_active:
+        type: string
+      password:
+        type: string
+      role:
+        type: string
+      username:
+        type: string
+    type: object
+host: api-hub.ppeum.com
+info:
+  contact:
+    email: support@swagger.io
+    name: API Support
+    url: http://www.swagger.io/support
+  description: API 제공 HUB 입니다.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: API-HUB
+  version: "1.0"
+paths:
+  /v1/admin/permission-approvals:
+    patch:
+      consumes:
+      - application/json
+      description: 관리자가 권한 요청을 승인 또는 거절합니다
+      parameters:
+      - default: Bearer <token>
+        description: Bearer JWT Token
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: 권한 승인 또는 거절 요청
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.PermissionApprovalRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.SuccessResponse'
+        "400":
+          description: 잘못된 요청 형식
+          schema:
+            $ref: '#/definitions/models.ErrorResponse400'
+        "500":
+          description: 서버 오류
+          schema:
+            $ref: '#/definitions/models.ErrorResponse500'
+      summary: 권한 요청 승인 또는 거절
+      tags:
+      - 권한 승인 요청
+  /v1/admin/permission-approvals-requests:
+    get:
+      consumes:
+      - application/json
+      description: 페이징을 지원하여 권한 요청 목록을 검색합니다
+      parameters:
+      - description: '페이지 번호 (기본값: 1)'
+        in: query
+        name: page
+        type: integer
+      - description: '페이지당 항목 수 (기본값: 10)'
+        in: query
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.SuccessResponse'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.PermissionApprovalsRequestsPagination'
+              type: object
+        "400":
+          description: 잘못된 요청 형식
+          schema:
+            $ref: '#/definitions/models.ErrorResponse400'
+        "500":
+          description: 서버 오류
+          schema:
+            $ref: '#/definitions/models.ErrorResponse500'
+      summary: 권한 승인 요청 목록 조회
+      tags:
+      - 권한 승인 요청
+  /v1/admin/permission-groups:
+    get:
+      consumes:
+      - application/json
+      description: 모든 사용자 권한 그룹을 검색합니다
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.SuccessResponse'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/models.PermissionGroups'
+                  type: array
+              type: object
+        "400":
+          description: 잘못된 요청 형식
+          schema:
+            $ref: '#/definitions/models.ErrorResponse400'
+        "500":
+          description: 서버 오류
+          schema:
+            $ref: '#/definitions/models.ErrorResponse500'
+      summary: 사용자 권한 그룹 목록 조회
+      tags:
+      - 사용자
+  /v1/admin/permissions:
+    get:
+      consumes:
+      - application/json
+      description: 모든 사용자 권한을 검색합니다
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.SuccessResponse'
+            - properties:
+                data:
+                  items:
+                    $ref: '#/definitions/models.Permission'
+                  type: array
+              type: object
+        "400":
+          description: 잘못된 요청 형식
+          schema:
+            $ref: '#/definitions/models.ErrorResponse400'
+        "500":
+          description: 서버 오류
+          schema:
+            $ref: '#/definitions/models.ErrorResponse500'
+      summary: 사용자 권한 목록 조회
+      tags:
+      - 사용자
+    post:
+      consumes:
+      - application/json
+      description: 특정 계정에 대한 사용자 권한을 요청합니다
+      parameters:
+      - description: 사용자 계정
+        in: query
+        name: email
+        required: true
+        type: string
+      - description: 권한 ID
+        in: query
+        name: permission
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: 새로운 요소 생성
+          schema:
+            $ref: '#/definitions/models.SuccessResponse'
+        "400":
+          description: 잘못된 요청 형식
+          schema:
+            $ref: '#/definitions/models.ErrorResponse400'
+        "500":
+          description: 서버 오류
+          schema:
+            $ref: '#/definitions/models.ErrorResponse500'
+      summary: 사용자 권한 요청
+      tags:
+      - 사용자
+  /v1/admin/user:
+    post:
+      consumes:
+      - application/json
+      description: 새로운 사용자 계정을 생성하고 JWT 토큰을 반환합니다
+      parameters:
+      - description: 사용자 계정 생성 요청
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.UserInsertRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.SuccessResponse'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.TokenResponse'
+              type: object
+        "400":
+          description: 잘못된 요청 형식
+          schema:
+            $ref: '#/definitions/models.ErrorResponse400'
+        "500":
+          description: 서버 오류
+          schema:
+            $ref: '#/definitions/models.ErrorResponse500'
+      summary: 사용자 계정 생성
+      tags:
+      - 사용자
+  /v1/franchise-user-leads:
+    delete:
+      consumes:
+      - application/json
+      description: 가맹점 문의 데이터를 삭제 상태로 업데이트합니다
+      parameters:
+      - default: Bearer <token>
+        description: Bearer JWT Token
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: 삭제할 가맹점 문의 ID 목록
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.DeleteFranchiseUserLeadsRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.SuccessResponse'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.DeleteFranchiseUserLeadsResponse'
+              type: object
+        "400":
+          description: 잘못된 요청 형식
+          schema:
+            $ref: '#/definitions/models.ErrorResponse400'
+        "500":
+          description: 서버 오류
+          schema:
+            $ref: '#/definitions/models.ErrorResponse500'
+      summary: 가맹점 문의 삭제
+      tags:
+      - 가맹점 문의
+    get:
+      consumes:
+      - application/json
+      description: 페이징을 지원하여 가맹점 문의 목록을 가져옵니다
+      parameters:
+      - default: Bearer <token>
+        description: Bearer JWT Token
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: '페이지 번호 (기본값: 1)'
+        in: query
+        name: page
+        type: integer
+      - description: '페이지당 항목 수 (기본값: 10)'
+        in: query
+        name: limit
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.SuccessResponse'
+            - properties:
+                data:
+                  $ref: '#/definitions/models.FranchiseUserLeadsPagination'
+              type: object
+        "400":
+          description: 잘못된 요청 형식
+          schema:
+            $ref: '#/definitions/models.ErrorResponse400'
+        "500":
+          description: 서버 오류
+          schema:
+            $ref: '#/definitions/models.ErrorResponse500'
+      summary: 가맹점 문의 목록 조회
+      tags:
+      - 가맹점 문의
+    post:
+      consumes:
+      - application/json
+      description: 새로운 가맹점 문의를 추가합니다
+      parameters:
+      - description: 가맹점 문의 요청 데이터
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.FranchiseUserLeads'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/models.FranchiseUserLeadsInsertResponse'
+        "400":
+          description: 잘못된 요청 형식
+          schema:
+            $ref: '#/definitions/models.ErrorResponse400'
+        "500":
+          description: 서버 오류
+          schema:
+            $ref: '#/definitions/models.ErrorResponse500'
+      summary: 가맹점 문의 삽입
+      tags:
+      - 가맹점 문의
+  /v1/login:
+    post:
+      consumes:
+      - application/json
+      description: 사용자를 인증하고 권한 정보와 JWT 토큰을 반환합니다.
+      parameters:
+      - description: 사용자 로그인 요청
+        in: body
+        name: request
+        required: true
+        schema:
+          $ref: '#/definitions/models.LoginRequest'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 로그인 성공
+          schema:
+            $ref: '#/definitions/models.LoginResponse'
+        "400":
+          description: 잘못된 요청 형식
+          schema:
+            $ref: '#/definitions/models.ErrorResponse400'
+        "500":
+          description: 서버 오류
+          schema:
+            $ref: '#/definitions/models.ErrorResponse500'
+      summary: 사용자 로그인
+      tags:
+      - 사용자
+  /v1/menu:
+    get:
+      consumes:
+      - application/json
+      description: 사용자 권한 및 그룹 필터에 따라 메뉴 목록을 검색합니다.
+      parameters:
+      - default: Bearer <token>
+        description: Bearer JWT Token
+        in: header
+        name: Authorization
+        required: true
+        type: string
+      - description: 메뉴 항목 필터링을 위한 그룹 식별 코드
+        in: query
+        name: group
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 메뉴 항목 목록
+          schema:
+            items:
+              $ref: '#/definitions/models.MenuItem'
+            type: array
+        "400":
+          description: 잘못된 요청 형식
+          schema:
+            $ref: '#/definitions/models.ErrorResponse400'
+        "500":
+          description: 서버 오류
+          schema:
+            $ref: '#/definitions/models.ErrorResponse500'
+      summary: 메뉴 목록 조회
+      tags:
+      - 메뉴
+  /v1/test:
+    get:
+      consumes:
+      - application/json
+      description: 쿼리 파라미터에 따라 지점별 description meta 태그를 반환합니다.
+      parameters:
+      - description: '지점명 (예: gangnam)'
+        in: query
+        name: branch
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: meta 태그 HTML 반환
+          schema:
+            allOf:
+            - $ref: '#/definitions/models.SuccessResponse'
+            - properties:
+                data:
+                  type: string
+              type: object
+        "400":
+          description: 잘못된 요청 형식
+          schema:
+            $ref: '#/definitions/models.ErrorResponse400'
+        "500":
+          description: 서버 오류
+          schema:
+            $ref: '#/definitions/models.ErrorResponse500'
+      summary: 지점 meta 태그 조회
+      tags:
+      - 지점
+swagger: "2.0"
