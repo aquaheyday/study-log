@@ -10,14 +10,7 @@
 
 | 번호 | 프로젝트명 | 폴더명 | 설명 |
 |---|---|---|---|
-| 01 | CLI TODO 앱 | [cli-todo](./cli-todo) | 터미널 기반 할 일 관리 앱 |
-| 02 | 파일 업로더 서버 | [file-uploader](./file-uploader) | 파일 업로드 및 저장 서버 구현 |
-| 03 | 간단 REST API 서버 | [simple-rest-api](./simple-rest-api) | CRUD 기능을 갖춘 REST API 서버 |
-| 04 | Goroutine 스크래퍼 | [concurrent-scraper](./concurrent-scraper) | Goroutine과 채널을 활용한 웹 스크래퍼 |
-| 05 | JSON Config 파서 | [json-config-parser](./json-config-parser) | 설정 파일 파싱 및 검증 툴 |
-| 06 | 유닛 테스트 연습 프로젝트 | [test-driven-project](./test-driven-project) | 테스트 주도 개발(TDD)로 기능 구현 연습 |
-| 07 | HTTP 클라이언트 툴 | [http-client](./http-client) | 외부 API 요청 및 응답 처리 도구 |
-| 08 | Go 모듈 매니저 | [go-module-manager](./go-module-manager) | 모듈 리스트 분석 및 관리 툴 |
+| 01 | RESTful 관리자 CRUD API + Swagger | [restful-admin-crud](./restful-admin-crud) | 관리자 CRUD + 스웨거 적용한 RESTful API |
 
 ---
 
