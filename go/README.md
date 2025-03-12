@@ -41,3 +41,9 @@
 - [Go 공식 문서](https://go.dev/doc/)
 - [Awesome Go](https://github.com/avelino/awesome-go)
 
+---
+
+## 📢 업데이트 로그
+- 2025-03-07: 초기 구성 완료
+- 2025-03-12: notes 초기 내용 완료
+- 새로운 예제 추가 시 목록 업데이트 예정
