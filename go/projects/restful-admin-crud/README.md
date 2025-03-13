@@ -10,8 +10,8 @@ Swagger 문서를 제공하여 API 테스트 및 연동이 용이합니다.
 ### 주요 기능
 | 기능 | 설명 |
 |---|---|
-| 사용자 관리 | 사용자 계정 생성, 수정, 삭제, 조회 |
-| 권한 관리 | 관리자 및 일반 사용자 권한 부여 |
+| 사용자 관리 | 사용자 계정 생성 |
+| 권한 관리 | 사용자 권한 부여 |
 | 데이터 CRUD | 리소스 생성(Create), 조회(Read), 수정(Update), 삭제(Delete) |
 | 인증 및 인가 | JWT 기반 사용자 인증 및 권한 관리 |
 | API 문서 제공 | Swagger UI를 활용한 API 문서 제공 |
@@ -23,10 +23,33 @@ Swagger 문서를 제공하여 API 테스트 및 연동이 용이합니다.
 | 구분 | 사용 기술 |
 |---|---|
 | Backend | Go (Golang), Gin |
-| Database | PostgreSQL / MySQL |
+| Database | MySQL |
 | API 문서 | Swagger (swaggo/gin-swagger) |
 | 인증 | JWT (jsonwebtoken) |
-| 기타 | Docker, Docker Compose |
+
+---
+
+## 📂 프로젝트 폴더 구조
+
+```text
+restful-admin-crud/
+│── config/          # 애플리케이션 환경 설정 (CORS, 설정 파일 등)
+│── database/        # 데이터베이스 연결 및 마이그레이션 관련 코드
+│── docs/            # API 문서 및 스웨거(Swagger) 문서화 관련 파일
+│── handlers/        # HTTP 핸들러 (컨트롤러) 계층, 요청 처리 담당
+│── middleware/      # 미들웨어 (인증)
+│── models/          # 데이터 모델 정의
+│── repositories/    # 데이터베이스 접근 레이어 (Repository 패턴 적용)
+│── routes/          # 라우터 설정 (각 API 엔드포인트 정의)
+│── services/        # 비즈니스 로직을 처리하는 서비스 계층
+│── utils/           # 유틸리티 함수 및 공통 헬퍼 함수
+│── .gitignore       # Git에 포함되지 않을 파일 정의
+│── README.md        # 프로젝트 소개 및 설명 문서
+│── go.mod           # Go 모듈 관리 파일
+│── go.sum           # Go 의존성 관리 파일
+│── main.go          # 애플리케이션 시작점 (Entry point)
+
+```
 
 ---
 
