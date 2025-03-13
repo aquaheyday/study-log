@@ -20,21 +20,3 @@
 | 09 | 성능 최적화 | [performance.md](./performance.md) | Rebuild 최소화, 이미지 최적화 등 팁 모음 |
 | 10 | 플러그인 활용 | [plugins.md](./plugins.md) | 필수 추천 플러그인 및 사용법 정리 |
 | 11 | 유용한 팁 | [tips.md](./tips.md) | 환경설정, 디버깅, 배포 관련 팁 |
-
----
-
-## 📝 작성 가이드
-
-- 파일명은 `케밥 케이스`로 작성 (ex: `basic-widgets.md`)
-- 각 노트는 다음 형식을 추천:
-    - 개념 정의
-    - 기본 사용법 및 예제
-    - 실전 팁 & 주의사항
-    - 관련 링크 (공식 문서, 추천 블로그 등)
-- 코드 예제는 가능하면 별도 파일(`examples/`)로 관리하고, 노트에서는 링크로 연결
-
----
-
-## 📚 참고 자료
-- [Flutter 공식 문서](https://docs.flutter.dev/)
-- [Awesome Flutter](https://github.com/Solido/awesome-flutter)
