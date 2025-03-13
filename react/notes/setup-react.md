@@ -109,4 +109,4 @@ npm install --save-dev prettier eslint-config-prettier eslint-plugin-prettier
 ---
 
 🚀 **이제 React 프로젝트가 준비되었습니다!**  
-다음 단계: [JSX 문](./jsx-basics.md) →
+다음 단계: [JSX 문법](./jsx-basics.md) →
