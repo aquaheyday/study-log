@@ -1,4 +1,4 @@
-# ⚛️ React 이벤트 처리 (Event Handling)
+# 🎯 React 이벤트 처리 (Event Handling)
 
 React에서는 **DOM 이벤트를 다루기 위해 이벤트 핸들러를 설정**할 수 있습니다.  
 JSX 문법을 사용하여 **HTML과 유사한 방식**으로 이벤트를 바인딩할 수 있지만, 일부 차이점이 있습니다.
