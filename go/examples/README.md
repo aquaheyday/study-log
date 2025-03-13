@@ -23,8 +23,8 @@
 | 12 | Goroutine | [goroutine.go](./goroutine.go) | 기본 Goroutine 사용법 |
 | 13 | 채널 | [channels.go](./channels.go) | 채널을 활용한 동시성 제어 |
 | 14 | WaitGroup | [waitgroup.go](./waitgroup.go) | 여러 Goroutine 동기화 |
-| 15 | HTTP 서버 | [http-server.go](./http_server.go) | 기본 HTTP 서버 구현 |
-| 16 | 유닛 테스트 | [unit-test-example_test.go](./unit_example_test.go) | 기본 테스트 코드 작성 |
+| 15 | HTTP 서버 | [http_server.go](./http_server.go) | 기본 HTTP 서버 구현 |
+| 16 | 유닛 테스트 | [unit_example_test.go](./unit_example_test.go) | 기본 테스트 코드 작성 |
 | 17 | 벤치마크 테스트 | [benchmark_test.go](./benchmark_test.go) | 성능 테스트 예제 |
 
 ---
