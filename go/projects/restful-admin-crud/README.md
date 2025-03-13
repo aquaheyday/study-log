@@ -205,6 +205,7 @@ Swagger 문서는 `swag init`을 통해 자동 생성할 수 있습니다.
 
 ### 1. Swagger API 문서
 - Swagger UI에서 API 목록을 확인하고 테스트할 수 있습니다.
+<img src="docs/assets/images/스웨거_메인.png" width="600">
 
 
 ### 2. 사용자 목록 조회 API
