@@ -1,4 +1,4 @@
-# ⚛️ React Context API
+# 🔄 React Context API
 
 **Context API**는 **전역 상태(Global State)를 관리하는 React 내장 기능**입니다.  
 부모 → 자식으로 **Props를 계속 전달하는 문제(Props Drilling)** 를 해결할 수 있습니다.
