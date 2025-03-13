@@ -1,7 +1,7 @@
-// unit-test-example.go 파일의 내용이라고 가정한다.
+// unit_example.go 파일의 내용이라고 가정한다.
 // 파일명과 동일한 *_test.go 파일에서 유닛 테스트 함수 실행이 가능하다.
 
-// unit-test-example.go 파일의 내용
+// unit_example.go 파일의 내용
 package main
 
 import (
@@ -25,7 +25,7 @@ func main() {
 	fmt.Println("Multiply(2, 3):", Multiply(2, 3))
 }
 
-// unit-test-example_test.go 파일의 내용
+// unit_example_test.go 파일의 내용
 
 // Add 함수 테스트
 func TestAdd(t *testing.T) {
