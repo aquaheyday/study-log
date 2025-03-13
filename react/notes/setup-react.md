@@ -1,4 +1,4 @@
-# ⚙️ React 프로젝트 설정
+# ⚛️ React 프로젝트 설정
 
 React 프로젝트를 시작하기 위해 환경을 설정하는 방법을 정리합니다.  
 **CRA(Create React App)와 Vite**를 사용한 설치 방법을 다룹니다.
@@ -99,7 +99,7 @@ npm install --save-dev prettier eslint-config-prettier eslint-plugin-prettier
 
 ---
 
-## 공식 문서 및 추가 자료
+## 7. 공식 문서 및 추가 자료
 - [React 공식 문서](https://react.dev/)
 - [Vite 공식 문서](https://vitejs.dev/)
 - [Node.js 공식 사이트](https://nodejs.org/)
