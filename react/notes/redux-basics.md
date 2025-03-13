@@ -1,4 +1,4 @@
-# ⚛️ Redux 기본 개념 (Redux Basics)
+# 🔄 Redux 기본 개념 (Redux Basics)
 
 **Redux**는 **React 애플리케이션에서 상태를 효율적으로 관리하기 위한 상태 관리 라이브러리**입니다.  
 Redux를 사용하면 **전역 상태(Global State)를 관리**하고, 컴포넌트 간의 **데이터 흐름을 예측 가능하게** 만들 수 있습니다.
