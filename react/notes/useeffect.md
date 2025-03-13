@@ -1,4 +1,4 @@
-# ⚛️ React useEffect 훅
+# 🎯 React useEffect 훅
 
 `useEffect`는 **React에서 컴포넌트의 생명주기(lifecycle)를 관리하는 훅**입니다.  
 렌더링 후 실행되어 **데이터 패칭, DOM 조작, 구독(subscription) 설정** 등에 사용됩니다.
