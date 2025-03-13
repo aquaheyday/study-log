@@ -30,13 +30,143 @@ Swagger 문서를 제공하여 API 테스트 및 연동이 용이합니다.
 
 ---
 
+## 📊 Database Table Structure
+
+### 1. admin_users 테이블 (관리자 사이트 사용자 정보)
+
+```sql
+CREATE TABLE `admin_users` (
+	`id` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`username` VARCHAR(50) NOT NULL,
+	`email` VARCHAR(100) NOT NULL,
+	`password` VARCHAR(255) NOT NULL,
+	`role` VARCHAR(50) NULL DEFAULT 'admin',
+	`is_active` TINYINT(1) NULL DEFAULT 1,
+	`last_login` DATETIME NULL DEFAULT NULL,
+	`created_at` DATETIME NULL DEFAULT current_timestamp(),
+	`updated_at` DATETIME NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+	PRIMARY KEY (`id`) USING BTREE,
+	UNIQUE INDEX `email` (`email`) USING BTREE
+);
+```
+
+### 2. admin_user_permissions 테이블 (사용자에게 부여된 권한 정보)
+
+```sql
+CREATE TABLE `admin_user_permissions` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`email` VARCHAR(100) NOT NULL COMMENT '사용자 ID',
+	`permission_id` INT(11) NOT NULL COMMENT '권한 ID',
+	`created_at` TIMESTAMP NULL DEFAULT current_timestamp(),
+	`updated_at` TIMESTAMP NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+	PRIMARY KEY (`id`) USING BTREE,
+	INDEX `email` (`email`) USING BTREE,
+	INDEX `permission_id` (`permission_id`) USING BTREE,
+	CONSTRAINT `admin_user_permissions_ibfk_1` FOREIGN KEY (`email`) REFERENCES `admin_users` (`email`) ON UPDATE CASCADE ON DELETE CASCADE,
+	CONSTRAINT `admin_user_permissions_ibfk_2` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON UPDATE CASCADE ON DELETE CASCADE
+);
+```
+
+### 3. admin_user_permission_requests 테이블 (사용자가 요청한 권한 정보)
+
+```sql
+CREATE TABLE `admin_user_permission_requests` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`email` VARCHAR(100) NOT NULL COMMENT '사용자 ID',
+	`permission_id` INT(11) NOT NULL COMMENT '요청된 권한 ID',
+	`status` ENUM('pending','approved','rejected') NOT NULL DEFAULT 'pending' COMMENT '요청 상태',
+	`requested_at` TIMESTAMP NULL DEFAULT current_timestamp() COMMENT '요청 시간',
+	`approved_at` TIMESTAMP NULL DEFAULT NULL COMMENT '승인 시간',
+	`rejected_at` TIMESTAMP NULL DEFAULT NULL COMMENT '거절 시간',
+	`admin_email` VARCHAR(100) NULL DEFAULT NULL COMMENT '승인/거절 처리한 관리자 ID',
+	PRIMARY KEY (`id`) USING BTREE,
+	INDEX `email` (`email`) USING BTREE,
+	INDEX `permission_id` (`permission_id`) USING BTREE,
+	CONSTRAINT `admin_permission_requests_ibfk_1` FOREIGN KEY (`email`) REFERENCES `admin_users` (`email`) ON UPDATE CASCADE ON DELETE CASCADE,
+	CONSTRAINT `admin_permission_requests_ibfk_2` FOREIGN KEY (`permission_id`) REFERENCES `permissions` (`id`) ON UPDATE CASCADE ON DELETE CASCADE
+);
+```
+
+### 4. permissions 테이블 (권한 목록 정보)
+
+```sql
+CREATE TABLE `permissions` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(50) NOT NULL COMMENT '권한명',
+	`type` VARCHAR(50) NULL DEFAULT 'url' COMMENT '권한 타입',
+	`role` ENUM('read', 'write') NOT NULL DEFAULT 'read' COMMENT 'read/write',
+	`detail` VARCHAR(100) NULL DEFAULT NULL COMMENT '상세 권한 설정',
+	`description` TEXT NULL DEFAULT NULL,
+	`sort` INT(11) NULL DEFAULT 0 COMMENT '권한 정렬 순서',
+	`created_at` TIMESTAMP NULL DEFAULT current_timestamp(),
+	`updated_at` TIMESTAMP NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+	PRIMARY KEY (`id`) USING BTREE
+);
+```
+
+### 5. permission_groups 테이블 (권한 목록을 그룹 단위로 묶은 정보)
+
+```sql
+CREATE TABLE `permission_groups` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(50) NOT NULL,
+	`description` TEXT NULL DEFAULT NULL,
+	`sort` INT(11) NULL DEFAULT 0 COMMENT '권한 정렬 순서',
+	`created_at` TIMESTAMP NULL DEFAULT current_timestamp(),
+	`updated_at` TIMESTAMP NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+	PRIMARY KEY (`id`) USING BTREE
+);
+```
+
+### 6. menu 테이블 (메뉴 목록 정보)
+
+```sql
+CREATE TABLE `menu` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`group` VARCHAR(30) NOT NULL COMMENT '메뉴 그룹(관리자:admin)',
+	`name` VARCHAR(255) NOT NULL COMMENT '메뉴명',
+	`parent_id` INT(11) NULL DEFAULT NULL COMMENT '상위 메뉴 id (NULL 이면 1뎁스)',
+	`url` VARCHAR(255) NULL DEFAULT NULL COMMENT '메뉴 URL 경로',
+	`level` INT(11) NOT NULL DEFAULT 1 COMMENT '메뉴 레벨 (1, 2, 3)',
+	`sort` INT(11) NULL DEFAULT 0 COMMENT '메뉴 정렬 순서',
+	`is_active` TINYINT(1) NULL DEFAULT 1 COMMENT '활성화 여부 (1: 활성, 0: 비활성)',
+	`created_at` TIMESTAMP NULL DEFAULT current_timestamp(),
+	`updated_at` TIMESTAMP NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+	PRIMARY KEY (`id`) USING BTREE,
+	INDEX `parent_id` (`parent_id`) USING BTREE,
+	CONSTRAINT `menu_ibfk_1` FOREIGN KEY (`parent_id`) REFERENCES `menu` (`id`) ON UPDATE RESTRICT ON DELETE CASCADE
+);
+```
+
+### 7. franchise_user_leads 테이블 (외부 랜딩에서 유입된 데이터 정보)
+
+```sql
+CREATE TABLE `franchise_user_leads` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`name` VARCHAR(50) NULL DEFAULT NULL,
+	`birth_date` DATE NULL DEFAULT NULL,
+	`gender` ENUM('male', 'female', 'other') NULL DEFAULT NULL,
+	`phone_number` VARCHAR(20) NULL DEFAULT NULL,
+	`branch_location` VARCHAR(50) NULL DEFAULT NULL COMMENT '지점 위치',
+	`inquiry` VARCHAR(255) NULL DEFAULT NULL COMMENT '문의내용',
+	`status` ENUM('live','delete') NOT NULL DEFAULT 'live' COMMENT '요청 상태',
+	`created_at` TIMESTAMP NOT NULL DEFAULT current_timestamp(),
+	`delete_at` TIMESTAMP NULL DEFAULT NULL COMMENT '삭제 시간',
+	`admin_email` VARCHAR(100) NULL DEFAULT NULL COMMENT '삭제 처리한 관리자 ID',
+	PRIMARY KEY (`id`) USING BTREE,
+	INDEX `idx_branch_location` (`branch_location`) USING BTREE
+);
+```
+
+---
+
 ## 📑 API 문서 (Swagger)
 
 Swagger를 사용하여 API 테스트 및 문서를 제공합니다.
 
 - **Swagger UI 접근 방법**
   ```bash
-  http://localhost:8080/swagger/index.html
+  http://localhost:8080/v1/swagger/index.html
   ```
 
 Swagger 문서는 `swag init`을 통해 자동 생성할 수 있습니다.
