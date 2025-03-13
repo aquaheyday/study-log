@@ -53,6 +53,85 @@ restful-admin-crud/
 
 ---
 
+## 📑 API 문서 (Swagger)
+
+Swagger를 사용하여 API 테스트 및 문서를 제공합니다.
+
+- **Swagger UI 접근 방법**
+  ```bash
+  http://localhost:8080/v1/swagger/index.html
+  ```
+
+Swagger 문서는 `swag init`을 통해 자동 생성할 수 있습니다.
+
+- **Swagger 문서 생성**
+  ```bash
+  swag init
+  ```
+
+---
+## RESTful API 상태 코드 (HTTP Status Codes)
+아래는 주요 HTTP 상태 코드 및 설명입니다.
+
+### 1xx: 정보 응답 (Informational Responses)
+
+| 상태 코드 | 설명 |
+|-----------|------------------------------------------|
+| `100 Continue` | 요청이 정상적으로 접수되었으며 계속 진행 가능 |
+| `101 Switching Protocols` | 클라이언트의 프로토콜 변경 요청을 수락함 |
+
+### 2xx: 성공 (Success)
+
+| 상태 코드 | 설명 |
+|-----------|------------------------------------------|
+| `200 OK` | 요청이 성공적으로 처리됨 (GET, PUT, DELETE 요청) |
+| `201 Created` | 리소스가 성공적으로 생성됨 (POST 요청) |
+| `204 No Content` | 요청이 성공했지만, 응답 본문이 없음 (DELETE 요청) |
+
+### 3xx: 리디렉션 (Redirection)
+
+| 상태 코드 | 설명 |
+|-----------|------------------------------------------|
+| `301 Moved Permanently` | 요청한 리소스가 영구적으로 이동됨 |
+| `302 Found` | 요청한 리소스가 일시적으로 이동됨 |
+| `304 Not Modified` | 캐시된 데이터를 사용할 수 있음 (클라이언트의 캐시 활용) |
+
+### 4xx: 클라이언트 오류 (Client Errors)
+
+| 상태 코드 | 설명 |
+|-----------|------------------------------------------|
+| `400 Bad Request` | 요청이 잘못되었거나 형식이 올바르지 않음 |
+| `401 Unauthorized` | 인증이 필요함 (JWT 토큰 없음/만료됨) |
+| `403 Forbidden` | 권한이 없어 요청을 수행할 수 없음 |
+| `404 Not Found` | 요청한 리소스를 찾을 수 없음 |
+| `405 Method Not Allowed` | 허용되지 않은 HTTP 메서드 사용 |
+
+### 5xx: 서버 오류 (Server Errors)
+
+| 상태 코드 | 설명 |
+|-----------|------------------------------------------|
+| `500 Internal Server Error` | 서버 내부 오류 (예상치 못한 에러) |
+| `502 Bad Gateway` | 게이트웨이 서버가 잘못된 응답을 받음 |
+| `503 Service Unavailable` | 서버가 현재 요청을 처리할 수 없음 (과부하 상태) |
+
+---
+
+## 📸 기능 시연 이미지
+
+### 1. Swagger API 문서
+- Swagger UI에서 API 목록을 확인하고 테스트할 수 있습니다.
+<img src="docs/assets/images/스웨거_메인.png" width="1000">
+
+### 2. 사용자 생성 API
+- `/v1/admin/user` 엔드포인트를 통해 새 사용자를 등록합니다.
+<img src="docs/assets/images/스웨거_계정_생성.png" width="1000">
+
+### 3. 인증 (JWT 로그인)
+- 로그인 후 발급된 JWT 토큰을 통해 API 요청을 수행할 수 있습니다.
+<img src="docs/assets/images/스웨거_로그인.png" width="1000">
+
+---
+
 ## 📊 Database Table Structure
 
 ### 1. admin_users 테이블 (관리자 사이트 사용자 정보)
@@ -180,45 +259,6 @@ CREATE TABLE `franchise_user_leads` (
 	INDEX `idx_branch_location` (`branch_location`) USING BTREE
 );
 ```
-
----
-
-## 📑 API 문서 (Swagger)
-
-Swagger를 사용하여 API 테스트 및 문서를 제공합니다.
-
-- **Swagger UI 접근 방법**
-  ```bash
-  http://localhost:8080/v1/swagger/index.html
-  ```
-
-Swagger 문서는 `swag init`을 통해 자동 생성할 수 있습니다.
-
-- **Swagger 문서 생성**
-  ```bash
-  swag init
-  ```
-
----
-
-## 📸 기능 시연 이미지
-
-### 1. Swagger API 문서
-- Swagger UI에서 API 목록을 확인하고 테스트할 수 있습니다.
-<img src="docs/assets/images/스웨거_메인.png" width="1000">
-
-
-### 2. 사용자 목록 조회 API
-- `/api/users` 엔드포인트를 통해 사용자 정보를 조회합니다.
-
-
-### 3. 사용자 생성 API
-- `/api/users` 엔드포인트를 통해 새 사용자를 등록합니다.
-
-
-### 4. 인증 (JWT 로그인)
-- 로그인 후 발급된 JWT 토큰을 통해 API 요청을 수행할 수 있습니다.
-
 
 ---
 
