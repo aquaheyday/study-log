@@ -189,7 +189,7 @@ ReactDOM.render(element, document.getElementById("root"));
 
 ---
 
-## 5️⃣ 공식 문서 및 추가 자료
+## 5. 공식 문서 및 추가 자료
 - [React 공식 문서 - JSX](https://react.dev/learn/writing-markup-with-jsx)
 - [MDN - JavaScript 표현식](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators)
 - [Babel JSX 변환기](https://babeljs.io/repl)  
