@@ -1,4 +1,4 @@
-# ⚛️ React JSX 문법
+# 📌 React JSX 문법
 
 JSX(JavaScript XML)는 **JavaScript 코드에서 XML 형식의 문법을 사용할 수 있도록 지원하는 React의 문법 확장**입니다.  
 
@@ -197,4 +197,4 @@ ReactDOM.render(element, document.getElementById("root"));
 ---
 
 🚀 **JSX를 이해했다면, 이제 컴포넌트를 배워봅시다!**  
-다음 개념: [React 컴포넌트 개념](./components.md) →
+다음 개념: [React 컴포넌트 기초](./components.md) →
