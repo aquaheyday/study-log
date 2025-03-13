@@ -1,4 +1,4 @@
-# ⚛️ Redux Toolkit 개요
+# 🔄 Redux Toolkit 개요
 
 **Redux Toolkit (RTK)**는 **Redux의 보일러플레이트 코드를 줄이고 쉽게 상태 관리를 할 수 있도록 도와주는 공식 라이브러리**입니다.  
 기존 Redux보다 **더 간결한 문법, 강력한 기능, 내장 미들웨어 지원**을 제공합니다.
