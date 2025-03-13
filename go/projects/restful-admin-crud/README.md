@@ -130,6 +130,14 @@ Swagger 문서는 `swag init`을 통해 자동 생성할 수 있습니다.
 - 로그인 후 발급된 JWT 토큰을 통해 API 요청을 수행할 수 있습니다.
 <img src="docs/assets/images/스웨거_로그인.png" width="1000">
 
+### 4. 권한 승인 요청 API
+- 로그인 후 계정에 권한 요청을 할 수 있습니다. 
+<img src="docs/assets/images/스웨거_권한_승인_요청.png" width="1000">
+
+### 4. 가맹점 문의 삭제 API
+- 쓰기 권한이 부여된 계정으로 로그인 후 문의 내용을 삭제할 수 있습니다. 
+<img src="docs/assets/images/스웨거_가맹점_삭제.png" width="1000">
+
 ---
 
 ## 📊 Database Table Structure
@@ -266,7 +274,7 @@ CREATE TABLE `franchise_user_leads` (
 
 ### 1. 클론 및 환경 설정
 ```bash
-git clone https://github.com/aquaheyday/admin-restful-crud.git
+git clone https://github.com/aquaheyday/language-archive.git language-archive/go/projects/admin-restful-crud/
 cd admin-restful-crud
 ```
 
@@ -274,32 +282,18 @@ cd admin-restful-crud
 `.env` 파일을 생성하고 데이터베이스 및 JWT 설정을 입력합니다.
 
 ```env
+DB_USERNAME=admin
+DB_PASSWORD=secret
 DB_HOST=localhost
-DB_PORT=5432
-DB_USER=admin
-DB_PASS=secret
+DB_PORT=3306
 DB_NAME=admin_db
+
 JWT_SECRET=mysecretkey
+
+CORS_ALLOWED_ORIGINS="http://localhost:*"
 ```
 
-### 3. Docker 컨테이너 실행
-```bash
-docker-compose up -d
-```
-
-### 4. 애플리케이션 실행
+### 3. 애플리케이션 실행
 ```bash
 go run main.go
 ```
-
----
-
-## 📌 API 엔드포인트
-
-| 메서드 | 엔드포인트 | 설명 |
-|---|---|---|
-| **POST** | `/api/login` | 사용자 로그인 (JWT 토큰 발급) |
-| **GET** | `/api/users` | 모든 사용자 조회 |
-| **POST** | `/api/users` | 새 사용자 등록 |
-| **PUT** | `/api/users/:id` | 사용자 정보 수정 |
-| **DELETE** | `/api/users/:id` | 사용자 삭제 |
