@@ -9,16 +9,23 @@
 
 | 번호 | 주제 | 파일명 | 설명 |
 |---|---|---|---|
-| 01 | 기본 입출력 | [basic-io.go](./basic-io.go) | 터미널 입력/출력 처리 예제 |
-| 02 | 함수와 리턴 | [functions.go](./functions.go) | 함수 선언, 다중 리턴, 익명 함수 활용 |
-| 03 | 슬라이스와 맵 | [slices-maps.go](./slices-maps.go) | 슬라이스 생성, 맵 활용법 예제 |
-| 04 | 구조체와 메서드 | [structs-methods.go](./structs-methods.go) | 구조체 정의, 메서드 추가 예제 |
-| 05 | 에러 처리 패턴 | [error-handling.go](./error-handling.go) | 에러 반환, wrapping, fmt.Errorf 활용 |
-| 06 | Goroutine과 채널 | [concurrency.go](./concurrency.go) | 비동기 처리, 채널 통신 기본 예제 |
-| 07 | 파일 입출력 | [file-io.go](./file-io.go) | 파일 읽기/쓰기, 에러 핸들링 예제 |
-| 08 | 간단한 HTTP 서버 | [http-server.go](./http-server.go) | net/http 기반 서버 구현 예제 |
-| 09 | 유닛 테스트 | [unit-test-example_test.go](./unit-test-example_test.go) | 테스트 작성 및 실행 예제 |
-| 10 | JSON 파싱 | [json-parsing.go](./json-parsing.go) | JSON 인코딩/디코딩 예제 |
+| 01 | 변수와 자료형 | [variables.go](./variables.go) | 변수 선언, 상수, 타입 변환 |
+| 02 | 제어문 | [control-flow.go](./control-flow.go) | 조건문(if/switch) & 반복문(for) |
+| 03 | 함수 | [functions.go](./functions.go) | 함수 선언, 다중 리턴, 익명 함수 |
+| 04 | 포인터 | [pointers.go](./pointers.go) | 포인터 개념과 활용법 |
+| 05 | 슬라이스 | [slices.go](./slices.go) | 슬라이스 생성, 추가, 복사 |
+| 06 | 맵(Map) | [maps.go](./maps.go) | 맵 생성, 조회, 수정, 삭제 |
+| 07 | 구조체 | [structs.go](./structs.go) | 구조체 정의 및 활용 |
+| 08 | 인터페이스 | [interfaces.go](./interfaces.go) | 인터페이스 개념 및 다형성 |
+| 09 | 기본 입출력 | [basic-io.go](./basic-io.go) | 터미널에서 입력/출력 처리 |
+| 10 | 파일 입출력 | [file-io.go](./file-io.go) | 파일 읽기/쓰기, 에러 처리 |
+| 11 | JSON 처리 | [json-parsing.go](./json-parsing.go) | JSON 인코딩/디코딩 예제 |
+| 12 | Goroutine | [goroutine.go](./goroutine.go) | 기본 Goroutine 사용법 |
+| 13 | 채널 | [channels.go](./channels.go) | 채널을 활용한 동시성 제어 |
+| 14 | WaitGroup | [waitgroup.go](./waitgroup.go) | 여러 Goroutine 동기화 |
+| 15 | HTTP 서버 | [http-server.go](./http-server.go) | 기본 HTTP 서버 구현 |
+| 16 | 유닛 테스트 | [unit-test-example_test.go](./unit-test-example_test.go) | 기본 테스트 코드 작성 |
+| 17 | 벤치마크 테스트 | [benchmark_test.go](./benchmark_test.go) | 성능 테스트 예제 |
 
 ---
 
