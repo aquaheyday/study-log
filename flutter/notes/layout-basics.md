@@ -218,9 +218,9 @@ GridView.count(
 
 ## 🎯 정리
 
-- Container → 크기, 색상, 여백을 설정하는 기본 박스 위젯
-- Row / Column → 가로 및 세로 정렬을 위한 핵심 레이아웃 위젯  
-- Stack → 위젯을 겹쳐 배치 (Z축 활용)  
-- Expanded / Flexible → 공간을 자동으로 분배  
-- MediaQuery / LayoutBuilder → 반응형 UI 구현  
-- ListView / GridView → 리스트 및 그리드 레이아웃 구성  
+✔ Container → 크기, 색상, 여백을 설정하는 기본 박스 위젯
+✔ Row / Column → 가로 및 세로 정렬을 위한 핵심 레이아웃 위젯  
+✔ Stack → 위젯을 겹쳐 배치 (Z축 활용)  
+✔ Expanded / Flexible → 공간을 자동으로 분배  
+✔ MediaQuery / LayoutBuilder → 반응형 UI 구현  
+✔ ListView / GridView → 리스트 및 그리드 레이아웃 구성  
