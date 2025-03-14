@@ -1,21 +1,35 @@
-# Flutter 상태관리 기본 개념
+# 상태 관리 (State Management)
 
-Flutter에서는 **StatelessWidget**과 **StatefulWidget**을 사용하여 UI를 구성합니다.  
-상태(state)를 관리하는 방식에 따라 다양한 방법이 존재하며, 대표적으로 **setState, Provider, Riverpod, Bloc** 등을 사용할 수 있습니다.
+Flutter에서 **상태(State)** 는 **UI에 영향을 주는 데이터**를 의미합니다.  
+상태 관리는 **어떻게 데이터를 변경하고, 변경된 데이터를 UI에 반영할 것인지**를 결정하는 중요한 개념입니다.
 
 ---
 
 ## 1. 상태(State)란?
-Flutter에서 **상태**란 UI가 변경될 수 있는 데이터나 속성을 의미합니다.  
-예를 들어, **사용자의 입력, 버튼 클릭, API 응답** 등이 상태에 해당합니다.
 
-- **StatelessWidget**: 상태가 없는 위젯 (변하지 않는 UI)
-- **StatefulWidget**: 상태를 가질 수 있는 위젯 (변경 가능한 UI)
+Flutter에서 **상태(State)**는 **앱이 실행되는 동안 변경될 수 있는 데이터**입니다.
+
+✔ **예제 - 상태가 필요한 경우**  
+- 버튼을 클릭할 때 카운트 증가  
+- 사용자 입력을 저장하여 화면에 표시  
+- API 요청 후 데이터를 업데이트  
+
+✔ **상태(State) 변경 방식**  
+- **로컬 상태(Local State)** → 개별 위젯 내부에서 관리 (`setState()`)
+- **전역 상태(Global State)** → 여러 위젯에서 공유 (Provider, Riverpod, Bloc 등 사용)
 
 ---
 
-## 2. `setState`를 이용한 상태관리 (기본)
-가장 기본적인 상태관리 방법으로, `StatefulWidget`에서 **setState()**를 사용하여 상태를 변경합니다.
+## 2. StatefulWidget을 사용한 상태 관리 (setState)
+
+Flutter에서 가장 기본적인 상태 관리는 **StatefulWidget**과 `setState()`를 활용하는 방식입니다.
+
+### 2-1. StatefulWidget 구조
+
+2-1-1. **StatefulWidget 클래스** → 상태를 관리하는 `State`를 생성  
+2-1-2. **State 클래스** → UI를 빌드하고, `setState()`를 사용하여 UI 갱신  
+
+### 2-2. 예제: 카운터 증가 버튼
 
 ```dart
 import 'package:flutter/material.dart';
@@ -39,26 +53,26 @@ class CounterScreen extends StatefulWidget {
 }
 
 class _CounterScreenState extends State<CounterScreen> {
-  int _counter = 0;
+  int _count = 0; // 상태 변수
 
   void _incrementCounter() {
     setState(() {
-      _counter++;
+      _count++; // 상태 변경 -> UI 갱신
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('setState 예제')),
+      appBar: AppBar(title: Text("Counter App")),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Counter: $_counter', style: TextStyle(fontSize: 24)),
+            Text("Count: $_count", style: TextStyle(fontSize: 24)),
             ElevatedButton(
               onPressed: _incrementCounter,
-              child: Text('Increase'),
+              child: Text("Increment"),
             ),
           ],
         ),
@@ -67,51 +81,96 @@ class _CounterScreenState extends State<CounterScreen> {
   }
 }
 ```
-✅ **setState()**를 호출하면 `build()` 함수가 다시 실행되어 UI가 업데이트됩니다.  
-❌ 단점: **규모가 커지면 성능 저하 및 코드 복잡도 증가**
+
+### 2-3. `setState()`란?
+- `setState()`를 호출하면 `build()`가 다시 실행되어 UI가 갱신됨.
+- **StatefulWidget 내부에서만 사용 가능**.
+- **로컬 상태 관리**(Local State Management) 방식.
+
+📌 **주의점**  
+- `setState()`를 너무 많이 호출하면 성능이 저하될 수 있음.  
+- 위젯의 범위를 벗어난 상태(State)는 `setState()`로 관리할 수 없음.
 
 ---
 
-## 3. `InheritedWidget`을 이용한 상태관리
-위젯 트리에서 데이터를 공유할 때 사용하는 방법입니다.
+## 3. 여러 위젯에서 상태를 공유하려면? (전역 상태 관리)
+
+위의 `setState()` 방식은 **위젯 하나의 상태만 관리**할 수 있습니다.  
+하지만, **앱 전체에서 상태를 공유하려면** 전역 상태 관리 방법이 필요합니다.
+
+✔ **대표적인 전역 상태 관리 라이브러리**
+| 방법 | 특징 | 사용 예 |
+|------|------|------|
+| **InheritedWidget** | 기본 내장 방식, 적은 데이터 공유에 적합 | 앱 테마, 언어 설정 |
+| **Provider** | Flutter 공식 권장 방식, 간단한 상태 관리 | 로그인 상태, UI 업데이트 |
+| **Riverpod** | Provider의 개선 버전, 간단한 사용법 | API 데이터 관리 |
+| **Bloc (flutter_bloc)** | 이벤트 기반 상태 관리 (Redux와 유사) | 대규모 프로젝트 |
+| **GetX** | 간단한 코드, 성능 최적화 | 상태 및 네비게이션 관리 |
+
+---
+
+## 4. InheritedWidget (Flutter 기본 상태 관리)
+
+Flutter에서 기본적으로 제공하는 전역 상태 관리 방식입니다.  
+하지만 코드가 복잡하고 사용이 어렵기 때문에 `Provider` 사용을 추천합니다.
 
 ```dart
-class MyData extends InheritedWidget {
-  final int counter;
+class MyInheritedWidget extends InheritedWidget {
+  final int count;
 
-  MyData({required this.counter, required Widget child}) : super(child: child);
+  MyInheritedWidget({Key? key, required Widget child, required this.count}) 
+      : super(key: key, child: child);
 
-  static MyData? of(BuildContext context) {
-    return context.dependOnInheritedWidgetOfExactType<MyData>();
+  static MyInheritedWidget? of(BuildContext context) {
+    return context.dependOnInheritedWidgetOfExactType<MyInheritedWidget>();
   }
 
   @override
-  bool updateShouldNotify(MyData oldWidget) {
-    return oldWidget.counter != counter;
+  bool updateShouldNotify(MyInheritedWidget oldWidget) {
+    return count != oldWidget.count;
   }
 }
 ```
-✅ **setState보다 구조적인 데이터 공유 가능**  
-❌ **코드가 길고 복잡해질 수 있음**  
+📌 **복잡한 구조로 인해 실무에서는 거의 사용되지 않음** → `Provider` 또는 `Riverpod`을 사용 추천.
 
 ---
 
-## 4. `Provider`를 이용한 상태관리 (추천)
-Flutter에서 공식적으로 권장하는 상태관리 패턴입니다.
+## 5. Provider (Flutter 공식 권장 상태 관리)
 
-### 4.1 `provider` 패키지 설치
-```yaml
-dependencies:
-  flutter:
-    sdk: flutter
-  provider: ^6.0.0
+`Provider`는 Flutter에서 공식적으로 권장하는 상태 관리 라이브러리입니다.
+
+✔ **장점**
+- 코드가 간결하고 사용하기 쉬움.
+- `ChangeNotifier`를 사용하여 상태를 자동으로 감지하고 UI 업데이트.
+
+### 5-1. Provider 패키지 설치
+
+```sh
+flutter pub add provider
 ```
 
-### 4.2 `ChangeNotifier`와 `Consumer`를 사용한 상태관리
+### 5-2. Provider 상태 모델 생성 (ChangeNotifier 사용)
+
 ```dart
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+// 상태 관리 클래스
+class CounterProvider with ChangeNotifier {
+  int _count = 0;
+
+  int get count => _count;
+
+  void increment() {
+    _count++;
+    notifyListeners(); // 상태 변경 알림
+  }
+}
+```
+
+### 5-3. Provider 적용하기 (MyApp 수정)
+
+```dart
 void main() {
   runApp(
     ChangeNotifierProvider(
@@ -120,45 +179,26 @@ void main() {
     ),
   );
 }
+```
 
-class CounterProvider extends ChangeNotifier {
-  int _counter = 0;
+### 5-4. UI에서 상태 사용
 
-  int get counter => _counter;
-
-  void increment() {
-    _counter++;
-    notifyListeners();
-  }
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: CounterScreen(),
-    );
-  }
-}
-
+```dart
 class CounterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final counter = Provider.of<CounterProvider>(context);
+
     return Scaffold(
-      appBar: AppBar(title: Text('Provider 예제')),
+      appBar: AppBar(title: Text("Provider Example")),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'Counter: ${context.watch<CounterProvider>().counter}',
-              style: TextStyle(fontSize: 24),
-            ),
+            Text("Count: ${counter.count}", style: TextStyle(fontSize: 24)),
             ElevatedButton(
-              onPressed: () {
-                context.read<CounterProvider>().increment();
-              },
-              child: Text('Increase'),
+              onPressed: () => counter.increment(),
+              child: Text("Increment"),
             ),
           ],
         ),
@@ -167,151 +207,25 @@ class CounterScreen extends StatelessWidget {
   }
 }
 ```
-✅ **전역 상태 공유 가능**  
-✅ **UI가 효율적으로 업데이트됨**  
-❌ **초기 학습 필요**  
+
+✔ `Provider.of<CounterProvider>(context)`를 사용하여 상태를 가져오고 UI를 업데이트함.
 
 ---
 
-## 5. `Riverpod`를 이용한 상태관리 (더 간단한 Provider)
-### 5.1 `flutter_riverpod` 패키지 설치
-```yaml
-dependencies:
-  flutter:
-    sdk: flutter
-  flutter_riverpod: ^2.0.0
-```
+## 6. 기타 상태 관리 방법
 
-### 5.2 `Riverpod` 사용 예제
-```dart
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-final counterProvider = StateProvider<int>((ref) => 0);
-
-void main() {
-  runApp(ProviderScope(child: MyApp()));
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: CounterScreen(),
-    );
-  }
-}
-
-class CounterScreen extends ConsumerWidget {
-  @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final counter = ref.watch(counterProvider);
-
-    return Scaffold(
-      appBar: AppBar(title: Text('Riverpod 예제')),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Counter: $counter', style: TextStyle(fontSize: 24)),
-            ElevatedButton(
-              onPressed: () {
-                ref.read(counterProvider.notifier).state++;
-              },
-              child: Text('Increase'),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-```
-✅ **Provider보다 더 간단하고 강력한 상태관리 가능**  
-✅ **전역 상태 관리 용이**  
-❌ **초기 학습 필요**  
+| 방식 | 특징 |
+|------|------|
+| **Riverpod** | Provider의 개선 버전, 더 간결한 코드 |
+| **Bloc (flutter_bloc)** | Redux 패턴과 유사한 이벤트 기반 상태 관리 |
+| **GetX** | 코드가 간단하고 높은 성능 |
+| **Redux** | 대규모 프로젝트에 적합한 패턴 |
 
 ---
 
-## 6. `Bloc`을 이용한 상태관리 (대규모 프로젝트)
-**Bloc (Business Logic Component)** 패턴은 대규모 프로젝트에서 추천하는 상태관리 방식입니다.
+## 🎯 정리
 
-🔹 `flutter_bloc` 패키지 사용  
-🔹 이벤트(Event)와 상태(State)를 기반으로 동작  
-🔹 구조적인 코드 작성 가능  
-
-```yaml
-dependencies:
-  flutter_bloc: ^8.0.0
-```
-
-```dart
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-
-class CounterCubit extends Cubit<int> {
-  CounterCubit() : super(0);
-
-  void increment() => emit(state + 1);
-}
-
-void main() {
-  runApp(
-    BlocProvider(
-      create: (context) => CounterCubit(),
-      child: MyApp(),
-    ),
-  );
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: CounterScreen(),
-    );
-  }
-}
-
-class CounterScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Bloc 예제')),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            BlocBuilder<CounterCubit, int>(
-              builder: (context, count) {
-                return Text('Counter: $count', style: TextStyle(fontSize: 24));
-              },
-            ),
-            ElevatedButton(
-              onPressed: () {
-                context.read<CounterCubit>().increment();
-              },
-              child: Text('Increase'),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-```
-✅ **대규모 프로젝트에 적합**  
-✅ **명확한 데이터 흐름**  
-❌ **구현이 복잡함**  
-
----
-
-## 7. 결론
-| 상태관리 방식 | 특징 |
-|--------------|----------------------|
-| `setState` | 작은 앱에 적합 |
-| `InheritedWidget` | 데이터 공유 가능 |
-| `Provider` | 가장 많이 사용됨 |
-| `Riverpod` | Provider보다 간단 |
-| `Bloc` | 대규모 프로젝트에 적합 |
-
+- **Flutter의 상태(State)는 UI에 영향을 주는 데이터**  
+- **setState()** → 간단한 로컬 상태 관리 (StatefulWidget 사용)  
+- **Provider** → Flutter 공식 권장 전역 상태 관리 방식  
+- **Bloc, Riverpod, GetX** → 프로젝트 규모에 따라 선택 가능  
