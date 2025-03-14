@@ -24,14 +24,14 @@ Flutter는 **모바일(Android, iOS), 웹, 데스크톱(Windows, macOS, Linux), 
 
 ## 2. 프로젝트 설정
 
-### 📌 프로젝트 생성
+### 프로젝트 생성
 Flutter에서 멀티플랫폼 프로젝트를 생성하려면 다음 명령어를 사용합니다.
 
 ```sh
 flutter create my_app
 ```
 
-### 📌 멀티플랫폼 지원 활성화
+### 멀티플랫폼 지원 활성화
 Flutter는 기본적으로 Android와 iOS를 지원하지만, 웹과 데스크톱을 활성화해야 합니다.
 
 ```sh
@@ -65,7 +65,7 @@ flutter devices
 
 ## 4. 플랫폼별 UI 대응
 
-### 📌 `Platform.is`를 사용한 분기 처리 (`dart:io`)
+### `Platform.is`를 사용한 분기 처리 (`dart:io`)
 `dart:io` 패키지를 사용하여 플랫폼별 UI를 다르게 설정할 수 있습니다.
 
 ```dart
@@ -92,7 +92,7 @@ class PlatformText extends StatelessWidget {
 
 ---
 
-### 📌 `Theme.of(context).platform`을 활용한 플랫폼 감지
+### `Theme.of(context).platform`을 활용한 플랫폼 감지
 
 ```dart
 import 'package:flutter/material.dart';
@@ -116,14 +116,14 @@ class PlatformAwareButton extends StatelessWidget {
 
 ## 5. 패키지 호환성 확인
 
-### 📌 패키지별 멀티플랫폼 지원 여부
+### 패키지별 멀티플랫폼 지원 여부
 Flutter에서 사용할 패키지가 특정 플랫폼에서 지원되는지 확인해야 합니다.
 
 ```sh
 flutter pub outdated
 ```
 
-### 📌 웹과 호환되지 않는 패키지 예시
+### 웹과 호환되지 않는 패키지 예시
 
 | 패키지 | Android/iOS | Web | 대체 가능 패키지 |
 |--------|------------|-----|-----------------|
@@ -132,7 +132,7 @@ flutter pub outdated
 | `firebase_messaging` | ✅ | ✅ | 웹은 일부 기능 제한 |
 | `geolocator` | ✅ | ❌ | `location` |
 
-✔ `pub.dev`에서 패키지 설명을 확인하고 호환성을 체크하세요.  
+✔ `pub.dev`에서 패키지 설명을 확인하고 호환성을 체크.   
 
 ---
 
@@ -149,13 +149,13 @@ flutter pub outdated
 
 ---
 
-## 7. 네이티브 코드 연동 (`platform_channel`)
+## 7. `platform_channel` (네이티브 코드 연동)
 
 플랫폼별로 네이티브 기능을 추가해야 할 경우 `MethodChannel`을 사용할 수 있습니다.
 
-### 📌 예제: Android에서 네이티브 코드 실행
+### Android에서 네이티브 코드 실행 예제: 
 
-#### **Flutter 코드**
+#### Flutter 코드
 ```dart
 import 'package:flutter/services.dart';
 
@@ -166,7 +166,7 @@ Future<String> getNativeMessage() async {
 }
 ```
 
-#### **Android 네이티브 코드 (Kotlin)**
+#### Android 네이티브 코드 (Kotlin)
 ```kotlin
 class MainActivity: FlutterActivity() {
     private val CHANNEL = "com.example/native"
@@ -188,33 +188,33 @@ class MainActivity: FlutterActivity() {
 
 ## 8. 플랫폼별 빌드 및 배포
 
-### 📌 Android 빌드
+### Android 빌드
 ```sh
 flutter build apk
 flutter build appbundle
 ```
 
-### 📌 iOS 빌드
+### iOS 빌드
 ```sh
 flutter build ios
 ```
 
-### 📌 웹 빌드
+### 웹 빌드
 ```sh
 flutter build web
 ```
 
-### 📌 Windows 빌드
+### Windows 빌드
 ```sh
 flutter build windows
 ```
 
-### 📌 macOS 빌드
+### macOS 빌드
 ```sh
 flutter build macos
 ```
 
-### 📌 Linux 빌드
+### Linux 빌드
 ```sh
 flutter build linux
 ```
