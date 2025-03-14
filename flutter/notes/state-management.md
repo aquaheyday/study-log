@@ -84,7 +84,7 @@ class _CounterScreenState extends State<CounterScreen> {
 ### 2-3. `setState()`란?
 로컬 상태 관리(Local State Management) 방식이며 `setState()`를 호출하면 `build()`가 다시 실행되어 UI가 갱신되며 StatefulWidget 내부에서만 사용 가능합니다.
 
-✔ **주의점**  
+⚠️ **주의점**  
 - `setState()`를 너무 많이 호출하면 성능이 저하될 수 있음.  
 - 위젯의 범위를 벗어난 상태(State)는 `setState()`로 관리할 수 없음.
 
