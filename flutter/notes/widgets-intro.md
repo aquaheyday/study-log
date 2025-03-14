@@ -48,7 +48,7 @@ Flutter 위젯은 크게 두 가지로 나뉩니다.
 
 ---
 
-## 3. Stateless 위젯 (StatelessWidget)
+## 3. `StatelessWidget`
 
 **StatelessWidget**은 상태가 변경되지 않는 **정적인 UI**를 구성할 때 사용됩니다.
 
@@ -82,11 +82,11 @@ class MyTextWidget extends StatelessWidget {
 }
 ```
 
-✔ `StatelessWidget`은 `build` 메서드에서 UI를 반환하며, 상태 변경이 필요하지 않음.
+✔ `StatelessWidget` → `build` 메서드에서 UI를 반환하며, 상태 변경이 필요하지 않음.
 
 ---
 
-## 4. Stateful 위젯 (StatefulWidget)
+## 4. `StatefulWidget`
 
 **StatefulWidget**은 상태(State)를 가지며, 변경될 수 있는 **동적인 UI**를 구성할 때 사용됩니다.
 
@@ -141,13 +141,13 @@ class _CounterWidgetState extends State<CounterWidget> {
 }
 ```
 
-✔ `setState()`를 사용하여 상태를 변경하면 **UI가 다시 렌더링**됨.
+✔ `setState()` → 상태를 변경하면 **UI가 다시 렌더링**됨.
 
 ---
 
 ## 5. 기본 위젯 정리
 
-### 5-1. 레이아웃 관련 위젯
+### 레이아웃 관련 위젯
 | 위젯 | 설명 |
 |------|------|
 | **Container** | 크기, 색상, 여백을 지정하는 박스 |
@@ -167,7 +167,7 @@ Container(
 
 ---
 
-### 5-2. 입력 위젯
+### 입력 위젯
 | 위젯 | 설명 |
 |------|------|
 | **TextField** | 텍스트 입력 필드 |
@@ -184,7 +184,7 @@ TextField(
 
 ---
 
-### 5-3. 버튼 위젯
+### 버튼 위젯
 | 위젯 | 설명 |
 |------|------|
 | **ElevatedButton** | 기본 버튼 |
@@ -203,7 +203,7 @@ ElevatedButton(
 
 ---
 
-### 5-4. 목록 & 스크롤 위젯
+### 목록 & 스크롤 위젯
 | 위젯 | 설명 |
 |------|------|
 | **ListView** | 스크롤 가능한 리스트 |
@@ -224,7 +224,7 @@ ListView(
 
 ## 6. 위젯 트리와 BuildContext
 
-### 6-1. 위젯 트리란?
+### 위젯 트리란?
 - Flutter는 **위젯 트리(WIDGET TREE)** 구조로 UI를 구성합니다.
 - 모든 위젯은 **부모-자식 관계**를 가지며 계층적으로 정리됩니다.
 
@@ -244,9 +244,9 @@ MaterialApp
 
 ## 🎯 정리
 
-✔ Flutter의 UI는 위젯으로 구성되며, 모든 요소가 위젯
-✔ 위젯은 Stateless(정적)과 Stateful(동적)로 나뉨
-✔ Flutter UI는 "위젯 트리" 형태로 구성됨
-✔ 레이아웃, 버튼, 리스트 등의 다양한 위젯 제공
-✔ StatefulWidget에서는 `setState()`를 사용하여 UI 갱신
+✔ Flutter의 UI는 위젯으로 구성되며, 모든 요소가 위젯  
+✔ 위젯은 Stateless(정적)과 Stateful(동적)로 나뉨  
+✔ Flutter UI는 "위젯 트리" 형태로 구성됨  
+✔ 레이아웃, 버튼, 리스트 등의 다양한 위젯 제공  
+✔ StatefulWidget에서는 `setState()`를 사용하여 UI 갱신  
 
