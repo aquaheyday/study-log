@@ -14,7 +14,7 @@
 | 02 | 프로젝트 설정 | [setup-flutter.md](./setup-flutter.md) | Flutter SDK 설치, 프로젝트 생성 |  
 | 03 | Dart 기본 문법 | [dart-basics.md](./dart-basics.md) | 변수, 함수, 클래스, 비동기 프로그래밍 |  
 | 04 | 위젯 개요 | [widgets-intro.md](./widgets-intro.md) | Stateless vs Stateful 위젯 개념 |  
-| 05 | 상태 관리 (State) | [state-management.md](./state-management.md) | setState, InheritedWidget 기초 |  
+| 05 | 상태 관리 | [state-management.md](./state-management.md) | setState, InheritedWidget 기초 |  
 
 ### 🔲 UI 구성 및 위젯  
 | 번호 | 주제 | 파일명 | 설명 |  
