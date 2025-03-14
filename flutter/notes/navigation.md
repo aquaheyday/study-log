@@ -15,7 +15,7 @@ Flutter의 네비게이션 시스템은 `Navigator`를 기반으로 하며, **�
 
 ## 2. 기본 네비게이션 (`Navigator` 사용)
 
-### 2-1. `Navigator.push()` (새 페이지로 이동)
+### `Navigator.push()` (새 페이지로 이동)
 
 ```dart
 Navigator.push(
@@ -29,7 +29,7 @@ Navigator.push(
 
 ---
 
-### 2-2. `Navigator.pop()` (이전 페이지로 이동)
+### `Navigator.pop()` (이전 페이지로 이동)
 
 ```dart
 Navigator.pop(context);
@@ -43,7 +43,7 @@ Navigator.pop(context);
 
 Flutter는 **경로(URL) 기반의 네비게이션**을 지원하며, **네임드 라우트(named routes)**를 사용할 수 있습니다.
 
-### 3-1. 네임드 라우트 설정 (`MaterialApp`에 등록)
+### 네임드 라우트 설정 (`MaterialApp`에 등록)
 
 ```dart
 void main() {
@@ -57,13 +57,13 @@ void main() {
 }
 ```
 
-### 3-2. `Navigator.pushNamed()`로 페이지 이동
+### `Navigator.pushNamed()`로 페이지 이동
 
 ```dart
 Navigator.pushNamed(context, '/second');
 ```
 
-### 3-3. `Navigator.pop()`으로 뒤로가기
+### `Navigator.pop()`으로 뒤로가기
 
 ```dart
 Navigator.pop(context);
@@ -77,7 +77,7 @@ Navigator.pop(context);
 
 ## 4. 데이터 전달하기
 
-### 4-1. `push()`로 데이터 전달
+### `push()`로 데이터 전달
 
 ```dart
 Navigator.push(
@@ -107,7 +107,7 @@ class SecondPage extends StatelessWidget {
 
 ---
 
-### 4-2. `pushNamed()`로 데이터 전달 (arguments 사용)
+### `pushNamed()`로 데이터 전달 (arguments 사용)
 ```dart
 Navigator.pushNamed(
   context,
