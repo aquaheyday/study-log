@@ -5,7 +5,7 @@
 **Dart**는 Google에서 개발한 프로그래밍 언어로, **Flutter의 공식 언어**입니다.  
 Dart는 **객체 지향 언어**이며, **정적 및 동적 타입 지정이 가능**하고, **JIT(Just-In-Time) 및 AOT(Ahead-Of-Time) 컴파일**을 지원하여 빠른 실행 속도를 제공합니다.
 
-### Dart의 특징
+✔ Dart의 특징
 - **C 계열 문법**을 기반으로 한 쉽고 직관적인 문법
 - **JIT & AOT 컴파일**을 활용한 빠른 실행 및 성능 최적화
 - **Garbage Collection 지원**으로 메모리 관리 자동화
@@ -38,7 +38,7 @@ void main() {
 }
 ```
 
-📌 **차이점**  
+✔ **차이점**  
 - `final`: 한 번 할당하면 변경할 수 없는 **런타임 상수**  
 - `const`: **컴파일 타임 상수**, `final`보다 더 엄격  
 - `dynamic`: 런타임에 타입이 결정되며 변경 가능  
@@ -230,9 +230,9 @@ void main() async {
 ---
 
 ## 🎯 정리
-- Dart는 객체 지향 및 비동기 프로그래밍을 지원하는 언어
-- 변수 선언 시 `var`, `final`, `const`, `dynamic` 사용
-- 리스트, 맵, 세트 등의 컬렉션 타입 제공
-- 제어문 (if, switch, for, while) 활용 가능
-- 비동기 프로그래밍을 위해 `Future`와 `async/await` 지원
+✔ Dart는 객체 지향 및 비동기 프로그래밍을 지원하는 언어
+✔ 변수 선언 시 `var`, `final`, `const`, `dynamic` 사용
+✔ 리스트, 맵, 세트 등의 컬렉션 타입 제공
+✔ 제어문 (if, switch, for, while) 활용 가능
+✔ 비동기 프로그래밍을 위해 `Future`와 `async/await` 지원
 
