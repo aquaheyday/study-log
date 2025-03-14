@@ -16,7 +16,7 @@ Dart는 **객체 지향 언어**이며, **정적 및 동적 타입 지정이 가
 
 ## 2. 기본 문법
 
-### 2-1. 변수 선언
+### 변수 선언
 
 Dart에서는 `var`, `final`, `const`, `dynamic` 키워드를 사용하여 변수를 선언할 수 있습니다.
 
@@ -45,7 +45,7 @@ void main() {
 
 ---
 
-### 2-2. 데이터 타입
+### 데이터 타입
 
 | 타입 | 설명 | 예제 |
 |---|---|---|
@@ -57,6 +57,10 @@ void main() {
 | **Set** | 중복 없는 집합 | `Set<String> fruits = {"apple", "banana"};` |
 | **Map** | 키-값 쌍 | `Map<String, int> ages = {"Alice": 25, "Bob": 30};` |
 | **dynamic** | 동적 타입 | `dynamic value = "Hello"; value = 42;` |
+
+---
+
+### 예제: 데이터 타입
 
 ```dart
 void main() {
@@ -79,7 +83,7 @@ void main() {
 
 ---
 
-### 2-3. 연산자
+### 연산자
 
 ```dart
 void main() {
@@ -113,7 +117,7 @@ void main() {
 
 ## 3. 제어문
 
-### 3-1. 조건문 (if-else, switch-case)
+### 조건문 (if-else, switch-case)
 ```dart
 void main() {
   int score = 85;
@@ -143,7 +147,7 @@ void main() {
 
 ---
 
-### 3-2. 반복문 (for, while, do-while)
+### 반복문 (for, while, do-while)
 ```dart
 void main() {
   // for 문
@@ -171,7 +175,7 @@ void main() {
 
 ## 4. 함수
 
-### 4-1. 기본 함수 선언
+### 기본 함수 선언
 ```dart
 void greet(String name) {
   print("Hello, $name!");
@@ -188,7 +192,7 @@ void main() {
 }
 ```
 
-### 4-2. 화살표 함수 (Lambda)
+### `Lambda` (화살표 함수)
 ```dart
 int multiply(int x, int y) => x * y;
 
@@ -197,7 +201,7 @@ void main() {
 }
 ```
 
-### 4-3. 선택적 매개변수
+### 선택적 매개변수
 ```dart
 void printInfo(String name, {int? age}) {
   print("Name: $name, Age: ${age ?? 'Unknown'}");
@@ -211,9 +215,9 @@ void main() {
 
 ---
 
-## 5. 비동기 프로그래밍 (Async/Await, Future)
+## 5. 비동기 프로그래밍 (`Async/Await`, `Future`)
 
-### 5-1. Future (비동기 작업)
+### `Future` (비동기 작업)
 ```dart
 Future<String> fetchData() async {
   await Future.delayed(Duration(seconds: 2));  // 2초 대기
