@@ -1,4 +1,4 @@
-# 위젯 개요 (Flutter Widgets)
+# 📌 위젯 개요 (Flutter Widgets)
 
 Flutter에서 **위젯(Widget)** 은 UI를 구성하는 기본 요소입니다.  
 Flutter 앱의 모든 것은 **위젯으로 이루어져 있으며, 위젯을 조합하여 화면을 구성**합니다.
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
   }
 }
 ```
-📌 `MaterialApp`, `Scaffold`, `AppBar`, `Text` 등 모든 요소가 위젯!
+✔ `MaterialApp`, `Scaffold`, `AppBar`, `Text` 등 모든 요소가 위젯!
 
 ---
 
@@ -141,7 +141,7 @@ class _CounterWidgetState extends State<CounterWidget> {
 }
 ```
 
-📌 `setState()`를 사용하여 상태를 변경하면 **UI가 다시 렌더링**됨.
+✔ `setState()`를 사용하여 상태를 변경하면 **UI가 다시 렌더링**됨.
 
 ---
 
@@ -244,9 +244,9 @@ MaterialApp
 
 ## 🎯 정리
 
-- **Flutter의 UI는 위젯으로 구성되며, 모든 요소가 위젯**  
-- **위젯은 Stateless(정적)과 Stateful(동적)로 나뉨**  
-- **Flutter UI는 "위젯 트리" 형태로 구성됨**  
-- **레이아웃, 버튼, 리스트 등의 다양한 위젯 제공**  
-- **StatefulWidget에서는 `setState()`를 사용하여 UI 갱신**
+- Flutter의 UI는 위젯으로 구성되며, 모든 요소가 위젯
+- 위젯은 Stateless(정적)과 Stateful(동적)로 나뉨
+- Flutter UI는 "위젯 트리" 형태로 구성됨
+- 레이아웃, 버튼, 리스트 등의 다양한 위젯 제공
+- StatefulWidget에서는 `setState()`를 사용하여 UI 갱신
 
