@@ -38,14 +38,6 @@
 - examples: 독립 실행 가능한 기능별 예제 (최소 코드 구성)
 - projects: 실제 구조를 갖춘 작은 프로젝트 (CRA, Vite 등 활용 가능)
 - troubleshooting: 삽질 로그 및 해결 방법
-- templates: 컴포넌트, 페이지 생성할 때 빠르게 쓸 수 있는 템플릿
-
----
-
-## 📚 참고 자료
-- [React 공식 문서](https://react.dev/)
-- [Awesome React](https://github.com/enaqx/awesome-react)
-- [React Patterns](https://reactpatterns.com/)
 
 ---
 
