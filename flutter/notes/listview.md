@@ -23,7 +23,7 @@ Flutter에서 `ListView`는 **스크롤 가능한 목록을 생성하는 가장 
 
 ## 2. `ListView` 기본 사용법
 
-### 2-1. 기본 `ListView`
+### `ListView` (기본)
 ```dart
 ListView(
   children: [
@@ -38,7 +38,7 @@ ListView(
 
 ---
 
-### 2-2. `ListView.builder` (동적 리스트)
+### `ListView.builder` (동적 리스트)
 - 데이터가 많거나 **반복되는 UI**를 효율적으로 만들 때 사용.
 - **성능이 좋고, 필요할 때만 항목을 렌더링**함.
 
@@ -60,7 +60,7 @@ ListView.builder(
 
 ---
 
-### 2-3. `ListView.separated` (구분선 있는 리스트)
+### `ListView.separated` (구분선 있는 리스트)
 - 각 아이템 사이에 **구분선(divider)** 추가.
 
 ```dart
@@ -81,7 +81,7 @@ ListView.separated(
 
 ## 3. 리스트 아이템 꾸미기
 
-### 3-1. `ListTile`을 사용한 리스트 아이템
+### `ListTile`을 사용한 리스트 아이템
 ```dart
 ListTile(
   leading: CircleAvatar(
@@ -101,7 +101,7 @@ ListTile(
 
 ---
 
-### 3-2. `Card`를 활용한 리스트 아이템
+### `Card`를 활용한 리스트 아이템
 ```dart
 Card(
   elevation: 4, // 그림자 효과
@@ -122,7 +122,7 @@ Card(
 
 ## 4. 스크롤 가능한 레이아웃 만들기
 
-### 4-1. `SingleChildScrollView` (스크롤 가능 영역)
+### `SingleChildScrollView` (스크롤 가능 영역)
 - 일반적인 위젯을 **스크롤 가능하게 만들 때** 사용.
 
 ```dart
@@ -144,7 +144,7 @@ SingleChildScrollView(
 
 ---
 
-### 4-2. `GridView` (그리드 형태 리스트)
+### `GridView` (그리드 형태 리스트)
 - `ListView`와 유사하지만, **격자(그리드) 형태로 배치**할 때 사용.
 
 ```dart
@@ -165,7 +165,7 @@ GridView.count(
 
 ---
 
-### 4-3. `GridView.builder` (동적 생성)
+### `GridView.builder` (동적 생성)
 - 많은 데이터를 효율적으로 관리.
 
 ```dart
@@ -193,7 +193,7 @@ GridView.builder(
 
 ## 5. 스크롤 컨트롤 (Custom ScrollView)
 
-### 5-1. `CustomScrollView + SliverList`
+### `CustomScrollView + SliverList`
 - 더 **세밀한 스크롤 컨트롤** 가능.
 
 ```dart
