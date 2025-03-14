@@ -1,4 +1,4 @@
-# 📌 Flutter Riverpod (상태 관리)
+# 🔄 Flutter Riverpod
 
 **Riverpod**은 Flutter에서 강력한 **상태 관리(State Management) 라이브러리**입니다.  
 **Provider의 단점을 보완한 업그레이드 버전**으로, 더 안전하고 간결한 코드 작성을 지원합니다.
