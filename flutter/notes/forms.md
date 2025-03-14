@@ -1,277 +1,265 @@
-# 📌 Flutter 폼과 입력 처리
+# 🔲 폼과 입력 필드
 
-Flutter에서 사용자의 입력을 처리하기 위해 **TextField**, **TextFormField**, **폼 유효성 검사**, **Focus**, **키보드 제어** 등을 사용할 수 있습니다.
+Flutter에서 **폼(Form)과 입력 필드(Input Fields)** 는 **사용자의 입력을 처리하는 핵심 요소**입니다.  
+사용자가 텍스트를 입력하거나, 버튼을 눌러 데이터를 제출하는 기능을 구현할 수 있습니다.
 
 ---
 
-## 1. `TextField` 기본 사용법
-`TextField`는 기본적인 입력 필드입니다.
+## 1. 폼(Form)이란?
+
+- `Form` 위젯을 사용하여 여러 개의 입력 필드를 그룹화할 수 있습니다.
+- `TextFormField`를 사용하면 **입력값 검증(Validation)** 이 가능합니다.
+- `GlobalKey<FormState>`를 활용하여 **폼의 상태를 관리**할 수 있습니다.
+
+---
+
+## 2. 기본 입력 필드 (TextField)
+
+Flutter에서 가장 기본적인 입력 필드는 `TextField`입니다.
 
 ```dart
 TextField(
   decoration: InputDecoration(
-    labelText: '이름 입력',
-    border: OutlineInputBorder(),
+    labelText: "이름",
+    hintText: "이름을 입력하세요",
+    border: OutlineInputBorder(), // 테두리 추가
   ),
 )
 ```
 
-✔ `labelText` : 필드 라벨 설정  
-✔ `border: OutlineInputBorder()` : 입력 필드에 테두리 추가  
+✔ **TextField 주요 속성**
+| 속성 | 설명 |
+|------|------|
+| `controller` | 입력된 값을 제어 |
+| `decoration` | 입력 필드 디자인 변경 |
+| `keyboardType` | 숫자 키패드 등 입력 방식 지정 |
+| `obscureText` | 비밀번호 입력 (●●●) |
+| `maxLength` | 최대 입력 글자 수 제한 |
 
 ---
 
-## 2. `TextEditingController`를 활용한 입력값 가져오기
-사용자가 입력한 값을 가져오려면 **TextEditingController**를 사용합니다.
+## 3. `TextEditingController`를 활용한 입력값 가져오기
+
+`TextEditingController`를 사용하면 입력된 값을 가져올 수 있습니다.
 
 ```dart
-import 'package:flutter/material.dart';
+final TextEditingController _controller = TextEditingController();
 
-void main() {
-  runApp(MyApp());
+void _printValue() {
+  print("입력한 값: ${_controller.text}");
 }
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: InputScreen(),
-    );
-  }
-}
+TextField(
+  controller: _controller,
+  decoration: InputDecoration(labelText: "이름"),
+);
 
-class InputScreen extends StatefulWidget {
-  @override
-  _InputScreenState createState() => _InputScreenState();
-}
-
-class _InputScreenState extends State<InputScreen> {
-  final TextEditingController _controller = TextEditingController();
-
-  void _printInput() {
-    print("입력한 값: ${_controller.text}");
-  }
-
-  @override
-  void dispose() {
-    _controller.dispose(); // 메모리 누수 방지를 위해 dispose 필요
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('TextField 입력 처리')),
-      body: Padding(
-        padding: EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            TextField(
-              controller: _controller,
-              decoration: InputDecoration(labelText: '이름 입력'),
-            ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: _printInput,
-              child: Text('출력하기'),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
+ElevatedButton(
+  onPressed: _printValue,
+  child: Text("출력"),
+);
 ```
 
-✔ `TextEditingController` 를 사용하여 입력값 가져오기  
-✔ 입력값 사용 후 `dispose()`를 호출하여 메모리 누수 방지
+✔ `_controller.text` 를 사용하면 입력값을 가져올 수 있음.
 
 ---
 
-## 3. `TextFormField`와 폼(Form) 활용
+## 4. 폼 (`Form`)과 입력값 검증 (`TextFormField`)
 
-`TextFormField`는 `TextField`와 비슷하지만 **폼(Form)과 함께 사용하여 유효성 검사를 쉽게 처리**할 수 있습니다.
+`TextFormField`는 `Form` 위젯과 함께 사용하여 **입력 검증(Validation)**이 가능합니다.
 
 ```dart
-import 'package:flutter/material.dart';
+final _formKey = GlobalKey<FormState>();
 
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: FormScreen(),
-    );
-  }
-}
-
-class FormScreen extends StatefulWidget {
-  @override
-  _FormScreenState createState() => _FormScreenState();
-}
-
-class _FormScreenState extends State<FormScreen> {
-  final _formKey = GlobalKey<FormState>();
-  final TextEditingController _emailController = TextEditingController();
-
-  void _submitForm() {
-    if (_formKey.currentState!.validate()) {
-      print("유효한 입력: ${_emailController.text}");
-    }
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('폼 입력 및 유효성 검사')),
-      body: Padding(
-        padding: EdgeInsets.all(16.0),
-        child: Form(
-          key: _formKey,
-          child: Column(
-            children: [
-              TextFormField(
-                controller: _emailController,
-                decoration: InputDecoration(labelText: '이메일 입력'),
-                validator: (value) {
-                  if (value == null || value.isEmpty) {
-                    return '이메일을 입력하세요.';
-                  } else if (!RegExp(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$').hasMatch(value)) {
-                    return '유효한 이메일 주소를 입력하세요.';
-                  }
-                  return null;
-                },
-              ),
-              SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: _submitForm,
-                child: Text('제출'),
-              ),
-            ],
-          ),
-        ),
+Form(
+  key: _formKey,
+  child: Column(
+    children: [
+      TextFormField(
+        decoration: InputDecoration(labelText: "이메일"),
+        validator: (value) {
+          if (value == null || value.isEmpty) {
+            return "이메일을 입력하세요.";
+          }
+          return null;
+        },
       ),
-    );
-  }
-}
+      ElevatedButton(
+        onPressed: () {
+          if (_formKey.currentState!.validate()) {
+            print("폼이 유효합니다.");
+          }
+        },
+        child: Text("제출"),
+      ),
+    ],
+  ),
+)
 ```
 
-✔ `Form` 과 `GlobalKey<FormState>` 를 사용하여 유효성 검사 가능  
-✔ `validator` 속성을 사용하여 입력값 검증  
-✔ 버튼 클릭 시 `validate()` 실행하여 입력값 확인
+✔ **폼 검증(Validation)**
+- `validator` → 입력값을 확인하고, 오류 메시지를 반환할 수 있음.
+- `_formKey.currentState!.validate()` → 폼이 유효한지 검사.
 
 ---
 
-## 4. 포커스(Focus)와 키보드 숨기기
+## 5. 다양한 입력 필드 종류
 
-입력 필드 간 포커스를 이동하거나, 입력 후 키보드를 숨기려면 **FocusNode**를 사용합니다.
-
+### 5-1. 숫자 입력 (`keyboardType`)
 ```dart
-class FocusExample extends StatefulWidget {
-  @override
-  _FocusExampleState createState() => _FocusExampleState();
-}
-
-class _FocusExampleState extends State<FocusExample> {
-  final FocusNode _focusNode1 = FocusNode();
-  final FocusNode _focusNode2 = FocusNode();
-
-  void _changeFocus() {
-    FocusScope.of(context).requestFocus(_focusNode2);
-  }
-
-  void _hideKeyboard() {
-    FocusScope.of(context).unfocus(); // 키보드 숨기기
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('포커스 및 키보드 제어')),
-      body: Padding(
-        padding: EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            TextField(
-              focusNode: _focusNode1,
-              decoration: InputDecoration(labelText: '첫 번째 필드'),
-            ),
-            SizedBox(height: 10),
-            TextField(
-              focusNode: _focusNode2,
-              decoration: InputDecoration(labelText: '두 번째 필드'),
-            ),
-            SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: _changeFocus,
-              child: Text('다음 필드로 이동'),
-            ),
-            ElevatedButton(
-              onPressed: _hideKeyboard,
-              child: Text('키보드 숨기기'),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
+TextField(
+  keyboardType: TextInputType.number,
+  decoration: InputDecoration(labelText: "나이"),
+)
 ```
 
-✔ `FocusNode` 를 사용하여 특정 입력 필드에 포커스 지정 가능  
-✔ `FocusScope.of(context).requestFocus(focusNode)` 를 사용하여 포커스 이동  
-✔ `FocusScope.of(context).unfocus()` 로 키보드 숨기기 가능  
-
----
-
-## 5. 비밀번호 입력 필드 (`obscureText`)
-비밀번호 입력을 위해 `obscureText: true`를 설정할 수 있습니다.
-
+### 5-2. 비밀번호 입력 (`obscureText`)
 ```dart
 TextField(
   obscureText: true,
-  decoration: InputDecoration(labelText: '비밀번호 입력'),
+  decoration: InputDecoration(labelText: "비밀번호"),
 )
 ```
 
-✔`obscureText: true` 를 사용하여 입력한 문자 숨김 처리  
+### 5-3. 다중 줄 입력 (`maxLines`)
+```dart
+TextField(
+  maxLines: 3, // 여러 줄 입력 가능
+  decoration: InputDecoration(labelText: "설명"),
+)
+```
 
 ---
 
-## 6. 자동완성 및 키보드 타입 설정
+## 6. 입력 필드 디자인 커스텀
 
-### 6.1 키보드 타입 변경
+입력 필드를 스타일링하려면 `InputDecoration`을 활용합니다.
+
 ```dart
 TextField(
-  keyboardType: TextInputType.emailAddress, // 이메일 입력에 적합한 키보드
-  decoration: InputDecoration(labelText: '이메일 입력'),
+  decoration: InputDecoration(
+    labelText: "이름",
+    hintText: "이름을 입력하세요",
+    prefixIcon: Icon(Icons.person),  // 왼쪽 아이콘 추가
+    suffixIcon: Icon(Icons.clear),   // 오른쪽 아이콘 추가
+    border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)), // 둥근 테두리
+    filled: true, 
+    fillColor: Colors.grey[200], // 배경색
+  ),
 )
 ```
 
-### 6.2 자동완성 및 힌트 제공
+✔ **주요 속성**
+| 속성 | 설명 |
+|------|------|
+| `labelText` | 필드 위에 표시되는 라벨 |
+| `hintText` | 입력 전 힌트 텍스트 |
+| `prefixIcon` | 왼쪽 아이콘 추가 |
+| `suffixIcon` | 오른쪽 아이콘 추가 |
+| `border` | 테두리 스타일 변경 |
+| `filled` & `fillColor` | 배경색 지정 |
+
+---
+
+## 7. 체크박스, 라디오 버튼, 스위치
+
+### 7-1. 체크박스 (`Checkbox`)
 ```dart
-TextField(
-  autofillHints: [AutofillHints.email], // 자동완성 기능 제공
-  decoration: InputDecoration(labelText: '이메일 입력'),
+bool _isChecked = false;
+
+Checkbox(
+  value: _isChecked,
+  onChanged: (bool? value) {
+    setState(() {
+      _isChecked = value!;
+    });
+  },
 )
 ```
 
-✔ `keyboardType` 을 설정하여 숫자, 이메일, 전화번호 입력에 최적화 가능  
-✔ `autofillHints` 를 사용하여 자동완성 기능 활용 가능  
+---
+
+### 7-2. 라디오 버튼 (`Radio`)
+```dart
+String _selectedGender = "남성";
+
+Column(
+  children: [
+    RadioListTile(
+      title: Text("남성"),
+      value: "남성",
+      groupValue: _selectedGender,
+      onChanged: (value) {
+        setState(() {
+          _selectedGender = value.toString();
+        });
+      },
+    ),
+    RadioListTile(
+      title: Text("여성"),
+      value: "여성",
+      groupValue: _selectedGender,
+      onChanged: (value) {
+        setState(() {
+          _selectedGender = value.toString();
+        });
+      },
+    ),
+  ],
+)
+```
+
+✔ `groupValue` → 하나의 선택지만 가능하도록 설정.
+
+---
+
+### 7-3. 스위치 (`Switch`)
+```dart
+bool _isSwitched = false;
+
+Switch(
+  value: _isSwitched,
+  onChanged: (value) {
+    setState(() {
+      _isSwitched = value;
+    });
+  },
+)
+```
+
+---
+
+## 8. 드롭다운 버튼 (DropdownButton)
+
+사용자가 목록에서 하나를 선택할 수 있는 드롭다운 메뉴입니다.
+
+```dart
+String _selectedItem = "옵션 1";
+
+DropdownButton<String>(
+  value: _selectedItem,
+  onChanged: (String? newValue) {
+    setState(() {
+      _selectedItem = newValue!;
+    });
+  },
+  items: ["옵션 1", "옵션 2", "옵션 3"]
+      .map<DropdownMenuItem<String>>((String value) {
+    return DropdownMenuItem<String>(
+      value: value,
+      child: Text(value),
+    );
+  }).toList(),
+)
+```
 
 ---
 
 ## 🎯 정리
 
-| 기능 | 위젯 / 메서드 |
-|------|-------------|
-| 기본 입력 필드 | `TextField` |
-| 입력값 가져오기 | `TextEditingController.text` |
-| 폼 유효성 검사 | `TextFormField` + `Form` |
-| 키보드 숨기기 | `FocusScope.of(context).unfocus()` |
-| 비밀번호 입력 | `obscureText: true` |
-| 자동완성 | `autofillHints: [AutofillHints.email]` |
-
+✔ `TextField` → 기본 입력 필드  
+✔ `TextEditingController` → 입력값을 가져올 때 사용  
+✔ `Form` & `TextFormField` → 입력값 검증 (Validation) 가능  
+✔ 다양한 입력 필드 → 숫자 입력, 비밀번호 입력, 다중 줄 입력  
+✔ 체크박스, 라디오 버튼, 스위치 → 다양한 사용자 입력 옵션  
+✔ 드롭다운 버튼 → 사용자가 목록에서 선택 가능  
