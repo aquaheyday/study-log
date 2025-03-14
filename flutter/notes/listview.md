@@ -8,12 +8,12 @@ Flutter에서 **리스트(ListView)와 스크롤(ScrollView)** 을 활용하면 
 
 Flutter에서 `ListView`는 **스크롤 가능한 목록을 생성하는 가장 기본적인 위젯**입니다.
 
-리스트를 사용하는 경우
+✔ 리스트를 사용하는 경우
 - 채팅 메시지 목록
 - 쇼핑몰 상품 목록
 - 뉴스 피드, 게시판
 
-ListView의 주요 기능
+✔ ListView의 주요 기능
 - 자동 스크롤 지원 (수직, 수평 방향)
 - 리스트 최적화 (`ListView.builder`)
 - 고정된 리스트 (`ListView`) & 동적 리스트 (`ListView.builder`) 지원
