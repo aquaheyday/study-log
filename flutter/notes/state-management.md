@@ -24,11 +24,20 @@ Flutter에서 **상태(State)** 는 **앱이 실행되는 동안 변경될 수 �
 
 Flutter에서 가장 기본적인 상태 관리는 **StatefulWidget**과 `setState()`를 활용하는 방식입니다.
 
-### 2-1. StatefulWidget 구조
-✔ StatefulWidget 클래스 → 상태를 관리하는 `State`를 생성  
-✔ State 클래스 → UI를 빌드하고, `setState()`를 사용하여 UI 갱신  
+### `StatefulWidget` 구조
+✔ `StatefulWidget` 클래스 → 상태를 관리하는 `State`를 생성  
+✔ `State` 클래스 → UI를 빌드하고, `setState()`를 사용하여 UI 갱신  
 
-### 2-2. 예제: 카운터 증가 버튼
+### `setState()`란?
+로컬 상태 관리(Local State Management) 방식이며 `setState()`를 호출하면 `build()`가 다시 실행되어 UI가 갱신되며 StatefulWidget 내부에서만 사용 가능합니다.
+
+⚠️ **주의점**  
+- `setState()`를 너무 많이 호출하면 성능이 저하될 수 있음.  
+- 위젯의 범위를 벗어난 상태(State)는 `setState()`로 관리할 수 없음.
+
+---
+
+### 예제: 카운터 증가 버튼 
 
 ```dart
 import 'package:flutter/material.dart';
@@ -81,13 +90,6 @@ class _CounterScreenState extends State<CounterScreen> {
 }
 ```
 
-### 2-3. `setState()`란?
-로컬 상태 관리(Local State Management) 방식이며 `setState()`를 호출하면 `build()`가 다시 실행되어 UI가 갱신되며 StatefulWidget 내부에서만 사용 가능합니다.
-
-⚠️ **주의점**  
-- `setState()`를 너무 많이 호출하면 성능이 저하될 수 있음.  
-- 위젯의 범위를 벗어난 상태(State)는 `setState()`로 관리할 수 없음.
-
 ---
 
 ## 3. 여러 위젯에서 상태를 공유하려면? (전역 상태 관리)
@@ -106,7 +108,7 @@ class _CounterScreenState extends State<CounterScreen> {
 
 ---
 
-## 4. InheritedWidget (Flutter 기본 상태 관리)
+## 4. `InheritedWidget` (Flutter 기본 상태 관리)
 
 Flutter에서 기본적으로 제공하는 전역 상태 관리 방식입니다.  
 하지만 코드가 복잡하고 사용이 어렵기 때문에 `Provider` 사용을 추천합니다.
@@ -132,7 +134,7 @@ class MyInheritedWidget extends InheritedWidget {
 
 ---
 
-## 5. Provider (Flutter 공식 권장 상태 관리)
+## 5. `Provider` (Flutter 공식 권장 상태 관리)
 
 `Provider`는 Flutter에서 공식적으로 권장하는 상태 관리 라이브러리입니다.
 
@@ -140,13 +142,13 @@ class MyInheritedWidget extends InheritedWidget {
 - 코드가 간결하고 사용하기 쉬움.
 - `ChangeNotifier`를 사용하여 상태를 자동으로 감지하고 UI 업데이트.
 
-### 5-1. Provider 패키지 설치
+### `Provider` 패키지 설치
 
 ```sh
 flutter pub add provider
 ```
 
-### 5-2. Provider 상태 모델 생성 (ChangeNotifier 사용)
+### `Provider` 상태 모델 생성 (`ChangeNotifier` 사용)
 
 ```dart
 import 'package:flutter/material.dart';
@@ -165,7 +167,7 @@ class CounterProvider with ChangeNotifier {
 }
 ```
 
-### 5-3. Provider 적용하기 (MyApp 수정)
+### `Provider` 적용하기 (`MyApp` 수정)
 
 ```dart
 void main() {
@@ -178,7 +180,7 @@ void main() {
 }
 ```
 
-### 5-4. UI에서 상태 사용
+### UI에서 상태 사용
 
 ```dart
 class CounterScreen extends StatelessWidget {
@@ -205,7 +207,7 @@ class CounterScreen extends StatelessWidget {
 }
 ```
 
-✔ `Provider.of<CounterProvider>(context)`를 사용하여 상태를 가져오고 UI를 업데이트함.
+✔ `Provider.of<CounterProvider>(context)` → 상태를 가져오고 UI를 업데이트함.
 
 ---
 
