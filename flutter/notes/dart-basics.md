@@ -230,9 +230,9 @@ void main() async {
 ---
 
 ## 🎯 정리
-- **Dart는 객체 지향 및 비동기 프로그래밍을 지원하는 언어**
-- **변수 선언 시 `var`, `final`, `const`, `dynamic` 사용**
-- **리스트, 맵, 세트 등의 컬렉션 타입 제공**
-- **제어문 (if, switch, for, while) 활용 가능**
-- **비동기 프로그래밍을 위해 `Future`와 `async/await` 지원**
+- Dart는 객체 지향 및 비동기 프로그래밍을 지원하는 언어
+- 변수 선언 시 `var`, `final`, `const`, `dynamic` 사용
+- 리스트, 맵, 세트 등의 컬렉션 타입 제공
+- 제어문 (if, switch, for, while) 활용 가능
+- 비동기 프로그래밍을 위해 `Future`와 `async/await` 지원
 
