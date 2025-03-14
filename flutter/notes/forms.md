@@ -1,4 +1,4 @@
-# Flutter 폼과 입력 처리
+# 📌 Flutter 폼과 입력 처리
 
 Flutter에서 사용자의 입력을 처리하기 위해 **TextField**, **TextFormField**, **폼 유효성 검사**, **Focus**, **키보드 제어** 등을 사용할 수 있습니다.
 
@@ -16,8 +16,8 @@ TextField(
 )
 ```
 
-✅ **`labelText`** : 필드 라벨 설정  
-✅ **`border: OutlineInputBorder()`** : 입력 필드에 테두리 추가  
+✔ `labelText` : 필드 라벨 설정  
+✔ `border: OutlineInputBorder()` : 입력 필드에 테두리 추가  
 
 ---
 
@@ -83,8 +83,8 @@ class _InputScreenState extends State<InputScreen> {
 }
 ```
 
-✅ **`TextEditingController`**를 사용하여 입력값 가져오기  
-✅ **입력값 사용 후 `dispose()`를 호출하여 메모리 누수 방지**  
+✔ `TextEditingController` 를 사용하여 입력값 가져오기  
+✔ 입력값 사용 후 `dispose()`를 호출하여 메모리 누수 방지
 
 ---
 
@@ -159,9 +159,9 @@ class _FormScreenState extends State<FormScreen> {
 }
 ```
 
-✅ **`Form`**과 **`GlobalKey<FormState>`**를 사용하여 유효성 검사 가능  
-✅ **`validator`** 속성을 사용하여 입력값 검증  
-✅ **버튼 클릭 시 `validate()` 실행하여 입력값 확인**  
+✔ `Form` 과 `GlobalKey<FormState>` 를 사용하여 유효성 검사 가능  
+✔ `validator` 속성을 사용하여 입력값 검증  
+✔ 버튼 클릭 시 `validate()` 실행하여 입력값 확인
 
 ---
 
@@ -221,9 +221,9 @@ class _FocusExampleState extends State<FocusExample> {
 }
 ```
 
-✅ **`FocusNode`**를 사용하여 특정 입력 필드에 포커스 지정 가능  
-✅ **`FocusScope.of(context).requestFocus(focusNode)`**를 사용하여 포커스 이동  
-✅ **`FocusScope.of(context).unfocus()`**로 키보드 숨기기 가능  
+✔ `FocusNode` 를 사용하여 특정 입력 필드에 포커스 지정 가능  
+✔ `FocusScope.of(context).requestFocus(focusNode)` 를 사용하여 포커스 이동  
+✔ `FocusScope.of(context).unfocus()` 로 키보드 숨기기 가능  
 
 ---
 
@@ -237,7 +237,7 @@ TextField(
 )
 ```
 
-✅ **`obscureText: true`**를 사용하여 입력한 문자 숨김 처리  
+✔`obscureText: true` 를 사용하여 입력한 문자 숨김 처리  
 
 ---
 
@@ -259,12 +259,12 @@ TextField(
 )
 ```
 
-✅ **`keyboardType`**을 설정하여 숫자, 이메일, 전화번호 입력에 최적화 가능  
-✅ **`autofillHints`**를 사용하여 자동완성 기능 활용 가능  
+✔ `keyboardType` 을 설정하여 숫자, 이메일, 전화번호 입력에 최적화 가능  
+✔ `autofillHints` 를 사용하여 자동완성 기능 활용 가능  
 
 ---
 
-## 7. 결론
+## 🎯 정리
 
 | 기능 | 위젯 / 메서드 |
 |------|-------------|
