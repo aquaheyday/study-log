@@ -16,7 +16,7 @@
 | 04 | 위젯 개요 | [widgets-intro.md](./widgets-intro.md) | Stateless vs Stateful 위젯 개념 |  
 | 05 | 상태 관리 (State) | [state-management.md](./state-management.md) | setState, InheritedWidget 기초 |  
 
-### 🎯 UI 구성 및 위젯  
+### 🔲 UI 구성 및 위젯  
 | 번호 | 주제 | 파일명 | 설명 |  
 |---|---|---|---|  
 | 06 | 레이아웃 기본 | [layout-basics.md](./layout-basics.md) | Column, Row, Stack, Expanded 사용법 |  
