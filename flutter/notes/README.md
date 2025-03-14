@@ -1,22 +1,57 @@
-# 📝 Flutter Notes
+# 📖 Flutter Notes  
 
-이 폴더는 Flutter 학습 과정에서 정리한 **개념 노트**를 보관하는 공간입니다.  
-기본 문법부터 실무에서 자주 쓰이는 패턴, 위젯 구성, 상태관리, 성능 최적화까지 폭넓게 다룹니다.  
+이 폴더는 **Flutter 학습 과정에서 정리한 개념 노트**를 보관하는 공간입니다.  
+각 노트는 개념 정의, 기본 문법, 예제 코드, 실전 팁, 관련 링크 순으로 구성해 체계적인 학습 자료로 활용할 수 있습니다.
 
 ---
 
-## 📋 목차
+## 📋 Flutter 개념 정리 목록  
 
-| 번호 | 주제 | 파일명 | 설명 |
-|---|---|---|---|
-| 01 | 프로젝트 구조 | [project-structure.md](./project-structure.md) | Flutter 프로젝트 폴더 구성 및 역할 정리 |
-| 02 | 기본 문법 & 위젯 기초 | [dart-basics.md](./dart-basics.md) | Dart 기본 문법, Stateless, Stateful 위젯 차이와 활용법 |
-| 03 | 레이아웃 구성 | [layout.md](./layout.md) | Row, Column, Flex, Stack 등 레이아웃 패턴 |
-| 04 | 상태관리 기본 | [state-management.md](./state-management.md) | setState, Provider, Riverpod 등 비교 |
-| 05 | 네트워크 통신 | [networking.md](./networking.md) | HTTP 요청, Dio 사용법 및 에러 핸들링 |
-| 06 | 폼과 입력 처리 | [forms.md](./forms.md) | Form 위젯 구성, TextField 다루기 |
-| 07 | 파일 입출력 | [file-handling.md](./file-handling.md) | 파일 저장, 읽기, 권한 처리 방법 |
-| 08 | 에러 처리 및 디버깅 | [error-handling.md](./error-handling.md) | 에러 로그, 디버깅 도구, 크래시 리포팅 |
-| 09 | 성능 최적화 | [performance.md](./performance.md) | Rebuild 최소화, 이미지 최적화 등 팁 모음 |
-| 10 | 플러그인 활용 | [plugins.md](./plugins.md) | 필수 추천 플러그인 및 사용법 정리 |
-| 11 | 유용한 팁 | [tips.md](./tips.md) | 환경설정, 디버깅, 배포 관련 팁 |
+### 📌 기본 개념  
+| 번호 | 주제 | 파일명 | 설명 |  
+|---|---|---|---|  
+| 01 | Flutter 개요 | [flutter-intro.md](./flutter-intro.md) | Flutter란 무엇인가? 특징과 장점 |  
+| 02 | 프로젝트 설정 | [setup-flutter.md](./setup-flutter.md) | Flutter SDK 설치, 프로젝트 생성 |  
+| 03 | Dart 기본 문법 | [dart-basics.md](./dart-basics.md) | 변수, 함수, 클래스, 비동기 프로그래밍 |  
+| 04 | 위젯 개요 | [widgets-intro.md](./widgets-intro.md) | Stateless vs Stateful 위젯 개념 |  
+| 05 | 상태 관리 (State) | [state-management.md](./state-management.md) | setState, InheritedWidget 기초 |  
+
+### 🎯 UI 구성 및 위젯  
+| 번호 | 주제 | 파일명 | 설명 |  
+|---|---|---|---|  
+| 06 | 레이아웃 기본 | [layout-basics.md](./layout-basics.md) | Column, Row, Stack, Expanded 사용법 |  
+| 07 | 리스트와 스크롤 | [listview.md](./listview.md) | ListView, GridView, ScrollController |  
+| 08 | 폼과 입력 필드 | [forms.md](./forms.md) | TextField, Form, validation |  
+| 09 | 버튼과 이벤트 처리 | [buttons.md](./buttons.md) | ElevatedButton, GestureDetector |  
+| 10 | 네비게이션 | [navigation.md](./navigation.md) | Navigator, push/pop, named routes |  
+
+### 🔄 상태 관리  
+| 번호 | 주제 | 파일명 | 설명 |  
+|---|---|---|---|  
+| 11 | Provider 기본 | [provider-basics.md](./provider-basics.md) | Provider를 활용한 상태 관리 |  
+| 12 | Riverpod | [riverpod.md](./riverpod.md) | Riverpod을 활용한 상태 관리 |  
+| 13 | Bloc 패턴 | [bloc-pattern.md](./bloc-pattern.md) | flutter_bloc 라이브러리 사용법 |  
+| 14 | GetX 상태 관리 | [getx.md](./getx.md) | GetX의 상태 관리와 라우팅 기능 |  
+
+### 🌍 네트워크 및 데이터 관리  
+| 번호 | 주제 | 파일명 | 설명 |  
+|---|---|---|---|  
+| 15 | HTTP 통신 | [http-request.md](./http-request.md) | Dio, http 패키지를 이용한 API 호출 |  
+| 16 | JSON 데이터 처리 | [json-parsing.md](./json-parsing.md) | json_serializable을 활용한 파싱 |  
+| 17 | 로컬 데이터 저장 | [local-storage.md](./local-storage.md) | SharedPreferences, Hive, SQLite |  
+| 18 | Firebase 연동 | [firebase.md](./firebase.md) | Firebase Auth, Firestore, Storage |  
+
+### 🚀 고급 개념  
+| 번호 | 주제 | 파일명 | 설명 |  
+|---|---|---|---|  
+| 19 | 애니메이션 기본 | [animations.md](./animations.md) | AnimatedBuilder, Hero, Lottie 사용 |  
+| 20 | 커스텀 위젯 만들기 | [custom-widgets.md](./custom-widgets.md) | 재사용 가능한 위젯 개발 |  
+| 21 | 플랫폼별 기능 | [platform-channels.md](./platform-channels.md) | MethodChannel을 활용한 네이티브 연동 |  
+| 22 | 멀티플랫폼 개발 | [flutter-web.md](./flutter-web.md) | Flutter Web 및 데스크톱 지원 |  
+
+### 🛠️ 테스트 및 배포  
+| 번호 | 주제 | 파일명 | 설명 |  
+|---|---|---|---|  
+| 23 | Flutter 테스트 | [testing.md](./testing.md) | Widget 테스트, Unit 테스트 |  
+| 24 | 앱 최적화 | [performance.md](./performance.md) | 렌더링 최적화, 코드 스플리팅 |  
+| 25 | 앱 배포 | [deployment.md](./deployment.md) | Android, iOS, 웹 배포 (Play Store, App Store) |  
