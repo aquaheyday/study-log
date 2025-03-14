@@ -122,7 +122,7 @@ class CounterScreen extends StatelessWidget {
 ## 5. `GetBuilder` (단순 상태 관리)
 반응형(`obs`) 없이도 상태 변경 가능하고 `GetBuilder`는 **필요한 위젯만 업데이트**하는 방식으로, 퍼포먼스가 뛰어남.
 
-### ✅ 1) `Controller` 만들기
+### `Controller` 만들기
 
 ```dart
 class CounterController extends GetxController {
@@ -139,7 +139,7 @@ class CounterController extends GetxController {
 
 ---
 
-### ✅ 2) `GetBuilder` 사용하기
+### `GetBuilder` 사용하기
 
 ```dart
 class CounterScreen extends StatelessWidget {
@@ -174,7 +174,7 @@ class CounterScreen extends StatelessWidget {
 - **`GetX`는 `GetBuilder`보다 더 강력한 상태 관리 기능을 제공**.
 - **자동으로 상태 변경을 감지하여 UI 업데이트**.
 
-### ✅ 1) `Controller` 만들기
+### `Controller` 만들기
 
 ```dart
 class CounterController extends GetxController {
@@ -188,7 +188,7 @@ class CounterController extends GetxController {
 
 ---
 
-### ✅ 2) `GetX` 사용하기
+### `GetX` 사용하기
 
 ```dart
 class CounterScreen extends StatelessWidget {
@@ -213,7 +213,7 @@ class CounterScreen extends StatelessWidget {
 }
 ```
 
-✔ **`Obx`와 유사하지만, `GetX`는 더 많은 기능을 제공**  
+✔ `Obx`와 유사하지만, `GetX`는 더 많은 기능을 제공  
 
 ---
 
@@ -221,9 +221,9 @@ class CounterScreen extends StatelessWidget {
 
 | 메서드 | 설명 |
 |--------|------|
-| **`Get.put()`** | 즉시 인스턴스 생성 (앱 실행과 동시에 메모리에 저장) |
-| **`Get.lazyPut()`** | 처음 호출될 때 인스턴스 생성 (메모리 절약) |
-| **`Get.find()`** | 기존에 생성된 인스턴스를 가져옴 |
+| `Get.put()` | 즉시 인스턴스 생성 (앱 실행과 동시에 메모리에 저장) |
+| `Get.lazyPut()` | 처음 호출될 때 인스턴스 생성 (메모리 절약) |
+| `Get.find()` | 기존에 생성된 인스턴스를 가져옴 |
 
 ```dart
 final CounterController counterController = Get.put(CounterController()); // 즉시 생성
@@ -235,7 +235,7 @@ final CounterController counterFind = Get.find<CounterController>(); // 기존 �
 
 ## 8. `Get.delete()` (Controller 삭제)
 
-- 사용하지 않는 컨트롤러를 삭제하여 **메모리 최적화 가능**.
+사용하지 않는 컨트롤러를 삭제하여 **메모리 최적화 가능**.
 
 ```dart
 Get.delete<CounterController>(); // 컨트롤러 삭제
@@ -247,12 +247,10 @@ Get.delete<CounterController>(); // 컨트롤러 삭제
 
 | GetX 상태 관리 방식 | 설명 |
 |------------------|------|
-| **`.obs` + `Obx`** | 반응형 상태 관리 (자동 UI 업데이트) |
-| **`GetBuilder`** | 단순 상태 관리 (`update()` 필요) |
-| **`GetX`** | 자동 상태 감지 및 UI 업데이트 |
-| **`Get.put()`** | 즉시 인스턴스 생성 |
-| **`Get.lazyPut()`** | 필요할 때 인스턴스 생성 (메모리 절약) |
-| **`Get.find()`** | 기존 인스턴스 가져오기 |
-| **`Get.delete()`** | 컨트롤러 삭제 (메모리 최적화) |
-
-🚀 **이제 GetX를 활용하여 강력한 상태 관리를 구현하세요!**
+| `.obs` + `Obx` | 반응형 상태 관리 (자동 UI 업데이트) |
+| `GetBuilder` | 단순 상태 관리 (`update()` 필요) |
+| `GetX` | 자동 상태 감지 및 UI 업데이트 |
+| `Get.put()` | 즉시 인스턴스 생성 |
+| `Get.lazyPut()` | 필요할 때 인스턴스 생성 (메모리 절약) |
+| `Get.find()` | 기존 인스턴스 가져오기 |
+| `Get.delete()` | 컨트롤러 삭제 (메모리 최적화) |
