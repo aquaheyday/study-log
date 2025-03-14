@@ -244,9 +244,9 @@ MaterialApp
 
 ## 🎯 정리
 
-- Flutter의 UI는 위젯으로 구성되며, 모든 요소가 위젯
-- 위젯은 Stateless(정적)과 Stateful(동적)로 나뉨
-- Flutter UI는 "위젯 트리" 형태로 구성됨
-- 레이아웃, 버튼, 리스트 등의 다양한 위젯 제공
-- StatefulWidget에서는 `setState()`를 사용하여 UI 갱신
+✔ Flutter의 UI는 위젯으로 구성되며, 모든 요소가 위젯
+✔ 위젯은 Stateless(정적)과 Stateful(동적)로 나뉨
+✔ Flutter UI는 "위젯 트리" 형태로 구성됨
+✔ 레이아웃, 버튼, 리스트 등의 다양한 위젯 제공
+✔ StatefulWidget에서는 `setState()`를 사용하여 UI 갱신
 
