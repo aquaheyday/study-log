@@ -1,4 +1,4 @@
-# 🔲 Flutter 레이아웃 기본
+# 🔲 레이아웃 기본
 
 Flutter에서 UI를 구성하는 기본 요소는 **위젯(Widget)** 이며, **레이아웃(Layout) 위젯**을 사용하여 다양한 화면 구성을 할 수 있습니다.
 
@@ -218,7 +218,7 @@ GridView.count(
 
 ## 🎯 정리
 
-✔ Container → 크기, 색상, 여백을 설정하는 기본 박스 위젯
+✔ Container → 크기, 색상, 여백을 설정하는 기본 박스 위젯  
 ✔ Row / Column → 가로 및 세로 정렬을 위한 핵심 레이아웃 위젯  
 ✔ Stack → 위젯을 겹쳐 배치 (Z축 활용)  
 ✔ Expanded / Flexible → 공간을 자동으로 분배  
