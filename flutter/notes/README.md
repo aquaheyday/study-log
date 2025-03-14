@@ -47,7 +47,7 @@
 | 19 | 애니메이션 기본 | [animations.md](./animations.md) | AnimatedBuilder, Hero, Lottie 사용 |  
 | 20 | 커스텀 위젯 만들기 | [custom-widgets.md](./custom-widgets.md) | 재사용 가능한 위젯 개발 |  
 | 21 | 플랫폼별 기능 정리 | [platform-channels.md](./platform-channels.md) | MethodChannel을 활용한 네이티브 연동 |  
-| 22 | 멀티플랫폼 개발 | [flutter-web.md](./flutter-web.md) | Flutter Web 및 데스크톱 지원 |  
+| 22 | 멀티플랫폼 개발 가이드 | [flutter-web.md](./flutter-web.md) | Flutter Web 및 데스크톱 지원 |  
 
 ### 🛠️ 테스트 및 배포  
 | 번호 | 주제 | 파일명 | 설명 |  
