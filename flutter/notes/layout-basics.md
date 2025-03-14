@@ -9,10 +9,10 @@ Flutter에서 UI를 구성하는 기본 요소는 **위젯(Widget)** 이며, **�
 Flutter에서 **모든 UI는 위젯을 조합하여 구성**됩니다.  
 화면을 만들기 위해 **Container, Row, Column, Stack** 등의 **레이아웃 위젯**을 활용합니다.
 
-✔ **Flutter 레이아웃 위젯 특징**
-- **위젯 기반 트리 구조**: 부모-자식 관계로 UI를 구성.
-- **반응형 디자인 가능**: `Flexible`, `Expanded`, `MediaQuery`를 사용하여 유동적인 레이아웃을 구현.
-- **다양한 배치 방식 지원**: 가로(Row), 세로(Column), 겹치기(Stack) 등.
+✔ Flutter 레이아웃 위젯 특징
+- 위젯 기반 트리 구조: 부모-자식 관계로 UI를 구성.
+- 반응형 디자인 가능: `Flexible`, `Expanded`, `MediaQuery`를 사용하여 유동적인 레이아웃을 구현.
+- 다양한 배치 방식 지원: 가로(Row), 세로(Column), 겹치기(Stack) 등.
 
 ---
 
@@ -51,7 +51,7 @@ Row(
 )
 ```
 
-✔ **속성 설명**
+✔ 속성 설명
 - `mainAxisAlignment`: **Row의 주축(가로) 정렬 방식** 지정  
   - `MainAxisAlignment.start` (왼쪽 정렬)
   - `MainAxisAlignment.center` (가운데 정렬)
@@ -119,8 +119,8 @@ Row(
 ```
 
 ✔ `Expanded`와 `Flexible`의 차이:
-- **`Expanded`** → 가능한 최대 공간을 차지.
-- **`Flexible`** → 필요한 만큼만 차지하고 남은 공간 유지.
+- `Expanded` → 가능한 최대 공간을 차지.
+- `Flexible` → 필요한 만큼만 차지하고 남은 공간 유지.
 
 ---
 
