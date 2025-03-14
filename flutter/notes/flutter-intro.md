@@ -1,4 +1,4 @@
-# Flutter 개요
+# 📌 Flutter 개요
 
 ## 1. Flutter란 무엇인가?
 
@@ -111,7 +111,3 @@ flutter run
 - 🎥 유튜브 강의: [Flutter 공식 채널](https://www.youtube.com/c/flutterdev)  
 - 📦 패키지 검색: [pub.dev](https://pub.dev)  
 - 🏛️ 커뮤니티: [Flutter Dev Forum](https://flutter.dev/community)  
-
----
-🚀 **이제 Flutter를의 기본 개념을 이해했으니, 실습을 시작해 보세요!**  
-다음 개념: [프로젝트 설정](./setup-flutter.md) →
