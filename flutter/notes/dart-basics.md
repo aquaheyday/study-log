@@ -1,409 +1,238 @@
-# Flutter 기본 문법 정리
+# 📌 Dart 기본 문법
 
-## 1. Flutter 개요
-Flutter는 Google에서 개발한 오픈소스 UI 프레임워크로, 하나의 코드베이스로 Android, iOS, 웹, 데스크톱 애플리케이션을 개발할 수 있습니다.
+## 1. Dart란 무엇인가?
+
+**Dart**는 Google에서 개발한 프로그래밍 언어로, **Flutter의 공식 언어**입니다.  
+Dart는 **객체 지향 언어**이며, **정적 및 동적 타입 지정이 가능**하고, **JIT(Just-In-Time) 및 AOT(Ahead-Of-Time) 컴파일**을 지원하여 빠른 실행 속도를 제공합니다.
+
+### Dart의 특징
+- **C 계열 문법**을 기반으로 한 쉽고 직관적인 문법
+- **JIT & AOT 컴파일**을 활용한 빠른 실행 및 성능 최적화
+- **Garbage Collection 지원**으로 메모리 관리 자동화
+- **비동기 프로그래밍 지원** (`async/await`, `Future`, `Stream`)
+- **모바일, 웹, 서버 및 데스크톱 애플리케이션 개발 가능**
 
 ---
 
-## 2. Dart 기본 문법
-Flutter는 Dart 언어를 사용합니다.
+## 2. 기본 문법
 
-### 변수 선언
+### 2-1. 변수 선언
+
+Dart에서는 `var`, `final`, `const`, `dynamic` 키워드를 사용하여 변수를 선언할 수 있습니다.
 
 ```dart
 void main() {
-  var name = 'Flutter';  // 타입 추론
-  String language = 'Dart'; // 명시적 선언
-  int version = 3;
-  double pi = 3.14;
-  bool isFlutterAwesome = true;
+  var name = "Flutter";  // 타입 추론 (String)
+  String language = "Dart";  // 명시적 선언
+  final String version = "3.0";  // 런타임 상수
+  const double pi = 3.1415;  // 컴파일 타임 상수
+
+  dynamic variable = 42;  // 타입 변경 가능
+  variable = "Hello";  // 문제 없음
 
   print(name);
+  print(language);
+  print(version);
+  print(pi);
+  print(variable);
 }
 ```
 
-### 조건문
+📌 **차이점**  
+- `final`: 한 번 할당하면 변경할 수 없는 **런타임 상수**  
+- `const`: **컴파일 타임 상수**, `final`보다 더 엄격  
+- `dynamic`: 런타임에 타입이 결정되며 변경 가능  
+
+---
+
+### 2-2. 데이터 타입
+
+| 타입 | 설명 | 예제 |
+|---|---|---|
+| **int** | 정수형 | `int num = 10;` |
+| **double** | 실수형 | `double pi = 3.14;` |
+| **String** | 문자열 | `String name = "Flutter";` |
+| **bool** | 참/거짓 | `bool isFlutter = true;` |
+| **List** | 리스트(배열) | `List<int> numbers = [1, 2, 3];` |
+| **Set** | 중복 없는 집합 | `Set<String> fruits = {"apple", "banana"};` |
+| **Map** | 키-값 쌍 | `Map<String, int> ages = {"Alice": 25, "Bob": 30};` |
+| **dynamic** | 동적 타입 | `dynamic value = "Hello"; value = 42;` |
 
 ```dart
 void main() {
-  int number = 10;
+  int age = 30;
+  double height = 1.75;
+  String message = "Hello, Dart!";
+  bool isLearning = true;
 
-  if (number > 5) {
-    print('Number is greater than 5');
+  List<String> languages = ["Dart", "Flutter", "JavaScript"];
+  Set<int> uniqueNumbers = {1, 2, 3, 4, 4};  // {1, 2, 3, 4}
+  Map<String, int> scores = {"Alice": 95, "Bob": 85};
+
+  print("$message I'm $age years old.");
+  print("Height: $height m");
+  print("Languages: $languages");
+  print("Unique Numbers: $uniqueNumbers");
+  print("Scores: $scores");
+}
+```
+
+---
+
+### 2-3. 연산자
+
+```dart
+void main() {
+  int a = 10;
+  int b = 3;
+
+  print(a + b);  // 덧셈
+  print(a - b);  // 뺄셈
+  print(a * b);  // 곱셈
+  print(a / b);  // 나눗셈 (소수점 포함)
+  print(a ~/ b); // 나눗셈 (정수형 결과)
+  print(a % b);  // 나머지
+
+  // 비교 연산자
+  print(a > b);  // true
+  print(a < b);  // false
+  print(a == b); // false
+  print(a != b); // true
+
+  // 논리 연산자
+  bool isFlutter = true;
+  bool isDart = false;
+
+  print(isFlutter && isDart); // false
+  print(isFlutter || isDart); // true
+  print(!isFlutter);          // false
+}
+```
+
+---
+
+## 3. 제어문
+
+### 3-1. 조건문 (if-else, switch-case)
+```dart
+void main() {
+  int score = 85;
+
+  if (score >= 90) {
+    print("A 학점");
+  } else if (score >= 80) {
+    print("B 학점");
   } else {
-    print('Number is 5 or less');
+    print("C 학점");
+  }
+
+  String grade = "B";
+
+  switch (grade) {
+    case "A":
+      print("Excellent!");
+      break;
+    case "B":
+      print("Good job!");
+      break;
+    default:
+      print("Keep trying!");
   }
 }
 ```
 
-### 반복문
+---
 
+### 3-2. 반복문 (for, while, do-while)
 ```dart
 void main() {
-  for (int i = 0; i < 5; i++) {
-    print('Iteration: \$i');
+  // for 문
+  for (int i = 1; i <= 5; i++) {
+    print("Number: $i");
   }
 
-  int count = 0;
-  while (count < 5) {
-    print('While loop: \$count');
-    count++;
+  // while 문
+  int j = 1;
+  while (j <= 5) {
+    print("While: $j");
+    j++;
   }
+
+  // do-while 문
+  int k = 1;
+  do {
+    print("Do-While: $k");
+    k++;
+  } while (k <= 5);
 }
 ```
 
-### 함수 선언
+---
 
+## 4. 함수
+
+### 4-1. 기본 함수 선언
 ```dart
+void greet(String name) {
+  print("Hello, $name!");
+}
+
 int add(int a, int b) {
   return a + b;
 }
 
 void main() {
-  int result = add(5, 10);
-  print('Sum: \$result');
+  greet("Dart");
+  int result = add(3, 5);
+  print("Sum: $result");
+}
+```
+
+### 4-2. 화살표 함수 (Lambda)
+```dart
+int multiply(int x, int y) => x * y;
+
+void main() {
+  print(multiply(4, 5)); // 20
+}
+```
+
+### 4-3. 선택적 매개변수
+```dart
+void printInfo(String name, {int? age}) {
+  print("Name: $name, Age: ${age ?? 'Unknown'}");
+}
+
+void main() {
+  printInfo("Alice");
+  printInfo("Bob", age: 25);
 }
 ```
 
 ---
 
-## 3. Flutter 기본 위젯
+## 5. 비동기 프로그래밍 (Async/Await, Future)
 
-Flutter에서 UI는 위젯(Widget)으로 구성됩니다. 위젯은 화면을 구성하는 기본 단위이며, 모든 요소(텍스트, 버튼, 레이아웃 등)가 위젯입니다.
-
-위젯은 크게 두 가지로 나뉩니다.
-- **StatelessWidget**: 상태를 가지지 않는 위젯
-- **StatefulWidget**: 상태를 가질 수 있는 위젯
-
-### StatelessWidget
-`StatelessWidget`은 변경되지 않는 UI를 구성할 때 사용됩니다.
-
+### 5-1. Future (비동기 작업)
 ```dart
-import 'package:flutter/material.dart';
-
-void main() {
-  runApp(MyApp());
+Future<String> fetchData() async {
+  await Future.delayed(Duration(seconds: 2));  // 2초 대기
+  return "Data Loaded";
 }
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: Text('StatelessWidget 예제')),
-        body: Center(child: Text('Hello, Flutter!')),
-      ),
-    );
-  }
-}
-```
-
-### StatefulWidget
-`StatefulWidget`은 변경 가능한 상태를 가지며, `setState()`를 호출하여 UI를 업데이트할 수 있습니다.
-
-```dart
-import 'package:flutter/material.dart';
-
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: CounterScreen(),
-    );
-  }
-}
-
-class CounterScreen extends StatefulWidget {
-  @override
-  _CounterScreenState createState() => _CounterScreenState();
-}
-
-class _CounterScreenState extends State<CounterScreen> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('StatefulWidget 예제')),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Counter: \$_counter', style: TextStyle(fontSize: 24)),
-            ElevatedButton(
-              onPressed: _incrementCounter,
-              child: Text('Increase'),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-```
-
-### 기본 앱 구조
-
-```dart
-import 'package:flutter/material.dart';
-
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: Text('Flutter 기본 문법')),
-        body: Center(child: Text('Hello, Flutter!')),
-      ),
-    );
-  }
-}
-```
-
-### 주요 위젯
-
-#### `Text`
-
-텍스트를 화면에 표시하는 위젯입니다.
-
-```dart
-Text(
-  'Hello, Flutter!',
-  style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-)
-```
-
-#### `Cotainer`
-
-컨테이너는 박스 형태의 위젯으로, 크기, 배경색, 패딩 등을 설정할 수 있습니다.
-
-```dart
-Container(
-  width: 200,
-  height: 100,
-  color: Colors.blue,
-  child: Center(child: Text('Container Example')),
-)
-```
-
-#### `Colunm`
-
-위젯을 `수직(Column)`으로 배치하는 레이아웃 위젯입니다.
-
-```dart
-Column(
-  mainAxisAlignment: MainAxisAlignment.center,
-  children: [
-    Text('First Line'),
-    Text('Second Line'),
-  ],
-)
-```
-
-#### `Row`
-
-위젯을 `수평(Row)`으로 배치하는 레이아웃 위젯입니다.
-
-```dart
-Row(
-  mainAxisAlignment: MainAxisAlignment.spaceAround,
-  children: [
-    Icon(Icons.star),
-    Icon(Icons.favorite),
-    Icon(Icons.thumb_up),
-  ],
-)
-```
-
-#### `ElevatedButton`
-
-클릭할 수 있는 버튼을 생성합니다.
-
-```dart
-ElevatedButton(
-  onPressed: () {
-    print('Button Pressed');
-  },
-  child: Text('Click Me'),
-)
-```
-
-#### `Image`
-
-이미지를 표시하는 위젯입니다.
-
-```dart
-Image.network(
-  'https://flutter.dev/images/flutter-logo-sharing.png',
-  width: 100,
-  height: 100,
-)
-```
-```dart
-Image.asset(
-  'assets/my_image.png',
-  width: 100,
-  height: 100,
-)
-```
-
-
-### 사용자 입력 위젯
-
-#### `TextField`
-
-사용자가 텍스트를 입력할 수 있도록 하는 위젯입니다.
-
-```dart
-TextField(
-  decoration: InputDecoration(
-    labelText: 'Enter your name',
-    border: OutlineInputBorder(),
-  ),
-)
-```
-
-#### `Checkbox`
-
-체크박스를 생성합니다.
-
-```dart
-Checkbox(
-  value: true,
-  onChanged: (bool? newValue) {
-    print(newValue);
-  },
-)
-```
-
-#### `Switch`
-
-스위치를 생성합니다.
-
-```dart
-Switch(
-  value: true,
-  onChanged: (bool newValue) {
-    print(newValue);
-  },
-)
-```
-
-#### `Slider`
-
-슬라이더를 생성합니다.
-
-```dart
-Slider(
-  value: 0.5,
-  min: 0.0,
-  max: 1.0,
-  onChanged: (double newValue) {
-    print(newValue);
-  },
-)
-```
-
----
-
-### 4. 상태 관리 (`StatefulWidget`)
-Flutter는 `StatelessWidget`과 `StatefulWidget`을 사용하여 UI를 구성합니다.
-
-```dart
-import 'package:flutter/material.dart';
-
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: CounterScreen(),
-    );
-  }
-}
-
-class CounterScreen extends StatefulWidget {
-  @override
-  _CounterScreenState createState() => _CounterScreenState();
-}
-
-class _CounterScreenState extends State<CounterScreen> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('Counter Example')),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Counter: \$_counter', style: TextStyle(fontSize: 24)),
-            ElevatedButton(
-              onPressed: _incrementCounter,
-              child: Text('Increase'),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
+void main() async {
+  print("Fetching...");
+  String data = await fetchData();
+  print(data);
 }
 ```
 
 ---
 
-## 5. 네비게이션 (페이지 이동)
+## 🎯 정리
+- **Dart는 객체 지향 및 비동기 프로그래밍을 지원하는 언어**
+- **변수 선언 시 `var`, `final`, `const`, `dynamic` 사용**
+- **리스트, 맵, 세트 등의 컬렉션 타입 제공**
+- **제어문 (if, switch, for, while) 활용 가능**
+- **비동기 프로그래밍을 위해 `Future`와 `async/await` 지원**
 
-```dart
-Navigator.push(
-  context,
-  MaterialPageRoute(builder: (context) => SecondPage()),
-);
-```
-```dart
-Navigator.pop(context);
-```
-
----
-
-## 6. API 호출 (HTTP 요청)
-
-```dart
-import 'package:http/http.dart' as http;
-import 'dart:convert';
-
-void fetchData() async {
-  final response = await http.get(Uri.parse('https://jsonplaceholder.typicode.com/posts/1'));
-  
-  if (response.statusCode == 200) {
-    var data = jsonDecode(response.body);
-    print('Title: ' + data['title']);
-  } else {
-    print('Failed to load data');
-  }
-}
-```
