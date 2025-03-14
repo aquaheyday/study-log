@@ -45,7 +45,7 @@ flutter pub get
 
 ## 3. Provider 기본 사용법
 
-### 3-1. `ChangeNotifier`를 사용한 상태 클래스 만들기
+### `ChangeNotifier`를 사용한 상태 클래스 만들기
 
 `ChangeNotifier`는 Provider에서 상태를 관리하는 기본 클래스입니다.
 
@@ -68,7 +68,7 @@ class CounterProvider with ChangeNotifier {
 
 ---
 
-### 3-2. `ChangeNotifierProvider`로 상태 제공하기
+### `ChangeNotifierProvider`로 상태 제공하기
 
 앱의 최상위 위젯에서 `ChangeNotifierProvider`로 상태를 제공해야 합니다.
 
@@ -100,7 +100,7 @@ class MyApp extends StatelessWidget {
 
 ---
 
-### 3-3. UI 에서 Provider 상태 사용하기
+### UI 에서 Provider 상태 사용하기
 
 이제 **UI 에서 Provider 상태를 가져와서 사용**할 수 있습니다.
 
@@ -145,7 +145,7 @@ Provider에서 상태를 가져오는 방법은 **3가지**가 있습니다.
 
 ---
 
-### 4-1. `Provider.of<T>(context)`
+### `Provider.of<T>(context)`
 
 `Provider.of`는 상태를 가져올 때 사용되며, 기본적으로 UI가 **자동 업데이트**됩니다.
 
@@ -160,7 +160,7 @@ final counter = Provider.of<CounterProvider>(context, listen: false);
 
 ---
 
-### 4-2. `Consumer<T>`
+### `Consumer<T>`
 
 `Consumer`는 UI에서 **특정 부분만 상태 변경 시 업데이트**할 수 있습니다.  
 UI의 일부만 다시 그려야 할 때 유용합니다.
@@ -175,7 +175,7 @@ Consumer<CounterProvider>(
 
 ---
 
-### 4-3. `context.watch<T>()` / `context.read<T>()`
+### `context.watch<T>()` / `context.read<T>()`
 
 | 메서드 | 설명 | 사용 예 |
 |--------|------|--------|
