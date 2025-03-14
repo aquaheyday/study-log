@@ -14,6 +14,7 @@ Flutter 공식 사이트에서 최신 버전을 다운로드합니다.
 🔗 [Flutter 설치 가이드](https://docs.flutter.dev/get-started/install)
 
 ### 1-2. OS별 설치 방법
+
 #### 1-2-1. Windows
 ```sh
 # Chocolatey 패키지 매니저를 사용한 설치
@@ -39,8 +40,8 @@ sudo snap install flutter --classic
 
 ### 1-3. Flutter 환경 변수 설정 (Windows)
 Flutter를 설치한 후, 환경 변수를 설정해야 합니다.
-1. **Flutter SDK 경로**를 `PATH`에 추가 (`C:\flutter\bin`)
-2. `flutter doctor` 명령어 실행하여 설정 확인
+#### 1-3-1. **Flutter SDK 경로**를 `PATH`에 추가 (`C:\flutter\bin`)
+#### 1-3-2. `flutter doctor` 명령어 실행하여 설정 확인
 
 ---
 
@@ -210,7 +211,7 @@ flutter build apk
 ```sh
 flutter build ios
 ```
-(📌 Mac 및 Xcode 필요)
+(✔ Mac 및 Xcode 필요)
 
 ### 9-3. 웹 빌드
 ```sh
@@ -222,9 +223,9 @@ flutter build web
 
 ## 🎯 정리
 
-- **Flutter 설치 후 `flutter doctor`로 상태 확인**
-- **새 Flutter 프로젝트 생성: `flutter create my_app`**
-- **프로젝트 실행: `flutter run`**
-- **핫 리로드(`r`), 핫 리스타트(`R`)로 빠른 개발 가능**
-- **패키지 추가는 `pubspec.yaml`에서 설정**
-- **앱 빌드는 `flutter build` 명령어 사용**
+- Flutter 설치 후 `flutter doctor`로 상태 확인
+- 새 Flutter 프로젝트 생성: `flutter create my_app`
+- 프로젝트 실행: `flutter run`
+- 핫 리로드(`r`), 핫 리스타트(`R`)로 빠른 개발 가능
+- 패키지 추가는 `pubspec.yaml`에서 설정
+- 앱 빌드는 `flutter build` 명령어 사용
