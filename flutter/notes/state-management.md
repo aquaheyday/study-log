@@ -222,7 +222,7 @@ class CounterScreen extends StatelessWidget {
 
 ## 🎯 정리
 
-✔ Flutter의 상태(State)는 UI에 영향을 주는 데이터
+✔ Flutter의 상태(State)는 UI에 영향을 주는 데이터  
 ✔ setState() → 간단한 로컬 상태 관리 (StatefulWidget 사용)  
 ✔ Provider → Flutter 공식 권장 전역 상태 관리 방식  
 ✔ Bloc, Riverpod, GetX → 프로젝트 규모에 따라 선택 가능  
