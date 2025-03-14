@@ -1,4 +1,4 @@
-# 상태 관리 (State Management)
+# 📌 상태 관리 (State Management)
 
 Flutter에서 **상태(State)** 는 **UI에 영향을 주는 데이터**를 의미합니다.  
 상태 관리는 **어떻게 데이터를 변경하고, 변경된 데이터를 UI에 반영할 것인지**를 결정하는 중요한 개념입니다.
@@ -7,16 +7,16 @@ Flutter에서 **상태(State)** 는 **UI에 영향을 주는 데이터**를 의�
 
 ## 1. 상태(State)란?
 
-Flutter에서 **상태(State)**는 **앱이 실행되는 동안 변경될 수 있는 데이터**입니다.
+Flutter에서 **상태(State)** 는 **앱이 실행되는 동안 변경될 수 있는 데이터**입니다.
 
-✔ **예제 - 상태가 필요한 경우**  
+### 1-1. 예제 - 상태가 필요한 경우
 - 버튼을 클릭할 때 카운트 증가  
 - 사용자 입력을 저장하여 화면에 표시  
 - API 요청 후 데이터를 업데이트  
 
-✔ **상태(State) 변경 방식**  
-- **로컬 상태(Local State)** → 개별 위젯 내부에서 관리 (`setState()`)
-- **전역 상태(Global State)** → 여러 위젯에서 공유 (Provider, Riverpod, Bloc 등 사용)
+### 1-2. 상태(State) 변경 방식
+- 로컬 상태(Local State) → 개별 위젯 내부에서 관리 (`setState()`)
+- 전역 상태(Global State) → 여러 위젯에서 공유 (Provider, Riverpod, Bloc 등 사용)
 
 ---
 
@@ -87,7 +87,7 @@ class _CounterScreenState extends State<CounterScreen> {
 - **StatefulWidget 내부에서만 사용 가능**.
 - **로컬 상태 관리**(Local State Management) 방식.
 
-📌 **주의점**  
+✔ **주의점**  
 - `setState()`를 너무 많이 호출하면 성능이 저하될 수 있음.  
 - 위젯의 범위를 벗어난 상태(State)는 `setState()`로 관리할 수 없음.
 
@@ -131,7 +131,7 @@ class MyInheritedWidget extends InheritedWidget {
   }
 }
 ```
-📌 **복잡한 구조로 인해 실무에서는 거의 사용되지 않음** → `Provider` 또는 `Riverpod`을 사용 추천.
+✔ **복잡한 구조로 인해 실무에서는 거의 사용되지 않음** → `Provider` 또는 `Riverpod`을 사용 추천.
 
 ---
 
@@ -216,16 +216,16 @@ class CounterScreen extends StatelessWidget {
 
 | 방식 | 특징 |
 |------|------|
-| **Riverpod** | Provider의 개선 버전, 더 간결한 코드 |
-| **Bloc (flutter_bloc)** | Redux 패턴과 유사한 이벤트 기반 상태 관리 |
-| **GetX** | 코드가 간단하고 높은 성능 |
-| **Redux** | 대규모 프로젝트에 적합한 패턴 |
+| Riverpod | Provider의 개선 버전, 더 간결한 코드 |
+| Bloc (flutter_bloc) | Redux 패턴과 유사한 이벤트 기반 상태 관리 |
+| GetX | 코드가 간단하고 높은 성능 |
+| Redux | 대규모 프로젝트에 적합한 패턴 |
 
 ---
 
 ## 🎯 정리
 
-- **Flutter의 상태(State)는 UI에 영향을 주는 데이터**  
-- **setState()** → 간단한 로컬 상태 관리 (StatefulWidget 사용)  
-- **Provider** → Flutter 공식 권장 전역 상태 관리 방식  
-- **Bloc, Riverpod, GetX** → 프로젝트 규모에 따라 선택 가능  
+- Flutter의 상태(State)는 UI에 영향을 주는 데이터
+- setState() → 간단한 로컬 상태 관리 (StatefulWidget 사용)  
+- Provider → Flutter 공식 권장 전역 상태 관리 방식  
+- Bloc, Riverpod, GetX → 프로젝트 규모에 따라 선택 가능  
