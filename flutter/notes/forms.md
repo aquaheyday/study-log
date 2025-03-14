@@ -105,7 +105,7 @@ Form(
 
 ## 5. 다양한 입력 필드 종류
 
-### 5-1. 숫자 입력 (`keyboardType`)
+### `keyboardType` (숫자 입력)
 ```dart
 TextField(
   keyboardType: TextInputType.number,
@@ -113,7 +113,7 @@ TextField(
 )
 ```
 
-### 5-2. 비밀번호 입력 (`obscureText`)
+### `obscureText` (비밀번호 입력)
 ```dart
 TextField(
   obscureText: true,
@@ -121,7 +121,7 @@ TextField(
 )
 ```
 
-### 5-3. 다중 줄 입력 (`maxLines`)
+### `maxLines` (다중 줄 입력)
 ```dart
 TextField(
   maxLines: 3, // 여러 줄 입력 가능
@@ -163,7 +163,7 @@ TextField(
 
 ## 7. 체크박스, 라디오 버튼, 스위치
 
-### 7-1. 체크박스 (`Checkbox`)
+### `Checkbox` (체크박스)
 ```dart
 bool _isChecked = false;
 
@@ -179,7 +179,7 @@ Checkbox(
 
 ---
 
-### 7-2. 라디오 버튼 (`Radio`)
+### `Radio` (라디오 버튼)
 ```dart
 String _selectedGender = "남성";
 
@@ -213,7 +213,7 @@ Column(
 
 ---
 
-### 7-3. 스위치 (`Switch`)
+### `Switch` (스위치)
 ```dart
 bool _isSwitched = false;
 
@@ -229,7 +229,7 @@ Switch(
 
 ---
 
-## 8. 드롭다운 버튼 (DropdownButton)
+## 8. `DropdownButton` (드롭다운 버튼)
 
 사용자가 목록에서 하나를 선택할 수 있는 드롭다운 메뉴입니다.
 
