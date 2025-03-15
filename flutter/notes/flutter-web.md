@@ -225,8 +225,8 @@ flutter build linux
 
 ## 🎯 정리
 
-✔ **Android, iOS, 웹, 데스크톱 지원** → 하나의 코드로 모든 플랫폼 실행  
-✔ **플랫폼별 UI 대응** → `Platform.isAndroid`, `Theme.of(context).platform` 활용  
-✔ **패키지 호환성 확인** → `flutter pub outdated` 사용  
-✔ **네이티브 연동 가능** → `MethodChannel`로 네이티브 코드 실행  
-✔ **멀티플랫폼 빌드 가능** → `flutter build <platform>` 사용  
+✔ Android, iOS, 웹, 데스크톱 지원 → 하나의 코드로 모든 플랫폼 실행  
+✔ 플랫폼별 UI 대응 → `Platform.isAndroid`, `Theme.of(context).platform` 활용  
+✔ 패키지 호환성 확인 → `flutter pub outdated` 사용  
+✔ 네이티브 연동 가능 → `MethodChannel`로 네이티브 코드 실행  
+✔ 멀티플랫폼 빌드 가능 → `flutter build <platform>` 사용  
