@@ -52,6 +52,6 @@
 ### 🛠️ 테스트 및 배포  
 | 번호 | 주제 | 파일명 | 설명 |  
 |---|---|---|---|  
-| 23 | Flutter 테스트 | [testing.md](./testing.md) | Widget 테스트, Unit 테스트 |  
-| 24 | 앱 최적화 | [performance.md](./performance.md) | 렌더링 최적화, 코드 스플리팅 |  
-| 25 | 앱 배포 | [deployment.md](./deployment.md) | Android, iOS, 웹 배포 (Play Store, App Store) |  
+| 23 | 테스트 가이드 | [testing.md](./testing.md) | Widget 테스트, Unit 테스트 |  
+| 24 | 앱 최적화 가이드 | [performance.md](./performance.md) | 렌더링 최적화, 코드 스플리팅 |  
+| 25 | 앱 배포 가이드 | [deployment.md](./deployment.md) | Android, iOS, 웹 배포 (Play Store, App Store) |  
