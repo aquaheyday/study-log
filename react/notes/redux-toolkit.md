@@ -1,21 +1,21 @@
-# 🔄 Redux Toolkit 개요
+# 🔄 Redux Toolkit
 
-**Redux Toolkit (RTK)**는 **Redux의 보일러플레이트 코드를 줄이고 쉽게 상태 관리를 할 수 있도록 도와주는 공식 라이브러리**입니다.  
+**Redux Toolkit (RTK)** 는 Redux의 보일러플레이트 코드를 줄이고 쉽게 상태 관리를 할 수 있도록 도와주는 공식 라이브러리입니다.  
 기존 Redux보다 **더 간결한 문법, 강력한 기능, 내장 미들웨어 지원**을 제공합니다.
 
 ---
 
 ## 1. Redux Toolkit의 필요성
 
-✅ **기존 Redux의 단점 해결**  
+✔ 기존 Redux의 단점 해결  
    - `createStore`, `combineReducers`, `applyMiddleware` 등 설정이 복잡함  
    - 액션과 리듀서를 분리해야 해서 코드가 많아짐  
    - `useSelector()`, `useDispatch()`를 사용할 때 코드가 길어짐  
 
-✅ **Redux Toolkit의 장점**  
-   - `configureStore()` → **스토어 설정 간소화**  
-   - `createSlice()` → **액션과 리듀서를 한 번에 작성 가능**  
-   - `createAsyncThunk()` → **비동기 처리 쉽게 구현 가능**  
+✔ Redux Toolkit의 장점  
+   - `configureStore()` → 스토어 설정 간소화  
+   - `createSlice()` → 액션과 리듀서를 한 번에 작성 가능  
+   - `createAsyncThunk()` → 비동기 처리 쉽게 구현 가능  
    - Redux DevTools 및 미들웨어 자동 설정  
 
 ---
@@ -25,14 +25,14 @@
 ```sh
 npm install @reduxjs/toolkit react-redux
 ```
-✅ `@reduxjs/toolkit` → Redux Toolkit 라이브러리  
-✅ `react-redux` → React에서 Redux를 사용할 수 있도록 연결  
+✔ `@reduxjs/toolkit` → Redux Toolkit 라이브러리  
+✔ `react-redux` → React에서 Redux를 사용할 수 있도록 연결  
 
 ---
 
 ## 3. Redux Toolkit의 주요 기능
 
-### 3-1. `configureStore()` - 스토어 설정
+### `configureStore()` - 스토어 설정
 ```jsx
 import { configureStore } from "@reduxjs/toolkit";
 import counterReducer from "./counterSlice";
@@ -45,12 +45,12 @@ const store = configureStore({
 
 export default store;
 ```
-✅ 기존 Redux의 `createStore()`보다 간결하게 **스토어 설정 가능**  
-✅ `reducer` 객체에 여러 개의 slice 리듀서를 추가 가능  
+✔ 기존 Redux의 `createStore()`보다 간결하게 스토어 설정 가능  
+✔ `reducer` 객체에 여러 개의 slice 리듀서를 추가 가능  
 
 ---
 
-### 3-2. `createSlice()` - 액션 & 리듀서 한 번에 정의
+### `createSlice()` - 액션 & 리듀서 한 번에 정의
 ```jsx
 import { createSlice } from "@reduxjs/toolkit";
 
@@ -66,13 +66,13 @@ const counterSlice = createSlice({
 export const { increment, decrement } = counterSlice.actions;
 export default counterSlice.reducer;
 ```
-✅ `reducers` 안에서 **객체 형태로 액션 & 리듀서 동시 정의**  
-✅ 기존 Redux에서는 **액션과 리듀서를 따로 관리했지만, RTK에서는 `createSlice()`로 합칠 수 있음**  
-✅ **불변성 관리를 자동 처리 (`immer` 사용)** → `state.count += 1` 가능  
+✔ `reducers` 안에서 객체 형태로 액션 & 리듀서 동시 정의  
+✔ 기존 Redux에서는 액션과 리듀서를 따로 관리했지만, RTK에서는 `createSlice()`로 합칠 수 있음  
+✔ 불변성 관리를 자동 처리 (`immer` 사용) → `state.count += 1` 가능  
 
 ---
 
-### 3-3. Redux Store를 React에 연결 (`Provider`)
+### Redux Store를 React에 연결 (`Provider`)
 ```jsx
 import React from "react";
 import ReactDOM from "react-dom";
@@ -87,11 +87,11 @@ ReactDOM.render(
   document.getElementById("root")
 );
 ```
-✅ `<Provider store={store}>` → **Redux Store를 React 애플리케이션에 제공**  
+✔ `<Provider store={store}>` → Redux Store를 React 애플리케이션에 제공  
 
 ---
 
-### 3-4. Redux 상태 가져오기 (`useSelector`) & 업데이트 (`useDispatch`)
+### Redux 상태 가져오기 (`useSelector`) & 업데이트 (`useDispatch`)
 ```jsx
 import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement } from "./counterSlice";
@@ -111,15 +111,15 @@ function Counter() {
 
 export default Counter;
 ```
-✅ `useSelector(state => state.counter.count)` → **Redux Store에서 상태 가져오기**  
-✅ `useDispatch()` → **Redux 액션(dispatch) 실행**  
+✔ `useSelector(state => state.counter.count)` → Redux Store에서 상태 가져오기  
+✔ `useDispatch()` → Redux 액션(dispatch) 실행  
 
 ---
 
 ## 4. 비동기 작업 (`createAsyncThunk`)
 
-### 4-1. `createAsyncThunk()` - API 호출 처리
-Redux에서 **비동기 작업(API 호출 등)을 쉽게 처리할 수 있도록 지원**합니다.
+### `createAsyncThunk()` - API 호출 처리
+Redux에서 비동기 작업(API 호출 등)을 쉽게 처리할 수 있도록 지원합니다.
 
 ```jsx
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
@@ -150,12 +150,12 @@ const userSlice = createSlice({
 
 export default userSlice.reducer;
 ```
-✅ `createAsyncThunk("액션명", 비동기 함수)` → API 요청을 정의  
-✅ `extraReducers` → **비동기 요청 상태 (`pending`, `fulfilled`, `rejected`) 관리**  
+✔ `createAsyncThunk("액션명", 비동기 함수)` → API 요청을 정의  
+✔ `extraReducers` → 비동기 요청 상태 (`pending`, `fulfilled`, `rejected`) 관리  
 
 ---
 
-### 4-2. API 호출 데이터 표시 (`useDispatch` 활용)
+### API 호출 데이터 표시 (`useDispatch` 활용)
 ```jsx
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
@@ -177,8 +177,8 @@ function UserProfile() {
 
 export default UserProfile;
 ```
-✅ `dispatch(fetchUser())`를 실행하면 자동으로 API 요청이 진행됨  
-✅ `status`를 활용하여 로딩, 성공, 실패 상태를 관리  
+✔ `dispatch(fetchUser())` → 실행하면 자동으로 API 요청이 진행됨  
+✔ `status` → 로딩, 성공, 실패 상태를 관리  
 
 ---
 
@@ -193,17 +193,16 @@ export default UserProfile;
 | 비동기 작업 | `redux-thunk` 설치 필요 | `createAsyncThunk()` 기본 제공 |
 | 코드량 | 많음 (보일러플레이트 많음) | 적음 (간결한 코드) |
 
-✅ **Redux Toolkit은 기존 Redux보다 코드가 짧고 직관적**  
-✅ **비동기 작업을 쉽게 관리 가능 (`createAsyncThunk`)**  
+✔ Redux Toolkit → 기존 Redux보다 코드가 짧고 직관적  
+✔ `createAsyncThunk` → 비동기 작업을 쉽게 관리 가능  
 
 ---
 
-## 6. 공식 문서 및 추가 자료
-- [Redux Toolkit 공식 문서](https://redux-toolkit.js.org/)
-- [React Redux 공식 문서](https://react-redux.js.org/)
-- [Redux vs Redux Toolkit 비교](https://redux.js.org/tutorials/fundamentals/part-8-modern-redux)
-
----
-
-🚀 **Redux Toolkit을 익혔다면, 이제 React Router를 배워봅시다!**  
-다음 개념: [React Router](./react-router.md) →
+## 🎯 정리
+✔ Redux Toolkit (RTK)은 Redux의 보일러플레이트 코드를 줄이고 간편한 상태 관리를 제공  
+✔ configureStore() → 스토어 설정을 간결하게 처리  
+✔ createSlice() → 액션과 리듀서를 한 번에 정의 가능  
+✔ useSelector() → Redux 스토어에서 상태 가져오기  
+✔ useDispatch() → 액션 실행하여 상태 변경  
+✔ createAsyncThunk() → 비동기 API 요청을 간편하게 처리  
+✔ Redux DevTools & 미들웨어 자동 설정 지원  
