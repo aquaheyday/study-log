@@ -250,9 +250,9 @@ function App() {
 
 ## 🎯 정리
 ✔ React Router는 싱글 페이지 애플리케이션(SPA)에서 페이지 이동을 관리하는 라이브러리  
-✔ <BrowserRouter>로 라우팅 활성화, <Routes>와 <Route>로 경로 설정  
-✔ <Link to="/"> → 새로고침 없이 페이지 이동, useNavigate() → 프로그래밍 방식으로 이동  
-✔ useParams() → URL 파라미터 (/product/:id) 가져오기  
-✔ useSearchParams() → 쿼리 스트링 (?keyword=React) 관리  
-✔ <Outlet>을 사용하면 중첩 라우트(Nested Routes) 구현 가능  
+✔ `<BrowserRouter>`로 라우팅 활성화, `<Routes>`와 `<Route>`로 경로 설정  
+✔ `<Link to="/">` → 새로고침 없이 페이지 이동, `useNavigate()` → 프로그래밍 방식으로 이동  
+✔ `useParams()` → URL 파라미터 (/product/:id) 가져오기  
+✔ `useSearchParams()` → 쿼리 스트링 (?keyword=React) 관리  
+✔ `<Outlet>`을 사용하면 중첩 라우트(Nested Routes) 구현 가능  
 ✔ ProtectedRoute를 활용해 인증된 사용자만 특정 페이지 접근 가능  
