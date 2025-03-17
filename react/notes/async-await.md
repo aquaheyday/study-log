@@ -240,6 +240,6 @@ export default App;
 
 ## 🎯 정리
 ✔ 콜백 함수, Promise, async/await을 활용하여 비동기 작업 수행 가능  
-✔ fetch(), axios → API 요청을 처리하는 기본적인 방법 (useEffect와 함께 사용)  
-✔ React Query → 자동 캐싱, 리패칭, 상태 관리 기능 제공 (useQuery())  
-✔ 단순 요청에는 fetch/axios, 상태 관리가 필요한 경우 React Query 사용 추천  
+✔ `fetch()`, `axios` → API 요청을 처리하는 기본적인 방법 (`useEffect`와 함께 사용)  
+✔ `React Query` → 자동 캐싱, 리패칭, 상태 관리 기능 제공 (`useQuery()`)  
+✔ 단순 요청에는 `fetch`/`axios`, 상태 관리가 필요한 경우 `React Query` 사용 추천  
