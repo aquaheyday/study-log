@@ -28,7 +28,7 @@
 | 번호 | 주제 | 파일명 | 설명 |
 |---|---|---|---|
 | 10 | Context API | [context-api.md](./context-api.md) | 전역 상태 관리, useContext 사용법 |
-| 11 | Redux 기본 | [redux-basics.md](./redux-basics.md) | Redux 개념, store, reducer, action |
+| 11 | Redux 기본 개념 | [redux-basics.md](./redux-basics.md) | Redux 개념, store, reducer, action |
 | 12 | Redux Toolkit | [redux-toolkit.md](./redux-toolkit.md) | Redux Toolkit을 활용한 상태 관리 |
 
 ### 🌍 네트워크 및 데이터 관리
