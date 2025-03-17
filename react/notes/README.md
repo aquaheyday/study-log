@@ -31,7 +31,7 @@
 | 11 | Redux 기본 | [redux-basics.md](./redux-basics.md) | Redux 개념, store, reducer, action |
 | 12 | Redux Toolkit | [redux-toolkit.md](./redux-toolkit.md) | Redux Toolkit을 활용한 상태 관리 |
 
-### 🌍 라우팅과 API 연동
+### 🌍 네트워크 및 데이터 관리
 | 번호 | 주제 | 파일명 | 설명 |
 |---|---|---|---|
 | 13 | React Router | [react-router.md](./react-router.md) | 페이지 이동, 동적 라우팅, useParams |
