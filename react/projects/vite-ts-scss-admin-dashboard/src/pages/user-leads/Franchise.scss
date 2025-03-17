@@ -1,0 +1,99 @@
+.inbound-container {
+  background-color: #fff;
+  border: 1px solid #dbdfe9;
+  border-radius: .75rem;
+  flex-grow: 1;
+  display: flex;
+  margin: 1.25rem;
+  margin-inline-start: 290px;
+  height: calc(100vh - 2.6rem);
+
+  .scroll-container {
+    scrollbar-width: auto;
+    scrollbar-color: #e8e8e8 transparent;
+    overflow-y: auto;
+    padding-top: 1.25rem;
+    flex-direction: column;
+    flex-grow: 1;
+    display: flex;
+
+    main {
+      flex-grow: 1;
+
+      .toolbar {
+        padding-bottom: 1.25rem;
+
+        .toolbar-header {
+          gap: .75rem;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          display: flex;
+          padding-inline-start: 1.875rem;
+          padding-inline-end: 1.875rem;
+          margin-bottom: 10px;
+
+          .toolbar-left {
+            gap: 1.25rem;
+            align-items: center;
+            flex-wrap: wrap;
+            display: flex;
+
+            h1 {
+              color: #071437;
+              font-weight: 500;
+              font-size: 1rem;
+              line-height: 1.5rem;
+            }
+          }
+
+          .toolbar-right {
+            gap: .875rem;
+            align-items: center;
+            flex-wrap: wrap;
+            display: flex;
+
+            .search-button {
+              color: #78829d;
+              border-radius: .375rem;
+              width: 2.25rem;
+              height: 2.25rem;
+              justify-content: center;
+              flex-shrink: 0;
+              padding: 0;
+              gap: 0;
+              display: inline-flex;
+              align-items: center;
+              cursor: pointer;
+              line-height: 1;
+              padding-inline-start: 1rem;
+              padding-inline-end: 1rem;
+              border: 1px solid transparent;
+              font-weight: 500;
+              font-size: .8125rem;
+              outline: none;
+            }
+
+            .export-button {
+              color: #4b5675;
+              border: 1px solid #dbdfe9;
+              background-color: #fff;
+              height: 1.75rem;
+              padding-inline-start: .5rem;
+              padding-inline-end: .5rem;
+              font-weight: 500;
+              font-size: .6875rem;
+              gap: .25rem;
+              display: inline-flex;
+              align-items: center;
+              cursor: pointer;
+              line-height: 1;
+              border-radius: .375rem;
+              text-decoration: inherit;
+            }
+          }
+        }
+      }
+    }
+  }
+}

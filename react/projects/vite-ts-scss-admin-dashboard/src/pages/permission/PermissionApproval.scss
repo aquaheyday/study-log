@@ -1,0 +1,55 @@
+.inbound-container {
+  background-color: #fff;
+  border: 1px solid #dbdfe9;
+  border-radius: 0.75rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin: 1.25rem;
+  margin-inline-start: 290px;
+  height: calc(100vh - 2.6rem);
+  .scroll-container {
+    scrollbar-width: auto;
+    scrollbar-color: #e8e8e8 transparent;
+    overflow-y: auto;
+    padding-top: 1.25rem;
+    flex-direction: column;
+    flex-grow: 1;
+    display: flex;
+    main {
+      flex-grow: 1;
+      .toolbar {
+        padding-bottom: 1.25rem;
+        .toolbar-header {
+          gap: 0.75rem;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          display: flex;
+          padding-inline-start: 1.875rem;
+          padding-inline-end: 1.875rem;
+          margin-bottom: 10px;
+          .toolbar-left {
+            gap: 1.25rem;
+            align-items: center;
+            flex-wrap: wrap;
+            display: flex;
+          }
+        }
+        .table-box {
+          table {
+            .completed {
+              display: block;
+              text-align: center;
+            }
+            .btn-box {
+              display: flex;
+              justify-content: center;
+              gap: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

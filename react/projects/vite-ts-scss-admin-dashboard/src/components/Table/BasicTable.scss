@@ -1,0 +1,161 @@
+.table-box {
+  flex-grow: 1;
+  padding-inline-start: 1.875rem;
+  padding-inline-end: 1.875rem;
+  .table-grid {
+    gap: 1.875rem;
+    display: grid;
+    .table-container {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      border-radius: 0.75rem;
+      border: 1px solid #f1f1f4;
+      .table-header {
+        padding-inline-start: 1.25rem;
+        padding-inline-end: 1.25rem;
+        flex-wrap: wrap;
+        display: flex;
+        min-height: 56px;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #f1f1f4;
+        h3 {
+          font-size: 0.9rem;
+          line-height: 1.5rem;
+          font-weight: 400;
+          color: #071437;
+          margin: 0;
+        }
+      }
+      // .table-box2 {
+      //   padding: 0;
+      //   flex-grow: 1;
+      //   .table-content {
+      //     scrollbar-color: #e8e8e8 transparent;
+      //     overflow-x: auto;
+      //     scrollbar-width: thin;
+      //     position: relative;
+      //     table {
+      //       border: 0;
+      //       table-layout: auto;
+      //       display: table;
+      //       width: 100%;
+      //       caption-side: bottom;
+      //       border-collapse: collapse;
+      //       vertical-align: middle;
+      //       text-align: left;
+      //       color: #4b5675;
+      //       font-weight: 500;
+      //       font-size: 0.875rem;
+      //       line-height: 1.25rem;
+      //       text-indent: 0;
+      //       th {
+      //         padding-inline-start: 1.25rem;
+      //         border-radius: 0;
+      //         border-start-start-radius: 0.75rem;
+      //         padding-inline-end: 1rem;
+      //         padding-top: 0.625rem;
+      //         padding-bottom: 0.625rem;
+      //         border-bottom: 1px solid #f1f1f4;
+      //         background-color: #fcfcfc;
+      //         color: #78829d;
+      //         font-weight: 500;
+      //         font-size: 0.8125rem;
+      //         line-height: 1.125rem;
+      //         vertical-align: middle;
+      //         border-inline-end: 1px solid #f1f1f4;
+      //         text-align: center;
+      //       }
+      //       tbody {
+      //         td {
+      //           padding-inline-start: 1.25rem;
+      //           padding-inline-end: 1rem;
+      //           padding-top: 0.75rem;
+      //           padding-bottom: 0.75rem;
+      //           border-bottom: 1px solid #f1f1f4;
+      //           border-inline-end: 1px solid #f1f1f4;
+      //           &.btn-wrap {
+      //             text-align: center;
+      //             .btn-box{
+      //               display: flex;
+      //               justify-content: center;
+      //               gap: 8px;
+      //               button {
+      //                 box-shadow: none;
+      //               }
+      //             }
+      //             .completed {
+      //               color: #888;
+      //             }
+      //           }
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
+      table {
+        border: 0;
+        table-layout: auto;
+        display: table;
+        width: 100%;
+        caption-side: bottom;
+        border-collapse: collapse;
+        vertical-align: middle;
+        text-align: left;
+        color: #4b5675;
+        font-weight: 500;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        thead {
+          tr {
+            th {
+              text-align: center;
+              padding-inline-start: 1.25rem;
+              border-radius: 0;
+              border-start-start-radius: 0.75rem;
+              padding-inline-end: 1rem;
+              padding-top: 0.625rem;
+              padding-bottom: 0.625rem;
+              border-bottom: 1px solid #f1f1f4;
+              background-color: #fcfcfc;
+              color: #78829d;
+              font-weight: 500;
+              font-size: 0.8125rem;
+              line-height: 1.125rem;
+              vertical-align: middle;
+              border-inline-end: 1px solid #f1f1f4;
+              padding: 0 16px;
+              height: 42px;
+            }
+          }
+        }
+        tbody {
+          tr {
+            &.table-row {
+              transition: background-color 0.2s ease;
+              &:hover {
+                background-color: #f5f5f5;
+              }
+            }
+            td {
+              padding-inline-start: 1.25rem;
+              padding-inline-end: 1rem;
+              padding-top: 0.75rem;
+              padding-bottom: 0.75rem;
+              border-bottom: 1px solid #f1f1f4;
+              border-inline-end: 1px solid #f1f1f4;
+              color: #4b5675;
+              padding: 0 16px;
+              height: 50px;
+              &:first-child {
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

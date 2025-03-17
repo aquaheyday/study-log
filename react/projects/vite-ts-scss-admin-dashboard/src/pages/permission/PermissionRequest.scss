@@ -1,0 +1,54 @@
+.permission-form-container {
+  background-color: #fff;
+  width: 100%;
+  max-width: 1070px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.75rem;
+  border: 1px solid #dbdfe9;
+  .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: flex-start;  
+    > div {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-start;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+    }  
+    h4 {
+      font-size: 1.1rem;
+      margin: 0;
+      width: 10rem;
+      text-align: center;
+      background-color: #f5f5f5;
+      // height: 100%; 
+      display: flex; 
+      align-items: center;
+      justify-content: center;
+    }  
+    .form-group {
+      // width: 100px;
+      // height: 3rem;
+      display: flex;
+      // flex-wrap: wrap;
+      justify-content: flex-start;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0 8px;
+      flex: 6;
+      padding: 1rem 2rem;
+      label {
+        font-weight: 400;
+        font-size: 0.8rem;
+        line-height: 1.125rem;
+      }
+    }
+  }
+  button {
+    width: 50%;
+    margin: 0 auto;
+  }
+}

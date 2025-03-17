@@ -1,0 +1,17 @@
+.menu-icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.menu-icon svg {
+  width: 26px;
+  height: auto;
+  display: block;
+}
+button .menu-icon svg {
+  width: 20px;
+  margin-right: 5px;
+}
+.btn-all {
+  font-size: 14px;
+}
