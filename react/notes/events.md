@@ -236,8 +236,8 @@ function MouseEventExample() {
 
 ## 🎯 정리
 ✔ React에서 이벤트 핸들링은 JSX 문법을 활용하여 설정  
-✔ onClick, onChange 등 CamelCase 이벤트 속성 사용  
+✔ `onClick`, `onChange` 등 CamelCase 이벤트 속성 사용  
 ✔ 클래스형 컴포넌트에서는 this 바인딩 문제 해결 필요  
-✔ event.preventDefault() → 기본 이벤트 방지  
-✔ event.stopPropagation() → 이벤트 버블링 방지  
-✔ 다양한 이벤트(onMouseEnter, onFocus 등) 활용 가능  
+✔ `event.preventDefault()` → 기본 이벤트 방지  
+✔ `event.stopPropagation()` → 이벤트 버블링 방지  
+✔ 다양한 이벤트(`onMouseEnter`, `onFocus` 등) 활용 가능  
