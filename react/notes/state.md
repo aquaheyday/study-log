@@ -1,4 +1,4 @@
-# 📌 React 상태 관리 (State)
+# 📌 상태 관리
 
 React에서 **State(상태)** 는 **컴포넌트 내부에서 관리되는 동적인 데이터**를 의미합니다.  
 State를 사용하면 **사용자의 입력, API 데이터, UI 상태** 등을 관리할 수 있습니다.
@@ -26,14 +26,14 @@ function Counter() {
 
 export default Counter;
 ```
-✅ `useState(0)` → 초기 값 `0` 설정  
-✅ `setCount(count + 1)` → 버튼 클릭 시 `count` 값 증가  
+✔ `useState(0)` → 초기 값 `0` 설정  
+✔ `setCount(count + 1)` → 버튼 클릭 시 `count` 값 증가  
 
 ---
 
 ## 2. useState() 훅 사용법
 
-### 2-1. 기본적인 State 사용
+### 기본적인 State 사용
 ```jsx
 import { useState } from "react";
 
@@ -48,12 +48,12 @@ function Example() {
   );
 }
 ```
-✅ `useState("초기 상태")` → 초기 값 설정  
-✅ `setText("변경된 상태")` → 버튼 클릭 시 State 변경  
+✔ `useState("초기 상태")` → 초기 값 설정  
+✔ `setText("변경된 상태")` → 버튼 클릭 시 State 변경  
 
 ---
 
-### 2-2. 객체 형태의 State 관리
+### 객체 형태의 State 관리
 State가 **객체인 경우**, `setState()`를 사용할 때 **기존 값을 유지**해야 합니다.
 
 ```jsx
@@ -73,11 +73,11 @@ function UserProfile() {
   );
 }
 ```
-✅ `setUser({ ...user, age: user.age + 1 })` → 기존 값 유지 후 `age`만 변경  
+✔ `setUser({ ...user, age: user.age + 1 })` → 기존 값 유지 후 `age`만 변경  
 
 ---
 
-### 3-3. 배열 형태의 State 관리
+### 배열 형태의 State 관리
 State가 **배열인 경우**, `map()`, `filter()` 등을 사용하여 업데이트합니다.
 
 ```jsx
@@ -102,7 +102,7 @@ function TodoList() {
   );
 }
 ```
-✅ `setTodos([...todos, "새로운 할 일"])` → 기존 배열 유지 후 새로운 요소 추가  
+✔ `setTodos([...todos, "새로운 할 일"])` → 기존 배열 유지 후 새로운 요소 추가  
 
 ---
 
@@ -134,7 +134,7 @@ function Counter() {
   );
 }
 ```
-✅ `setCount(count + 1)`을 사용해야 UI가 자동 업데이트됨  
+✔ `setCount(count + 1)`을 사용해야 UI가 자동 업데이트됨  
 
 ---
 
@@ -158,8 +158,8 @@ function Example() {
   );
 }
 ```
-✅ `console.log(count)` → 이전 값이 출력됨  
-✅ 최신 값을 반영하려면 **`setState(prev => prev + 1)` 방식 사용**
+✔ `console.log(count)` → 이전 값이 출력됨  
+✔ 최신 값을 반영하려면 **`setState(prev => prev + 1)` 방식 사용**
 
 ```jsx
 setCount(prevCount => prevCount + 1);
@@ -187,7 +187,7 @@ function MultiStateExample() {
   );
 }
 ```
-✅ 여러 개의 `useState()`를 사용하여 독립적인 상태 관리 가능  
+✔ 여러 개의 `useState()`를 사용하여 독립적인 상태 관리 가능  
 
 ---
 
@@ -200,16 +200,11 @@ function MultiStateExample() {
 | 초기값 설정 | `useState(initialValue)` | 부모 컴포넌트에서 전달 |
 | 예제 사용 | `useState()` | `<Child name="Alice" />` |
 
-✅ **State는 컴포넌트 내부에서 변경 가능**  
-✅ **Props는 부모 컴포넌트에서 자식으로 전달**  
+✔ State는 컴포넌트 내부에서 변경 가능  
+✔ Props는 부모 컴포넌트에서 자식으로 전달  
 
 ---
 
 ## 7. 공식 문서 및 추가 자료
 - [React 공식 문서 - State](https://react.dev/reference/react/useState)
 - [React 상태 관리 가이드](https://react.dev/learn/state-a-components-memory)
-
----
-
-🚀 **React의 State를 이해했다면, 이제 이벤트 핸들링을 배워봅시다!**  
-다음 개념: [React 이벤트 처리](./events.md) →
