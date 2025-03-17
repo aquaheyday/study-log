@@ -193,6 +193,6 @@ export default Timer;
 
 ## 🎯 정리
 ✔ React 컴포넌트는 마운트(Mount) → 업데이트(Update) → 언마운트(Unmount) 단계를 거침  
-✔ useEffect(() => {...}, []) (componentDidMount) → 마운트 시 실행  
-✔ useEffect(() => {...}, [state]) (componentDidUpdate) → 업데이트 시 실행  
-✔ useEffect(() => {... return () => {...}}, []) (componentWillUnmount) →  언마운트 시 실행 (정리 작업)  
+✔ `useEffect(() => {...}, []) (componentDidMount)` → 마운트 시 실행  
+✔ `useEffect(() => {...}, [state]) (componentDidUpdate)` → 업데이트 시 실행  
+✔ `useEffect(() => {... return () => {...}}, []) (componentWillUnmount)` →  언마운트 시 실행 (정리 작업)  
