@@ -225,8 +225,8 @@ export default UncontrolledForm;
 
 ## 🎯 정리
 ✔ React에서 폼 입력값을 관리하는 기본 방법은 Controlled Component (제어 컴포넌트) 사용  
-✔ useState()를 활용하여 입력값을 상태(state)로 저장 및 관리  
-✔ onChange 핸들러를 사용하여 입력 변경 시 state 업데이트  
-✔ 여러 개의 입력 필드는 객체(state)와 name 속성을 활용하여 관리 가능  
-✔ onSubmit을 사용하여 폼 제출 처리, event.preventDefault()로 기본 동작 방지  
-✔ Uncontrolled Component (비제어 컴포넌트) 에서는 useRef()를 활용하여 값 접근 가능  
+✔ `useState()`를 활용하여 입력값을 상태(state)로 저장 및 관리  
+✔ `onChange` 핸들러를 사용하여 입력 변경 시 state 업데이트  
+✔ 여러 개의 입력 필드는 객체(state)와 `name` 속성을 활용하여 관리 가능  
+✔ `onSubmit`을 사용하여 폼 제출 처리, `event.preventDefault()`로 기본 동작 방지  
+✔ Uncontrolled Component (비제어 컴포넌트) 에서는 `useRef()`를 활용하여 값 접근 가능  
