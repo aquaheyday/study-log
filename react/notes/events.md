@@ -1,4 +1,4 @@
-# 🎯 React 이벤트 처리 (Event Handling)
+# 🔲 이벤트 처리
 
 React에서는 **DOM 이벤트를 다루기 위해 이벤트 핸들러를 설정**할 수 있습니다.  
 JSX 문법을 사용하여 **HTML과 유사한 방식**으로 이벤트를 바인딩할 수 있지만, 일부 차이점이 있습니다.
@@ -7,23 +7,23 @@ JSX 문법을 사용하여 **HTML과 유사한 방식**으로 이벤트를 바�
 
 ## 1. React 이벤트의 특징
 
-✅ **CamelCase 문법 사용**  
-  - `onclick` → `onClick`, `onchange` → `onChange`
+### CamelCase 문법 사용
+`onclick` → `onClick`, `onchange` → `onChange`
 
-✅ **이벤트 핸들러에 함수 전달 (문자열 X)**  
-  - HTML: `<button onclick="handleClick()">클릭</button>` ❌  
-  - React: `<button onClick={handleClick}>클릭</button>` ✅
+### 이벤트 핸들러에 함수 전달 (문자열 X)
+HTML: `<button onclick="handleClick()">클릭</button>` ❌  
+React: `<button onClick={handleClick}>클릭</button>` ✅
 
-✅ **SyntheticEvent 사용**  
-  - React는 브라우저의 네이티브 이벤트를 감싸서 `SyntheticEvent` 객체로 제공  
+### SyntheticEvent 사용
+React는 브라우저의 네이티브 이벤트를 감싸서 `SyntheticEvent` 객체로 제공  
 
-✅ **이벤트 핸들러 내부에서 `this` 문제 해결 필요 (클래스형 컴포넌트의 경우)**  
+✔ 이벤트 핸들러 내부에서 `this` 문제 해결 필요 (클래스형 컴포넌트의 경우)  
 
 ---
 
 ## 2. 기본 이벤트 핸들링
 
-### 2-1. 함수형 컴포넌트에서 이벤트 처리
+### 함수형 컴포넌트에서 이벤트 처리
 ```jsx
 function ButtonClick() {
   const handleClick = () => {
@@ -35,11 +35,11 @@ function ButtonClick() {
 
 export default ButtonClick;
 ```
-✅ `onClick={handleClick}` → 함수 이름을 직접 전달해야 함 (괄호 없음)  
+✔ `onClick={handleClick}` → 함수 이름을 직접 전달해야 함 (괄호 없음)  
 
 ---
 
-### 2-2. 클래스형 컴포넌트에서 이벤트 처리
+### 클래스형 컴포넌트에서 이벤트 처리
 ```jsx
 import React, { Component } from "react";
 
@@ -55,7 +55,7 @@ class ButtonClick extends Component {
 
 export default ButtonClick;
 ```
-✅ 클래스형 컴포넌트에서는 `this.handleClick`을 직접 바인딩  
+✔ 클래스형 컴포넌트에서는 `this.handleClick`을 직접 바인딩  
 
 ---
 
@@ -72,15 +72,15 @@ function InputField() {
   return <input type="text" onChange={handleChange} />;
 }
 ```
-✅ `event.target.value` → 입력된 값을 가져올 수 있음  
+✔ `event.target.value` → 입력된 값을 가져올 수 있음  
 
 ---
 
 ## 4. 이벤트 핸들러에 매개변수 전달
 
-**매개변수를 전달할 경우 화살표 함수 또는 `bind()`를 사용해야 합니다.**
+매개변수를 전달할 경우 화살표 함수 또는 `bind()`를 사용해야 합니다.
 
-### 4-1. 함수형 컴포넌트에서 매개변수 전달
+### 함수형 컴포넌트에서 매개변수 전달
 ```jsx
 function GreetingButton() {
   const sayHello = (name) => {
@@ -90,11 +90,11 @@ function GreetingButton() {
   return <button onClick={() => sayHello("Alice")}>클릭</button>;
 }
 ```
-✅ 화살표 함수 사용 → `onClick={() => sayHello("Alice")}`  
+✔ 화살표 함수 사용 → `onClick={() => sayHello("Alice")}`  
 
 ---
 
-### 4-2. 클래스형 컴포넌트에서 매개변수 전달
+### 클래스형 컴포넌트에서 매개변수 전달
 ```jsx
 import React, { Component } from "react";
 
@@ -110,7 +110,7 @@ class GreetingButton extends Component {
 
 export default GreetingButton;
 ```
-✅ 화살표 함수 사용하여 매개변수 전달 (`onClick={() => this.sayHello("Alice")}`)  
+✔ 화살표 함수 사용하여 매개변수 전달 (`onClick={() => this.sayHello("Alice")}`)  
 
 ---
 
@@ -144,9 +144,8 @@ class Counter extends Component {
 
 export default Counter;
 ```
-✅ `this.handleClick = this.handleClick.bind(this);` → 생성자에서 `this` 바인딩 필요  
-
-> 📌 **클래스형 컴포넌트에서는 화살표 함수 (`handleClick = () => {}`)를 사용하면 `this` 바인딩이 필요 없음!**  
+✔ `this.handleClick = this.handleClick.bind(this);` → 생성자에서 `this` 바인딩 필요  
+✔ 클래스형 컴포넌트에서는 화살표 함수 (`handleClick = () => {}`)를 사용하면 `this` 바인딩이 필요 없음!  
 
 ```jsx
 class Counter extends Component {
@@ -187,7 +186,7 @@ function Form() {
   );
 }
 ```
-✅ `event.preventDefault()` → 폼 제출 기본 동작 방지  
+✔ `event.preventDefault()` → 폼 제출 기본 동작 방지  
 
 ---
 
@@ -210,7 +209,7 @@ function EventExample() {
   );
 }
 ```
-✅ `event.stopPropagation()` → 부모의 `onClick` 이벤트 실행 방지  
+✔ `event.stopPropagation()` → 부모의 `onClick` 이벤트 실행 방지  
 
 ---
 
@@ -231,15 +230,14 @@ function MouseEventExample() {
   );
 }
 ```
-✅ `onMouseEnter`, `onFocus` 등 다양한 이벤트 처리 가능  
+✔ `onMouseEnter`, `onFocus` 등 다양한 이벤트 처리 가능  
 
 ---
 
-## 9. 공식 문서 및 추가 자료
-- [React 공식 문서 - 이벤트 처리](https://react.dev/learn/responding-to-events)
-- [React SyntheticEvent](https://react.dev/reference/react-dom/synthetic-event)
-
----
-
-🚀 **React의 이벤트 처리를 이해했다면, 이제 폼 입력을 배워봅시다!**  
-다음 개념: [React 폼과 입력 관리](./forms.md) →
+## 🎯 정리
+✔ React에서 이벤트 핸들링은 JSX 문법을 활용하여 설정  
+✔ onClick, onChange 등 CamelCase 이벤트 속성 사용  
+✔ 클래스형 컴포넌트에서는 this 바인딩 문제 해결 필요  
+✔ event.preventDefault() → 기본 이벤트 방지  
+✔ event.stopPropagation() → 이벤트 버블링 방지  
+✔ 다양한 이벤트(onMouseEnter, onFocus 등) 활용 가능  
