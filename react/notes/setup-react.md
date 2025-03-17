@@ -99,9 +99,9 @@ npm install --save-dev prettier eslint-config-prettier eslint-plugin-prettier
 
 ---
 
-## 7. 공식 문서 및 추가 자료
-- [React 공식 문서](https://react.dev/)
-- [Vite 공식 문서](https://vitejs.dev/)
-- [Node.js 공식 사이트](https://nodejs.org/)
-- [ESLint 공식 문서](https://eslint.org/)
-- [Prettier 공식 문서](https://prettier.io/)
+## 🎯 정리
+✔ React 프로젝트 생성 방법 → `npx create-react-app my-app (CRA)` 또는 `npm create vite@latest my-app --template react` (Vite)  
+✔ Vite는 CRA보다 더 빠르고 가벼운 개발 환경을 제공  
+✔ 프로젝트 구조 이해 → `src/`에서 주요 컴포넌트와 스타일 관리  
+✔ 자주 사용하는 명령어 → `npm start`(CRA) / `npm run dev`(Vite) / `npm run build`(배포)  
+✔ ESLint & Prettier 설정 → 코드 품질 유지 및 자동 정리 가능  
