@@ -1,4 +1,4 @@
-# 🎯 React 폼과 입력 관리
+# 🔲 폼과 입력 관리
 
 React에서 폼(Form) 요소는 HTML과 유사하지만,  
 입력값을 관리하고 상태(State)를 활용하는 방식이 다릅니다.  
@@ -16,7 +16,7 @@ React에서는 **Controlled Component (제어 컴포넌트)** 를 사용하여
 | 값 변경 방식 | 사용자가 직접 입력 | `onChange` 핸들러를 통해 `setState()` |
 | 데이터 동기화 | 폼 요소에 직접 저장 | `state`와 동기화 |
 
-✅ **React에서는 `useState()`를 사용하여 폼 입력값을 관리해야 함**  
+✔ React에서는 `useState()`를 사용하여 폼 입력값을 관리해야 함  
 
 ---
 
@@ -24,7 +24,7 @@ React에서는 **Controlled Component (제어 컴포넌트)** 를 사용하여
 
 React에서는 **폼 요소의 상태를 `state`로 관리**하는 방식을 사용합니다.
 
-### 2-1. 단일 입력 필드 관리
+### 단일 입력 필드 관리
 ```jsx
 import { useState } from "react";
 
@@ -45,12 +45,12 @@ function TextInput() {
 
 export default TextInput;
 ```
-✅ `value={text}` → 입력 값이 `state`와 동기화됨  
-✅ `onChange={handleChange}` → 입력 시 `state` 업데이트  
+✔ `value={text}` → 입력 값이 `state`와 동기화됨  
+✔ `onChange={handleChange}` → 입력 시 `state` 업데이트  
 
 ---
 
-### 2-2. 여러 개의 입력 필드 관리
+### 여러 개의 입력 필드 관리
 여러 개의 `input` 필드를 관리할 경우, `name` 속성을 활용합니다.
 
 ```jsx
@@ -75,11 +75,11 @@ function UserForm() {
 
 export default UserForm;
 ```
-✅ `name` 속성을 활용하여 `setState()`로 여러 필드 동시 관리 가능  
+✔ `name` 속성을 활용하여 `setState()`로 여러 필드 동시 관리 가능  
 
 ---
 
-### 2-3. 체크박스 (Checkbox) 입력 관리
+### 체크박스 (Checkbox) 입력 관리
 ```jsx
 import { useState } from "react";
 
@@ -100,11 +100,11 @@ function CheckboxExample() {
 
 export default CheckboxExample;
 ```
-✅ `checked={isChecked}` → 체크 여부를 `state`와 동기화  
+✔ `checked={isChecked}` → 체크 여부를 `state`와 동기화  
 
 ---
 
-### 2-4. 라디오 버튼 (Radio) 입력 관리
+### 라디오 버튼 (Radio) 입력 관리
 ```jsx
 import { useState } from "react";
 
@@ -132,11 +132,11 @@ function RadioExample() {
 
 export default RadioExample;
 ```
-✅ `checked={gender === "male"}` → 선택된 값과 비교하여 상태 반영  
+✔ `checked={gender === "male"}` → 선택된 값과 비교하여 상태 반영  
 
 ---
 
-### 2-5. 드롭다운 (Select) 입력 관리
+### 드롭다운 (Select) 입력 관리
 ```jsx
 import { useState } from "react";
 
@@ -161,7 +161,7 @@ function SelectExample() {
 
 export default SelectExample;
 ```
-✅ `value={fruit}` → 선택된 값을 `state`와 동기화  
+✔ `value={fruit}` → 선택된 값을 `state`와 동기화  
 
 ---
 
@@ -190,8 +190,8 @@ function FormSubmit() {
 
 export default FormSubmit;
 ```
-✅ `event.preventDefault()` → 기본 제출 동작 방지  
-✅ `onSubmit={handleSubmit}` → 폼 제출 시 실행  
+✔ `event.preventDefault()` → 기본 제출 동작 방지  
+✔ `onSubmit={handleSubmit}` → 폼 제출 시 실행  
 
 ---
 
@@ -219,15 +219,14 @@ function UncontrolledForm() {
 
 export default UncontrolledForm;
 ```
-✅ `useRef()`를 사용하여 `input`의 값을 직접 가져올 수 있음  
+✔ `useRef()`를 사용하여 `input`의 값을 직접 가져올 수 있음  
 
 ---
 
-## 5. 공식 문서 및 추가 자료
-- [React 공식 문서 - Form](https://react.dev/learn/responding-to-events)
-- [MDN - HTML 폼 요소](https://developer.mozilla.org/ko/docs/Web/HTML/Element/form)
-
----
-
-🚀 **React에서 폼 입력을 관리하는 방법을 익혔다면, 이제 useEffect 훅 배워봅시다!**  
-다음 개념: [React useEffect 훅](./useeffect.md) →
+## 🎯 정리
+✔ React에서 폼 입력값을 관리하는 기본 방법은 Controlled Component (제어 컴포넌트) 사용  
+✔ useState()를 활용하여 입력값을 상태(state)로 저장 및 관리  
+✔ onChange 핸들러를 사용하여 입력 변경 시 state 업데이트  
+✔ 여러 개의 입력 필드는 객체(state)와 name 속성을 활용하여 관리 가능  
+✔ onSubmit을 사용하여 폼 제출 처리, event.preventDefault()로 기본 동작 방지  
+✔ Uncontrolled Component (비제어 컴포넌트) 에서는 useRef()를 활용하여 값 접근 가능  
