@@ -16,13 +16,13 @@ node -v  # Node.js 버전 확인
 npm -v   # npm (Node 패키지 매니저) 버전 확인
 ```
 
-✅ [Node.js 공식 사이트](https://nodejs.org/)에서 최신 버전을 다운로드하세요.
+✔ [Node.js 공식 사이트](https://nodejs.org/)에서 최신 버전을 다운로드하세요.
 
 ---
 
 ## 2. React 프로젝트 생성 방법
 
-### 2-1. CRA(Create React App) 사용
+### CRA(Create React App) 사용
 ```sh
 npx create-react-app my-app
 cd my-app
@@ -32,7 +32,7 @@ npm start
 - **my-app**: 프로젝트 폴더명 (원하는 이름으로 변경 가능)
 - **npm start**: 개발 서버 실행 (`http://localhost:3000`)
 
-### 2-2. Vite 사용
+### Vite 사용
 ```sh
 npm create vite@latest my-app --template react
 cd my-app
@@ -77,18 +77,18 @@ my-app/
 
 ## 5. ESLint & Prettier 설정 (코드 스타일 정리)
 
-### 5-1. ESLint 설치
+### ESLint 설치
 ```sh
 npm install eslint --save-dev
 npx eslint --init
 ```
-✅ 설정 파일을 생성하고 원하는 스타일을 선택하세요.
+✔ 설정 파일을 생성하고 원하는 스타일을 선택하세요.
 
-### 5-2. Prettier 설치
+### Prettier 설치
 ```sh
 npm install --save-dev prettier eslint-config-prettier eslint-plugin-prettier
 ```
-✅ `.eslintrc.js` 또는 `.eslintrc.json` 파일을 수정하여 **Prettier를 ESLint와 함께 사용**하도록 설정하세요.
+✔ `.eslintrc.js` 또는 `.eslintrc.json` 파일을 수정하여 **Prettier를 ESLint와 함께 사용**하도록 설정하세요.
 
 ---
 
@@ -105,8 +105,3 @@ npm install --save-dev prettier eslint-config-prettier eslint-plugin-prettier
 - [Node.js 공식 사이트](https://nodejs.org/)
 - [ESLint 공식 문서](https://eslint.org/)
 - [Prettier 공식 문서](https://prettier.io/)
-
----
-
-🚀 **이제 React 프로젝트가 준비되었습니다!**  
-다음 단계: [JSX 문법](./jsx-basics.md) →
