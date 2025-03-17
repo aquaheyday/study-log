@@ -14,14 +14,15 @@ React에서 **컴포넌트(Component)** 는 UI를 구성하는 기본 단위입�
 
 ## 2. 컴포넌트의 종류
 React에서는 **함수형 컴포넌트**와 **클래스형 컴포넌트**를 사용할 수 있습니다.  
-(최근에는 **함수형 컴포넌트 + React Hooks** 사용을 권장합니다.)
+
+✔ 최근에는 함수형 컴포넌트 + React Hooks 사용을 권장합니다.
 
 ---
 
 ### 함수형 컴포넌트 (Functional Component)
-- **더 짧고 간결한 코드** 작성 가능
-- **React Hooks (`useState`, `useEffect` 등) 사용 가능**
-- **클래스형보다 성능이 우수**하고 메모리 사용량이 적음
+- 더 짧고 간결한 코드 작성 가능
+- React Hooks (`useState`, `useEffect` 등) 사용 가능
+- 클래스형보다 성능이 우수하고 메모리 사용량이 적음
 
 ```jsx
 function Greeting() {
@@ -184,6 +185,9 @@ export default Counter;
 
 ---
 
-## 7. 공식 문서 및 추가 자료
-- [React 공식 문서 - Components](https://react.dev/learn/your-first-component)
-- [React Hooks - useState](https://react.dev/reference/react/useState)
+## 🎯 정리
+✔ React 컴포넌트는 UI를 구성하는 독립적인 단위  
+✔ 함수형 컴포넌트 (`useState`, `useEffect` 활용 가능), 클래스형 컴포넌트 (최근에는 거의 사용되지 않음)  
+✔ `props` → 부모 컴포넌트에서 자식 컴포넌트로 데이터 전달  
+✔ `useState()` → 컴포넌트 내부에서 상태(State) 관리 가능  
+✔ 컴포넌트는 재사용, 독립성, 조합 가능성, 단방향 데이터 흐름을 갖는 것이 특징  
