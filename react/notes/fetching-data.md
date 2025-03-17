@@ -176,8 +176,8 @@ export default App;
 
 ## 🎯 정리
 ✔ React에서 데이터 Fetching은 서버/API에서 데이터를 가져오는 과정  
-✔ fetch() → 기본적인 HTTP 요청 방식 (useEffect와 함께 사용)  
-✔ axios → fetch()보다 간결하고 JSON 변환 자동 처리  
-✔ React Query → 자동 캐싱, 리패칭, 비동기 상태 관리 가능  
-✔ SWR → React Query와 유사한 자동 데이터 관리 기능 제공  
-✔ 단순 요청에는 Fetch API/Axios, 상태 관리 및 성능 최적화에는 React Query/SWR 사용  
+✔ `fetch()` → 기본적인 HTTP 요청 방식 (`useEffect`와 함께 사용)  
+✔ `axios` → `fetch()`보다 간결하고 JSON 변환 자동 처리  
+✔ `React Query` → 자동 캐싱, 리패칭, 비동기 상태 관리 가능  
+✔ `SWR` → React Query와 유사한 자동 데이터 관리 기능 제공  
+✔ 단순 요청에는 `Fetch API`/`Axios`, 상태 관리 및 성능 최적화에는 `React Query`/`SWR` 사용  
