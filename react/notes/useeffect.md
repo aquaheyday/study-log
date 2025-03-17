@@ -1,4 +1,4 @@
-# 🎯 React useEffect 훅
+# 🔲 useEffect 훅
 
 `useEffect`는 **React에서 컴포넌트의 생명주기(lifecycle)를 관리하는 훅**입니다.  
 렌더링 후 실행되어 **데이터 패칭, DOM 조작, 구독(subscription) 설정** 등에 사용됩니다.
@@ -7,10 +7,10 @@
 
 ## 1. `useEffect`란?
 
-✅ **컴포넌트가 렌더링될 때 실행되는 함수**  
-✅ **클래스 컴포넌트의 `componentDidMount`, `componentDidUpdate`, `componentWillUnmount`를 대체**  
-✅ **Side Effect(부작용) 처리**: API 요청, 타이머 설정, 이벤트 리스너 등록 등  
-✅ **렌더링 후 실행되며, 특정 값이 변경될 때 다시 실행 가능**  
+- 컴포넌트가 렌더링될 때 실행되는 함수  
+- 클래스 컴포넌트의 `componentDidMount`, `componentDidUpdate`, `componentWillUnmount`를 대체  
+- Side Effect(부작용) 처리: API 요청, 타이머 설정, 이벤트 리스너 등록 등  
+- 렌더링 후 실행되며, 특정 값이 변경될 때 다시 실행 가능  
 
 ```jsx
 import { useEffect } from "react";
@@ -23,33 +23,33 @@ function Example() {
   return <h1>Hello, useEffect!</h1>;
 }
 ```
-✅ **`useEffect(() => { ... })`** → 기본적으로 **렌더링 후 실행됨**  
+✔ `useEffect(() => { ... })` → 기본적으로 렌더링 후 실행됨  
 
 ---
 
 ## 2. `useEffect`의 실행 타이밍과 의존성 배열
 
-### 2-1. **컴포넌트가 렌더링될 때마다 실행 (기본)**
+### 컴포넌트가 렌더링될 때마다 실행 (기본)
 ```jsx
 useEffect(() => {
   console.log("렌더링됨!");
 });
 ```
-✅ **렌더링이 발생할 때마다 실행됨** (의존성 배열 없음)
+✔ 렌더링이 발생할 때마다 실행됨 (의존성 배열 없음)
 
 ---
 
-### 2-2. **마운트(처음 렌더링)될 때만 실행**
+### 마운트(처음 렌더링)될 때만 실행
 ```jsx
 useEffect(() => {
   console.log("한 번만 실행됨!");
 }, []);
 ```
-✅ `[]` → **빈 배열을 전달하면 처음 렌더링될 때만 실행됨**  
+✔ `[]` → 빈 배열을 전달하면 처음 렌더링될 때만 실행됨  
 
 ---
 
-### 2-3. **특정 값이 변경될 때 실행**
+### 특정 값이 변경될 때 실행
 ```jsx
 import { useState, useEffect } from "react";
 
@@ -68,7 +68,7 @@ function Counter() {
   );
 }
 ```
-✅ `[count]` → **`count` 값이 변경될 때만 실행됨**  
+✔ `[count]` → `count` 값이 변경될 때만 실행됨  
 
 ---
 
@@ -76,7 +76,7 @@ function Counter() {
 
 `useEffect`는 **컴포넌트가 언마운트되거나 의존성이 변경될 때 정리(cleanup) 작업을 수행할 수 있음**  
 
-### 3-1. **이벤트 리스너 제거**
+### 이벤트 리스너 제거
 ```jsx
 import { useEffect } from "react";
 
@@ -97,12 +97,12 @@ function WindowResize() {
   return <h1>창 크기를 조절해보세요!</h1>;
 }
 ```
-✅ `return () => {}` → **컴포넌트가 언마운트될 때 실행됨**  
-✅ **이벤트 리스너를 제거하여 메모리 누수 방지**  
+✔ `return () => {}` → 컴포넌트가 언마운트될 때 실행됨  
+✔ 이벤트 리스너를 제거하여 메모리 누수 방지  
 
 ---
 
-### 3-2. **인터벌(Interval) 정리**
+### 인터벌(Interval) 정리
 ```jsx
 import { useState, useEffect } from "react";
 
@@ -123,14 +123,14 @@ function Timer() {
   return <p>타이머: {seconds}초</p>;
 }
 ```
-✅ `setInterval()`을 사용하면 **매초마다 `seconds`가 증가**  
-✅ **컴포넌트가 언마운트되면 `clearInterval()`을 호출하여 메모리 누수를 방지**  
+✔ `setInterval()`을 사용하면 매초마다 `seconds`가 증가  
+✔ 컴포넌트가 언마운트되면 `clearInterval()`을 호출하여 메모리 누수를 방지  
 
 ---
 
 ## 4. `useEffect`의 주요 활용 사례
 
-### 4-1. **API 데이터 불러오기 (Fetching Data)**
+### API 데이터 불러오기 (Fetching Data)
 ```jsx
 import { useState, useEffect } from "react";
 
@@ -146,12 +146,12 @@ function FetchData() {
   return <pre>{JSON.stringify(data, null, 2)}</pre>;
 }
 ```
-✅ `fetch()`를 사용하여 데이터 요청 후, 응답을 `setData()`로 저장  
-✅ 의존성 배열 `[]`을 추가하여 **한 번만 실행되도록 설정**  
+✔ `fetch()`를 사용하여 데이터 요청 후, 응답을 `setData()`로 저장  
+✔ 의존성 배열 `[]`을 추가하여 한 번만 실행되도록 설정  
 
 ---
 
-### 4-2. **다크 모드 상태 저장 (로컬 스토리지 활용)**
+### 다크 모드 상태 저장 (로컬 스토리지 활용)
 ```jsx
 import { useState, useEffect } from "react";
 
@@ -171,8 +171,8 @@ function DarkModeToggle() {
   );
 }
 ```
-✅ `localStorage.getItem()` → 다크 모드 설정을 저장하고 불러오기  
-✅ `[darkMode]` → **`darkMode` 값이 변경될 때마다 `localStorage` 업데이트**  
+✔ `localStorage.getItem()` → 다크 모드 설정을 저장하고 불러오기  
+✔ `[darkMode]` → `darkMode` 값이 변경될 때마다 `localStorage` 업데이트  
 
 ---
 
@@ -186,12 +186,9 @@ function DarkModeToggle() {
 
 ---
 
-## 6. 공식 문서 및 추가 자료
-- [React 공식 문서 - useEffect](https://react.dev/reference/react/useEffect)
-- [MDN - Fetch API](https://developer.mozilla.org/ko/docs/Web/API/Fetch_API)
-- [React 컴포넌트 라이프사이클 이해](https://react.dev/learn/lifecycle-of-react)
-
----
-
-🚀 **이제 `useEffect`를 이해했다면, 컴포넌트 라이프사이클을 배워봅시다!**  
-다음 개념: [React 컴포넌트 라이프사이클](./lifecycle.md) →
+## 🎯 정리
+✔ useEffect는 React의 Side Effect(부작용) 처리를 위한 훅  
+✔ useEffect(() => {...}) → 렌더링될 때마다 실행  
+✔ useEffect(() => {...}, []) → 마운트(처음 렌더링) 시 한 번만 실행  
+✔ useEffect(() => {...}, [count]) → count 값이 변경될 때만 실행  
+✔ Cleanup 함수 (return () => {...}) 사용하여 이벤트 리스너 및 인터벌 제거 가능  
