@@ -180,8 +180,8 @@ export default MyComponent;
 ---
 
 ## 🎯 정리
-✔ React.memo → props 변경이 없을 때 렌더링 방지  
-✔ useMemo → 연산량이 많은 값의 재계산 방지  
-✔ useCallback → 이벤트 핸들러 및 콜백 함수의 재생성 방지  
-✔ react-window → 긴 리스트의 렌더링 성능 최적화 (가상화 적용)  
-✔ shouldComponentUpdate, PureComponent → 클래스형 컴포넌트의 리렌더링 최적화  
+✔ `React.memo` → `props` 변경이 없을 때 렌더링 방지  
+✔ `useMemo` → 연산량이 많은 값의 재계산 방지  
+✔ `useCallback` → 이벤트 핸들러 및 콜백 함수의 재생성 방지  
+✔ `react-window` → 긴 리스트의 렌더링 성능 최적화 (가상화 적용)  
+✔ `shouldComponentUpdate`, `PureComponent` → 클래스형 컴포넌트의 리렌더링 최적화  
