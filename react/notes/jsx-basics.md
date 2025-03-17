@@ -167,9 +167,9 @@ function Greeting() {
 ---
 
 ## 3. JSX의 장점  
-✔ **가독성이 뛰어남**: HTML과 유사한 문법으로 직관적인 코드 작성 가능  
-✔ **빠른 렌더링**: Babel을 통해 최적화된 JavaScript로 변환  
-✔ **강력한 표현력**: JavaScript 표현식과 동적으로 결합 가능  
+- 가독성이 뛰어남: HTML과 유사한 문법으로 직관적인 코드 작성 가능  
+- 빠른 렌더링: Babel을 통해 최적화된 JavaScript로 변환  
+- 강력한 표현력: JavaScript 표현식과 동적으로 결합 가능  
 
 ---
 
@@ -181,7 +181,7 @@ const element = React.createElement("h1", null, "Hello, React!");
 ReactDOM.render(element, document.getElementById("root"));
 ```
 
-✔ **JSX를 사용하면 더 직관적으로 작성 가능**
+✔ JSX를 사용하면 더 직관적으로 작성 가능
 ```jsx
 const element = <h1>Hello, React!</h1>;
 ReactDOM.render(element, document.getElementById("root"));
@@ -189,7 +189,10 @@ ReactDOM.render(element, document.getElementById("root"));
 
 ---
 
-## 5. 공식 문서 및 추가 자료
-- [React 공식 문서 - JSX](https://react.dev/learn/writing-markup-with-jsx)
-- [MDN - JavaScript 표현식](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators)
-- [Babel JSX 변환기](https://babeljs.io/repl)  
+## 🎯 정리
+✔ JSX는 JavaScript 코드에서 HTML과 유사한 문법을 사용할 수 있도록 지원하는 React의 문법 확장  
+✔ JSX는 반드시 하나의 부모 요소로 감싸야 하며, `<></>`(Fragment) 사용 가능  
+✔ JavaScript 표현식 `{}`을 사용하여 동적 데이터 렌더링 가능  
+✔ 스타일 적용 시 `style={{}}` 객체 형태 사용, `class` 대신 `className` 사용  
+✔ 조건부 렌더링은 &&, 삼항 연산자 `? :` 활용 가능  
+✔ JSX를 사용하면 React 코드가 더 직관적이고 가독성이 향상됨  
