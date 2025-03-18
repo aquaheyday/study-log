@@ -11,7 +11,7 @@
 |---|---|
 | [issues](./issues) | 해결한 GitHub 이슈 기록 |
 | [pull-requests](./pull-requests) | 제출한 PR 및 코드 리뷰 정리 |
-| [best-practices](./best-practices) | 오픈소스 기여 및 협업 가이드 |
+| [open-source-guide](/best-practices/open-source-guide.md) | 오픈소스 기여 및 협업 가이드 |
 
 ---
 
