@@ -5,11 +5,11 @@
 
 ---
 
-## 📂 디렉토리 구성
+## 📋 해결 이슈 목록
 
-| 폴더명 | 설명 |
-|---|---|
-| [sanga-1-fix-github-action-not-working.md](./sanga-1-fix-github-action-not-working.md) | GitHub Actions Not Working |
+| 번호 | 파일명 | 설명 |
+|---|---|---|
+| 01 | [sanga-1-fix-github-action-not-working.md](./sanga-1-fix-github-action-not-working.md) | GitHub Actions Not Working |
 
 ---
 
