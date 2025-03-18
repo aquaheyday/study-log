@@ -12,7 +12,6 @@
 | [issues](./issues) | 해결한 GitHub 이슈 기록 |
 | [pull-requests](./pull-requests) | 제출한 PR 및 코드 리뷰 정리 |
 | [best-practices](./best-practices) | 오픈소스 기여 및 협업 가이드 |
-| [templates](./templates) | PR 템플릿, 이슈 템플릿 등 |
 
 ---
 
