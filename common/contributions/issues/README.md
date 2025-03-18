@@ -29,4 +29,4 @@ issues/
 📌 파일 작성 템플릿
 이슈를 정리할 때, 다음 템플릿을 사용하여 일관되게 기록하세요.
 
-📄 예제 파일 (./templates/issue-template.md)
+📄 예제 파일  [issue-template.md](./templates/issue-template.md)
