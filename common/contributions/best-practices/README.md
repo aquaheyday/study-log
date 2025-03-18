@@ -1,4 +1,4 @@
-# 🚀 오픈소스 기여 가이드 (Open Source Contribution Guide)
+# 📜 오픈소스 기여 가이드 (Open Source Contribution Guide)
 
 이 문서는 오픈소스 프로젝트에 기여할 때 **효율적인 협업을 위한 모범 사례(Best Practices)** 를 정리한 가이드입니다.  
 **GitHub에서 기여하는 방법, PR 작성법, 코드 스타일, 코드 리뷰 절차까지 포함**되어 있습니다.
