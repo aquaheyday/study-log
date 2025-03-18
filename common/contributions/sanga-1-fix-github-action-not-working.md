@@ -2,7 +2,7 @@
 📌 **이슈 링크:** [GitHub Actions Not Working (#1)](https://github.com/daewoungkim/sanga/issues/1)
 
 ## 🔍 문제 상황
-- git push 시 서버에서 git pull을 위한 github action 이 동작하지 않고 있는 상황
+1. git push 시 서버에서 git pull을 위한 github action 이 동작하지 않고 있는 상황
 
 ## 🛠 해결 방법
 1. $HOME/.ssh 디렉토리 생성 후 700 권한 설정
@@ -14,6 +14,7 @@
 ## 📝 변경된 코드
 
 ### 수정 전
+#### `.github\workflows\autopull.yml`
 ```yml
 name: Auto Pull
 
@@ -44,6 +45,7 @@ jobs:
 
 
 ### 수정 후
+#### `.github\workflows\autopull.yml`
 ```yml
 name: Auto Pull
 
