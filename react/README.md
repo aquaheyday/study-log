@@ -86,6 +86,14 @@
 
 ---
 
+## 📚 참고 자료
+- [React 공식 문서](https://react.dev/) - 최신 React 공식 문서 및 가이드  
+- [React API 레퍼런스](https://react.dev/reference/react) - React의 주요 API 및 Hook 정리  
+- [Create React App](https://create-react-app.dev/) - React 프로젝트 생성 및 설정 가이드  
+- [React TypeScript 가이드](https://react-typescript-cheatsheet.netlify.app/) - TypeScript와 함께 React 사용법 정리  
+
+---
+
 ## 📢 업데이트 로그
 - 2025-03-06: 초기 구성
 - 2025-03-13: notes 초기 구성
