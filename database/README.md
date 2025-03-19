@@ -59,7 +59,7 @@
 ---
 
 ## 📚 참고 자료 & 추천 도서  
-- [SQL 첫걸음 - 초보자를 위한 데이터베이스 입문](https://www.yes24.com/Product/Goods/66325951)  
-- [Designing Data-Intensive Applications (데이터 중심 애플리케이션 설계)](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/)  
+- [SQL 첫걸음](https://www.yes24.com/Product/Goods/66325951) - 초보자를 위한 데이터베이스 입문
+- [Designing Data](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/) - Intensive Applications (데이터 중심 애플리케이션 설계)
 - [PostgreSQL 공식 문서](https://www.postgresql.org/docs/)  
 - [MongoDB 개발자 가이드](https://www.mongodb.com/docs/guides/)  
