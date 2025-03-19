@@ -15,14 +15,63 @@
 
 ---
 
-## 📖 추천 학습 주제
+## 📋 Python 개념 정리 목록
 
-| 단계 | 학습 주제 | 링크 |
-|---|---|---|
-| 1 | 기본 문법 | [기본문법.md](./notes/기본문법.md) |
-| 2 | 자료구조 | [자료구조.md](./notes/자료구조.md) |
-| 3 | 객체지향 | [객체지향.md](./notes/객체지향.md) |
-| 4 | 유용한 팁 | [파이썬팁.md](./notes/파이썬팁.md) |
+### 📌 기본 개념
+| 번호 | 주제 | 파일명 | 설명 |
+|---|---|---|---|
+| 01 | Python 개요 | [python-intro.md](./notes/python-intro.md) | Python이란? 특징과 장점 |
+| 02 | 개발 환경 설정 | [setup-python.md](./notes/setup-python.md) | Python 설치, 가상 환경, 패키지 관리 |
+| 03 | 변수와 자료형 | [variables.md](./notes/variables.md) | 숫자, 문자열, 리스트, 딕셔너리 등 |
+| 04 | 연산자와 표현식 | [operators.md](./notes/operators.md) | 산술, 비교, 논리, 비트 연산자 |
+| 05 | 조건문과 반복문 | [control-flow.md](./notes/control-flow.md) | if, for, while 문법과 사용법 |
+
+### 🎯 함수와 객체지향 프로그래밍
+| 번호 | 주제 | 파일명 | 설명 |
+|---|---|---|---|
+| 06 | 함수 사용법 | [functions.md](./notes/functions.md) | 함수 정의, 매개변수, 반환값, 람다 |
+| 07 | 모듈과 패키지 | [modules.md](./notes/modules.md) | 모듈 가져오기, 패키지 구조 이해 |
+| 08 | 클래스와 객체 | [oop.md](./notes/oop.md) | 클래스, 객체, 상속, 다형성 |
+| 09 | 예외 처리 | [exceptions.md](./notes/exceptions.md) | try-except, raise, 사용자 정의 예외 |
+
+### 🔄 데이터 처리
+| 번호 | 주제 | 파일명 | 설명 |
+|---|---|---|---|
+| 10 | 파일 입출력 | [file-io.md](./notes/file-io.md) | 텍스트 파일, CSV, JSON 다루기 |
+| 11 | 데이터베이스 | [database.md](./notes/database.md) | SQLite, MySQL, PostgreSQL 활용 |
+| 12 | 웹 스크래핑 | [web-scraping.md](./notes/web-scraping.md) | BeautifulSoup, Selenium 사용법 |
+
+### 🌍 네트워크와 API 연동
+| 번호 | 주제 | 파일명 | 설명 |
+|---|---|---|---|
+| 13 | HTTP 요청 | [http-requests.md](./notes/http-requests.md) | requests 라이브러리, API 호출 |
+| 14 | 비동기 프로그래밍 | [async.md](./notes/async.md) | async/await, asyncio 활용법 |
+| 15 | 웹 개발 | [web-frameworks.md](./notes/web-frameworks.md) | Flask, FastAPI, Django 기본 |
+
+### 🚀 고급 개념
+| 번호 | 주제 | 파일명 | 설명 |
+|---|---|---|---|
+| 16 | 정규 표현식 | [regex.md](./notes/regex.md) | re 모듈, 패턴 매칭 활용 |
+| 17 | 멀티스레딩 | [multithreading.md](./notes/multithreading.md) | threading, multiprocessing 비교 |
+| 18 | 데코레이터 | [decorators.md](./notes/decorators.md) | 함수형 프로그래밍, 고차 함수 |
+| 19 | 제너레이터와 이터레이터 | [generators.md](./notes/generators.md) | yield, lazy evaluation |
+
+### 🛠️ 데이터 과학 및 머신러닝
+| 번호 | 주제 | 파일명 | 설명 |
+|---|---|---|---|
+| 20 | NumPy 기본 | [numpy.md](./notes/numpy.md) | 배열 생성, 연산, 슬라이싱 |
+| 21 | Pandas 기본 | [pandas.md](./notes/pandas.md) | 데이터프레임 생성, 필터링, 그룹화 |
+| 22 | 데이터 시각화 | [visualization.md](./notes/visualization.md) | Matplotlib, Seaborn 그래프 그리기 |
+| 23 | 머신러닝 개요 | [ml-basics.md](./notes/ml-basics.md) | Scikit-learn을 활용한 기본 모델 |
+| 24 | 딥러닝 기초 | [deep-learning.md](./notes/deep-learning.md) | TensorFlow, PyTorch 활용 |
+
+### 🛠️ 테스트 및 배포
+| 번호 | 주제 | 파일명 | 설명 |
+|---|---|---|---|
+| 25 | 단위 테스트 | [testing.md](./notes/testing.md) | unittest, pytest 활용법 |
+| 26 | 패키징과 배포 | [packaging.md](./notes/packaging.md) | pip, setuptools, PyPI 배포 |
+
+---
 
 ---
 
