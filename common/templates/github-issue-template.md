@@ -1,9 +1,10 @@
 # 🐛 Sample Issue (#issue number)
+>📌 **이슈 링크:** [Sample Issue (#1)](https://github.com/aquaheyday/sample-url) (🔒 Private Repository)
+
+---
 
 ## ⚠️ 문제 상황
 1. Sample Before 상황
-
-📌 **이슈 링크:** [Sample Issue (#1)](https://github.com/aquaheyday/sample-url)
 
 ---
 
