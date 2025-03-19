@@ -88,6 +88,13 @@
 
 ---
 
+## 📚 참고 자료
+- [Flutter 공식 문서](https://docs.flutter.dev/)
+- [Flutter API 공식 문서](https://api.flutter.dev/)
+- [Dart 언어 공식 문서](https://dart.dev/guides)
+
+---
+
 ## 📢 업데이트 로그
 - 2025-03-07: 초기 구성
 - 2025-03-10: notes 초기 내용
