@@ -89,9 +89,9 @@
 ---
 
 ## 📚 참고 자료
-- [Flutter 공식 문서](https://docs.flutter.dev/)
-- [Flutter API 공식 문서](https://api.flutter.dev/)
-- [Dart 언어 공식 문서](https://dart.dev/guides)
+- [Flutter 공식 문서](https://docs.flutter.dev/) - Flutter의 기본 개념부터 심화된 내용까지 공식 가이드 제공  
+- [Flutter API 문서](https://api.flutter.dev/) - Flutter 위젯 및 API 문서  
+- [Dart 언어 문서](https://dart.dev/guides) - Flutter에서 사용하는 Dart 프로그래밍 언어 가이드  
 
 ---
 
