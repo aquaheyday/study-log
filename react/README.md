@@ -82,7 +82,7 @@
 
 | 번호 | 프로젝트명 | 폴더명 | 설명 |
 |---|---|---|---|
-| 01 | 관리자 사이트 | [todo-app](./projects/vite-ts-scss-admin-dashboard) | CRUD 기능을 갖춘 관리자 사이트  |
+| 01 | 관리자 사이트 | [vite-ts-scss-admin-dashboard](./projects/vite-ts-scss-admin-dashboard) | CRUD 기능을 갖춘 관리자 사이트  |
 
 ---
 
