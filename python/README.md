@@ -100,6 +100,14 @@
 
 ---
 
+## 📚 참고 자료
+- [Python 공식 문서](https://docs.python.org/3/) - Python의 공식 매뉴얼 및 가이드  
+- [Real Python](https://realpython.com/) - Python 학습을 위한 다양한 튜토리얼과 강의  
+- [PEP 8 - Python 스타일 가이드](https://peps.python.org/pep-0008/) - Python 코드 스타일 및 베스트 프랙티스  
+- [Python Package Index (PyPI)](https://pypi.org/) - Python 패키지 및 라이브러리 모음  
+
+---
+
 ## 📢 업데이트 로그
 - 2025-03-06: 초기 디렉토리 구성
 - 2025-03-07: projects > dilivery-api-server 추가
