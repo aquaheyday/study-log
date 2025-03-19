@@ -85,3 +85,9 @@
 ## 📚 참고 자료
 - [PostgreSQL 공식 문서](https://www.postgresql.org/docs/)  
 - [MongoDB 개발자 가이드](https://www.mongodb.com/docs/guides/)  
+
+---
+
+## 📢 업데이트 로그
+- 2025-03-19: 초기 구성
+- 새로운 예제 추가 시 목록 업데이트 예정
