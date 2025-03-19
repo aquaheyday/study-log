@@ -58,6 +58,14 @@
 
 ---
 
+## 📚 참고 자료
+- [PHP 공식 문서](https://www.php.net/manual/en/) - PHP의 공식 매뉴얼 및 가이드  
+- [PHP The Right Way](https://phptherightway.com/) - PHP 개발을 위한 모범 사례 및 권장 방법론  
+- [Composer 공식 문서](https://getcomposer.org/doc/) - PHP 패키지 관리 도구 Composer 사용법  
+- [PHP-FIG PSR 표준](https://www.php-fig.org/psr/) - PHP 코드 스타일 및 표준 가이드
+
+---
+
 ## 📢 업데이트 로그
 - 2025-03-06: 초기 구성 완료
 - 2025-03-09: 초기 notes 추가
