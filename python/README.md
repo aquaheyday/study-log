@@ -73,10 +73,36 @@
 
 ---
 
+## 📋 예제 목록
+
+| 번호 | 주제 | 파일명 | 설명 |
+|---|---|---|---|
+| 01 | 입출력 기본 | [input_output.py](./examples/input_output.py) | 표준 입력 및 출력 예제 |
+| 02 | 변수 | [variables.py](./examples/variables.py) | 변수 선언 및 사용 예제 |
+| 03 | 연산자 | [operators.py](./examples/operators.py) | 산술, 비교, 논리 연산자 활용 예제 |
+| 04 | 문자열 | [strings.py](./examples/strings.py) | 문자열 다루기 및 메서드 활용 |
+| 05 | 리스트 | [lists.py](./examples/lists.py) | 리스트 생성, 조작 및 메서드 활용 |
+| 06 | 튜플 | [tuples.py](./examples/tuples.py) | 변경 불가능한 튜플의 활용 |
+| 07 | 집합 | [sets.py](./examples/sets.py) | 집합 연산 및 활용 예제 |
+| 08 | 딕셔너리 | [dictionaries.py](./examples/dictionaries.py) | 키-값 쌍을 저장하는 딕셔너리 활용 |
+| 09 | 조건문 | [conditionals.py](./examples/conditionals.py) | if-elif-else 문 활용 예제 |
+| 10 | 반복문 | [loops.py](./examples/loops.py) | for 및 while 반복문 예제 |
+| 11 | 함수 | [functions.py](./examples/functions.py) | 함수 정의, 매개변수, 반환값 예제 |
+| 12 | 리스트 컴프리헨션 | [list_comprehension.py](./examples/list_comprehension.py) | 리스트 컴프리헨션 활용 예제 |
+
+---
+
+## 📋 프로젝트 목록
+
+| 번호 | 프로젝트명 | 설명 | 링크 |
+|---|---|---|---|
+| 01 | 택배/요금제/문의 관리 | 택배사 정보, 요금제, 문의사항을 관리하는 FastAPI 기반 서비스 | [delivery-api-server](./projects/delivery-api-server) |
+
 ---
 
 ## 📢 업데이트 로그
 - 2025-03-06: 초기 디렉토리 구성
 - 2025-03-07: projects > dilivery-api-server 추가
 - 2025-03-10: 초기 notes 구성
+- 2025-03-19: 디렉토리 구성 수정
 - 새로운 예제 추가 시 목록 업데이트 예정
