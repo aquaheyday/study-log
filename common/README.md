@@ -9,9 +9,10 @@
 
 | 폴더명 | 설명 |
 |---|---|
-| [best-practices](./best-practices) | 개발 과정에서 적용할 수 있는 방법론과 모범 사례 정리  |
-| [contributions](./contributions) | 해결된 Issue 와 Pull Request 기록을 정리   |
+| [best-practices](./best-practices) | 개발 과정에서 적용할 수 있는 방법론과 모범 사례 정리 |
+| [contributions](./contributions) | 해결된 Issue 와 Pull Request 기록을 정리 |
 | [templates](./templates) | 코드 작성 및 문서화 시 일관성을 유지하기 위한 템플릿 |
+| [troubleshooting](./troubleshooting) | 개발 과정에서 발생한 문제와 해결 방법을 정리 |
 
 ---
 
@@ -28,6 +29,12 @@
 | 번호 | 주제 | 파일명 | 설명 |
 |---|---|---|---|
 | 01 | GitHub Actions Not Working | [sanga-1-fix-github-action-not-working.md](./contributions/issues/sanga-1-fix-github-action-not-working.md) | 깃허브 엑션이 동작하지않는 이슈 해결 |
+
+---
+
+## 📋 트러블 슈팅 목록
+| 번호 | 주제 | 파일명 | 설명 |
+|---|---|---|---|
 
 ---
 
