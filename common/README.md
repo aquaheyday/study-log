@@ -35,10 +35,11 @@
 
 | 번호 | 템플릿명 | 파일명 | 설명 |
 |---|---|---|---|
-| 01 | 언어 메인 템플릿 | [language-template.md](./templates/language-template.md) | 언어별 최상단 README.md 템플릿 | 
-| 02 | 노트 템플릿 | [note-template.md](./templates/note-template.md) | 학습 노트 md 템플릿 |
-| 03 | 프로젝트 템플릿 | [project-template.md](./templates/project-template.md) | 프로젝트 md 템플릿 |
-| 04 | 깃허브 이슈 템플릿 | [github-issue-template.md](./templates/github-issue-template.md) | 깃허브 이슈 md 템플릿 |
+| 01 | 언어 메인 템플릿 | [language-template.md](./templates/language-template.md) | 언어별 최상단 README.md 파일 | 
+| 02 | 노트 템플릿 | [note-template.md](./templates/note-template.md) | 학습 노트 md 파일 |
+| 03 | 프로젝트 템플릿 | [project-template.md](./templates/project-template.md) | 프로젝트 md 파일 |
+| 04 | 트러블 슈팅 템플릿 | [troubleshooting-template.md](./templates/troubleshooting-template.md) | 트러블 슈팅  md 파일 |
+| 05 | 깃허브 이슈 템플릿 | [github-issue-template.md](./templates/github-issue-template.md) | 깃허브 이슈 md 파일 |
 
 --- 
 
