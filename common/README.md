@@ -36,7 +36,8 @@
 | 번호 | 템플릿명 | 파일명 | 설명 |
 |---|---|---|---|
 | 01 | 언어 메인 템플릿 | [language-template.md](./templates/language-template.md) | 언어별 최상단 README.md 템플릿 | 
-| 02 | 노트 템플릿 | [note-template.md](./templates/note-template.md) | 학습 노트 md 템플릿 | 
+| 02 | 노트 템플릿 | [note-template.md](./templates/note-template.md) | 학습 노트 md 템플릿 |
+| 03 | 프로젝트 템플릿 | [project-template.md](./templates/project-template.md) | 프로젝트 md 템플릿 |
 
 --- 
 
