@@ -1,6 +1,8 @@
 # 🐛 GitHub Actions Not Working (#1)
 >📌 이슈 링크: [GitHub Actions Not Working (#1)](https://github.com/daewoungkim/sanga/issues/1) (🔒 Private Repository)
 
+---
+
 ## ⚠️ 문제 상황
 1. git push 시 서버에서 git pull을 위한 github action 이 동작하지 않고 있는 상황
 
