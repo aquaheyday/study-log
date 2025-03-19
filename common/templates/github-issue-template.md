@@ -11,7 +11,7 @@
 ## 🔍 원인 분석
 1. Samle Before 내용
 
-#### `.example.yml`
+#### `.sample.yml`
 ```yml
 sample issue befor
 ```
@@ -21,7 +21,7 @@ sample issue befor
 ## 🛠 해결 방법
 1. Sample After 내용
 
-#### `.example.yml`
+#### `.sample.yml`
 ```yml
 sample issue after
 ```
