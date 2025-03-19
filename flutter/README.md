@@ -72,7 +72,7 @@
 
 | 번호 | 프로젝트명 | 설명 | 링크 |
 |---|---|---|---|
-| 01 | 메뉴 주문 웹 | API 와 연동하여 방을 생성하여 개인별 메뉴를 접수하는 웹 사이트 | [menu-order-web-front](./menu-order-web-front) |
+| 01 | 메뉴 주문 웹 | API 와 연동하여 방을 생성하여 개인별 메뉴를 접수하는 웹 사이트 | [menu-order-web-front](./projects/menu-order-web-front) |
 
 ---
 
