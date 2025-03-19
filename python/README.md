@@ -94,9 +94,9 @@
 
 ## 📋 프로젝트 목록
 
-| 번호 | 프로젝트명 | 설명 | 링크 |
+| 번호 | 프로젝트명 | 폴더명 | 설명 |
 |---|---|---|---|
-| 01 | 택배/요금제/문의 관리 | 택배사 정보, 요금제, 문의사항을 관리하는 FastAPI 기반 서비스 | [delivery-api-server](./projects/delivery-api-server) |
+| 01 | 택배/요금제/문의 관리 | [delivery-api-server](./projects/delivery-api-server) | 택배사 정보, 요금제, 문의사항을 관리하는 FastAPI 기반 서비스 |
 
 ---
 
