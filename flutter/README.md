@@ -10,7 +10,7 @@
 | 폴더명 | 설명 |
 |---|---|
 | [notes](./notes) | 개념 정리 및 학습 노트 |
-| [examples](./examples) | 주요 기능별 예제 코드 (컴포넌트, 상태관리 등) |
+| [examples](./examples) | 주요 기능별 예제 코드 |
 | [projects](./projects) | 미니 프로젝트 및 실습 프로젝트 |
 
 ---
