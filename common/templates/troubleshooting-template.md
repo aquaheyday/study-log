@@ -1,37 +1,57 @@
-# 🐛 Troubleshooting
+# 🐛 문제 제목 (예: NameError: 함수 호출 시 정의되지 않은 이름 에러 발생)
 
-이 디렉토리는 개발 과정에서 발생한 문제와 그 해결 방법을 기록한 공간입니다.  
-단순 에러 로그뿐만 아니라, **문제 상황 - 원인 분석 - 해결 과정 - 배운 점**까지 체계적으로 정리합니다.
+## 1️⃣ 문제 상황  
+🔹 **발생 날짜:** YYYY-MM-DD  
+🔹 **발생 환경:** (OS, 개발 언어, 프레임워크, 라이브러리 버전 등)  
+🔹 **재현 방법:**  
+1. (어떤 코드를 실행했는지)  
+2. (어떤 조건에서 발생했는지)  
+3. (특정 입력 값 또는 실행 흐름)  
 
----
-
-## 📋 문제 목록
-
-| 파일명 | 문제 요약 | 링크 |
-|---|---|---|
-| `nameerror-in-main.md` | 함수 호출 시 정의되지 않은 이름 에러 발생 | [바로가기](./nameerror-in-main.md) |
-| `encoding-issue.md` | 한글 파일 읽기 시 인코딩 깨짐 현상 | [바로가기](./encoding-issue.md) |
-| `dependency-conflict.md` | 라이브러리 버전 충돌 문제 | [바로가기](./dependency-conflict.md) |
-| ... | 이후 계속 추가 | |
-
----
-
-## 📝 작성 가이드
-- 파일명: `문제요약.md` 형태로 작성 (스네이크케이스 추천)
-- 내용 구성은 템플릿(`troubleshooting-template.md`) 기반으로 작성
-- 필요 시 로그/스크린샷/참고 링크 포함
+📌 **오류 메시지 (있다면 포함)**  
+🔹 **오류 로그 예제**
+Traceback (most recent call last):
+  File "main.py", line 10, in <module>
+    print(hello_world())
+NameError: name 'hello_world' is not defined
 
 ---
 
-## 📚 참고
-- [Stack Overflow](https://stackoverflow.com)
-- [공식 문서 링크](https://docs.python.org/3/) (언어에 따라 변경)
-- [개발자 커뮤니티](https://dev.to)
+## 2️⃣ 원인 분석  
+🔍 **원인:**  
+- (문제가 발생한 원인을 설명)  
+- (관련된 코드 또는 설정 문제 설명)  
+
+📌 **관련 코드 스니펫 (있다면 포함)**
+def hello():
+    print("Hello, World!")
+
+print(hello_world())  # 잘못된 함수명 호출
 
 ---
 
-## ✅ 작성일: YYYY-MM-DD
-## ✅ 관리 기준
-- 트러블 발생 즉시 기록
-- 원인 모르면 조사 후 업데이트
-- 같은 문제 반복 발생 시 기존 문서 업데이트
+## 3️⃣ 해결 과정  
+✅ **수정 방법:**  
+1. (어떤 방법으로 해결했는지 설명)  
+2. (수정된 코드 또는 설정 값)  
+
+📌 **수정 후 코드**
+def hello_world():
+    print("Hello, World!")
+
+print(hello_world())  # 올바른 함수명으로 수정
+
+📌 **적용 후 정상 작동 여부:** ✅ 정상 동작 확인  
+---
+
+## 4️⃣ 배운 점 & 예방 방법  
+📌 **핵심 정리:**  
+- (이 오류를 통해 배운 점)  
+- (유사한 오류를 방지하기 위한 방법)  
+
+📌 **참고 자료:**  
+- 🔗 [Stack Overflow - 관련 질문](https://stackoverflow.com/)  
+- 📖 [공식 문서 링크](https://docs.python.org/3/)  
+
+✅ **작성자:** (작성자명)  
+✅ **업데이트 날짜:** YYYY-MM-DD  
