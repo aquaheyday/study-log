@@ -65,6 +65,14 @@
 
 ---
 
+## 📚 참고 자료
+- [Go 공식 문서](https://go.dev/doc/) - Go 언어의 공식 문서 및 가이드  
+- [Go API 레퍼런스](https://pkg.go.dev/std) - Go 표준 라이브러리 및 API 문서  
+- [A Tour of Go](https://go.dev/tour/) - Go의 핵심 개념을 배울 수 있는 공식 튜토리얼  
+- [Effective Go](https://go.dev/doc/effective_go) - Go 스타일 가이드 및 모범 사례  
+
+---
+
 ## 📢 업데이트 로그
 - 2025-03-07: 초기 구성
 - 2025-03-12: notes 초기 내용
