@@ -66,6 +66,13 @@
 | 24 | 앱 최적화 가이드 | [performance.md](./notes/performance.md) | 렌더링 최적화, 코드 스플리팅 |  
 | 25 | 앱 배포 가이드 | [deployment.md](./notes/deployment.md) | Android, iOS, 웹 배포 (Play Store, App Store) |  
 
+---
+
+## 📋 프로젝트 목록
+
+| 번호 | 프로젝트명 | 설명 | 링크 |
+|---|---|---|---|
+| 01 | 메뉴 주문 웹 | API 와 연동하여 방을 생성하여 개인별 메뉴를 접수하는 웹 사이트 | [menu-order-web-front](./menu-order-web-front) |
 
 ---
 
