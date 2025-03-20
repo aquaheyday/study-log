@@ -5,19 +5,6 @@
 
 ---
 
-## 📂 템플릿 구성 목록
-
-| 파일명 | 설명 | 용도 |
-|---|---|---|
-| `note-template.md` | 개념 정리 노트 템플릿 | `notes/` 작성용 |
-| `example-template.md` | 예제 코드 설명 템플릿 | `examples/` 작성용 |
-| `project-readme-template.md` | 프로젝트 설명 템플릿 | `projects/` 하위 프로젝트용 |
-| `troubleshooting-template.md` | 트러블슈팅 기록 템플릿 | `troubleshooting/` 작성용 |
-| `component-template.jsx` | React 컴포넌트 기본 템플릿 | React 예제/프로젝트 작성용 |
-| `script-template.py` | Python 스크립트 기본 템플릿 | Python 예제 작성용 |
-
----
-
 ## 📑 사용 방법
 1. 새로운 파일 작성 시, 해당 폴더에서 적합한 템플릿 복사
 2. 파일명 변경 후 내용 작성
