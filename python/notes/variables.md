@@ -4,7 +4,7 @@ Python에서 변수를 선언하고 다양한 자료형을 다루는 방법을 �
 
 ---
 
-## 1. 변수 (Variable)
+## 1️⃣ 변수 (Variable)
 
 변수는 데이터를 저장하는 **이름이 있는 메모리 공간**입니다.
 
@@ -23,7 +23,7 @@ is_active = True
 
 ---
 
-## 2. 기본 자료형 (Primitive Data Types)
+## 2️⃣ 기본 자료형 (Primitive Data Types)
 
 | 자료형 | 설명 | 예제 |
 |--------|----------|----------------|
@@ -42,7 +42,7 @@ print(type(True))      # <class 'bool'>
 
 ---
 
-## 3. 문자열 (String)
+## 3️⃣ 문자열 (String)
 
 Python에서 문자열은 작은따옴표(`'`) 또는 큰따옴표(`"`)로 감쌉니다.
 
@@ -65,7 +65,7 @@ print(a * 3)        # "HelloHelloHello" (반복)
 
 ---
 
-## 4. 숫자형 (Numbers)
+## 4️⃣ 숫자형 (Numbers)
 
 Python에서 정수(`int`)와 실수(`float`)를 다룰 수 있습니다.
 
@@ -85,7 +85,7 @@ print(a ** b) # 거듭제곱 (1000)
 
 ---
 
-## 5. 논리형 (Boolean)
+## 5️⃣ 논리형 (Boolean)
 
 논리형(`bool`)은 `True` 또는 `False` 값을 가집니다.
 
@@ -108,7 +108,7 @@ print(bool("text"))  # True
 
 ---
 
-## 6. 컬렉션 자료형 (Collection Data Types)
+## 6️⃣ 컬렉션 자료형 (Collection Data Types)
 
 Python에서는 여러 개의 값을 저장할 수 있는 컬렉션 자료형을 제공합니다.
 
@@ -129,7 +129,7 @@ print(type({"name": "Alice"}))  # <class 'dict'>
 
 ---
 
-## 7. 자료형 변환 (Type Casting)
+## 7️⃣ 자료형 변환 (Type Casting)
 
 Python에서는 자료형을 자유롭게 변환할 수 있습니다.
 
