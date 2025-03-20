@@ -1,180 +1,208 @@
-# Python 함수와 스코프 정리
+# 🏗️ Python 함수 사용법
 
-## 1. 함수(Function)란?
-Python에서 함수는 특정 작업을 수행하는 코드 블록입니다. 함수는 코드의 재사용성을 높이고, 유지보수를 쉽게 하며, 프로그램을 구조화하는 데 도움을 줍니다.
+Python에서 함수(Function)는 코드의 재사용성을 높이고 유지보수를 쉽게 하기 위해 사용됩니다.  
+이 문서에서는 함수 정의, 매개변수, 반환값, 람다 함수, 스코프 등을 정리합니다.
 
-### 1.1 함수 정의와 호출
+---
+
+## 1. 함수란?
+
+- 함수(Function)는 특정 작업을 수행하는 코드 블록입니다.
+- `def` 키워드를 사용하여 함수를 정의합니다.
+- 필요할 경우 매개변수(Arguments)를 받아 실행할 수 있습니다.
+- 값을 반환(`return`)할 수도 있습니다.
+
+---
+
+## 2. 함수 정의 및 호출
+
+### 기본 함수 정의 및 호출
 ```python
-# 함수 정의
+def greet():
+    print("Hello, Python!")
+
+greet()  # Hello, Python!
+```
+
+✔ 함수는 `def` 키워드로 정의하며, 호출하려면 함수 이름을 사용  
+✔ 함수가 호출될 때 `print()` 문이 실행됨  
+
+---
+
+## 3. 매개변수와 인자 (Parameters & Arguments)
+
+함수는 매개변수를 받아서 동적으로 동작할 수 있습니다.
+
+### 매개변수가 있는 함수
+```python
 def greet(name):
-    return f"Hello, {name}!"
+    print(f"Hello, {name}!")
 
-# 함수 호출
-print(greet("Python"))  # Hello, Python!
+greet("Alice")  # Hello, Alice!
+greet("Bob")    # Hello, Bob!
 ```
 
-### 1.2 매개변수와 반환값
-```python
-# 두 개의 숫자를 더하는 함수
-def add(a, b):
-    return a + b
+✔ `name`은 함수 내부에서만 사용되는 지역 변수  
 
-print(add(3, 5))  # 8
-```
+---
 
-### 1.3 기본값 매개변수 (Default Parameter)
+### 기본값 매개변수 (Default Parameter)
 ```python
 def greet(name="Guest"):
-    return f"Hello, {name}!"
+    print(f"Hello, {name}!")
 
-print(greet())       # Hello, Guest!
-print(greet("Alice"))  # Hello, Alice!
+greet()        # Hello, Guest!
+greet("Alice") # Hello, Alice!
 ```
 
-### 1.4 키워드 인자 (Keyword Arguments)
+✔ 인자를 제공하지 않으면 기본값(`Guest`)이 사용됨  
+
+---
+
+### 키워드 인자 (Keyword Arguments)
 ```python
 def introduce(name, age):
-    return f"My name is {name} and I am {age} years old."
+    print(f"My name is {name}, and I am {age} years old.")
 
-print(introduce(age=25, name="Alice"))  
-# My name is Alice and I am 25 years old.
+introduce(age=30, name="Alice")  # 순서와 관계없이 인자 전달 가능
 ```
 
-### 1.5 가변 인자 (*args)
+✔ 키워드를 사용하여 인자 순서를 바꿔도 정확하게 전달 가능  
+
+---
+
+### 가변 인자 (`*args`) - 여러 개의 인자를 받을 때
 ```python
-def add_all(*args):
+def add_numbers(*args):
     return sum(args)
 
-print(add_all(1, 2, 3, 4, 5))  # 15
+print(add_numbers(1, 2, 3))       # 6
+print(add_numbers(10, 20, 30, 40)) # 100
 ```
 
-### 1.6 가변 키워드 인자 (**kwargs)
+✔ `*args`는 튜플 형태로 전달되며, 여러 개의 인자를 받을 수 있음  
+
+---
+
+### 키워드 가변 인자 (`**kwargs`) - 여러 개의 키워드 인자를 받을 때
 ```python
-def introduce(**kwargs):
+def print_info(**kwargs):
     for key, value in kwargs.items():
         print(f"{key}: {value}")
 
-introduce(name="Alice", age=25, city="Seoul")
-# name: Alice
-# age: 25
-# city: Seoul
+print_info(name="Alice", age=25, city="New York")
 ```
+
+✔ `**kwargs`는 딕셔너리 형태로 전달되며, 여러 개의 키워드 인자를 받을 수 있음  
 
 ---
 
-## 2. 함수의 스코프(Scope)
+## 4. 반환값 (`return`)
 
-Python에서 변수의 스코프(범위)는 변수가 어디에서 유효한지를 결정합니다.
+함수는 결과를 반환할 수 있습니다.
 
-### 2.1 지역 변수(Local Variable)
-함수 내부에서 선언된 변수는 함수 내에서만 유효합니다.
+### 반환값이 있는 함수
 ```python
-def my_function():
-    local_var = "I am local"
-    print(local_var)
+def add(a, b):
+    return a + b
 
-my_function()
-# print(local_var)  # 오류 발생! (local_var는 함수 밖에서 접근 불가)
+result = add(3, 5)
+print(result)  # 8
 ```
 
-### 2.2 전역 변수(Global Variable)
-함수 바깥에서 선언된 변수는 프로그램 전체에서 접근할 수 있습니다.
-```python
-global_var = "I am global"
-
-def my_function():
-    print(global_var)  # 함수 내부에서도 접근 가능
-
-my_function()
-print(global_var)
-```
-
-### 2.3 `global` 키워드 사용
-함수 내부에서 전역 변수를 수정하려면 `global` 키워드를 사용해야 합니다.
-```python
-count = 0
-
-def increase():
-    global count
-    count += 1
-
-increase()
-print(count)  # 1
-```
-
-### 2.4 `nonlocal` 키워드 사용
-중첩 함수(함수 안의 함수)에서 바깥 함수의 변수를 수정하려면 `nonlocal` 키워드를 사용합니다.
-```python
-def outer():
-    x = 10
-
-    def inner():
-        nonlocal x
-        x += 5
-        print("Inner x:", x)
-
-    inner()
-    print("Outer x:", x)
-
-outer()
-# Inner x: 15
-# Outer x: 15
-```
+✔ `return` 키워드를 사용하여 값을 반환  
+✔ 반환된 값은 변수에 저장할 수 있음  
 
 ---
 
-## 3. 람다 함수 (Lambda Function)
-람다 함수는 `lambda` 키워드를 사용하여 간단한 익명 함수를 만들 때 사용합니다.
+### 여러 개의 값 반환 (Tuple 반환)
 ```python
-square = lambda x: x ** 2
-print(square(5))  # 25
+def get_user():
+    name = "Alice"
+    age = 30
+    return name, age  # 튜플 형태로 반환
+
+user = get_user()
+print(user)        # ('Alice', 30)
+print(user[0])     # Alice
+print(user[1])     # 30
 ```
 
-람다 함수는 여러 개의 매개변수를 받을 수도 있습니다.
+✔ 여러 값을 반환할 때는 **튜플(Tuple)** 로 반환됨  
+
+---
+
+## 5. 람다 함수 (Lambda Function)
+
+람다 함수는 **한 줄짜리 익명 함수**를 만들 때 사용됩니다.
+
+### 기본 람다 함수
 ```python
-add = lambda a, b: a + b
+add = lambda x, y: x + y
 print(add(3, 5))  # 8
 ```
 
-람다 함수는 `map()`, `filter()`, `sorted()` 등의 함수와 함께 자주 사용됩니다.
-```python
-numbers = [1, 2, 3, 4, 5]
-squared = list(map(lambda x: x ** 2, numbers))
-print(squared)  # [1, 4, 9, 16, 25]
-
-even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
-print(even_numbers)  # [2, 4]
-```
+✔ `lambda` 키워드를 사용하여 함수를 간결하게 정의  
 
 ---
 
-## 4. 함수의 응용
-
-### 4.1 함수 안에서 함수 정의 (중첩 함수)
+### `map()`, `filter()` 와 함께 사용
 ```python
-def outer_function(msg):
-    def inner_function():
-        print("Message:", msg)
-    
-    inner_function()
+numbers = [1, 2, 3, 4, 5]
 
-outer_function("Hello, World!")  
-# Message: Hello, World!
+squared = list(map(lambda x: x**2, numbers))  # 모든 요소 제곱
+print(squared)  # [1, 4, 9, 16, 25]
+
+evens = list(filter(lambda x: x % 2 == 0, numbers))  # 짝수만 필터링
+print(evens)  # [2, 4]
 ```
 
-### 4.2 클로저(Closure)
-클로저는 내부 함수가 바깥 함수의 변수를 기억하는 기능을 의미합니다.
-```python
-def multiplier(n):
-    def inner(x):
-        return x * n
-    return inner
+✔ `map()` → 모든 요소에 함수 적용  
+✔ `filter()` → 특정 조건을 만족하는 요소만 필터링  
 
-times3 = multiplier(3)
-print(times3(5))  # 15
+---
+
+## 6. 함수 스코프 (Scope)
+
+함수 내부와 외부에서 변수의 접근 범위를 다룹니다.
+
+### 지역 변수 (Local Variable)
+```python
+def my_function():
+    x = 10  # 함수 내부에서만 사용 가능
+    print(x)
+
+my_function()
+print(x)  # 오류 발생 (NameError)
 ```
 
-### 4.3 재귀 함수 (Recursion)
+✔ 함수 내부에서 선언된 변수는 함수 밖에서 접근할 수 없음  
+
+---
+
+### 전역 변수 (Global Variable)
+```python
+x = 10  # 전역 변수
+
+def my_function():
+    global x  # 전역 변수 수정
+    x = 20
+    print(x)
+
+my_function()
+print(x)  # 20
+```
+
+✔ `global` 키워드를 사용하면 함수 내부에서 전역 변수 수정 가능  
+✔ 하지만 전역 변수 사용은 신중하게 해야 함 (가독성 및 유지보수에 영향)  
+
+---
+
+## 7. 재귀 함수 (Recursive Function)
+
+재귀 함수는 자기 자신을 호출하는 함수입니다.
+
+### 팩토리얼 계산 (Factorial)
 ```python
 def factorial(n):
     if n == 1:
@@ -184,26 +212,15 @@ def factorial(n):
 print(factorial(5))  # 120
 ```
 
+✔ 재귀 함수는 종료 조건(`if n == 1`)이 반드시 필요함  
+
 ---
 
-## 5. 함수형 프로그래밍 기법
+## 🎯 정리
 
-### 5.1 `map()` 함수
-```python
-numbers = [1, 2, 3, 4, 5]
-squared = list(map(lambda x: x ** 2, numbers))
-print(squared)  # [1, 4, 9, 16, 25]
-```
-
-### 5.2 `filter()` 함수
-```python
-even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
-print(even_numbers)  # [2, 4]
-```
-
-### 5.3 `reduce()` 함수 (from functools)
-```python
-from functools import reduce
-product = reduce(lambda x, y: x * y, [1, 2, 3, 4, 5])
-print(product)  # 120
-```
+✔ **함수 정의**: `def` 키워드를 사용하여 정의  
+✔ **매개변수 & 인자**: 기본값, `*args`, `**kwargs` 사용 가능  
+✔ **반환값**: `return`을 사용하여 값 반환 (여러 값 반환 가능)  
+✔ **람다 함수**: 간단한 익명 함수 작성 가능 (`lambda x: x + 1`)  
+✔ **스코프**: 지역 변수(`local`)와 전역 변수(`global`) 개념 이해 필요  
+✔ **재귀 함수**: 자기 자신을 호출하는 함수, 종료 조건 필수  
