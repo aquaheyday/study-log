@@ -9,7 +9,7 @@ Python에서는 파일을 읽고 쓰는 기능을 제공하여 데이터를 저�
 
 Python에서 파일을 열고 작업하는 기본 방식은 `open()` 함수를 사용하는 것입니다.
 
-### `open()` 함수 기본 문법
+#### 예제
 ```python
 file = open("example.txt", "r")  # 파일 열기
 file.close()  # 파일 닫기
