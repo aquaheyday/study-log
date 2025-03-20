@@ -4,7 +4,7 @@ Python 개발을 시작하기 위한 환경 설정 방법을 정리합니다.
 
 ---
 
-## 1. Python 설치
+## 1️⃣ Python 설치
 
 Python 설치 방법에 대해 설명합니다.
 
@@ -21,7 +21,7 @@ python --version
 
 ---
 
-## 2. 가상 환경 (Python 프로젝트별 독립적인 환경 구성)
+## 2️⃣ 가상 환경 (Python 프로젝트별 독립적인 환경 구성)
 
 ### `venv` (Python 기본 가상 환경)
 Python 내장 모듈 `venv`를 사용하여 가상 환경을 설정합니다.
@@ -48,7 +48,7 @@ deactivate
 
 ---
 
-## 3. 패키지 관리 (`pip` 사용)
+## 3️⃣ 패키지 관리 (`pip` 사용)
 
 | 기능 | 명령어 |
 |----------|----------------|
@@ -67,7 +67,7 @@ pip install -r requirements.txt
 
 ---
 
-## 4. 플랫폼 지원
+## 4️⃣ 플랫폼 지원
 
 Python은 다양한 운영체제에서 실행할 수 있습니다.
 
@@ -79,7 +79,7 @@ Python은 다양한 운영체제에서 실행할 수 있습니다.
 
 ---
 
-## 5. Python 기본 문법
+## 5️⃣ Python 기본 문법
 
 Python의 기초적인 문법을 소개합니다.
 
@@ -96,7 +96,7 @@ greet()
 def greet()
     print("Hello, Python!")
 ```
-> **해결 방법**  
+#### ⚡ 해결 방법
 ```python
 def greet():
     print("Hello, Python!")
