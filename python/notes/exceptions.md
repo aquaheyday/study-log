@@ -5,18 +5,20 @@ Python에서 **예외(Exception)** 는 프로그램 실행 중 발생할 수 있
 
 ---
 
-## 1. 예외(Exception)란?
+## 1️⃣ 예외(Exception)란?
 
 - 예외는 **코드 실행 중 발생하는 오류**입니다.
 - 예외가 발생하면 프로그램이 즉시 중단되므로, 이를 **처리**하는 것이 중요합니다.
 - 예외는 `try-except` 문을 사용하여 처리할 수 있습니다.
 
-### 예외 발생 예제
+### 1) 예외 발생 예제
 ```python
 print(10 / 0)  # ZeroDivisionError 발생 (0으로 나눌 수 없음)
 ```
 
-### 예외 발생 시 프로그램이 중단됨
+---
+
+### 2) 예외 발생 시 프로그램이 중단됨
 ```
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -25,7 +27,7 @@ ZeroDivisionError: division by zero
 
 ---
 
-## 2. 기본 예외 처리 (`try-except`)
+## 2️⃣ 기본 예외 처리 (`try-except`)
 
 ### `try-except` 기본 문법
 ```python
@@ -40,9 +42,9 @@ except ZeroDivisionError:
 
 ---
 
-## 3. 여러 개의 예외 처리
+## 3️⃣ 여러 개의 예외 처리
 
-### 여러 개의 예외 처리 (`except` 여러 개)
+### 1) 여러 개의 예외 처리 (`except` 여러 개)
 ```python
 try:
     num = int(input("숫자를 입력하세요: "))
@@ -57,7 +59,7 @@ except ValueError:
 
 ---
 
-### 하나의 `except`에서 여러 예외 처리 (`except (예외1, 예외2)`)
+### 2) 하나의 `except`에서 여러 예외 처리 (`except (예외1, 예외2)`)
 ```python
 try:
     num = int(input("숫자를 입력하세요: "))
@@ -70,7 +72,7 @@ except (ZeroDivisionError, ValueError):
 
 ---
 
-## 4. 모든 예외 처리 (`Exception` 사용)
+## 4️⃣ 모든 예외 처리 (`Exception` 사용)
 
 ### `Exception`으로 모든 예외 처리
 ```python
@@ -85,7 +87,7 @@ except Exception as e:
 
 ---
 
-## 5. `finally` 블록 (항상 실행되는 코드)
+## 5️⃣ `finally` 블록 (항상 실행되는 코드)
 
 ### `finally` 블록 사용
 ```python
@@ -103,7 +105,7 @@ finally:
 
 ---
 
-## 6. `else` 블록 (예외가 발생하지 않았을 때 실행)
+## 6️⃣ `else` 블록 (예외가 발생하지 않았을 때 실행)
 
 ### `else` 블록 사용
 ```python
@@ -120,9 +122,9 @@ else:
 
 ---
 
-## 7. 사용자 정의 예외 (`raise` 사용)
+## 7️⃣ 사용자 정의 예외 (`raise` 사용)
 
-### 직접 예외 발생 (`raise`)
+### 1) 직접 예외 발생 (`raise`)
 ```python
 def check_age(age):
     if age < 18:
@@ -139,7 +141,7 @@ except ValueError as e:
 
 ---
 
-### 사용자 정의 예외 클래스
+### 2) 사용자 정의 예외 클래스
 ```python
 class NegativeNumberError(Exception):
     """음수 입력 시 발생하는 사용자 정의 예외"""
@@ -160,7 +162,7 @@ except NegativeNumberError as e:
 
 ---
 
-## 8. 주요 예외 종류
+## 8️⃣ 주요 예외 종류
 
 | 예외 클래스 | 설명 |
 |------------|--------------------------------|
