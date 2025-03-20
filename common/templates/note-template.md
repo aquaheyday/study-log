@@ -16,7 +16,7 @@ Sample Table 설명
 
 ## 2. Sample 기능 (Sample 기능 설명)
 
-### `SampleFunction`
+### 1) `SampleFunction`
 `SampleFunction` 설명
 
 ```sh
@@ -41,25 +41,40 @@ sample code
 
 Sample 문법 설명 
 
-✅ **올바른 Sample 코드**
+#### ✅ 올바른 Sample
 ```sample
 function Sample() {
   return true;
 }
 ```
 
-❌ **잘못된 JSX 코드 (에러 발생)**
+#### ❌ 잘못된 Sample
 ```sample
 function Sample() {
   return false;
 }
 ```
-> **해결 방법**  
+#### 해결 방법
 ```sample
 function Sample() {
   return true;
 }
 ```
+
+---
+
+## 5. Sample 순차
+
+1️⃣ **Sample** → Sample 내용  
+2️⃣ **Sample** → Sample 내용  
+3️⃣ **Sample** → Sample 내용  
+4️⃣ **Sample** → Sample 내용  
+5️⃣ **Sample** → Sample 내용  
+6️⃣ **Sample** → Sample 내용  
+7️⃣ **Sample** → Sample 내용  
+8️⃣ **Sample** → Sample 내용  
+9️⃣ **Sample** → Sample 내용  
+🔟 **Sample** → Sample 내용  
 
 ---
 
