@@ -5,7 +5,7 @@ Python을 사용하여 웹 페이지의 데이터를 자동으로 수집하는 �
 
 ---
 
-## 1. 웹 스크래핑(Web Scraping)이란?
+## 1️⃣ 웹 스크래핑(Web Scraping)이란?
 
 - **웹 페이지에서 원하는 데이터를 추출하는 과정**을 의미합니다.
 - 뉴스, 가격 정보, 상품 리뷰, 통계 데이터 등을 자동으로 수집하는 데 사용됩니다.
@@ -13,14 +13,14 @@ Python을 사용하여 웹 페이지의 데이터를 자동으로 수집하는 �
 
 ---
 
-## 2. 웹 스크래핑을 위한 라이브러리 설치
+## 2️⃣ 웹 스크래핑을 위한 라이브러리 설치
 
-### 기본 라이브러리 설치 (`requests`, `BeautifulSoup`)
+#### 기본 라이브러리 설치 (`requests`, `BeautifulSoup`)
 ```sh
 pip install requests beautifulsoup4
 ```
 
-### 동적 페이지 크롤링을 위한 `Selenium` 설치
+#### 동적 페이지 크롤링을 위한 `Selenium` 설치
 ```sh
 pip install selenium
 ```
@@ -30,9 +30,9 @@ pip install selenium
 
 ---
 
-## 3. `requests`와 `BeautifulSoup`를 활용한 기본 웹 스크래핑
+## 3️⃣ `requests`와 `BeautifulSoup`를 활용한 기본 웹 스크래핑
 
-### `requests` - 웹 페이지 HTML 가져오기
+#### `requests` 웹 페이지 HTML 가져오기 예제
 ```python
 import requests
 
@@ -48,9 +48,9 @@ print(response.text)  # HTML 내용 출력
 
 ---
 
-## 4. HTML 파싱 (`BeautifulSoup` 사용)
+## 4️⃣ HTML 파싱 (`BeautifulSoup` 사용)
 
-### `BeautifulSoup`을 사용한 HTML 파싱
+#### `BeautifulSoup`을 사용한 HTML 파싱 예제
 ```python
 from bs4 import BeautifulSoup
 
@@ -64,9 +64,9 @@ print(soup.h1.text)  # Hello, Web Scraping!
 
 ---
 
-## 5. 웹 페이지에서 원하는 데이터 추출
+## 5️⃣ 웹 페이지에서 원하는 데이터 추출
 
-### 특정 태그 가져오기 (`find()`, `find_all()`)
+### 1) 특정 태그 가져오기 (`find()`, `find_all()`)
 ```python
 html = """
 <html>
@@ -92,7 +92,7 @@ for p in p_tags:
 
 ---
 
-### 링크(URL) 가져오기 (`a` 태그)
+### 2) 링크(URL) 가져오기 (`a` 태그)
 ```python
 html = """
 <html>
@@ -114,7 +114,7 @@ for link in links:
 
 ---
 
-### 웹 페이지에서 이미지 가져오기 (`img` 태그)
+### 3) 웹 페이지에서 이미지 가져오기 (`img` 태그)
 ```python
 html = """
 <html>
@@ -136,12 +136,12 @@ for img in images:
 
 ---
 
-## 6. 동적 웹 페이지 스크래핑 (`Selenium` 활용)
+## 6️⃣ 동적 웹 페이지 스크래핑 (`Selenium` 활용)
 
 일부 웹사이트는 **JavaScript** 로 데이터를 로딩하므로 `requests` 만으로는 데이터를 가져올 수 없습니다.  
 이 경우 **Selenium** 을 사용하여 웹페이지를 자동으로 조작할 수 있습니다.
 
-### `Selenium`을 사용하여 동적 웹 페이지 크롤링
+### 1) `Selenium`을 사용하여 동적 웹 페이지 크롤링
 ```python
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -166,7 +166,7 @@ driver.quit()
 
 ---
 
-### `click()` - 버튼 클릭
+### 2) `click()` - 버튼 클릭
 ```python
 button = driver.find_element(By.ID, "search-button")
 button.click()  # 버튼 클릭
@@ -177,7 +177,7 @@ button.click()  # 버튼 클릭
 
 ---
 
-### `send_keys()` - 입력 상자에 텍스트 입력
+### 3) `send_keys()` - 입력 상자에 텍스트 입력
 ```python
 search_box = driver.find_element(By.NAME, "q")
 search_box.send_keys("Python 웹 스크래핑")  # 검색어 입력
@@ -189,14 +189,16 @@ search_box.submit()  # 엔터 입력
 
 ---
 
-## 7. 웹 크롤링 시 주의할 점
+## 7️⃣ 웹 크롤링 시 주의할 점
 
-### 웹 크롤링의 법적 이슈
+### 1) 웹 크롤링의 법적 이슈
 - **웹사이트의 `robots.txt` 규칙을 확인**하세요.  
 - 데이터를 무단으로 수집하면 **법적 문제**가 발생할 수 있습니다.  
 - 트래픽을 과도하게 발생시키면 **IP 차단**될 수도 있습니다.  
 
-### 서버 부하 방지 (`time.sleep()` 활용)
+---
+
+### 2) 서버 부하 방지 (`time.sleep()` 활용)
 ```python
 import time
 
