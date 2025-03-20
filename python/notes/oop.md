@@ -215,10 +215,10 @@ print(account.get_balance())  # 1500
 
 ✔ **클래스(Class)**: 객체를 생성하는 설계도  
 ✔ **객체(Object)**: 클래스로부터 만들어진 실체  
+✔ **상속(Inheritance)**: 기존 클래스를 확장하여 새로운 클래스 생성  
+✔ **오버라이딩(Overriding)**: 부모 클래스의 메서드를 자식 클래스에서 재정의  
+✔ **캡슐화(Encapsulation)**: `__private` 속성으로 정보 보호  
 ✔ **메서드 종류**:
   - 인스턴스 메서드 (`self`)
   - 클래스 메서드 (`@classmethod`)
   - 정적 메서드 (`@staticmethod`)  
-✔ **상속(Inheritance)**: 기존 클래스를 확장하여 새로운 클래스 생성  
-✔ **오버라이딩(Overriding)**: 부모 클래스의 메서드를 자식 클래스에서 재정의  
-✔ **캡슐화(Encapsulation)**: `__private` 속성으로 정보 보호  
