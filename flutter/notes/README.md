@@ -21,4 +21,4 @@
 
 이슈를 정리할 때, 템플릿을 사용하여 일관되게 기록하세요.
 
-> 📄 예제 파일: [note-template.md](../../templates/note-template.md)
+> 📄 예제 파일: [note-template.md](/common/template/templates/note-template.md)
