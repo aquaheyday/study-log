@@ -91,6 +91,8 @@ for i in range(5):  # 0부터 4까지 반복
     print(i)
 ```
 
+---
+
 #### 3) `range(start, stop, step)` 형태로 사용 가능  
 ```python
 for i in range(1, 10, 2):  # 1부터 9까지 2씩 증가
