@@ -5,7 +5,7 @@ Python에서는 `sqlite3`, `MySQL`, `PostgreSQL` 등의 다양한 데이터베�
 
 ---
 
-## 1. 데이터베이스 개념
+## 1️⃣ 데이터베이스 개념
 
 - 데이터베이스(Database)란 데이터를 저장하고 관리하는 시스템입니다.
 - Python에서는 `sqlite3` 모듈을 사용하여 **SQLite** 데이터베이스를 쉽게 다룰 수 있습니다.
@@ -13,13 +13,13 @@ Python에서는 `sqlite3`, `MySQL`, `PostgreSQL` 등의 다양한 데이터베�
 
 ---
 
-## 2. SQLite란?
+## 2️⃣ SQLite란?
 
 - **SQLite**는 파일 기반의 가벼운 데이터베이스 관리 시스템(DBMS)입니다.
 - **서버가 필요하지 않으며**, 로컬 파일(`.db`)에 데이터를 저장합니다.
 - Python의 **표준 라이브러리**에 포함되어 있어 별도의 설치 없이 사용할 수 있습니다.
 
-✔ **SQLite 데이터베이스 파일 생성**
+#### SQLite 데이터베이스 파일 생성
 ```python
 import sqlite3
 
@@ -34,11 +34,11 @@ conn.close()
 
 ---
 
-## 3. 테이블 생성
+## 3️⃣ 테이블 생성
 
 데이터를 저장하기 위해 **테이블(Table)** 을 생성해야 합니다.
 
-### 테이블 생성 예제
+#### 테이블 생성 예제
 ```python
 import sqlite3
 
@@ -66,11 +66,11 @@ conn.close()   # 연결 종료
 
 ---
 
-## 4. 데이터 삽입 (INSERT)
+## 4️⃣ 데이터 삽입 (INSERT)
 
 데이터를 테이블에 추가하려면 `INSERT INTO` 문을 사용합니다.
 
-### 단일 데이터 삽입
+### 1) 단일 데이터 삽입
 ```python
 import sqlite3
 
@@ -89,7 +89,7 @@ conn.close()
 
 ---
 
-### 여러 데이터 삽입
+### 2) 여러 데이터 삽입
 ```python
 users = [
     ("Bob", 30, "bob@example.com"),
@@ -107,11 +107,11 @@ conn.close()
 
 ---
 
-## 5. 데이터 조회 (SELECT)
+## 5️⃣ 데이터 조회 (SELECT)
 
 저장된 데이터를 가져오려면 `SELECT` 문을 사용합니다.
 
-### 모든 데이터 조회
+### 1) 모든 데이터 조회
 ```python
 conn = sqlite3.connect("example.db")
 cursor = conn.cursor()
@@ -130,7 +130,7 @@ conn.close()
 
 ---
 
-### `WHERE` - 특정 데이터 조회
+### 2) `WHERE` - 특정 데이터 조회
 ```python
 cursor.execute("SELECT * FROM users WHERE age > ?", (28,))
 rows = cursor.fetchall()
@@ -143,9 +143,9 @@ for row in rows:
 
 ---
 
-## 6. `UPDATE` - 데이터 수정
+## 6️⃣ `UPDATE` - 데이터 수정
 
-### 특정 데이터 수정
+#### 특정 데이터 수정 예제
 ```python
 cursor.execute("UPDATE users SET age = ? WHERE name = ?", (26, "Alice"))
 conn.commit()
@@ -155,9 +155,9 @@ conn.commit()
 
 ---
 
-## 7. `DELETE` - 데이터 삭제
+## 7️⃣ `DELETE` - 데이터 삭제
 
-### 특정 데이터 삭제
+### 특정 데이터 삭제 예제
 ```python
 cursor.execute("DELETE FROM users WHERE name = ?", ("Charlie",))
 conn.commit()
@@ -167,11 +167,11 @@ conn.commit()
 
 ---
 
-## 8. `try-except` - 예외 처리
+## 8️⃣ `try-except` - 예외 처리
 
 데이터베이스 작업 중 오류를 방지하기 위해 **예외 처리**를 추가할 수 있습니다.
 
-### 예외 처리 예제
+#### 예외 처리 예제
 ```python
 try:
     conn = sqlite3.connect("example.db")
@@ -191,11 +191,11 @@ finally:
 
 ---
 
-## 9. MySQL과 PostgreSQL 사용법
+## 9️⃣ MySQL과 PostgreSQL 사용법
 
 SQLite 외에도 **MySQL** 및 **PostgreSQL** 데이터베이스를 사용할 수 있습니다.
 
-### MySQL 사용 (`pymysql` 패키지 필요)
+### 1) MySQL 사용 (`pymysql` 패키지 필요)
 ```sh
 pip install pymysql
 ```
@@ -215,7 +215,7 @@ conn.close()
 
 ---
 
-### PostgreSQL 사용 (`psycopg2` 패키지 필요)
+### 2) PostgreSQL 사용 (`psycopg2` 패키지 필요)
 ```sh
 pip install psycopg2
 ```
