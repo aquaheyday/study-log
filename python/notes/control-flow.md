@@ -4,11 +4,11 @@ Python에서 조건문과 반복문을 활용하여 프로그램의 흐름을 �
 
 ---
 
-## 1. 조건문 (Conditional Statements)
+## 1️⃣ 조건문 (Conditional Statements)
 
 조건문은 특정 조건을 만족할 때 코드 블록을 실행하는 데 사용됩니다.
 
-### `if` 문 (기본 조건문)
+### 1) `if` 문 (기본 조건문)
 ```python
 x = 10
 
@@ -21,7 +21,7 @@ if x > 5:
 
 ---
 
-### `if-else` 문 (조건이 참/거짓일 때 실행)
+### 2) `if-else` 문 (조건이 참/거짓일 때 실행)
 ```python
 x = 3
 
@@ -35,7 +35,7 @@ else:
 
 ---
 
-### `if-elif-else` 문 (여러 조건 검사)
+### 3) `if-elif-else` 문 (여러 조건 검사)
 ```python
 score = 85
 
@@ -54,7 +54,7 @@ else:
 
 ---
 
-### 조건문에서 논리 연산자 사용 (`and`, `or`, `not`)
+### 4) 조건문에서 논리 연산자 사용 (`and`, `or`, `not`)
 ```python
 age = 20
 is_student = True
@@ -69,13 +69,13 @@ if age >= 18 and is_student:
 
 ---
 
-## 2. 반복문 (Loops)
+## 2️⃣ 반복문 (Loops)
 
 Python에서 반복문은 특정 코드 블록을 여러 번 실행하는 데 사용됩니다.
 
 ---
 
-### `for` 문 (리스트, 문자열, 범위 반복)
+### 1) `for` 문 (리스트, 문자열, 범위 반복)
 ```python
 fruits = ["사과", "바나나", "체리"]
 
@@ -87,13 +87,13 @@ for fruit in fruits:
 
 ---
 
-### `for` 문과 `range()` 함수 (숫자 범위 반복)
+### 2) `for` 문과 `range()` 함수 (숫자 범위 반복)
 ```python
 for i in range(5):  # 0부터 4까지 반복
     print(i)
 ```
 
-#### `range(start, stop, step)` 형태로 사용 가능  
+#### 3) `range(start, stop, step)` 형태로 사용 가능  
 ```python
 for i in range(1, 10, 2):  # 1부터 9까지 2씩 증가
     print(i)
@@ -101,7 +101,7 @@ for i in range(1, 10, 2):  # 1부터 9까지 2씩 증가
 
 ---
 
-### `while` 문 (조건이 참인 동안 반복)
+### 4) `while` 문 (조건이 참인 동안 반복)
 ```python
 x = 0
 
@@ -115,9 +115,9 @@ while x < 5:
 
 ---
 
-## 3. 반복문 제어 (Loop Control)
+## 3️⃣ 반복문 제어 (Loop Control)
 
-### `break` 문 (반복문 종료)
+### 1) `break` 문 (반복문 종료)
 ```python
 for i in range(10):
     if i == 5:
@@ -129,7 +129,7 @@ for i in range(10):
 
 ---
 
-### `continue` 문 (현재 반복 건너뛰기)
+### 2) `continue` 문 (현재 반복 건너뛰기)
 ```python
 for i in range(5):
     if i == 2:
@@ -141,7 +141,7 @@ for i in range(5):
 
 ---
 
-### `else` 블록과 반복문 (반복문이 정상 종료될 때 실행)
+### 3) `else` 블록과 반복문 (반복문이 정상 종료될 때 실행)
 ```python
 for i in range(5):
     print(i)
