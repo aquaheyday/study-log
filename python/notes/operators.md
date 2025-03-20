@@ -5,7 +5,7 @@ Python에서 연산자(Operators)는 변수와 값을 조작하는데 사용됩�
 
 ---
 
-## 1. 연산자의 종류
+## 1️⃣ 연산자의 종류
 
 | 연산자 종류 | 설명 |
 |------------|----------------------|
@@ -19,7 +19,7 @@ Python에서 연산자(Operators)는 변수와 값을 조작하는데 사용됩�
 
 ---
 
-## 2. 산술 연산자 (Arithmetic Operators)
+## 2️⃣ 산술 연산자 (Arithmetic Operators)
 
 Python에서 기본적인 산술 연산을 수행하는 연산자입니다.
 
@@ -49,7 +49,7 @@ print(a ** b) # 1000
 
 ---
 
-## 3. 비교 연산자 (Comparison Operators)
+## 3️⃣ 비교 연산자 (Comparison Operators)
 
 두 값을 비교하여 **True** 또는 **False**를 반환합니다.
 
@@ -77,7 +77,7 @@ print(y <= 5)  # True
 
 ---
 
-## 4. 논리 연산자 (Logical Operators)
+## 4️⃣ 논리 연산자 (Logical Operators)
 
 논리값(`True` 또는 `False`)을 조합하여 결과를 반환합니다.
 
@@ -99,7 +99,7 @@ print(not a)    # False
 
 ---
 
-## 5. 할당 연산자 (Assignment Operators)
+## 5️⃣ 할당 연산자 (Assignment Operators)
 
 변수에 값을 할당하는데 사용됩니다.
 
@@ -123,7 +123,7 @@ print(x)  # 15
 
 ---
 
-## 6. 비트 연산자 (Bitwise Operators)
+## 6️⃣ 비트 연산자 (Bitwise Operators)
 
 이진 연산을 수행하는 연산자입니다.
 
@@ -151,7 +151,7 @@ print(a >> 1) # 2
 
 ---
 
-## 7. 멤버 연산자 (Membership Operators)
+## 7️⃣ 멤버 연산자 (Membership Operators)
 
 값이 특정 시퀀스(`list`, `tuple`, `set`, `dict`) 내에 존재하는지 확인합니다.
 
