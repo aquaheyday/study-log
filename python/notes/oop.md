@@ -1,254 +1,220 @@
-# Python 객체지향 프로그래밍(OOP) 기초 정리
+# 🔲 Python 클래스(Class)와 객체(Object)
 
-Python은 객체지향 프로그래밍(Object-Oriented Programming, OOP)을 지원하는 언어입니다.  
-객체지향 프로그래밍은 코드의 재사용성을 높이고 유지보수를 쉽게 합니다.
-
----
-
-## 1. 클래스(Class)와 객체(Object)
-
-클래스는 객체를 생성하기 위한 청사진(설계도)이며, 객체는 클래스의 인스턴스(instance)입니다.
-
-```python
-# 클래스 정의
-class Person:
-    def __init__(self, name, age):
-        self.name = name  # 인스턴스 변수
-        self.age = age    # 인스턴스 변수
-    
-    def introduce(self):
-        return f"My name is {self.name} and I am {self.age} years old."
-
-# 객체 생성
-person1 = Person("Alice", 25)
-print(person1.introduce())  # My name is Alice and I am 25 years old.
-```
+Python에서 **클래스(Class)** 는 객체를 생성하는 틀이며,  
+**객체(Object)** 는 클래스에서 생성된 인스턴스를 의미합니다.
 
 ---
 
-## 2. 생성자(`__init__`)와 소멸자(`__del__`)
+## 1. 클래스와 객체 개념
 
-### 2.1 생성자 (`__init__`)
-객체가 생성될 때 자동으로 호출됩니다.
+### 클래스란?
+- 클래스는 **속성(변수)과 동작(메서드)** 을 정의하는 **설계도(틀)** 입니다.
+- 클래스를 사용하면 코드를 **재사용**하고 **구조화**할 수 있습니다.
 
+### 객체란?
+- 객체는 **클래스에서 생성된 인스턴스(Instance)** 입니다.
+- 동일한 클래스를 기반으로 여러 개의 객체를 생성할 수 있습니다.
+
+---
+
+## 2. 클래스 정의 및 객체 생성
+
+### 기본적인 클래스 정의
 ```python
 class Dog:
-    def __init__(self, name):
-        self.name = name
-        print(f"{self.name}가 태어났습니다!")
+    def __init__(self, name, breed):  # 생성자
+        self.name = name  # 인스턴스 변수
+        self.breed = breed  # 인스턴스 변수
 
-dog = Dog("Buddy")  # Buddy가 태어났습니다!
+    def bark(self):  # 메서드
+        print(f"{self.name}가 멍멍! 하고 짖습니다.")
+
+# 객체 생성
+dog1 = Dog("Buddy", "Golden Retriever")
+dog2 = Dog("Charlie", "Beagle")
+
+# 메서드 호출
+dog1.bark()  # "Buddy가 멍멍! 하고 짖습니다."
+dog2.bark()  # "Charlie가 멍멍! 하고 짖습니다."
 ```
 
-### 2.2 소멸자 (`__del__`)
-객체가 소멸될 때 자동으로 호출됩니다.
-
-```python
-class Animal:
-    def __init__(self, name):
-        self.name = name
-
-    def __del__(self):
-        print(f"{self.name} 객체가 삭제되었습니다.")
-
-animal = Animal("Tiger")
-del animal  # Tiger 객체가 삭제되었습니다.
-```
+✔ `__init__` → 생성자(Constructor)로 객체가 생성될 때 실행됨  
+✔ `self` → 객체 자기 자신을 가리키는 키워드  
+✔ 클래스 내부의 변수(속성)는 `self.변수명` 형태로 정의  
 
 ---
 
-## 3. 클래스 변수와 인스턴스 변수
+## 3. 인스턴스 변수와 클래스 변수
 
-- **클래스 변수**: 모든 객체가 공유하는 변수
-- **인스턴스 변수**: 각 객체가 개별적으로 가지는 변수
+### 클래스 변수 (Class Variable)
+- 모든 객체가 공유하는 변수 (`클래스명.변수명` 형태로 정의)
 
-```python
-class Counter:
-    count = 0  # 클래스 변수
-
-    def __init__(self):
-        Counter.count += 1  # 객체 생성 시마다 증가
-
-print(Counter.count)  # 0
-c1 = Counter()
-c2 = Counter()
-print(Counter.count)  # 2
-```
-
----
-
-## 4. 메서드(Method)의 종류
-
-### 4.1 인스턴스 메서드
-객체에서 호출하며, `self`를 통해 인스턴스 변수에 접근할 수 있습니다.
+### 인스턴스 변수 (Instance Variable)
+- `self.변수명` 형태로 객체마다 다른 값을 저장하는 변수
 
 ```python
 class Car:
-    def __init__(self, brand):
-        self.brand = brand
-    
-    def show_info(self):
-        return f"Car brand: {self.brand}"
+    wheels = 4  # 클래스 변수 (모든 객체가 공유)
 
-car = Car("Toyota")
-print(car.show_info())  # Car brand: Toyota
+    def __init__(self, brand):
+        self.brand = brand  # 인스턴스 변수
+
+car1 = Car("Tesla")
+car2 = Car("BMW")
+
+print(car1.brand, car1.wheels)  # Tesla 4
+print(car2.brand, car2.wheels)  # BMW 4
 ```
 
-### 4.2 클래스 메서드 (`@classmethod`)
-클래스 변수를 다룰 때 사용하며, `cls`를 통해 접근합니다.
+✔ `wheels`는 클래스 변수로 모든 객체가 공유  
+✔ `brand`는 인스턴스 변수로 각 객체마다 다름  
+
+---
+
+## 4. 메서드의 종류
+
+### 인스턴스 메서드 (Instance Method)
+- `self`를 사용하여 객체의 속성을 다루는 일반적인 메서드
 
 ```python
-class Vehicle:
-    count = 0  # 클래스 변수
+class Person:
+    def __init__(self, name):
+        self.name = name
 
-    def __init__(self):
-        Vehicle.count += 1
+    def greet(self):
+        print(f"안녕하세요, 저는 {self.name}입니다.")
+
+person1 = Person("Alice")
+person1.greet()  # "안녕하세요, 저는 Alice입니다."
+```
+
+---
+
+### 클래스 메서드 (Class Method)
+- `@classmethod` 데코레이터 사용
+- `cls`를 매개변수로 받아 클래스 변수에 접근 가능
+
+```python
+class Animal:
+    species = "동물"
 
     @classmethod
-    def get_count(cls):
-        return f"Total Vehicles: {cls.count}"
+    def show_species(cls):
+        print(f"이 클래스의 종(species)은 {cls.species}입니다.")
 
-v1 = Vehicle()
-v2 = Vehicle()
-print(Vehicle.get_count())  # Total Vehicles: 2
+Animal.show_species()  # "이 클래스의 종(species)은 동물입니다."
 ```
 
-### 4.3 정적 메서드 (`@staticmethod`)
-클래스나 인스턴스와 관계없이 독립적으로 동작합니다.
+✔ `cls`를 통해 클래스 변수에 접근 가능  
+
+---
+
+### 정적 메서드 (Static Method)
+- `@staticmethod` 데코레이터 사용
+- `self`나 `cls` 없이 독립적인 기능 수행
 
 ```python
-class MathUtils:
+class Math:
     @staticmethod
     def add(a, b):
         return a + b
 
-print(MathUtils.add(3, 5))  # 8
+print(Math.add(3, 5))  # 8
 ```
+
+✔ 정적 메서드는 클래스와 관계없이 독립적인 기능을 수행  
 
 ---
 
-## 5. 상속(Inheritance)
+## 5. 클래스 상속 (Inheritance)
 
-기존 클래스(부모 클래스)를 재사용하여 새로운 클래스(자식 클래스)를 정의할 수 있습니다.
+- **기존 클래스(부모 클래스, Superclass)의 기능을 그대로 물려받아 새로운 클래스를 생성**
+- **코드 재사용** 및 **유지보수성** 향상
 
+### 기본 상속 예제
 ```python
 class Animal:
     def __init__(self, name):
         self.name = name
 
     def speak(self):
-        return "소리를 냅니다."
+        print("소리를 냅니다.")
 
-class Dog(Animal):  # Animal 클래스를 상속받음
+class Dog(Animal):  # Animal 클래스를 상속
     def speak(self):
-        return "멍멍!"
+        print(f"{self.name}가 멍멍!")
+
+class Cat(Animal):  # Animal 클래스를 상속
+    def speak(self):
+        print(f"{self.name}가 야옹!")
 
 dog = Dog("Buddy")
-print(dog.speak())  # 멍멍!
+cat = Cat("Kitty")
+
+dog.speak()  # "Buddy가 멍멍!"
+cat.speak()  # "Kitty가 야옹!"
 ```
 
-### 5.1 `super()`를 이용한 부모 클래스 접근
-```python
-# 부모 클래스 (Animal)
-class Animal:
-    def __init__(self, name):
-        self.name = name  # 이름 속성 정의
-
-    def speak(self):
-        return "소리를 냅니다."  # 기본적인 메서드
-
-# 자식 클래스 (Bird)
-class Bird(Animal):  # Animal 클래스를 상속받음
-    def __init__(self, name, color):
-        super().__init__(name)  # 부모 클래스의 생성자 호출
-        self.color = color  # 새의 색깔 속성 추가
-
-    def speak(self):  # 부모 클래스의 speak 메서드 오버라이딩
-        return f"{self.color} {self.name}가 짹짹거립니다."
-
-# 객체 생성 및 테스트
-bird = Bird("참새", "갈색")  
-print(bird.speak())  # 갈색 참새가 짹짹거립니다.
-```
+✔ `Dog`와 `Cat` 클래스는 `Animal` 클래스를 상속받아 사용  
+✔ 부모 클래스의 기능을 그대로 사용하거나 **재정의(오버라이딩)** 가능  
 
 ---
 
-## 6. 다형성(Polymorphism)
+## 6. 메서드 오버라이딩 (Method Overriding)
 
-같은 메서드 이름을 사용하더라도 객체에 따라 다르게 동작할 수 있습니다.
+- **부모 클래스의 메서드를 자식 클래스에서 재정의(Override)하여 동작을 변경할 수 있음**
 
 ```python
-class Animal:
-    def speak(self):
-        return "소리를 냅니다."
+class Parent:
+    def show(self):
+        print("부모 클래스 메서드")
 
-class Dog(Animal):
-    def speak(self):
-        return "멍멍!"
+class Child(Parent):
+    def show(self):
+        print("자식 클래스에서 재정의된 메서드")
 
-class Cat(Animal):
-    def speak(self):
-        return "야옹!"
-
-animals = [Dog(), Cat(), Animal()]
-
-for animal in animals:
-    print(animal.speak())
+child = Child()
+child.show()  # "자식 클래스에서 재정의된 메서드"
 ```
 
-출력:
-```
-멍멍!
-야옹!
-소리를 냅니다.
-```
+✔ 자식 클래스에서 동일한 이름의 메서드를 정의하면 부모 메서드를 덮어씀  
 
 ---
 
-## 7. 추상 클래스(Abstract Class)
+## 7. 캡슐화 (Encapsulation)
 
-추상 클래스는 인스턴스를 만들 수 없으며, 반드시 **자식 클래스에서 메서드를 구현해야 합니다.**  
-`abc` 모듈의 `ABC` 클래스를 상속받고, `@abstractmethod` 데코레이터를 사용합니다.
+- 클래스 내부의 속성을 **외부에서 직접 접근하지 못하도록 보호**하는 개념
+- 속성 앞에 **`_`(protected)** 또는 **`__`(private)** 를 붙여서 접근 제한 가능
 
+### 캡슐화 예제
 ```python
-from abc import ABC, abstractmethod
+class BankAccount:
+    def __init__(self, balance):
+        self.__balance = balance  # private 변수
 
-class Animal(ABC):
-    @abstractmethod
-    def speak(self):
-        pass  # 반드시 자식 클래스에서 구현해야 함
+    def deposit(self, amount):
+        self.__balance += amount
 
-class Dog(Animal):
-    def speak(self):
-        return "멍멍!"
+    def get_balance(self):
+        return self.__balance
 
-dog = Dog()
-print(dog.speak())  # 멍멍!
+account = BankAccount(1000)
+account.deposit(500)
+print(account.get_balance())  # 1500
 ```
+
+✔ `__balance`는 클래스 내부에서만 접근 가능 (외부에서 `account.__balance` 직접 접근 불가)  
 
 ---
 
-## 8. 캡슐화(Encapsulation)
+## 🎯 정리
 
-캡슐화는 데이터 보호를 위해 변수의 접근 제한을 설정하는 기법입니다.
-
-- **공개 멤버 (Public)**: `self.var`
-- **보호 멤버 (Protected)**: `_var` (관례적으로 보호됨)
-- **비공개 멤버 (Private)**: `__var` (외부 접근 불가)
-
-```python
-class Person:
-    def __init__(self, name, age):
-        self.name = name       # 공개 변수
-        self._age = age        # 보호 변수
-        self.__id = "1234ABCD" # 비공개 변수
-
-    def get_id(self):
-        return self.__id  # 비공개 변수는 내부에서만 접근 가능
-
-person = Person("Alice", 25)
-print(person.name)  # Alice
-print(person._age)  # 25 (외부에서 접근 가능하지만, 사용을 권장하지 않음)
-# print(person.__id)  # 오류 발생 (비공개 변수)
-print(person.get_id())  # 1234ABCD (메서드를 통해 접근)
-```
+✔ **클래스(Class)**: 객체를 생성하는 설계도  
+✔ **객체(Object)**: 클래스로부터 만들어진 실체  
+✔ **메서드 종류**:
+  - 인스턴스 메서드 (`self`)
+  - 클래스 메서드 (`@classmethod`)
+  - 정적 메서드 (`@staticmethod`)  
+✔ **상속(Inheritance)**: 기존 클래스를 확장하여 새로운 클래스 생성  
+✔ **오버라이딩(Overriding)**: 부모 클래스의 메서드를 자식 클래스에서 재정의  
+✔ **캡슐화(Encapsulation)**: `__private` 속성으로 정보 보호  
