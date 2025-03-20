@@ -26,7 +26,7 @@
 | 04 | 연산자와 표현식 | [operators.md](./notes/operators.md) | 산술, 비교, 논리, 비트 연산자 |
 | 05 | 조건문과 반복문 | [control-flow.md](./notes/control-flow.md) | if, for, while 문법과 사용법 |
 
-### 🎯 함수와 객체지향 프로그래밍
+### 🔲 함수와 객체지향 프로그래밍
 | 번호 | 주제 | 파일명 | 설명 |
 |---|---|---|---|
 | 06 | 함수 사용법 | [functions.md](./notes/functions.md) | 함수 정의, 매개변수, 반환값, 람다 |
