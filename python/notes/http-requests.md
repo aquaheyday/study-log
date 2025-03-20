@@ -5,12 +5,12 @@ Python에서 **HTTP 요청을 보내는 방법**을 설명합니다.
 
 ---
 
-## 1. HTTP 요청이란?
+## 1️⃣ HTTP 요청이란?
 
 - **HTTP 요청(Request)** 은 클라이언트가 웹 서버에 데이터를 요청하는 방식입니다.
 - 요청 방식(Method)에 따라 수행하는 작업이 달라집니다.
 
-### 주요 HTTP 요청 메서드
+#### 주요 HTTP 요청 메서드
 
 | HTTP 메서드 | 설명 |
 |------------|----------------------------------|
@@ -21,16 +21,16 @@ Python에서 **HTTP 요청을 보내는 방법**을 설명합니다.
 
 ---
 
-## 2. `requests` 라이브러리 설치 및 기본 사용법
+## 2️⃣ `requests` 라이브러리 설치 및 기본 사용법
 
 Python에서 HTTP 요청을 보낼 때는 `requests` 라이브러리를 사용합니다.
 
-### `requests` 설치
+#### `requests` 설치
 ```sh
 pip install requests
 ```
 
-### 기본 GET 요청 (`requests.get()`)
+#### 기본 GET 요청 (`requests.get()`)
 ```python
 import requests
 
@@ -46,9 +46,9 @@ print(response.text)  # 응답 본문 출력
 
 ---
 
-## 3. GET 요청 (Query Parameters 포함)
+## 3️⃣ GET 요청 (Query Parameters 포함)
 
-### URL에 파라미터 추가 (`params` 사용)
+#### URL에 파라미터 추가 예제 (`params` 사용)
 ```python
 params = {"userId": 1}
 response = requests.get("https://jsonplaceholder.typicode.com/posts", params=params)
@@ -63,9 +63,9 @@ print(response.json())  # JSON 데이터 출력
 
 ---
 
-## 4. POST 요청 (데이터 전송)
+## 4️⃣ POST 요청 (데이터 전송)
 
-### `requests.post()` 사용
+#### `requests.post()` 사용 예제
 ```python
 data = {"title": "Hello", "body": "This is a test", "userId": 1}
 response = requests.post("https://jsonplaceholder.typicode.com/posts", json=data)
@@ -79,9 +79,9 @@ print(response.json())  # 응답 데이터 확인
 
 ---
 
-## 5. PUT 요청 (데이터 수정)
+## 5️⃣ PUT 요청 (데이터 수정)
 
-### `requests.put()` 사용
+#### `requests.put()` 사용 예제
 ```python
 data = {"title": "Updated Title", "body": "Updated body", "userId": 1}
 response = requests.put("https://jsonplaceholder.typicode.com/posts/1", json=data)
@@ -94,9 +94,9 @@ print(response.json())  # 수정된 데이터 확인
 
 ---
 
-## 6. DELETE 요청 (데이터 삭제)
+## 6️⃣ DELETE 요청 (데이터 삭제)
 
-### `requests.delete()` 사용
+#### `requests.delete()` 사용 예제
 ```python
 response = requests.delete("https://jsonplaceholder.typicode.com/posts/1")
 
@@ -107,12 +107,12 @@ print(response.status_code)  # 응답 코드 (200: 성공, 204: 삭제 완료)
 
 ---
 
-## 7. 요청 헤더 설정
+## 7️⃣ 요청 헤더 설정
 
 일부 API는 **헤더(Headers)** 를 요구할 수 있습니다.  
 예를 들어, `User-Agent`, `Authorization`, `Content-Type` 등의 정보를 포함해야 할 수 있습니다.
 
-### `headers` 사용 예제
+#### `headers` 사용 예제
 ```python
 headers = {
     "User-Agent": "Mozilla/5.0",
@@ -127,9 +127,9 @@ print(response.status_code)
 
 ---
 
-## 8. 응답(Response) 다루기
+## 8️⃣ 응답(Response) 다루기
 
-### 응답 데이터 확인 방법
+#### 응답 데이터 확인 방법
 ```python
 response = requests.get("https://jsonplaceholder.typicode.com/posts/1")
 
@@ -145,11 +145,11 @@ print(response.headers)  # 응답 헤더 출력
 
 ---
 
-## 9. 예외 처리 (`try-except` 사용)
+## 9️⃣ 예외 처리 (`try-except` 사용)
 
 요청이 실패할 경우 예외 처리를 추가하여 안정적인 코드를 작성할 수 있습니다.
 
-### `try-except`로 예외 처리
+#### `try-except`로 예외 처리 예제
 ```python
 try:
     response = requests.get("https://jsonplaceholder.typicode.com/posts/1", timeout=5)
@@ -171,9 +171,9 @@ except requests.exceptions.RequestException as e:
 
 ---
 
-## 10. 파일 업로드 및 다운로드
+## 🔟 파일 업로드 및 다운로드
 
-### 파일 업로드 (`files` 사용)
+### 1) 파일 업로드 (`files` 사용)
 ```python
 files = {"file": open("example.txt", "rb")}
 
@@ -185,7 +185,7 @@ print(response.json())  # 업로드된 파일 정보 확인
 
 ---
 
-### 파일 다운로드
+### 2) 파일 다운로드
 ```python
 response = requests.get("https://example.com/image.jpg")
 
