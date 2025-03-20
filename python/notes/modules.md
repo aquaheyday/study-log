@@ -5,13 +5,13 @@ Python에서 **모듈(Module)** 과 **패키지(Package)** 를 활용하면 코�
 
 ---
 
-## 1. 모듈(Module) 이란?
+## 1️⃣ 모듈(Module) 이란?
 
 - 모듈(Module)은 **여러 기능을 하나의 파일에 정의한 Python 코드 파일**입니다.
 - `.py` 확장자를 가지며, 다른 Python 파일에서 가져와 사용할 수 있습니다.
 - 모듈을 사용하면 코드의 **재사용성**과 **가독성**을 높일 수 있습니다.
 
-### 모듈 가져오기 (`import`)
+### 1) 모듈 가져오기 (`import`)
 
 Python에서 모듈을 가져오는 방법은 다음과 같습니다.
 
@@ -27,7 +27,7 @@ print(math.pi)        # 3.141592653589793
 
 ---
 
-### 모듈에서 특정 함수만 가져오기 (`from import`)
+### 2) 모듈에서 특정 함수만 가져오기 (`from import`)
 
 ```python
 from math import sqrt, pi  # sqrt(), pi만 가져오기
@@ -40,7 +40,7 @@ print(pi)        # 3.141592653589793
 
 ---
 
-### 모듈의 모든 기능 가져오기 (`from import *`)
+### 3) 모듈의 모든 기능 가져오기 (`from import *`)
 
 ```python
 from math import *
@@ -54,7 +54,7 @@ print(cos(0))   # 1.0
 
 ---
 
-### 모듈에 별칭(Alias) 지정 (`as`)
+### 4) 모듈에 별칭(Alias) 지정 (`as`)
 
 ```python
 import math as m  # math 모듈을 'm'으로 별칭 지정
@@ -66,11 +66,11 @@ print(m.sqrt(9))  # 3.0
 
 ---
 
-## 2. 사용자 정의 모듈 만들기
+## 2️⃣ 사용자 정의 모듈 만들기
 
 사용자만의 모듈을 직접 만들 수 있습니다.
 
-### 사용자 모듈 생성 (`my_module.py`)
+### 1) 사용자 모듈 생성 (`my_module.py`)
 ```python
 # my_module.py
 def greet(name):
@@ -80,7 +80,7 @@ def add(a, b):
     return a + b
 ```
 
-### 사용자 모듈 불러오기 (`main.py`)
+### 2) 사용자 모듈 불러오기 (`main.py`)
 ```python
 import my_module  # my_module.py 가져오기
 
@@ -93,7 +93,7 @@ print(my_module.add(3, 5))       # 8
 
 ---
 
-## 3. 패키지(Package)란?
+## 3️⃣ 패키지(Package)란?
 
 - **패키지(Package)** 는 **여러 모듈을 포함하는 디렉터리(폴더)** 입니다.
 - 패키지를 사용하면 **관련된 모듈을 논리적으로 그룹화**할 수 있습니다.
@@ -101,7 +101,7 @@ print(my_module.add(3, 5))       # 8
 
 ---
 
-### 패키지 구조 예시
+### 1) 패키지 구조 예시
 
 ```
 my_package/        # 패키지 디렉터리
@@ -110,7 +110,9 @@ my_package/        # 패키지 디렉터리
     ├── module2.py   # 두 번째 모듈
 ```
 
-### 패키지 모듈 사용하기
+---
+
+### 2) 패키지 모듈 사용하기
 ```python
 import my_package.module1
 import my_package.module2
@@ -120,7 +122,7 @@ import my_package.module2
 
 ---
 
-### `__init__.py` 파일의 역할
+### 3) `__init__.py` 파일의 역할
 
 - `__init__.py` 파일이 있는 디렉터리는 **패키지로 인식**됨
 - `__init__.py` 파일에서 패키지를 초기화할 수 있음
@@ -134,7 +136,7 @@ print("my_package가 로드되었습니다.")
 
 ---
 
-### 패키지에서 특정 함수 가져오기
+### 4) 패키지에서 특정 함수 가져오기
 ```python
 from my_package.module1 import some_function
 ```
@@ -143,7 +145,7 @@ from my_package.module1 import some_function
 
 ---
 
-## 4. 표준 라이브러리 (Python Standard Library)
+## 4️⃣ 표준 라이브러리 (Python Standard Library)
 
 Python에는 기본적으로 제공되는 **표준 라이브러리(Standard Library)** 가 있습니다.
 
@@ -160,7 +162,7 @@ Python에는 기본적으로 제공되는 **표준 라이브러리(Standard Libr
 
 ---
 
-## 5. 외부 라이브러리 (Third-party Libraries)
+## 5️⃣ 외부 라이브러리 (Third-party Libraries)
 
 Python에서는 **외부 라이브러리**를 설치하여 확장 기능을 사용할 수 있습니다.
 
