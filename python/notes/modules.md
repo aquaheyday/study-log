@@ -80,6 +80,8 @@ def add(a, b):
     return a + b
 ```
 
+---
+
 ### 2) 사용자 모듈 불러오기 (`main.py`)
 ```python
 import my_module  # my_module.py 가져오기
@@ -166,24 +168,30 @@ Python에는 기본적으로 제공되는 **표준 라이브러리(Standard Libr
 
 Python에서는 **외부 라이브러리**를 설치하여 확장 기능을 사용할 수 있습니다.
 
-### 외부 라이브러리 설치 (`pip`)
+### 1) 외부 라이브러리 설치 (`pip`)
 ```sh
 pip install requests  # requests 라이브러리 설치
 ```
 
-✔ 설치된 라이브러리는 `import`하여 사용할 수 있음
+---
+
+### 2) 설치된 라이브러리는 `import`하여 사용할 수 있음
 ```python
 import requests
 response = requests.get("https://www.google.com")
 print(response.status_code)  # 200
 ```
 
-✔ 설치된 라이브러리 목록 확인
+---
+
+### 3) 설치된 라이브러리 목록 확인
 ```sh
 pip list
 ```
 
-✔ 특정 라이브러리 삭제
+---
+
+### 4) 특정 라이브러리 삭제
 ```sh
 pip uninstall requests
 ```
