@@ -56,7 +56,7 @@
 | 18 | 데코레이터 | [decorators.md](./notes/decorators.md) | 함수형 프로그래밍, 고차 함수 |
 | 19 | 제너레이터와 이터레이터 | [generators.md](./notes/generators.md) | yield, lazy evaluation |
 
-### 🛠️ 데이터 과학 및 머신러닝
+### 📊 데이터 과학 및 머신러닝
 | 번호 | 주제 | 파일명 | 설명 |
 |---|---|---|---|
 | 20 | NumPy 기본 | [numpy.md](./notes/numpy.md) | 배열 생성, 연산, 슬라이싱 |
