@@ -11,14 +11,12 @@ Python에서 **예외(Exception)** 는 프로그램 실행 중 발생할 수 있
 - 예외가 발생하면 프로그램이 즉시 중단되므로, 이를 **처리**하는 것이 중요합니다.
 - 예외는 `try-except` 문을 사용하여 처리할 수 있습니다.
 
-### 1) 예외 발생 예제
+#### 예외 발생 예제
 ```python
 print(10 / 0)  # ZeroDivisionError 발생 (0으로 나눌 수 없음)
 ```
 
----
-
-### 2) 예외 발생 시 프로그램이 중단됨
+#### 예외 발생 시 프로그램이 중단됨
 ```
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -29,7 +27,6 @@ ZeroDivisionError: division by zero
 
 ## 2️⃣ 기본 예외 처리 (`try-except`)
 
-### `try-except` 기본 문법
 ```python
 try:
     x = 10 / 0  # 예외 발생 가능 코드
@@ -42,7 +39,7 @@ except ZeroDivisionError:
 
 ---
 
-## 3️⃣ 여러 개의 예외 처리
+## 3️⃣ 복수의 예외 처리
 
 ### 1) 여러 개의 예외 처리 (`except` 여러 개)
 ```python
@@ -74,7 +71,6 @@ except (ZeroDivisionError, ValueError):
 
 ## 4️⃣ 모든 예외 처리 (`Exception` 사용)
 
-### `Exception`으로 모든 예외 처리
 ```python
 try:
     x = int("abc")  # ValueError 발생
@@ -89,7 +85,6 @@ except Exception as e:
 
 ## 5️⃣ `finally` 블록 (항상 실행되는 코드)
 
-### `finally` 블록 사용
 ```python
 try:
     file = open("test.txt", "r")
@@ -107,7 +102,6 @@ finally:
 
 ## 6️⃣ `else` 블록 (예외가 발생하지 않았을 때 실행)
 
-### `else` 블록 사용
 ```python
 try:
     num = int(input("숫자를 입력하세요: "))
