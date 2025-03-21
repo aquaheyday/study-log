@@ -1,25 +1,25 @@
-# 📌 컴포넌트 기초
+# 📌 React 컴포넌트 기초
 
 React에서 **컴포넌트(Component)** 는 UI를 구성하는 기본 단위입니다.  
 컴포넌트를 사용하면 **재사용성, 유지보수성, 가독성이 뛰어난 코드**를 작성할 수 있습니다.
 
 ---
 
-## 1. 컴포넌트란?
+## 1️⃣ 컴포넌트란?
 - **컴포넌트(Component)** 는 React에서 **독립적인 UI 블록**입니다.
 - 하나의 애플리케이션은 여러 개의 컴포넌트로 구성됩니다.
 - 컴포넌트는 **재사용 가능**하며, **props를 통해 데이터를 전달**할 수 있습니다.
 
 ---
 
-## 2. 컴포넌트의 종류
+## 2️⃣ 컴포넌트의 종류
 React에서는 **함수형 컴포넌트**와 **클래스형 컴포넌트**를 사용할 수 있습니다.  
 
 ✔ 최근에는 함수형 컴포넌트 + React Hooks 사용을 권장합니다.
 
 ---
 
-### 함수형 컴포넌트 (Functional Component)
+### 1) 함수형 컴포넌트 (Functional Component)
 - 더 짧고 간결한 코드 작성 가능
 - React Hooks (`useState`, `useEffect` 등) 사용 가능
 - 클래스형보다 성능이 우수하고 메모리 사용량이 적음
@@ -35,7 +35,7 @@ export default Greeting;
 
 ---
 
-### 클래스형 컴포넌트 (Class Component)
+### 2) 클래스형 컴포넌트 (Class Component)
 - `class` 키워드를 사용하여 정의  
 - `render()` 메서드가 반드시 필요함  
 - `this.state`를 사용하여 **상태(State)** 관리 가능
@@ -56,10 +56,10 @@ export default Greeting;
 
 ---
 
-## 3. 컴포넌트 사용법 (Import & Render)
+## 3️⃣ 컴포넌트 사용법 (Import & Render)
 컴포넌트를 사용하려면 `import`하여 렌더링해야 합니다.
 
-### 기본 컴포넌트 불러오기
+### 1) 기본 컴포넌트 불러오기
 ```jsx
 import Greeting from "./Greeting";
 
@@ -77,7 +77,7 @@ export default App;
 
 ---
 
-### 여러 개의 컴포넌트 조합
+### 2) 여러 개의 컴포넌트 조합
 컴포넌트는 **다른 컴포넌트 안에서 사용 가능**합니다.
 
 ```jsx
@@ -106,10 +106,10 @@ export default App;
 
 ---
 
-## 4. Props (컴포넌트 간 데이터 전달)
+## 4️⃣ Props (컴포넌트 간 데이터 전달)
 `props`는 **부모 컴포넌트에서 자식 컴포넌트로 데이터를 전달하는 방법**입니다.
 
-### Props 기본 사용법
+### 1) Props 기본 사용법
 ```jsx
 function User(props) {
   return <h1>안녕하세요, {props.name}님!</h1>;
@@ -125,7 +125,7 @@ export default App;
 
 ---
 
-### Props 기본값 설정 (`defaultProps`)
+### 2) Props 기본값 설정 (`defaultProps`)
 ```jsx
 function User(props) {
   return <h1>안녕하세요, {props.name}님!</h1>;
@@ -141,7 +141,7 @@ export default User;
 
 ---
 
-### Props 비구조화 할당 (Destructuring)
+### 3) Props 비구조화 할당 (Destructuring)
 ```jsx
 function User({ name }) {
   return <h1>안녕하세요, {name}님!</h1>;
@@ -151,11 +151,11 @@ function User({ name }) {
 
 ---
 
-## 5. State (컴포넌트 내부 데이터 관리)
+## 5️⃣ State (컴포넌트 내부 데이터 관리)
 `State`는 **컴포넌트 내부에서 관리되는 동적인 데이터**입니다.  
 React에서는 `useState()` 훅을 사용하여 State를 관리할 수 있습니다.
 
-### `useState()`를 사용한 State 관리
+### 1) `useState()`를 사용한 State 관리
 ```jsx
 import { useState } from "react";
 
@@ -177,11 +177,11 @@ export default Counter;
 
 ---
 
-## 6. 컴포넌트의 주요 특징
-✔ 재사용성 → 동일한 컴포넌트를 여러 곳에서 재사용 가능  
-✔ 독립성 → 각 컴포넌트는 독립적으로 동작  
-✔ 조합 가능 → 여러 컴포넌트를 조합하여 복잡한 UI 구성 가능  
-✔ 단방향 데이터 흐름 → `props`를 사용하여 부모 → 자식으로 데이터 전달  
+## 6️⃣ 컴포넌트의 주요 특징
+- 재사용성 → 동일한 컴포넌트를 여러 곳에서 재사용 가능  
+- 독립성 → 각 컴포넌트는 독립적으로 동작  
+- 조합 가능 → 여러 컴포넌트를 조합하여 복잡한 UI 구성 가능  
+- 단방향 데이터 흐름 → `props`를 사용하여 부모 → 자식으로 데이터 전달  
 
 ---
 
