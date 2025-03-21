@@ -5,20 +5,20 @@ Python에서 **정규 표현식(Regular Expressions, RegEx)** 은 **문자열에
 
 ---
 
-## 1. 정규 표현식이란?
+## 1️⃣ 정규 표현식이란?
 
 - **특정 문자열 패턴을 찾기 위한 기법**입니다.
 - 이메일 주소, 전화번호, URL 등의 패턴을 검출하는 데 유용합니다.
 - `re` 모듈을 사용하여 문자열 검색, 매칭, 치환을 수행할 수 있습니다.
 
-### `re` 모듈 불러오기
+#### `re` 모듈 불러오기
 ```python
 import re
 ```
 
 ---
 
-## 2. 정규 표현식 기본 패턴
+## 2️⃣ 정규 표현식 기본 패턴
 
 | 정규식 | 설명 | 예제 매칭 |
 |--------|------|----------|
@@ -41,9 +41,9 @@ import re
 
 ---
 
-## 3. 정규 표현식 기본 사용법 (`re` 모듈)
+## 3️⃣ 정규 표현식 기본 사용법 (`re` 모듈)
 
-### `re.search()` - 패턴 검색
+### 1) `re.search()` - 패턴 검색
 ```python
 import re
 
@@ -58,7 +58,7 @@ if match:
 
 ---
 
-### `re.findall()` - 모든 패턴 찾기
+### 2) `re.findall()` - 모든 패턴 찾기
 ```python
 text = "My numbers are 123-4567 and 987-6543"
 matches = re.findall(r"\d{3}-\d{4}", text)
@@ -68,7 +68,7 @@ print(matches)  # ['123-4567', '987-6543']
 
 ---
 
-### `re.match()` - 문자열의 시작 부분에서 매칭 확인
+### 3) `re.match()` - 문자열의 시작 부분에서 매칭 확인
 ```python
 text = "Python is great!"
 match = re.match(r"Python", text)
@@ -80,7 +80,7 @@ if match:
 
 ---
 
-### `re.sub()` - 문자열 치환 (Replace)
+### 4) `re.sub()` - 문자열 치환 (Replace)
 ```python
 text = "I love Python!"
 new_text = re.sub(r"Python", "Regex", text)
@@ -90,9 +90,9 @@ print(new_text)  # I love Regex!
 
 ---
 
-## 4. 정규 표현식 그룹핑 (`()` 사용)
+## 4️⃣ 정규 표현식 그룹핑 (`()` 사용)
 
-### 그룹핑된 데이터 가져오기
+#### 그룹핑된 데이터 가져오기
 ```python
 text = "My phone number is 010-1234-5678"
 match = re.search(r"(\d{3})-(\d{4})-(\d{4})", text)
@@ -108,11 +108,11 @@ if match:
 
 ---
 
-## 5. `re.compile()` - 정규식 패턴 미리 컴파일
+## 5️⃣ `re.compile()` - 정규식 패턴 미리 컴파일
 
 `re.compile()`을 사용하면 정규식을 **미리 컴파일하여 성능을 향상**시킬 수 있습니다.
 
-### 정규식 컴파일 후 재사용
+#### 정규식 컴파일 후 재사용
 ```python
 pattern = re.compile(r"\d{3}-\d{4}-\d{4}")
 text = "My number is 010-1234-5678"
@@ -125,9 +125,9 @@ if match:
 
 ---
 
-## 6. 정규 표현식 활용 예제
+## 6️⃣ 정규 표현식 활용 예제
 
-### 이메일 주소 검증
+### 1) 이메일 주소 검증
 ```python
 email = "example@mail.com"
 pattern = r"^\w+@\w+\.\w+$"
@@ -141,7 +141,7 @@ else:
 
 ---
 
-### 비밀번호 강도 검사 (대문자, 소문자, 숫자 포함)
+### 2) 비밀번호 강도 검사 (대문자, 소문자, 숫자 포함)
 ```python
 password = "StrongPass123!"
 pattern = r"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$"
@@ -157,7 +157,7 @@ else:
 
 ---
 
-### 한글만 포함된 문자열 검사
+### 3) 한글만 포함된 문자열 검사
 ```python
 text = "안녕하세요"
 pattern = r"^[가-힣]+$"
