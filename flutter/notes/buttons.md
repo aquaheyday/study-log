@@ -1,11 +1,11 @@
-# 🔲 버튼과 이벤트 처리
+# 🔲 Flutter 버튼과 이벤트 처리
 
 Flutter에서 버튼은 **사용자의 액션(클릭, 탭 등)을 처리하는 주요 UI 요소**입니다.  
 버튼을 클릭하면 특정 동작을 실행하는 **이벤트(Event Handling)**을 설정할 수 있습니다.
 
 ---
 
-## 1. 기본 버튼 종류
+## 1️⃣ 기본 버튼 종류
 
 Flutter에서는 다양한 버튼 위젯을 제공합니다.
 
@@ -19,7 +19,7 @@ Flutter에서는 다양한 버튼 위젯을 제공합니다.
 
 ---
 
-## 2. `ElevatedButton` (입체 효과 버튼)
+## 2️⃣ `ElevatedButton` - 입체 효과 버튼
 
 가장 일반적인 버튼으로, **입체 효과가 있는 기본 버튼**입니다.
 
@@ -37,7 +37,7 @@ ElevatedButton(
 
 ---
 
-## 3. `TextButton` (평면 버튼)
+## 3️⃣ `TextButton` - 평면 버튼
 
 **배경이 없는** 간단한 텍스트 버튼입니다.
 
@@ -52,7 +52,7 @@ TextButton(
 
 ---
 
-## 4. `OutlinedButton` (테두리 버튼)
+## 4️⃣ `OutlinedButton` - 테두리 버튼
 
 **테두리만 있는 버튼**으로, 배경 없이 강조할 때 사용합니다.
 
@@ -67,7 +67,7 @@ OutlinedButton(
 
 ---
 
-## 5. `IconButton` (아이콘 버튼)
+## 5️⃣ `IconButton` - 아이콘 버튼
 
 **아이콘만 표시되는 버튼**.
 
@@ -84,7 +84,7 @@ IconButton(
 
 ---
 
-## 6. `FloatingActionButton` (화면 위에 떠 있는 버튼) 
+## 6️⃣ `FloatingActionButton` - 화면 위에 떠 있는 버튼
 
 **스크롤 시에도 유지되는 버튼**으로, `Scaffold`에서 사용.
 
@@ -112,7 +112,7 @@ Scaffold(
 
 ---
 
-## 7. 버튼 스타일 적용 (`style` 속성)
+## 7️⃣ 버튼 스타일 적용 (`style` 속성)
 
 버튼의 **색상, 모양, 패딩, 크기** 등을 커스텀할 수 있습니다.
 
@@ -130,7 +130,8 @@ ElevatedButton(
   child: Text("Styled Button"),
 )
 ```
-✔ **속성**
+
+#### 속성
 - `primary` → 배경색  
 - `onPrimary` → 글자색  
 - `padding` → 버튼 내부 여백  
@@ -138,7 +139,7 @@ ElevatedButton(
 
 ---
 
-## 8. 버튼 비활성화 (`onPressed: null`)
+## 8️⃣ `onPressed: null` - 버튼 비활성화
 
 버튼을 비활성화하려면 `onPressed`를 `null`로 설정합니다.
 
@@ -151,7 +152,7 @@ ElevatedButton(
 
 ---
 
-## 9. 이벤트 처리 (onPressed)
+## 9️⃣ 이벤트 처리 (onPressed)
 
 버튼 클릭 시 특정 동작을 실행하는 이벤트 처리.
 
@@ -168,7 +169,7 @@ ElevatedButton(
 
 ---
 
-## 10. 버튼으로 변수 값 변경
+## 🔟 버튼으로 변수 값 변경
 
 버튼을 클릭할 때 변수 값을 변경하고, UI를 업데이트하는 예제.
 
@@ -228,7 +229,7 @@ class _CounterScreenState extends State<CounterScreen> {
 
 ---
 
-## 11. 여러 버튼 동작 처리
+## 1️⃣1️⃣ 여러 버튼 동작 처리
 
 ```dart
 void _handlePress(String action) {
@@ -250,7 +251,7 @@ TextButton(
 
 ---
 
-## 12. `GestureDetector` (커스텀 제스처 이벤트)
+## 1️⃣2️⃣ `GestureDetector` - 커스텀 제스처 이벤트
 
 Flutter에서는 버튼 외에도 다양한 **제스처 이벤트**(탭, 길게 누르기, 스와이프 등)를 감지할 수 있습니다.
 
