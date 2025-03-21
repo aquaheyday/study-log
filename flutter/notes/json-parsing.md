@@ -1,11 +1,10 @@
-# 🌍 JSON 데이터 처리
+# 🌍 Flutter JSON 데이터 처리
 
 Flutter에서 API 응답을 JSON으로 받아와 Dart 객체로 변환하거나, Dart 객체를 JSON으로 변환하는 방법을 학습합니다.
 
 ---
 
-## 1. JSON 데이터란?
-
+## 1️⃣ JSON 데이터란?
 JSON(JavaScript Object Notation)은 **텍스트 기반 데이터 형식**으로 API와 데이터를 주고받을 때 많이 사용됩니다.
 
 ```json
@@ -21,12 +20,10 @@ JSON(JavaScript Object Notation)은 **텍스트 기반 데이터 형식**으로 
 
 ---
 
-## 2. JSON 데이터를 Dart 객체로 변환 (디코딩)
-
-### `dart:convert`를 사용한 JSON 디코딩
-
+## 2️⃣ JSON 데이터를 Dart 객체로 변환 (디코딩)
 JSON 문자열을 **Dart 객체(Map/List)**로 변환할 수 있습니다.
 
+#### `dart:convert`를 사용한 JSON 디코딩
 ```dart
 import 'dart:convert';
 
@@ -43,8 +40,7 @@ void main() {
 
 ---
 
-## 3. Dart 객체를 JSON 데이터로 변환 (인코딩)
-
+## 3️⃣ Dart 객체를 JSON 데이터로 변환 (인코딩)
 Dart 객체를 **JSON 문자열**로 변환할 수 있습니다.
 
 ```dart
@@ -67,11 +63,10 @@ void main() {
 
 ---
 
-## 4. JSON 데이터를 모델 클래스로 변환
-
+## 4️⃣ JSON 데이터를 모델 클래스로 변환
 Flutter에서는 JSON 데이터를 쉽게 다루기 위해 **모델 클래스를 정의**하는 것이 일반적입니다.
 
-### 모델 클래스 정의
+#### 1. 모델 클래스 정의
 
 ```dart
 class User {
@@ -104,9 +99,7 @@ class User {
 ✔ `factory User.fromJson(Map<String, dynamic> json)` → JSON 데이터를 Dart 객체로 변환  
 ✔ `toJson()` → Dart 객체를 JSON 데이터로 변환  
 
----
-
-### API에서 JSON을 가져와 모델 클래스로 변환
+#### 2. API에서 JSON을 가져와 모델 클래스로 변환
 
 ```dart
 import 'package:http/http.dart' as http;
@@ -128,12 +121,10 @@ Future<User> fetchUser() async {
 
 ---
 
-## 5. JSON 리스트 데이터 변환
-
+## 5️⃣ JSON 리스트 데이터 변환
 API 응답이 **배열(List)** 형태라면 리스트 변환이 필요합니다.
 
-### JSON 리스트를 Dart 객체 리스트로 변환
-
+#### JSON 리스트를 Dart 객체 리스트로 변환
 ```dart
 Future<List<User>> fetchUsers() async {
   final response = await http.get(Uri.parse('https://jsonplaceholder.typicode.com/users'));
@@ -151,18 +142,17 @@ Future<List<User>> fetchUsers() async {
 
 ---
 
-## 6. `json_serializable`을 이용한 자동 변환
-
+## 6️⃣ `json_serializable`을 이용한 자동 변환
 `json_serializable` 패키지를 사용하면 **JSON 변환 코드를 자동 생성**할 수 있습니다.
 
-### 패키지 설치
+#### 1. 패키지 설치
 
 ```sh
 flutter pub add json_annotation
 flutter pub add build_runner json_serializable --dev
 ```
 
-### 모델 클래스 작성
+#### 2. 모델 클래스 작성
 
 ```dart
 import 'package:json_annotation/json_annotation.dart';
@@ -186,7 +176,7 @@ class User {
 ✔ `@JsonSerializable()` → JSON 변환을 자동화  
 ✔ `_$UserFromJson(json)` → 자동 생성된 JSON 변환 함수  
 
-### 코드 생성
+#### 3. 코드 생성
 
 ```sh
 flutter pub run build_runner build
@@ -194,8 +184,7 @@ flutter pub run build_runner build
 
 ---
 
-## 7. JSON과 UI 연결 예제
-
+## 7️⃣ JSON과 UI 연결 예제
 Flutter UI에서 **JSON 데이터를 표시**하는 예제입니다.
 
 ```dart
