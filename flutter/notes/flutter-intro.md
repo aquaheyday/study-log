@@ -1,6 +1,6 @@
 # 📌 Flutter 개요
 
-## 1. Flutter 란?
+## 1️⃣ Flutter 란?
 
 **Flutter**는 Google에서 개발한 오픈소스 UI 프레임워크로, 하나의 코드베이스로 **iOS, Android, 웹, 데스크톱(Windows, macOS, Linux)** 애플리케이션을 개발할 수 있도록 지원합니다.
 
@@ -10,49 +10,49 @@
 
 ---
 
-## 2. Flutter의 특징과 장점
+## 2️⃣ Flutter의 특징과 장점
 
-### 크로스 플랫폼 개발  
+#### 1. 크로스 플랫폼 개발  
 - 하나의 코드베이스로 여러 플랫폼(iOS, Android, Web, Desktop)에서 실행 가능  
 - 유지보수 및 개발 비용 절감  
 
-### 높은 성능  
+#### 2. 높은 성능  
 - Skia 그래픽 엔진을 활용하여 빠른 렌더링 제공  
 - 네이티브 ARM 코드로 컴파일되므로 네이티브 앱과 유사한 성능  
 
-### 빠른 개발 속도  
+#### 3. 빠른 개발 속도  
 - Hot Reload: 코드 수정 후 즉시 적용되어 UI 변화를 실시간으로 확인 가능  
 - 풍부한 위젯 제공: Material Design, Cupertino 위젯 포함  
 
-### 강력한 UI 프레임워크  
+#### 4. 강력한 UI 프레임워크  
 - 커스텀 UI 제작이 용이하며, 애니메이션 및 테마 적용이 간편  
 - 플랫폼에 구애받지 않고 일관된 디자인 구현 가능  
 
-### 2-5. 다양한 패키지와 플러그인 지원  
+#### 5. 다양한 패키지와 플러그인 지원  
 - 공식 패키지 및 커뮤니티 패키지 활용 가능 (pub.dev)  
 - Firebase, REST API, SQLite, Google Maps 등의 다양한 플러그인 제공  
 
 ---
 
-## 3. Flutter의 구조
+## 3️⃣ Flutter의 구조
 
 Flutter는 3가지 주요 계층으로 구성됩니다.
 
-### Flutter Framework
+#### 1. Flutter Framework
 - UI를 구성하는 다양한 **위젯(Widgets)** 포함  
 - `Material`, `Cupertino`, `Animation`, `Rendering`, `Gestures` 등의 모듈 제공  
 
-### Flutter Engine
+#### 2. Flutter Engine
 - **Dart VM**, Skia 그래픽 엔진, 네이티브 API와 상호작용  
 - 빠른 렌더링 및 애니메이션 제공  
 
-### Platform-specific Embedder
+#### 3. Platform-specific Embedder
 - iOS, Android, Web, Windows, macOS, Linux에서 실행되도록 지원  
 - 각 플랫폼의 네이티브 기능과 통신  
 
 ---
 
-## 4. Flutter와 다른 프레임워크 비교
+## 4️⃣ Flutter와 다른 프레임워크 비교
 
 | 특징 | Flutter | React Native | Swift/Kotlin |
 |---|---|---|---|
@@ -65,7 +65,7 @@ Flutter는 3가지 주요 계층으로 구성됩니다.
 
 ---
 
-## 5. Flutter로 개발할 수 있는 앱
+## 5️⃣ Flutter로 개발할 수 있는 앱
 
 Flutter는 다양한 유형의 애플리케이션을 개발할 수 있습니다.
 
@@ -76,7 +76,7 @@ Flutter는 다양한 유형의 애플리케이션을 개발할 수 있습니다.
 
 ---
 
-## 6. Flutter 주요 사용 사례
+## 6️⃣ Flutter 주요 사용 사례
 
 - Google: Google Pay, Google Ads, Google Assistant  
 - Alibaba: 전자상거래 앱  
@@ -86,17 +86,19 @@ Flutter는 다양한 유형의 애플리케이션을 개발할 수 있습니다.
 
 ---
 
-## 7. Flutter 개발을 위한 준비 사항
+## 7️⃣ Flutter 개발을 위한 준비 사항
 
-### 필수 설치 도구  
-1. Flutter SDK ([설치 가이드](https://docs.flutter.dev/get-started/install))  
-2. Dart SDK (Flutter와 함께 설치됨)  
-3. 개발 환경  
+### 1) 필수 설치 도구  
+#### 1. Flutter SDK ([설치 가이드](https://docs.flutter.dev/get-started/install))  
+#### 2. Dart SDK (Flutter와 함께 설치됨)  
+#### 3. 개발 환경  
    - VS Code + Flutter Extension  
    - Android Studio / IntelliJ IDEA  
-4. Android Emulator 또는 iOS Simulator
+#### 4. Android Emulator 또는 iOS Simulator
 
-### 프로젝트 생성 명령어
+---
+
+### 2) 프로젝트 생성 명령어
 ```sh
 flutter create my_app
 cd my_app
@@ -105,7 +107,7 @@ flutter run
 
 ---
 
-## 8. Flutter 학습 자료
+## 8️⃣ Flutter 학습 자료
 
 - 📚 공식 문서: [https://docs.flutter.dev](https://docs.flutter.dev)  
 - 🎥 유튜브 강의: [Flutter 공식 채널](https://www.youtube.com/c/flutterdev)  
