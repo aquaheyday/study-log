@@ -5,7 +5,7 @@
 
 ---
 
-## 1. React Router의 필요성
+## 1️⃣ React Router의 필요성
 
 - 싱글 페이지 애플리케이션(SPA)에서 페이지 전환을 가능하게 함  
 - 컴포넌트 기반으로 동적 라우팅 구현 가능  
@@ -14,7 +14,7 @@
 
 ---
 
-## 2. React Router 설치
+## 2️⃣ React Router 설치
 
 ```sh
 npm install react-router-dom
@@ -23,9 +23,9 @@ npm install react-router-dom
 
 ---
 
-## 3. React Router 기본 사용법
+## 3️⃣ React Router 기본 사용법
 
-### `BrowserRouter`로 감싸기
+#### `BrowserRouter`로 감싸기
 `BrowserRouter`를 사용하여 라우팅 기능을 활성화합니다.
 
 ```jsx
@@ -52,9 +52,9 @@ export default App;
 
 ---
 
-## 4. `Link`, `useNavigate` (페이지 이동)
+## 4️⃣ `Link`, `useNavigate` (페이지 이동)
 
-### `<Link>` 컴포넌트 사용 (기본)
+#### 1. `<Link>` 컴포넌트 사용 (기본)
 `<Link>`를 사용하여 페이지 이동이 가능합니다.
 
 ```jsx
@@ -73,9 +73,7 @@ export default Navbar;
 ```
 ✔ `<a>` 태그 대신 `<Link to="/">홈</Link>` 사용 → 새로고침 없이 페이지 전환  
 
----
-
-### `useNavigate()` 훅 사용 (프로그래밍 방식으로 이동)
+#### 2. `useNavigate()` 훅 사용 (프로그래밍 방식으로 이동)
 `useNavigate()`를 사용하면 특정 이벤트에서 페이지 이동이 가능합니다.
 
 ```jsx
@@ -98,9 +96,9 @@ export default Home;
 
 ---
 
-## 5. `useParams` (동적 라우팅)
+## 5️⃣ `useParams` (동적 라우팅)
 
-### `:id` (URL 파라미터 설정 사용)
+#### 1. `:id` (URL 파라미터 설정 사용)
 ```jsx
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ProductDetail from "./ProductDetail";
@@ -119,9 +117,7 @@ export default App;
 ```
 ✔ `/product/:id` → `id` 값을 동적으로 받는 페이지  
 
----
-
-### `useParams()`로 URL 파라미터 가져오기
+#### 2. `useParams()`로 URL 파라미터 가져오기
 ```jsx
 import { useParams } from "react-router-dom";
 
@@ -137,9 +133,9 @@ export default ProductDetail;
 
 ---
 
-## 6. `useSearchParams` (쿼리 스트링)
+## 6️⃣ `useSearchParams` (쿼리 스트링)
 
-### `?key=value` (URL 쿼리 스트링 사용)
+#### `?key=value` (URL 쿼리 스트링 사용)
 ```jsx
 import { useSearchParams } from "react-router-dom";
 
@@ -164,9 +160,9 @@ export default SearchPage;
 
 ---
 
-## 7. Nested Routes (중첩 라우트)
+## 7️⃣ Nested Routes (중첩 라우트)
 
-### `Outlet`을 사용한 중첩 라우팅
+#### `Outlet`을 사용한 중첩 라우팅
 ```jsx
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 
@@ -208,7 +204,7 @@ export default App;
 
 ---
 
-## 8. `Protected Routes` (보호된 라우트)
+## 8️⃣ `Protected Routes` (보호된 라우트)
 
 로그인한 사용자만 접근 가능한 페이지를 만들려면 **보호된 라우트(Protected Route)** 를 설정해야 합니다.
 
@@ -236,7 +232,7 @@ function App() {
 
 ---
 
-## 9. `HashRouter` vs `BrowserRouter`
+## 9️⃣ `HashRouter` vs `BrowserRouter`
 
 | 라우터 | 설명 | URL 예시 |
 |--------|------|---------|
