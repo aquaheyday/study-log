@@ -1,10 +1,10 @@
-# 🚀 플랫폼별 기능 정리
+# 🚀 Flutter 플랫폼별 기능 정리
 
 Flutter는 **iOS, Android, 웹, 데스크톱(Windows, macOS, Linux)** 등 플랫폼별로 제공되는 기능과 차이점을 정리합니다.  
 
 ---
 
-## 1. Flutter의 멀티 플랫폼 지원
+## 1️⃣ Flutter의 멀티 플랫폼 지원
 
 | 플랫폼 | 지원 상태 | 주요 기능 |
 |--------|---------|----------|
@@ -20,18 +20,16 @@ Flutter는 **iOS, Android, 웹, 데스크톱(Windows, macOS, Linux)** 등 플랫
 
 ---
 
-## 2. 플랫폼별 기능 차이
+## 2️⃣ 플랫폼별 기능 차이
 
-### `path_provider` (파일 시스템 접근)
+### 1) `path_provider` (파일 시스템 접근)
 
 | 기능 | Android | iOS | Web | Windows | macOS | Linux |
 |------|--------|----|----|----|----|----|
 | 앱 데이터 저장 | ✅ | ✅ | ❌ | ✅ | ✅ | ✅ |
 | 외부 저장소 접근 | ✅ | 제한적 | ❌ | ✅ | ✅ | ✅ |
 
-
 #### `path_provider` 패키지 예시
-
 ```dart
 import 'package:path_provider/path_provider.dart';
 
@@ -46,7 +44,7 @@ Future<void> getAppDirectory() async {
 
 ---
 
-### `platform_channel` (네이티브 코드 실행)
+### 2) `platform_channel` (네이티브 코드 실행)
 
 | 기능 | Android | iOS | Web | Windows | macOS | Linux |
 |------|--------|----|----|----|----|----|
@@ -69,7 +67,7 @@ Future<String> getNativeMessage() async {
 
 ---
 
-### `device_info_plus` (기기 정보)
+### 3) `device_info_plus` (기기 정보)
 
 | 기능 | Android | iOS | Web | Windows | macOS | Linux |
 |------|--------|----|----|----|----|----|
@@ -77,7 +75,6 @@ Future<String> getNativeMessage() async {
 | OS 버전 확인 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 
 #### `device_info_plus` 패키지 예시
-
 ```dart
 import 'package:device_info_plus/device_info_plus.dart';
 
@@ -93,7 +90,7 @@ Future<void> getDeviceInfo() async {
 
 ---
 
-### `firebase_messaging` (푸시 알림)
+### 4) `firebase_messaging` (푸시 알림)
 
 | 기능 | Android | iOS | Web | Windows | macOS | Linux |
 |------|--------|----|----|----|----|----|
@@ -116,7 +113,7 @@ Future<void> setupFirebase() async {
 
 ---
 
-### `geolocator` (위치 정보)
+### 5) `geolocator` (위치 정보)
 
 | 기능 | Android | iOS | Web | Windows | macOS | Linux |
 |------|--------|----|----|----|----|----|
@@ -138,7 +135,7 @@ Future<void> getLocation() async {
 
 ---
 
-### `local_auth` (생체 인증)
+### 6) `local_auth` (생체 인증)
 
 | 기능 | Android | iOS | Web | Windows | macOS | Linux |
 |------|--------|----|----|----|----|----|
@@ -164,7 +161,7 @@ Future<void> authenticateUser() async {
 
 ---
 
-### `adaptive_theme` (다크 모드)
+### 7) `adaptive_theme` (다크 모드)
 
 | 기능 | Android | iOS | Web | Windows | macOS | Linux |
 |------|--------|----|----|----|----|----|
