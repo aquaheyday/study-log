@@ -1,16 +1,16 @@
-# 🔄 Provider
+# 🔄 Flutter Provider
 
 **Provider**는 Flutter에서 공식적으로 권장하는 **전역 상태 관리 라이브러리**입니다.  
 앱의 여러 위젯에서 데이터를 공유하고 UI를 자동으로 업데이트할 수 있습니다.
 
 ---
 
-## 1. Provider란?
+## 1️⃣ Provider란?
 
 **Provider**는 **Flutter의 상태(State)를 관리하는 라이브러리**로,  
 UI와 상태를 효율적으로 연결하여 업데이트할 수 있도록 도와줍니다.
 
-✔ **Provider의 장점**
+#### Provider의 장점
 - Flutter 공식 권장 방식
 - 간단한 사용법 (`ChangeNotifier` 기반)
 - UI 자동 업데이트 (`notifyListeners()` 활용)
@@ -18,7 +18,7 @@ UI와 상태를 효율적으로 연결하여 업데이트할 수 있도록 도�
 
 ---
 
-## 2. Provider 설치
+## 2️⃣ Provider 설치
 
 Flutter 프로젝트에서 `Provider`를 사용하려면 패키지를 추가해야 합니다.
 
@@ -43,9 +43,9 @@ flutter pub get
 
 ---
 
-## 3. Provider 기본 사용법
+## 3️⃣ Provider 기본 사용법
 
-### `ChangeNotifier`를 사용한 상태 클래스 만들기
+#### 1. `ChangeNotifier`를 사용한 상태 클래스 만들기
 
 `ChangeNotifier`는 Provider에서 상태를 관리하는 기본 클래스입니다.
 
@@ -66,9 +66,8 @@ class CounterProvider with ChangeNotifier {
 
 ✔ `notifyListeners()` → 상태가 변경되면 자동으로 UI를 업데이트합니다.
 
----
 
-### `ChangeNotifierProvider`로 상태 제공하기
+#### 2. `ChangeNotifierProvider`로 상태 제공하기
 
 앱의 최상위 위젯에서 `ChangeNotifierProvider`로 상태를 제공해야 합니다.
 
@@ -98,9 +97,7 @@ class MyApp extends StatelessWidget {
 
 ✔ `ChangeNotifierProvider` → `create:` 에 상태 클래스를 넣어 위젯 트리에 상태를 제공.
 
----
-
-### UI 에서 Provider 상태 사용하기
+#### 3. UI 에서 Provider 상태 사용하기
 
 이제 **UI 에서 Provider 상태를 가져와서 사용**할 수 있습니다.
 
@@ -133,19 +130,11 @@ class CounterScreen extends StatelessWidget {
 
 ---
 
-## 4. 상태 접근 방식 비교
+## 4️⃣ 상태 접근 방식 비교
 
 Provider에서 상태를 가져오는 방법은 **3가지**가 있습니다.
 
-| 방법 | 설명 | 사용 예 |
-|------|------|------|
-| `Provider.of<T>(context)` | 즉시 상태를 가져오고 UI 갱신 | `Provider.of<CounterProvider>(context).count` |
-| `Consumer<T>` | UI의 특정 부분만 업데이트 | `Consumer<CounterProvider>(builder: ...)` |
-| `context.watch<T>()` / `context.read<T>()` | UI 갱신 여부에 따라 다름 | `context.watch<T>()` (UI 갱신), `context.read<T>()` (한 번만 읽음) |
-
----
-
-### `Provider.of<T>(context)`
+### 1) `Provider.of<T>(context)`
 
 `Provider.of`는 상태를 가져올 때 사용되며, 기본적으로 UI가 **자동 업데이트**됩니다.
 
@@ -160,7 +149,7 @@ final counter = Provider.of<CounterProvider>(context, listen: false);
 
 ---
 
-### `Consumer<T>`
+### 2) `Consumer<T>`
 
 `Consumer`는 UI에서 **특정 부분만 상태 변경 시 업데이트**할 수 있습니다.  
 UI의 일부만 다시 그려야 할 때 유용합니다.
@@ -175,7 +164,7 @@ Consumer<CounterProvider>(
 
 ---
 
-### `context.watch<T>()` / `context.read<T>()`
+### 3) `context.watch<T>()` / `context.read<T>()`
 
 | 메서드 | 설명 | 사용 예 |
 |--------|------|--------|
@@ -195,7 +184,16 @@ ElevatedButton(
 
 ---
 
-## 5. 여러 상태 관리 (`MultiProvider`)
+### 4) 방법 차이 
+| 방법 | 설명 | 사용 예 |
+|------|------|------|
+| `Provider.of<T>(context)` | 즉시 상태를 가져오고 UI 갱신 | `Provider.of<CounterProvider>(context).count` |
+| `Consumer<T>` | UI의 특정 부분만 업데이트 | `Consumer<CounterProvider>(builder: ...)` |
+| `context.watch<T>()` / `context.read<T>()` | UI 갱신 여부에 따라 다름 | `context.watch<T>()` (UI 갱신), `context.read<T>()` (한 번만 읽음) |
+
+---
+
+## 5️⃣ 여러 상태 관리 (`MultiProvider`)
 
 `MultiProvider`를 사용하면 **여러 개의 상태를 한 번에 제공**할 수 있습니다.
 
@@ -217,7 +215,7 @@ void main() {
 
 ---
 
-## 6. Provider vs 다른 상태 관리 라이브러리
+## 6️⃣ Provider vs 다른 상태 관리 라이브러리
 
 | 상태 관리 방식 | 장점 | 단점 |
 |--------------|------|------|
