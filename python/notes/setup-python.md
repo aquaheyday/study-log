@@ -23,7 +23,7 @@ python --version
 
 ## 2️⃣ 가상 환경 (Python 프로젝트별 독립적인 환경 구성)
 
-### `venv` (Python 기본 가상 환경)
+### 1) `venv` (Python 기본 가상 환경)
 Python 내장 모듈 `venv`를 사용하여 가상 환경을 설정합니다.
 
 ```sh
@@ -83,23 +83,18 @@ Python은 다양한 운영체제에서 실행할 수 있습니다.
 
 Python의 기초적인 문법을 소개합니다.
 
+#### ❌ 잘못된 코드 (SyntaxError 발생)
+```python
+def greet()
+    print("Hello, Python!")
+```
+
 #### ✅ 올바른 Python 코드
 ```python
 def greet():
     print("Hello, Python!")
 
 greet()
-```
-
-#### ❌ 잘못된 코드 (SyntaxError 발생)
-```python
-def greet()
-    print("Hello, Python!")
-```
-#### ⚡ 해결 방법
-```python
-def greet():
-    print("Hello, Python!")
 ```
 
 ---
