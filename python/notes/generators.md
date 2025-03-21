@@ -5,13 +5,13 @@ Python에서 **이터레이터(Iterator)** 와 **제너레이터(Generator)** �
 
 ---
 
-## 1. 이터레이터(Iterator)란?
+## 1️⃣ 이터레이터(Iterator)란?
 
 - **이터레이터(Iterator)** 는 **다음 요소를 계속해서 반환하는 객체**입니다.
 - `for` 루프에서 반복 가능한(iterable) 객체(`list`, `tuple`, `dict`, `set`, `string`)를 순회할 때 내부적으로 사용됨.
 - `iter()`와 `next()` 함수를 사용하여 **직접 요소를 가져올 수 있음**.
 
-### 이터레이터 만들기 (`iter()`, `next()` 사용)
+#### 이터레이터 만들기 (`iter()`, `next()` 사용)
 ```python
 numbers = [1, 2, 3, 4, 5]
 iterator = iter(numbers)  # 리스트를 이터레이터로 변환
@@ -25,11 +25,11 @@ print(next(iterator))  # 3
 
 ---
 
-## 2. 이터레이터 클래스 만들기
+## 2️⃣ 이터레이터 클래스 만들기
 
 `__iter__()` 와 `__next__()` 메서드를 구현하면 **사용자 정의 이터레이터를 만들 수 있음**.
 
-### 사용자 정의 이터레이터 예제
+#### 사용자 정의 이터레이터 예제
 ```python
 class Counter:
     def __init__(self, start, end):
@@ -56,14 +56,14 @@ for num in counter:
 
 ---
 
-## 3. 제너레이터(Generator)란?
+## 3️⃣ 제너레이터(Generator)란?
 
 - **제너레이터(Generator)** 는 **이터레이터를 더 쉽게 만들 수 있는 함수**입니다.
 - `yield` 키워드를 사용하여 **값을 하나씩 반환**하면서 상태를 유지.
 - `return`을 만나면 실행이 종료됨.
 - **제너레이터는 일반 함수보다 메모리를 절약**할 수 있음.
 
-### 기본적인 제너레이터 예제 (`yield` 사용)
+#### 기본적인 제너레이터 예제 (`yield` 사용)
 ```python
 def my_generator():
     yield 1
@@ -80,7 +80,7 @@ print(next(gen))  # 3
 
 ---
 
-## 4. 제너레이터와 이터레이터 비교
+## 4️⃣ 제너레이터와 이터레이터 비교
 
 | 비교 항목 | 이터레이터(Iterator) | 제너레이터(Generator) |
 |----------|------------------|------------------|
@@ -93,9 +93,9 @@ print(next(gen))  # 3
 
 ---
 
-## 5. 제너레이터 실전 활용 예제
+## 5️⃣ 제너레이터 실전 활용 예제
 
-### 큰 데이터 처리 (메모리 절약)
+### 1) 큰 데이터 처리 (메모리 절약)
 ```python
 def large_numbers():
     num = 0
@@ -113,7 +113,7 @@ print(next(gen))  # 2
 
 ---
 
-### 제너레이터 표현식 (Generator Expression)
+### 2) 제너레이터 표현식 (Generator Expression)
 
 리스트 컴프리헨션과 비슷하지만 **메모리를 절약**할 수 있음.
 
@@ -128,7 +128,7 @@ print(next(nums))  # 4
 
 ---
 
-### 파일 읽기 (큰 파일 처리)
+### 3) 파일 읽기 (큰 파일 처리)
 ```python
 def read_large_file(file_path):
     with open(file_path, "r") as file:
@@ -142,7 +142,7 @@ for line in read_large_file("example.txt"):
 
 ---
 
-### 여러 개의 제너레이터 병렬 실행 (`yield from`)
+### 4) 여러 개의 제너레이터 병렬 실행 (`yield from`)
 ```python
 def generator1():
     yield from range(3)
@@ -160,9 +160,9 @@ for value in generator2():
 
 ---
 
-## 6. `send()`, `throw()`, `close()` 메서드 활용
+## 6️⃣ `send()`, `throw()`, `close()` 메서드 활용
 
-### `send()` - 제너레이터에 값 전달
+### 1) `send()` - 제너레이터에 값 전달
 ```python
 def custom_counter():
     count = 0
@@ -182,7 +182,7 @@ print(next(gen))  # 11
 
 ---
 
-### `throw()` - 예외 발생
+### 2) `throw()` - 예외 발생
 ```python
 def test():
     try:
@@ -200,7 +200,7 @@ print(next(gen))  # 2
 
 ---
 
-### `close()` - 제너레이터 종료
+### 3) `close()` - 제너레이터 종료
 ```python
 gen = custom_counter()
 print(next(gen))  # 0
