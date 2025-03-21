@@ -1,11 +1,10 @@
-# 🌍 로컬 데이터 저장
+# 🌍 Flutter 로컬 데이터 저장
 
 Flutter에서 앱 내에서 데이터를 저장하고 불러오는 다양한 방식들을 알아봅니다.
 
 ---
 
-## 1. 로컬 데이터 저장 방식
-
+## 1️⃣ 로컬 데이터 저장 방식
 Flutter에서 로컬 데이터를 저장하는 방법은 여러 가지가 있습니다.
 
 | 저장 방식 | 사용 목적 | 장점 | 단점 |
@@ -18,15 +17,15 @@ Flutter에서 로컬 데이터를 저장하는 방법은 여러 가지가 있습
 
 ---
 
-## 2. `SharedPreferences` (간단한 키-값 저장)
+## 2️⃣ `SharedPreferences` (간단한 키-값 저장)
 
-### 패키지 설치
+#### 1. 패키지 설치
 
 ```sh
 flutter pub add shared_preferences
 ```
 
-### 데이터 저장
+#### 2. 데이터 저장
 
 ```dart
 import 'package:shared_preferences/shared_preferences.dart';
@@ -40,9 +39,7 @@ Future<void> saveData() async {
 ✔ `SharedPreferences.getInstance()` → 인스턴스 생성  
 ✔ `prefs.setString('key', value)` → 값 저장  
 
----
-
-### 데이터 불러오기
+#### 3. 데이터 불러오기
 
 ```dart
 Future<void> loadData() async {
@@ -54,9 +51,7 @@ Future<void> loadData() async {
 
 ✔ `prefs.getString('key')` → 저장된 값 가져오기  
 
----
-
-### 데이터 삭제
+#### 4. 데이터 삭제
 
 ```dart
 Future<void> removeData() async {
@@ -69,16 +64,16 @@ Future<void> removeData() async {
 
 ---
 
-## 3. `Hive` (빠른 NoSQL DB)
+## 3️⃣ `Hive` (빠른 NoSQL DB)
 
-### 패키지 설치
+#### 1. 패키지 설치
 
 ```sh
 flutter pub add hive
 flutter pub add hive_flutter
 ```
 
-### 초기화 및 데이터 저장
+#### 2. 초기화 및 데이터 저장
 
 ```dart
 import 'package:hive_flutter/hive_flutter.dart';
@@ -94,9 +89,7 @@ Future<void> initHive() async {
 ✔ `Hive.openBox('boxName')` → 데이터 저장 박스 열기  
 ✔ `box.put('key', value)` → 데이터 저장  
 
----
-
-### 데이터 불러오기
+#### 3. 데이터 불러오기
 
 ```dart
 Future<void> loadHiveData() async {
@@ -105,12 +98,9 @@ Future<void> loadHiveData() async {
   print(username);
 }
 ```
-
 ✔ `box.get('key')` → 값 가져오기  
 
----
-
-### 데이터 삭제
+#### 4. 데이터 삭제
 
 ```dart
 Future<void> deleteHiveData() async {
@@ -123,15 +113,15 @@ Future<void> deleteHiveData() async {
 
 ---
 
-## 4. `Sqflite` (SQLite 데이터베이스)
+## 4️⃣ `Sqflite` (SQLite 데이터베이스)
 
-### 패키지 설치
+#### 1. 패키지 설치
 
 ```sh
 flutter pub add sqflite path
 ```
 
-### 데이터베이스 생성 및 테이블 만들기
+#### 2. 데이터베이스 생성 및 테이블 만들기
 
 ```dart
 import 'package:sqflite/sqflite.dart';
@@ -153,9 +143,7 @@ Future<Database> openDatabaseConnection() async {
 ✔ `getDatabasesPath()` → 데이터베이스 경로 설정  
 ✔ `db.execute("CREATE TABLE ...")` → 테이블 생성  
 
----
-
-### 데이터 삽입
+#### 3. 데이터 삽입
 
 ```dart
 Future<void> insertUser(Database db) async {
@@ -169,9 +157,7 @@ Future<void> insertUser(Database db) async {
 
 ✔ `db.insert('tableName', data)` → 데이터 삽입  
 
----
-
-### 데이터 조회
+#### 4. 데이터 조회
 
 ```dart
 Future<List<Map<String, dynamic>>> getUsers(Database db) async {
@@ -181,9 +167,7 @@ Future<List<Map<String, dynamic>>> getUsers(Database db) async {
 
 ✔ `db.query('tableName')` → 데이터 조회  
 
----
-
-### 데이터 삭제
+#### 5. 데이터 삭제
 
 ```dart
 Future<void> deleteUser(Database db) async {
@@ -195,15 +179,15 @@ Future<void> deleteUser(Database db) async {
 
 ---
 
-## 5. 파일을 이용한 JSON 데이터 저장
+## 5️⃣ 파일을 이용한 JSON 데이터 저장
 
-### 패키지 설치
+#### 1. 패키지 설치
 
 ```sh
 flutter pub add path_provider
 ```
 
-### JSON 데이터 저장
+#### 2. JSON 데이터 저장
 
 ```dart
 import 'dart:io';
@@ -224,9 +208,7 @@ Future<void> saveJson(Map<String, dynamic> data) async {
 ✔ `getApplicationDocumentsDirectory()` → 저장 경로 가져오기  
 ✔ `file.writeAsString(jsonEncode(data))` → JSON 데이터 저장  
 
----
-
-### JSON 데이터 불러오기
+#### 3. JSON 데이터 불러오기
 
 ```dart
 Future<Map<String, dynamic>> loadJson() async {
@@ -245,16 +227,16 @@ Future<Map<String, dynamic>> loadJson() async {
 
 ---
 
-## 6. `Isar` (고속 NoSQL 데이터베이스)
+## 6️⃣ `Isar` (고속 NoSQL 데이터베이스)
 
-### 패키지 설치
+#### 1. 패키지 설치
 
 ```sh
 flutter pub add isar isar_flutter_libs
 flutter pub add build_runner isar_generator --dev
 ```
 
-### 모델 클래스 생성
+#### 2. 모델 클래스 생성
 
 ```dart
 import 'package:isar/isar.dart';
@@ -269,9 +251,7 @@ class User {
 ✔ `@Collection()` → Isar 데이터 모델 생성  
 ✔ `Isar.autoIncrement` → 자동 증가 ID  
 
----
-
-### 데이터 저장 및 조회
+#### 3. 데이터 저장 및 조회
 
 ```dart
 Future<void> saveUser(Isar isar) async {
