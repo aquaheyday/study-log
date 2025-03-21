@@ -5,15 +5,15 @@
 
 ---
 
-## 1. GetX란?
+## 1️⃣ GetX란?
 
-**GetX의 주요 기능**
+#### 1. GetX의 주요 기능
 - 간결한 상태 관리 (`obs`, `GetBuilder`, `GetX`)
 - 라우팅 기능 내장 (`Get.to()`, `Get.off()`)
 - 의존성 주입 가능 (`Get.put()`, `Get.find()`)
 - 퍼포먼스 최적화 (`setState()` 없이 UI 업데이트)
 
-✔ **GetX vs 다른 상태 관리 라이브러리**
+#### 2. GetX vs 다른 상태 관리 라이브러리
 | 기능 | GetX | Provider | BLoC |
 |------|------|----------|------|
 | 상태 관리 | ✅ 간단함 | ✅ 중간 난이도 | ❌ 복잡함 |
@@ -24,8 +24,7 @@
 
 ---
 
-## 2. GetX 설치
-
+## 2️⃣ GetX 설치
 Flutter 프로젝트에서 `GetX`를 사용하려면 패키지를 추가해야 합니다.
 
 ```sh
@@ -49,7 +48,7 @@ import 'package:get/get.dart';
 
 ---
 
-## 3. GetX 상태 관리 방식
+## 3️⃣ GetX 상태 관리 방식
 
 | 상태 관리 방식 | 설명 |
 |--------------|------|
@@ -59,11 +58,11 @@ import 'package:get/get.dart';
 
 ---
 
-## 4. `.obs` (반응형 상태 관리)
+## 4️⃣ `.obs` (반응형 상태 관리)
 
 `obs`를 사용하면 변수 값이 변경될 때 UI가 자동 업데이트됩니다.
 
-### `Controller` 만들기
+#### 1. `Controller` 만들기
 
 ```dart
 import 'package:get/get.dart';
@@ -79,9 +78,7 @@ class CounterController extends GetxController {
 
 ✔ `.obs` → 상태를 감지할 수 있도록 선언.
 
----
-
-### `Get.put()`을 사용하여 Controller 주입
+#### 2. `Get.put()`을 사용하여 Controller 주입
 
 ```dart
 final CounterController counterController = Get.put(CounterController());
@@ -89,9 +86,7 @@ final CounterController counterController = Get.put(CounterController());
 
 ✔ `Get.put(Controller())` → 컨트롤러를 메모리에 등록.
 
----
-
-### `Obx`를 사용하여 UI 업데이트
+#### 3. `Obx`를 사용하여 UI 업데이트
 
 ```dart
 class CounterScreen extends StatelessWidget {
@@ -119,10 +114,10 @@ class CounterScreen extends StatelessWidget {
 
 ---
 
-## 5. `GetBuilder` (단순 상태 관리)
+## 5️⃣ `GetBuilder` (단순 상태 관리)
 반응형(`obs`) 없이도 상태 변경 가능하고 `GetBuilder`는 **필요한 위젯만 업데이트**하는 방식으로, 퍼포먼스가 뛰어남.
 
-### `Controller` 만들기
+#### 1. `Controller` 만들기
 
 ```dart
 class CounterController extends GetxController {
@@ -137,9 +132,7 @@ class CounterController extends GetxController {
 
 ✔ `update()`를 호출해야 UI가 갱신됨.
 
----
-
-### `GetBuilder` 사용하기
+#### 2. `GetBuilder` 사용하기
 
 ```dart
 class CounterScreen extends StatelessWidget {
@@ -169,12 +162,11 @@ class CounterScreen extends StatelessWidget {
 
 ---
 
-## 6. `GetX` (자동 상태 감지)
-
+## 6️⃣ `GetX` (자동 상태 감지)
 - **`GetX`는 `GetBuilder`보다 더 강력한 상태 관리 기능을 제공**.
 - **자동으로 상태 변경을 감지하여 UI 업데이트**.
 
-### `Controller` 만들기
+#### 1. `Controller` 만들기
 
 ```dart
 class CounterController extends GetxController {
@@ -186,9 +178,7 @@ class CounterController extends GetxController {
 }
 ```
 
----
-
-### `GetX` 사용하기
+#### 2. `GetX` 사용하기
 
 ```dart
 class CounterScreen extends StatelessWidget {
@@ -217,7 +207,7 @@ class CounterScreen extends StatelessWidget {
 
 ---
 
-## 7. `Get.put()` vs `Get.lazyPut()` vs `Get.find()`
+## 7️⃣ `Get.put()` vs `Get.lazyPut()` vs `Get.find()`
 
 | 메서드 | 설명 |
 |--------|------|
@@ -233,8 +223,7 @@ final CounterController counterFind = Get.find<CounterController>(); // 기존 �
 
 ---
 
-## 8. `Get.delete()` (Controller 삭제)
-
+## 8️⃣ `Get.delete()` (Controller 삭제)
 사용하지 않는 컨트롤러를 삭제하여 **메모리 최적화 가능**.
 
 ```dart
