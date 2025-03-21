@@ -1,21 +1,19 @@
-# 🚀 커스텀 위젯 만들기
+# 🚀 Flutter 커스텀 위젯 만들기
 
 Flutter에서 UI를 효율적으로 관리하기 위해 **재사용 가능한 커스텀 위젯**을 만드는 방법을 정리합니다.
 
 ---
 
-## 1. 커스텀 위젯이 필요한 이유
-
-✔ 코드 중복 제거 → 같은 UI 요소를 여러 번 사용 가능  
-✔ 유지보수 용이 → UI 수정이 필요할 때 한 곳만 변경하면 됨  
-✔ 구조화된 코드 → 코드가 더 깔끔하고 읽기 쉬움  
+## 1️⃣ 커스텀 위젯이 필요한 이유
+- 코드 중복 제거 → 같은 UI 요소를 여러 번 사용 가능  
+- 유지보수 용이 → UI 수정이 필요할 때 한 곳만 변경하면 됨  
+- 구조화된 코드 → 코드가 더 깔끔하고 읽기 쉬움  
 
 ---
 
-## 2. StatelessWidget을 이용한 커스텀 위젯
+## 2️⃣ StatelessWidget을 이용한 커스텀 위젯
 
-### 기본적인 커스텀 버튼 만들기
-
+#### 기본적인 커스텀 버튼 만들기
 ```dart
 import 'package:flutter/material.dart';
 
@@ -53,9 +51,9 @@ CustomButton(
 
 ---
 
-## 3. StatefulWidget을 이용한 커스텀 위젯
+## 3️⃣ StatefulWidget을 이용한 커스텀 위젯
 
-### 상태를 가지는 커스텀 토글 버튼 만들기
+#### 상태를 가지는 커스텀 토글 버튼 만들기
 
 ```dart
 import 'package:flutter/material.dart';
@@ -100,9 +98,9 @@ ToggleButton();
 
 ---
 
-## 4. 매개변수가 있는 커스텀 위젯
+## 4️⃣ 매개변수가 있는 커스텀 위젯
 
-### 이미지 카드 위젯 만들기
+#### 이미지 카드 위젯 만들기
 
 ```dart
 import 'package:flutter/material.dart';
@@ -146,9 +144,9 @@ ImageCard(
 
 ---
 
-## 5. ListView에서 재사용 가능한 아이템 위젯
+## 5️⃣ ListView에서 재사용 가능한 아이템 위젯
 
-### 리스트 아이템 만들기
+#### 리스트 아이템 만들기
 
 ```dart
 class ListItem extends StatelessWidget {
@@ -181,9 +179,9 @@ ListView(
 
 ---
 
-## 6. 테마를 활용한 커스텀 위젯
+## 6️⃣ 테마를 활용한 커스텀 위젯
 
-### 공통 스타일을 적용한 커스텀 버튼
+#### 공통 스타일을 적용한 커스텀 버튼
 
 ```dart
 class ThemedButton extends StatelessWidget {
@@ -211,9 +209,9 @@ class ThemedButton extends StatelessWidget {
 
 ---
 
-## 7. 애니메이션이 포함된 커스텀 위젯
+## 7️⃣ 애니메이션이 포함된 커스텀 위젯
 
-### 크기가 변화하는 애니메이션 위젯
+#### 크기가 변화하는 애니메이션 위젯
 
 ```dart
 class AnimatedBox extends StatefulWidget {
