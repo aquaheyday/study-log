@@ -1,11 +1,11 @@
-# 🛠️ 앱 최적화 가이드
+# 🛠️ Flutter 앱 최적화 가이드
 
 Flutter 앱의 성능을 최적화하는 방법을 정리합니다.  
 앱이 빠르고 원활하게 실행되도록 **렌더링, 메모리 관리, 네트워크 성능** 등을 개선하는 방법을 알아봅니다.
 
 ---
 
-## 1. Flutter 앱 최적화의 주요 영역
+## 1️⃣ Flutter 앱 최적화의 주요 영역
 
 | 최적화 영역 | 설명 |
 |------------|------|
@@ -17,9 +17,9 @@ Flutter 앱의 성능을 최적화하는 방법을 정리합니다.
 
 ---
 
-## 2. 렌더링 성능 최적화
+## 2️⃣ 렌더링 성능 최적화
 
-### `const` 키워드 사용
+### 1) `const` 키워드 사용
 `const`를 사용하면 불필요한 위젯 리빌드를 방지할 수 있습니다.
 
 ```dart
@@ -30,13 +30,11 @@ class MyWidget extends StatelessWidget {
   }
 }
 ```
-
 ✔ `const` 키워드를 사용하면 변경되지 않는 위젯을 캐싱하여 **렌더링 성능**을 향상  
 
 ---
 
-### `RepaintBoundary`를 사용하여 불필요한 리렌더링 방지
-
+### 2) `RepaintBoundary`를 사용하여 불필요한 리렌더링 방지
 ```dart
 RepaintBoundary(
   child: Image.network("https://example.com/image.jpg"),
@@ -47,8 +45,7 @@ RepaintBoundary(
 
 ---
 
-### `Opacity` 대신 `Visibility` 사용
-
+### 3) `Opacity` 대신 `Visibility` 사용
 ```dart
 Visibility(
   visible: true, // false로 설정하면 화면에서 숨김
@@ -60,10 +57,9 @@ Visibility(
 
 ---
 
-## 3. 빌드 성능 최적화
+## 3️⃣ 빌드 성능 최적화
 
-### `const` 생성자를 활용한 위젯 재사용
-
+### 1) `const` 생성자를 활용한 위젯 재사용
 ```dart
 class MyButton extends StatelessWidget {
   const MyButton({Key? key}) : super(key: key);
@@ -74,7 +70,7 @@ class MyButton extends StatelessWidget {
 
 ---
 
-### `ListView.builder` 사용
+### 2) `ListView.builder` 사용
 화면에 보이는 항목만 렌더링하여 **메모리 사용을 줄임**.
 
 ```dart
@@ -90,8 +86,7 @@ ListView.builder(
 
 ---
 
-### `AutomaticKeepAliveClientMixin`으로 리스트 상태 유지
-
+### 3) `AutomaticKeepAliveClientMixin`으로 리스트 상태 유지
 ```dart
 class MyListView extends StatefulWidget {
   @override
@@ -117,9 +112,9 @@ class _MyListViewState extends State<MyListView> with AutomaticKeepAliveClientMi
 
 ---
 
-## 4. 메모리 관리 최적화
+## 4️⃣ 메모리 관리 최적화
 
-### `dispose()`를 활용하여 리소스 해제
+### 1) `dispose()`를 활용하여 리소스 해제
 
 ```dart
 class MyWidget extends StatefulWidget {
@@ -148,7 +143,7 @@ class _MyWidgetState extends State<MyWidget> {
 
 ---
 
-### `image_cache.clear()`로 불필요한 이미지 캐시 삭제
+### 2) `image_cache.clear()`로 불필요한 이미지 캐시 삭제
 
 ```dart
 void clearCache() {
@@ -161,10 +156,9 @@ void clearCache() {
 
 ---
 
-## 5. 네트워크 성능 최적화
+## 5️⃣ 네트워크 성능 최적화
 
-### `http` 패키지 대신 `dio` 사용 (더 빠른 API 호출)
-
+### 1) `http` 패키지 대신 `dio` 사용 (더 빠른 API 호출)
 ```dart
 import 'package:dio/dio.dart';
 
@@ -180,8 +174,7 @@ Future<void> fetchData() async {
 
 ---
 
-### API 응답 캐싱 (`dio_cache_interceptor` 활용)
-
+### 2) API 응답 캐싱 (`dio_cache_interceptor` 활용)
 ```sh
 flutter pub add dio_cache_interceptor
 ```
@@ -202,9 +195,9 @@ void setupDio() {
 
 ---
 
-## 6. 패키지 및 코드 최적화
+## 6️⃣ 패키지 및 코드 최적화
 
-### 사용하지 않는 패키지 제거
+### 1) 사용하지 않는 패키지 제거
 
 ```sh
 flutter pub outdated
@@ -215,7 +208,7 @@ flutter pub remove <패키지명>
 
 ---
 
-### 코드 난독화 및 앱 크기 줄이기
+### 2) 코드 난독화 및 앱 크기 줄이기
 
 ```sh
 flutter build apk --release --split-per-abi
@@ -227,7 +220,7 @@ flutter build ios --release
 
 ---
 
-### `flutter analyze`를 활용한 코드 정리
+### 3) `flutter analyze`를 활용한 코드 정리
 
 ```sh
 flutter analyze
@@ -237,9 +230,9 @@ flutter analyze
 
 ---
 
-## 7. 앱 실행 성능 최적화
+## 7️⃣ 앱 실행 성능 최적화
 
-### `Flutter DevTools` 활용
+### 1) `Flutter DevTools` 활용
 
 ```sh
 flutter pub global activate devtools
@@ -251,7 +244,7 @@ flutter run --profile
 
 ---
 
-### `Isolate`를 사용하여 백그라운드 작업 수행
+### 2) `Isolate`를 사용하여 백그라운드 작업 수행
 
 ```dart
 import 'dart:isolate';
@@ -269,7 +262,7 @@ void main() {
 
 ---
 
-## 🎯 최적화 체크리스트
+## 🎯 정리
 
 ✔ 렌더링 성능 최적화 → `const` 사용, `RepaintBoundary` 활용  
 ✔ 위젯 빌드 최적화 → `ListView.builder` 사용, 불필요한 리빌드 방지  
