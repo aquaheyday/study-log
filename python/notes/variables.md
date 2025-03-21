@@ -8,7 +8,7 @@ Python에서 변수를 선언하고 다양한 자료형을 다루는 방법을 �
 
 변수는 데이터를 저장하는 **이름이 있는 메모리 공간**입니다.
 
-### 변수 선언 및 할당
+#### 변수 선언 및 할당
 ```python
 # 변수 선언 및 값 할당
 name = "Python"
@@ -32,7 +32,7 @@ is_active = True
 | `str` | 문자열 | `text = "Hello"` |
 | `bool` | 논리형 (참/거짓) | `is_active = True` |
 
-자료형 확인 방법:
+#### 자료형 확인 방법
 ```python
 print(type(42))        # <class 'int'>
 print(type(3.14))      # <class 'float'>
@@ -46,7 +46,7 @@ print(type(True))      # <class 'bool'>
 
 Python에서 문자열은 작은따옴표(`'`) 또는 큰따옴표(`"`)로 감쌉니다.
 
-### 문자열 기본 사용법
+### 1) 문자열 기본 사용법
 ```python
 text = "Hello, Python"
 print(text[0])   # 'H' (인덱싱)
@@ -55,7 +55,9 @@ print(text[:5])  # 'Hello' (슬라이싱)
 print(len(text)) # 문자열 길이
 ```
 
-### 문자열 연산
+---
+
+### 2) 문자열 연산
 ```python
 a = "Hello"
 b = "Python"
@@ -69,7 +71,7 @@ print(a * 3)        # "HelloHelloHello" (반복)
 
 Python에서 정수(`int`)와 실수(`float`)를 다룰 수 있습니다.
 
-### 기본 연산
+#### 기본 연산
 ```python
 a = 10
 b = 3
@@ -119,7 +121,7 @@ Python에서는 여러 개의 값을 저장할 수 있는 컬렉션 자료형을
 | `set` | 순서가 없고 중복을 허용하지 않는 집합 | `{1, 2, 3}` |
 | `dict` | 키-값 쌍으로 이루어진 데이터 구조 | `{"name": "Alice", "age": 25}` |
 
-✔ 자료형 확인:
+#### 자료형 확인
 ```python
 print(type([1, 2, 3]))  # <class 'list'>
 print(type((1, 2, 3)))  # <class 'tuple'>
@@ -133,7 +135,7 @@ print(type({"name": "Alice"}))  # <class 'dict'>
 
 Python에서는 자료형을 자유롭게 변환할 수 있습니다.
 
-### 정수, 실수, 문자열 변환
+#### 정수, 실수, 문자열 변환
 ```python
 num = 42
 pi = 3.14
@@ -145,7 +147,7 @@ print(str(num))    # '42' (숫자를 문자열로 변환)
 print(int(text))   # 123 (문자열을 정수로 변환)
 ```
 
-### 리스트, 튜플, 집합 변환
+#### 리스트, 튜플, 집합 변환
 ```python
 my_list = [1, 2, 3]
 my_tuple = tuple(my_list)  # 리스트 → 튜플
