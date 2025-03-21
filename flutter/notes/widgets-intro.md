@@ -1,16 +1,16 @@
-# 📌 위젯 개요
+# 📌 Flutter 위젯 개요
 
 Flutter에서 **위젯(Widget)** 은 UI를 구성하는 기본 요소입니다.  
 Flutter 앱의 모든 것은 **위젯으로 이루어져 있으며, 위젯을 조합하여 화면을 구성**합니다.
 
 ---
 
-## 1. 위젯이란?
+## 1️⃣ 위젯이란?
 
 **위젯(Widget)** 은 Flutter에서 화면을 구성하는 **UI 요소**입니다.  
 모든 버튼, 텍스트, 이미지, 레이아웃 등이 **위젯**으로 표현됩니다.
 
-✔ **Flutter UI = 위젯 트리 (Widget Tree)**
+#### Flutter UI = 위젯 트리 (Widget Tree)
 - 위젯을 중첩하여 트리 구조로 화면을 구성
 - 부모-자식 관계를 형성하여 UI 계층 구조 생성
 
@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
 
 ---
 
-## 2. 위젯의 종류
+## 2️⃣ 위젯의 종류
 
 Flutter 위젯은 크게 두 가지로 나뉩니다.
 
@@ -48,7 +48,7 @@ Flutter 위젯은 크게 두 가지로 나뉩니다.
 
 ---
 
-## 3. `StatelessWidget`
+## 3️⃣ `StatelessWidget`
 
 **StatelessWidget**은 상태가 변경되지 않는 **정적인 UI**를 구성할 때 사용됩니다.
 
@@ -86,7 +86,7 @@ class MyTextWidget extends StatelessWidget {
 
 ---
 
-## 4. `StatefulWidget`
+## 4️⃣ `StatefulWidget`
 
 **StatefulWidget**은 상태(State)를 가지며, 변경될 수 있는 **동적인 UI**를 구성할 때 사용됩니다.
 
@@ -145,9 +145,9 @@ class _CounterWidgetState extends State<CounterWidget> {
 
 ---
 
-## 5. 기본 위젯 정리
+## 5️⃣ 기본 위젯 정리
 
-### 레이아웃 관련 위젯
+### 1) 레이아웃 관련 위젯
 | 위젯 | 설명 |
 |------|------|
 | **Container** | 크기, 색상, 여백을 지정하는 박스 |
@@ -167,7 +167,7 @@ Container(
 
 ---
 
-### 입력 위젯
+### 2) 입력 위젯
 | 위젯 | 설명 |
 |------|------|
 | **TextField** | 텍스트 입력 필드 |
@@ -184,7 +184,7 @@ TextField(
 
 ---
 
-### 버튼 위젯
+### 3) 버튼 위젯
 | 위젯 | 설명 |
 |------|------|
 | **ElevatedButton** | 기본 버튼 |
@@ -203,7 +203,7 @@ ElevatedButton(
 
 ---
 
-### 목록 & 스크롤 위젯
+### 4) 목록 & 스크롤 위젯
 | 위젯 | 설명 |
 |------|------|
 | **ListView** | 스크롤 가능한 리스트 |
@@ -222,9 +222,9 @@ ListView(
 
 ---
 
-## 6. 위젯 트리와 BuildContext
+## 6️⃣ 위젯 트리와 BuildContext
 
-### 위젯 트리란?
+#### 위젯 트리란?
 - Flutter는 **위젯 트리(WIDGET TREE)** 구조로 UI를 구성합니다.
 - 모든 위젯은 **부모-자식 관계**를 가지며 계층적으로 정리됩니다.
 
