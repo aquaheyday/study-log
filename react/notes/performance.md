@@ -1,10 +1,10 @@
-# 🚀 성능 최적화
+# 🚀 React 성능 최적화
 
 React 애플리케이션의 **렌더링 성능을 최적화**하여 불필요한 연산을 줄이고, 사용자 경험을 향상시키는 방법을 정리합니다.
 
 ---
 
-## 1. 성능 최적화가 필요한 이유
+## 1️⃣ 성능 최적화가 필요한 이유
 
 - 불필요한 렌더링을 방지하여 성능 개선
 - 빠른 상태 업데이트 및 렌더링 최적화
@@ -13,9 +13,9 @@ React 애플리케이션의 **렌더링 성능을 최적화**하여 불필요한
 
 ---
 
-## 2. 불필요한 렌더링 방지
+## 2️⃣ 불필요한 렌더링 방지
 
-### React.memo` (컴포넌트 메모이제이션)
+### 1) `React.memo` (컴포넌트 메모이제이션)
 `React.memo`를 사용하면 **동일한 `props`가 전달될 때 컴포넌트의 불필요한 재렌더링을 방지**할 수 있습니다.
 
 ```jsx
@@ -34,9 +34,9 @@ export default MyComponent;
 
 ---
 
-## 3. 연산 비용이 큰 작업 최적화
+## 3️⃣ 연산 비용이 큰 작업 최적화
 
-### `useMemo` (값의 계산 결과 캐싱)
+### 1) `useMemo` (값의 계산 결과 캐싱)
 `useMemo`는 연산량이 큰 작업을 캐싱하여 불필요한 재계산을 방지합니다.
 
 ```jsx
@@ -59,9 +59,9 @@ export default MyComponent;
 
 ---
 
-## 4. 함수 재생성 방지
+## 4️⃣ 함수 재생성 방지
 
-### `useCallback` (함수 메모이제이션)
+### 1) `useCallback` (함수 메모이제이션)
 `useCallback`은 컴포넌트가 리렌더링될 때 동일한 함수가 매번 새로 생성되는 문제를 방지합니다.
 
 ```jsx
@@ -83,9 +83,9 @@ export default MyComponent;
 
 ---
 
-## 5. 리스트 렌더링 최적화
+## 5️⃣ 리스트 렌더링 최적화
 
-### `key` 속성 최적화
+### 1) `key` 속성 최적화
 리스트를 렌더링할 때 고유한 `key` 값을 지정하면 렌더링 성능이 향상됩니다.
 
 ```jsx
@@ -102,7 +102,9 @@ return (
 
 ⚠ 배열의 index를 key로 사용하면 리스트 변경 시 성능 저하 발생 가능  
 
-### 가상화 (Virtualization) 적용
+---
+
+### 2) 가상화 (Virtualization) 적용
 긴 리스트를 효율적으로 렌더링하기 위해 `react-window`, `react-virtualized` 등의 라이브러리를 활용할 수 있습니다.
 
 ```jsx
@@ -127,9 +129,9 @@ export default MyList;
 
 ---
 
-## 6. 불필요한 리렌더링 방지
+## 6️⃣ 불필요한 리렌더링 방지
 
-### `shouldComponentUpdate` (클래스 컴포넌트)
+### 1) `shouldComponentUpdate` (클래스 컴포넌트)
 클래스형 컴포넌트에서 `shouldComponentUpdate`를 사용하면 특정 조건에서만 리렌더링을 수행할 수 있습니다.
 
 ```jsx
@@ -146,7 +148,9 @@ class MyComponent extends React.Component {
 export default MyComponent;
 ```
 
-### `PureComponent` 활용
+---
+
+### 2) `PureComponent` 활용
 `PureComponent`는 자동으로 `shouldComponentUpdate`를 구현하여 성능을 최적화합니다.
 
 ```jsx
@@ -166,7 +170,7 @@ export default MyComponent;
 
 ---
 
-## 7. React 성능 최적화 비교
+## 7️⃣ React 성능 최적화 비교
 
 | 기법 | 사용 목적 | 주요 특징 |
 |------|----------|----------|
