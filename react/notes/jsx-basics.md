@@ -4,18 +4,18 @@ JSX(JavaScript XML)는 **JavaScript 코드에서 XML 형식의 문법을 사용�
 
 ---
 
-## 1. JSX란 무엇인가?
+## 1️⃣ JSX란 무엇인가?
 - JSX는 JavaScript 코드 내에서 HTML과 유사한 구문을 작성하는 방법입니다.
 - 브라우저에서 직접 실행할 수 없으며, **Babel이 JSX를 순수 JavaScript로 변환**합니다.
 
-#### JSX 예제 (React 컴포넌트)
+#### 1. JSX 예제 (React 컴포넌트)
 ```jsx
 function Greeting() {
   return <h1>Hellow, React!</h1>;
 }
 ```
 
-#### 변환된 JavaScript 코드
+#### 2. 변환된 JavaScript 코드
 ```js
 function Greeting() {
   return React.createElement("h1", null, "Hellow, React!");
@@ -24,9 +24,9 @@ function Greeting() {
 
 ---
 
-## 2. JSX 기본 문법
+## 2️⃣ JSX 기본 문법
 
-### 반드시 하나의 부모 요소로 감싸야 함
+### 1) 반드시 하나의 부모 요소로 감싸야 함
 JSX에서는 **하나의 부모 요소**로 감싸지 않으면 오류가 발생합니다.
 
 ✅ **올바른 JSX 코드**
@@ -50,7 +50,7 @@ function App() {
   );
 }
 ```
-> **해결 방법:** `<> ... </>` **(Fragment 태그 사용 가능)**  
+#### 💡 해결 방법: `<> ... </>` (Fragment 태그 사용 가능)
 ```jsx
 function App() {
   return (
@@ -64,7 +64,7 @@ function App() {
 
 ---
 
-### JavaScript 표현식 사용 `{}`  
+### 2) JavaScript 표현식 사용 `{}`  
 JSX 내부에서는 `{}`를 사용하여 **JavaScript 표현식**을 삽입할 수 있습니다.
 
 ```jsx
@@ -82,7 +82,7 @@ function MathExample() {
 
 ---
 
-### 인라인 스타일 적용  
+### 3) 인라인 스타일 적용  
 JSX에서 **스타일을 적용할 때** 객체 형태로 작성해야 합니다.
 
 ```jsx
@@ -99,7 +99,7 @@ function StyledText() {
 
 ---
 
-### class 대신 className 사용  
+### 4) class 대신 className 사용  
 JSX에서는 `class` 대신 **`className`을 사용**해야 합니다.
 
 ```jsx
@@ -112,7 +112,7 @@ function Button() {
 
 ---
 
-### 조건부 렌더링 (`&&`, `? :`, 삼항 연산자)  
+### 5) 조건부 렌더링 (`&&`, `? :`, 삼항 연산자)  
 JSX에서 **조건부 렌더링**을 할 때 `&&`, 삼항 연산자(`? :`)를 사용할 수 있습니다.
 
 #### 논리 연산자 (`&&`)
@@ -131,7 +131,7 @@ function Greeting({ isLoggedIn }) {
 
 ---
 
-### 배열을 사용한 리스트 렌더링  
+### 6) 배열을 사용한 리스트 렌더링  
 JSX에서는 **배열을 사용하여 여러 개의 요소를 렌더링**할 수 있습니다.
 
 ```jsx
@@ -151,7 +151,7 @@ function ItemList() {
 
 ---
 
-### JSX에서 함수 호출  
+### 7) JSX에서 함수 호출  
 JSX 내부에서 **함수를 호출할 수도 있습니다.**
 
 ```jsx
@@ -166,14 +166,14 @@ function Greeting() {
 
 ---
 
-## 3. JSX의 장점  
+## 3️⃣ JSX의 장점  
 - 가독성이 뛰어남: HTML과 유사한 문법으로 직관적인 코드 작성 가능  
 - 빠른 렌더링: Babel을 통해 최적화된 JavaScript로 변환  
 - 강력한 표현력: JavaScript 표현식과 동적으로 결합 가능  
 
 ---
 
-## 4. JSX 없이 React 사용 (일반 JavaScript)  
+## 4️⃣ JSX 없이 React 사용 (일반 JavaScript)  
 JSX를 사용하지 않고 React를 작성할 수도 있지만, **코드가 길고 가독성이 떨어짐**  
 
 ```js
@@ -181,7 +181,7 @@ const element = React.createElement("h1", null, "Hello, React!");
 ReactDOM.render(element, document.getElementById("root"));
 ```
 
-✔ JSX를 사용하면 더 직관적으로 작성 가능
+✅ JSX를 사용하면 더 직관적으로 작성 가능
 ```jsx
 const element = <h1>Hello, React!</h1>;
 ReactDOM.render(element, document.getElementById("root"));
