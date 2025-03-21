@@ -1,19 +1,19 @@
-# 🔲 리스트와 스크롤
+# 🔲 Flutter 리스트와 스크롤
 
 Flutter에서 **리스트(ListView)와 스크롤(ScrollView)** 을 활용하면 긴 목록을 표시하고, 화면을 넘겨서 콘텐츠를 확인할 수 있습니다.
 
 ---
 
-## 1. 리스트(ListView)란?
+## 1️⃣ 리스트(ListView)란?
 
 Flutter에서 `ListView`는 **스크롤 가능한 목록을 생성하는 가장 기본적인 위젯**입니다.
 
-✔ 리스트를 사용하는 경우
+#### 리스트를 사용하는 경우
 - 채팅 메시지 목록
 - 쇼핑몰 상품 목록
 - 뉴스 피드, 게시판
 
-✔ ListView의 주요 기능
+#### ListView의 주요 기능
 - 자동 스크롤 지원 (수직, 수평 방향)
 - 리스트 최적화 (`ListView.builder`)
 - 고정된 리스트 (`ListView`) & 동적 리스트 (`ListView.builder`) 지원
@@ -21,9 +21,9 @@ Flutter에서 `ListView`는 **스크롤 가능한 목록을 생성하는 가장 
 
 ---
 
-## 2. `ListView` 기본 사용법
+## 2️⃣ `ListView` 기본 사용법
 
-### `ListView` (기본)
+### 1) `ListView` (기본)
 ```dart
 ListView(
   children: [
@@ -38,7 +38,7 @@ ListView(
 
 ---
 
-### `ListView.builder` (동적 리스트)
+### 2) `ListView.builder` (동적 리스트)
 - 데이터가 많거나 **반복되는 UI**를 효율적으로 만들 때 사용.
 - **성능이 좋고, 필요할 때만 항목을 렌더링**함.
 
@@ -60,7 +60,7 @@ ListView.builder(
 
 ---
 
-### `ListView.separated` (구분선 있는 리스트)
+### 3) `ListView.separated` (구분선 있는 리스트)
 - 각 아이템 사이에 **구분선(divider)** 추가.
 
 ```dart
@@ -79,9 +79,9 @@ ListView.separated(
 
 ---
 
-## 3. 리스트 아이템 꾸미기
+## 3️⃣ 리스트 아이템 꾸미기
 
-### `ListTile`을 사용한 리스트 아이템
+### 1) `ListTile`을 사용한 리스트 아이템
 ```dart
 ListTile(
   leading: CircleAvatar(
@@ -101,7 +101,7 @@ ListTile(
 
 ---
 
-### `Card`를 활용한 리스트 아이템
+### 2) `Card`를 활용한 리스트 아이템
 ```dart
 Card(
   elevation: 4, // 그림자 효과
@@ -120,9 +120,9 @@ Card(
 
 ---
 
-## 4. 스크롤 가능한 레이아웃 만들기
+## 4️⃣ 스크롤 가능한 레이아웃 만들기
 
-### `SingleChildScrollView` (스크롤 가능 영역)
+### 1) `SingleChildScrollView` (스크롤 가능 영역)
 - 일반적인 위젯을 **스크롤 가능하게 만들 때** 사용.
 
 ```dart
@@ -144,7 +144,7 @@ SingleChildScrollView(
 
 ---
 
-### `GridView` (그리드 형태 리스트)
+### 2) `GridView` (그리드 형태 리스트)
 - `ListView`와 유사하지만, **격자(그리드) 형태로 배치**할 때 사용.
 
 ```dart
@@ -165,7 +165,7 @@ GridView.count(
 
 ---
 
-### `GridView.builder` (동적 생성)
+### 3) `GridView.builder` (동적 생성)
 - 많은 데이터를 효율적으로 관리.
 
 ```dart
@@ -191,9 +191,9 @@ GridView.builder(
 
 ---
 
-## 5. 스크롤 컨트롤 (Custom ScrollView)
+## 5️⃣ 스크롤 컨트롤 (Custom ScrollView)
 
-### `CustomScrollView + SliverList`
+### 1) `CustomScrollView + SliverList`
 - 더 **세밀한 스크롤 컨트롤** 가능.
 
 ```dart
