@@ -4,7 +4,7 @@ Sample 설명
 
 ---
 
-## 1. Sample Table
+## 1️⃣ Sample Table
 
 Sample Table 설명
 
@@ -14,20 +14,24 @@ Sample Table 설명
 
 ---
 
-## 2. Sample 기능 (Sample 기능 설명)
+## 2️⃣ Sample 기능 (Sample 기능 설명)
 
 ### 1) `SampleFunction`
 `SampleFunction` 설명
 
+#### 1. Sample First Step
 ```sh
 sample code
 ```
-
 ✔ `Sample옵션` → Sample 옵션 설명 
 
+#### 2. Sample Second Step
+```sh
+sample code
+```
 ---
 
-## 3. Sample 플랫폼 지원
+## 3️⃣ Sample 플랫폼 지원
 
 | 플랫폼 | 지원 상태 | 주요 특징 |
 |--------|---------|----------|
@@ -37,7 +41,7 @@ sample code
 
 ---
 
-## 4. Sample 기본 문법
+## 4️⃣ Sample 기본 문법
 
 Sample 문법 설명 
 
@@ -54,7 +58,7 @@ function Sample() {
   return false;
 }
 ```
-#### 해결 방법
+#### 💡 해결 방법
 ```sample
 function Sample() {
   return true;
@@ -63,20 +67,16 @@ function Sample() {
 
 ---
 
-## 5. Sample 순차
+## 5️⃣ Sample 순차
 
-1️⃣ **Sample** → Sample 내용  
-2️⃣ **Sample** → Sample 내용  
-3️⃣ **Sample** → Sample 내용  
-4️⃣ **Sample** → Sample 내용  
-5️⃣ **Sample** → Sample 내용  
-6️⃣ **Sample** → Sample 내용  
-7️⃣ **Sample** → Sample 내용  
-8️⃣ **Sample** → Sample 내용  
-9️⃣ **Sample** → Sample 내용  
-🔟 **Sample** → Sample 내용  
+#### 1. Sample → Sample 내용  
+#### 2. Sample → Sample 내용  
+#### 3. Sample → Sample 내용   
 
 ---
+
+## 6️⃣ Sample 아이콘 목록
+1️⃣2️⃣3️⃣4️⃣5️⃣6️⃣7️⃣8️⃣8️⃣9️⃣🔟
 
 
 ## 🎯 정리
