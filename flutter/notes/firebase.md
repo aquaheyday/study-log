@@ -1,29 +1,26 @@
-# 🌍 Firebase 연동
+# 🌍 Flutter Firebase 연동
 
 Flutter에서 Firebase를 연동하는 방법을 정리합니다.  
 Firebase는 백엔드 서비스로, 인증, 데이터베이스, 스토리지 등을 제공합니다.
 
 ---
 
-## 1. Firebase 프로젝트 설정
-
-### Firebase 콘솔에서 프로젝트 생성
-1. [Firebase Console](https://console.firebase.google.com/)에 접속  
-2. **새 프로젝트 만들기** 클릭  
-3. 프로젝트 이름 입력 후 **계속**  
-4. Google 애널리틱스 활성화 여부 선택 후 프로젝트 생성  
+## 1️⃣ Firebase 콘솔에서 프로젝트 생성
+#### 1. [Firebase Console](https://console.firebase.google.com/)에 접속  
+#### 2. **새 프로젝트 만들기** 클릭  
+#### 3. 프로젝트 이름 입력 후 **계속**  
+#### 4. Google 애널리틱스 활성화 여부 선택 후 프로젝트 생성  
 
 ---
 
-## 2. Flutter 프로젝트에 Firebase 추가
+## 2️⃣ Flutter 프로젝트에 Firebase 추가
 
-### Firebase CLI 설치
-
+#### 1. Firebase CLI 설치
 ```sh
 npm install -g firebase-tools
 ```
 
-### Firebase 프로젝트에 Flutter 앱 추가
+#### 2. Firebase 프로젝트에 Flutter 앱 추가
 1. Firebase 콘솔에서 **iOS/Android 앱 추가**  
 2. 패키지 이름 입력 (`com.example.myapp`)  
 3. **Google 서비스 파일 다운로드**
@@ -33,8 +30,7 @@ npm install -g firebase-tools
 
 ---
 
-## 3. Firebase 패키지 설치
-
+## 3️⃣ Firebase 패키지 설치
 ```sh
 flutter pub add firebase_core
 ```
@@ -49,18 +45,16 @@ flutter pub add firebase_core
 | 스토리지 | `firebase_storage` |
 | 메시징 | `firebase_messaging` |
 
-예제:
-
+#### 예제
 ```sh
 flutter pub add firebase_auth cloud_firestore
 ```
 
 ---
 
-## 4. Firebase 초기화
+## 4️⃣ Firebase 초기화
 
-### `main.dart`에서 Firebase 초기화
-
+#### `main.dart`에서 Firebase 초기화
 ```dart
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -89,16 +83,14 @@ class MyApp extends StatelessWidget {
 
 ---
 
-## 5. Firebase Authentication (로그인)
+## 5️⃣ Firebase Authentication (로그인)
 
-### 패키지 설치
-
+#### 1. 패키지 설치
 ```sh
 flutter pub add firebase_auth
 ```
 
-### 이메일 로그인 구현
-
+#### 2. 이메일 로그인 구현
 ```dart
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -117,9 +109,7 @@ Future<void> signIn(String email, String password) async {
 
 ✔ `signInWithEmailAndPassword()` → 이메일/비밀번호 로그인  
 
----
-
-### 회원가입 구현
+#### 3. 회원가입 구현
 
 ```dart
 Future<void> signUp(String email, String password) async {
@@ -137,9 +127,7 @@ Future<void> signUp(String email, String password) async {
 
 ✔ `createUserWithEmailAndPassword()` → 이메일/비밀번호 회원가입  
 
----
-
-### 로그아웃
+#### 4. 로그아웃
 
 ```dart
 Future<void> signOut() async {
@@ -152,15 +140,15 @@ Future<void> signOut() async {
 
 ---
 
-## 6. Firestore (NoSQL 데이터베이스)
+## 6️⃣ Firestore (NoSQL 데이터베이스)
 
-### 패키지 설치
+#### 1. 패키지 설치
 
 ```sh
 flutter pub add cloud_firestore
 ```
 
-### 데이터 추가
+#### 2. 데이터 추가
 
 ```dart
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -173,12 +161,9 @@ Future<void> addUser(String name, int age) async {
   });
 }
 ```
-
 ✔ `.collection('users').add({...})` → Firestore에 새 문서 추가  
 
----
-
-### 데이터 읽기
+#### 3. 데이터 읽기
 
 ```dart
 Future<void> fetchUsers() async {
@@ -188,12 +173,9 @@ Future<void> fetchUsers() async {
   }
 }
 ```
-
 ✔ `.collection('users').get()` → Firestore에서 모든 문서 가져오기  
 
----
-
-### 데이터 업데이트
+#### 4. 데이터 업데이트
 
 ```dart
 Future<void> updateUser(String userId, String newName) async {
@@ -202,32 +184,28 @@ Future<void> updateUser(String userId, String newName) async {
   });
 }
 ```
-
 ✔ `.doc(userId).update({...})` → 특정 문서 업데이트  
 
----
-
-### 데이터 삭제
+#### 5. 데이터 삭제
 
 ```dart
 Future<void> deleteUser(String userId) async {
   await FirebaseFirestore.instance.collection('users').doc(userId).delete();
 }
 ```
-
 ✔ `.doc(userId).delete()` → 특정 문서 삭제  
 
 ---
 
-## 7. Firebase Storage (파일 저장)
+## 7️⃣ Firebase Storage (파일 저장)
 
-### 패키지 설치
+#### 1. 패키지 설치
 
 ```sh
 flutter pub add firebase_storage
 ```
 
-### 파일 업로드
+#### 2. 파일 업로드
 
 ```dart
 import 'dart:io';
@@ -242,19 +220,15 @@ Future<void> uploadFile(File file) async {
   }
 }
 ```
-
 ✔ `.ref('path/to/file').putFile(file)` → Firebase Storage에 파일 업로드  
 
----
-
-### 파일 다운로드 URL 가져오기
+#### 3. 파일 다운로드 URL 가져오기
 
 ```dart
 Future<String> getDownloadUrl(String path) async {
   return await FirebaseStorage.instance.ref(path).getDownloadURL();
 }
 ```
-
 ✔ `.getDownloadURL()` → 업로드된 파일의 다운로드 URL 가져오기  
 
 ---
