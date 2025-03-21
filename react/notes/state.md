@@ -1,11 +1,11 @@
-# 📌 상태 관리
+# 📌 React 상태 관리
 
 React에서 **State(상태)** 는 **컴포넌트 내부에서 관리되는 동적인 데이터**를 의미합니다.  
 State를 사용하면 **사용자의 입력, API 데이터, UI 상태** 등을 관리할 수 있습니다.
 
 ---
 
-## 1. State란?
+## 1️⃣ State란?
 - State는 **컴포넌트 내부에서 변경될 수 있는 값**입니다.
 - `useState()` 훅을 사용하여 **함수형 컴포넌트에서 State를 관리**할 수 있습니다.
 - State가 변경되면 **자동으로 UI가 다시 렌더링**됩니다.
@@ -31,9 +31,9 @@ export default Counter;
 
 ---
 
-## 2. useState() 훅 사용법
+## 2️⃣ useState() 훅 사용법
 
-### 기본적인 State 사용
+### 1) 기본적인 State 사용
 ```jsx
 import { useState } from "react";
 
@@ -53,7 +53,7 @@ function Example() {
 
 ---
 
-### 객체 형태의 State 관리
+### 2) 객체 형태의 State 관리
 State가 **객체인 경우**, `setState()`를 사용할 때 **기존 값을 유지**해야 합니다.
 
 ```jsx
@@ -77,7 +77,7 @@ function UserProfile() {
 
 ---
 
-### 배열 형태의 State 관리
+### 3) 배열 형태의 State 관리
 State가 **배열인 경우**, `map()`, `filter()` 등을 사용하여 업데이트합니다.
 
 ```jsx
@@ -106,10 +106,10 @@ function TodoList() {
 
 ---
 
-## 3. State 업데이트 주의사항
+## 3️⃣ State 업데이트 주의사항
 
-### ❌ 직접 변경하면 안 됨
-State는 반드시 **`setState()` 함수를 사용하여 변경**해야 합니다.
+#### ❌ state는 직접 변경하면 안 됨
+#### ✅ state는 반드시 `setState()` 함수를 사용하여 변경**해야 합니다.
 
 ```jsx
 function Counter() {
@@ -138,7 +138,7 @@ function Counter() {
 
 ---
 
-## 4. State 업데이트가 비동기적으로 작동함
+## 4️⃣ State 업데이트가 비동기적으로 작동함
 State 업데이트는 **즉시 반영되지 않고, 비동기적으로 처리**됩니다.
 
 ```jsx
@@ -167,7 +167,7 @@ setCount(prevCount => prevCount + 1);
 
 ---
 
-## 5. 여러 개의 State 관리하기
+## 5️⃣ 여러 개의 State 관리하기
 
 컴포넌트 내에서 여러 개의 `useState()`를 사용할 수 있습니다.
 
@@ -191,7 +191,7 @@ function MultiStateExample() {
 
 ---
 
-## 6. State vs Props 차이점
+## 6️⃣ State vs Props 차이점
 
 | 특징 | State | Props |
 |------|-------|-------|
