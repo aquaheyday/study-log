@@ -62,12 +62,14 @@ Python에서는 **Scikit-Learn**, **TensorFlow**, **PyTorch** 등의 라이브�
 
 ## 4️⃣ Scikit-Learn을 활용한 머신러닝 구현
 
-#### 1. Scikit-Learn 설치
+### 1) Scikit-Learn 설치
 ```sh
 pip install scikit-learn
 ```
 
-#### 2. 데이터 불러오기
+---
+
+### 2) 데이터 불러오기
 ```python
 from sklearn.datasets import load_iris
 
@@ -78,7 +80,7 @@ print(X.shape, y.shape)  # (150, 4), (150,)
 
 ---
 
-### 데이터 분할 (훈련/테스트 데이터)
+### 3) 데이터 분할 (훈련/테스트 데이터)
 ```python
 from sklearn.model_selection import train_test_split
 
@@ -90,7 +92,7 @@ print(X_train.shape, X_test.shape)  # (120, 4), (30, 4)
 
 ---
 
-### 머신러닝 모델 학습 (로지스틱 회귀)
+### 4) 머신러닝 모델 학습 (로지스틱 회귀)
 ```python
 from sklearn.linear_model import LogisticRegression
 
@@ -100,7 +102,7 @@ model.fit(X_train, y_train)  # 모델 학습
 
 ---
 
-### 예측 및 평가
+### 5) 예측 및 평가
 ```python
 from sklearn.metrics import accuracy_score
 
