@@ -1,11 +1,11 @@
-# 🔄 Context API
+# 🔄 React Context API
 
 **Context API**는 **전역 상태(Global State)를 관리하는 React 내장 기능**입니다.  
 부모 → 자식으로 **Props를 계속 전달하는 문제(Props Drilling)** 를 해결할 수 있습니다.
 
 ---
 
-## 1. Context API란?
+## 1️⃣ Context API란?
 
 - Props Drilling 문제 해결  
 - Redux 같은 외부 상태 관리 라이브러리 없이 전역 상태 관리 가능  
@@ -13,14 +13,14 @@
 
 ---
 
-## 2. Context API의 기본 개념
+## 2️⃣ Context API의 기본 개념
 
 React에서는 **`createContext()`를 사용하여 전역 상태를 생성**합니다.  
 
 ✔ `Provider` → 데이터를 제공하는 컴포넌트  
 ✔ `Consumer` → 데이터를 사용하는 컴포넌트  
 
-### Props Drilling 문제 (기본 상태 전달 방식)
+### 1) Props Drilling 문제 (기본 상태 전달 방식)
 ```jsx
 function Parent() {
   const user = "Alice";
@@ -37,7 +37,9 @@ function GrandChild({ user }) {
 ```
 ✔ Props를 계속 전달해야 함 → 유지보수 어려움  
 
-### Context API 적용 후 (Props Drilling 해결)
+---
+
+### 2) Context API 적용 후 (Props Drilling 해결)
 ```jsx
 import { createContext, useContext } from "react";
 
@@ -64,9 +66,9 @@ function GrandChild() {
 
 ---
 
-## 3. Context API 기본 사용법
+## 3️⃣ Context API 기본 사용법
 
-### Context 생성 (`createContext`)
+#### 1. Context 생성 (`createContext`)
 
 ```jsx
 import { createContext } from "react";
@@ -74,12 +76,9 @@ import { createContext } from "react";
 const ThemeContext = createContext("light"); // 기본값 설정
 export default ThemeContext;
 ```
-
 ✔ `createContext(defaultValue)` → 기본값을 설정 가능  
 
----
-
-### Provider로 상태 전달
+#### 2. Provider로 상태 전달
 
 ```jsx
 import ThemeContext from "./ThemeContext";
@@ -92,12 +91,9 @@ function App() {
   );
 }
 ```
-
 ✔ `Provider` → 전역으로 상태를 제공  
 
----
-
-### useContext()로 값 사용
+#### 3. useContext()로 값 사용
 
 ```jsx
 import { useContext } from "react";
@@ -113,11 +109,11 @@ function Component() {
 
 ---
 
-## 4. 상태 업데이트 (전역 State 관리)
+## 4️⃣ 상태 업데이트 (전역 State 관리)
 
 `useState()`를 활용하면 **Context에서 전역 상태를 업데이트 가능**합니다.
 
-### 4-1. Context에 `useState()` 적용
+#### 1. Context에 `useState()` 적용
 ```jsx
 import { createContext, useState } from "react";
 
@@ -138,9 +134,7 @@ export default ThemeContext;
 ✔ `useState()` → 상태를 관리  
 ✔ `value={{ theme, setTheme }}` → 상태와 변경 함수 전달 가능  
 
----
-
-### Provider로 감싸기
+#### 2. Provider로 감싸기
 ```jsx
 import { ThemeProvider } from "./ThemeContext";
 import ThemeSwitcher from "./ThemeSwitcher";
@@ -155,9 +149,7 @@ function App() {
 ```
 ✔ `ThemeProvider` → 전체 컴포넌트를 감싸서 전역 상태 사용 가능  
 
----
-
-### Context에서 값 변경 (`setState()` 활용)
+#### 3. Context에서 값 변경 (`setState()` 활용)
 
 ```jsx
 import { useContext } from "react";
@@ -183,7 +175,7 @@ export default ThemeSwitcher;
 
 ---
 
-## 5. 여러 개의 Context 사용 (중첩 가능)
+## 5️⃣ 여러 개의 Context 사용 (중첩 가능)
 
 여러 개의 Context를 함께 사용할 수 있음
 
@@ -214,7 +206,7 @@ function Component() {
 
 ---
 
-## 6. Context API vs Redux 비교
+## 6️⃣ Context API vs Redux 비교
 
 | 특징 | Context API | Redux |
 |------|------------|-------|
@@ -229,11 +221,11 @@ function Component() {
 
 ---
 
-## 7. Context API 사용 시 주의할 점
+## 7️⃣ Context API 사용 시 주의할 점
 
-✔ 불필요한 리렌더링 주의 → `useMemo()` 또는 `React.memo()`를 사용하여 최적화 가능  
-✔ Context 값이 자주 변경될 경우 Redux 고려 → 상태 변경이 빈번하면 성능 저하 발생 가능  
-✔ 중첩 Provider 피하기 → 너무 많은 Context를 사용하면 코드 복잡도 증가  
+- 불필요한 리렌더링 주의 → `useMemo()` 또는 `React.memo()`를 사용하여 최적화 가능  
+- Context 값이 자주 변경될 경우 Redux 고려 → 상태 변경이 빈번하면 성능 저하 발생 가능  
+- 중첩 Provider 피하기 → 너무 많은 Context를 사용하면 코드 복잡도 증가  
 
 ---
 
