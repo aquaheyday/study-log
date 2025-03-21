@@ -1,11 +1,11 @@
-# 🔄 Redux Toolkit
+# 🔄 React Redux Toolkit
 
 **Redux Toolkit (RTK)** 는 Redux의 보일러플레이트 코드를 줄이고 쉽게 상태 관리를 할 수 있도록 도와주는 공식 라이브러리입니다.  
 기존 Redux보다 **더 간결한 문법, 강력한 기능, 내장 미들웨어 지원**을 제공합니다.
 
 ---
 
-## 1. Redux Toolkit의 필요성
+## 1️⃣ Redux Toolkit의 필요성
 
 ✔ 기존 Redux의 단점 해결  
    - `createStore`, `combineReducers`, `applyMiddleware` 등 설정이 복잡함  
@@ -20,7 +20,7 @@
 
 ---
 
-## 2. Redux Toolkit 설치
+## 2️⃣ Redux Toolkit 설치
 
 ```sh
 npm install @reduxjs/toolkit react-redux
@@ -30,9 +30,9 @@ npm install @reduxjs/toolkit react-redux
 
 ---
 
-## 3. Redux Toolkit의 주요 기능
+## 3️⃣ Redux Toolkit의 주요 기능
 
-### `configureStore()` - 스토어 설정
+#### 1. `configureStore()` - 스토어 설정
 ```jsx
 import { configureStore } from "@reduxjs/toolkit";
 import counterReducer from "./counterSlice";
@@ -48,9 +48,7 @@ export default store;
 ✔ 기존 Redux의 `createStore()`보다 간결하게 스토어 설정 가능  
 ✔ `reducer` 객체에 여러 개의 slice 리듀서를 추가 가능  
 
----
-
-### `createSlice()` - 액션 & 리듀서 한 번에 정의
+#### 2. `createSlice()` - 액션 & 리듀서 한 번에 정의
 ```jsx
 import { createSlice } from "@reduxjs/toolkit";
 
@@ -70,9 +68,7 @@ export default counterSlice.reducer;
 ✔ 기존 Redux에서는 액션과 리듀서를 따로 관리했지만, RTK에서는 `createSlice()`로 합칠 수 있음  
 ✔ 불변성 관리를 자동 처리 (`immer` 사용) → `state.count += 1` 가능  
 
----
-
-### Redux Store를 React에 연결 (`Provider`)
+#### 3. Redux Store를 React에 연결 (`Provider`)
 ```jsx
 import React from "react";
 import ReactDOM from "react-dom";
@@ -89,9 +85,7 @@ ReactDOM.render(
 ```
 ✔ `<Provider store={store}>` → Redux Store를 React 애플리케이션에 제공  
 
----
-
-### Redux 상태 가져오기 (`useSelector`) & 업데이트 (`useDispatch`)
+#### 4. Redux 상태 가져오기 (`useSelector`) & 업데이트 (`useDispatch`)
 ```jsx
 import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement } from "./counterSlice";
@@ -116,9 +110,9 @@ export default Counter;
 
 ---
 
-## 4. 비동기 작업 (`createAsyncThunk`)
+## 4️⃣ 비동기 작업 (`createAsyncThunk`)
 
-### `createAsyncThunk()` - API 호출 처리
+### 1) `createAsyncThunk()` - API 호출 처리
 Redux에서 비동기 작업(API 호출 등)을 쉽게 처리할 수 있도록 지원합니다.
 
 ```jsx
@@ -155,7 +149,7 @@ export default userSlice.reducer;
 
 ---
 
-### API 호출 데이터 표시 (`useDispatch` 활용)
+### 2) API 호출 데이터 표시 (`useDispatch` 활용)
 ```jsx
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
@@ -182,7 +176,7 @@ export default UserProfile;
 
 ---
 
-## 5. Redux Toolkit vs 기존 Redux 비교
+## 5️⃣ Redux Toolkit vs 기존 Redux 비교
 
 | 기능 | Redux | Redux Toolkit |
 |------|--------|---------------|
