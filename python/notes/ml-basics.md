@@ -5,7 +5,7 @@ Python에서는 **Scikit-Learn**, **TensorFlow**, **PyTorch** 등의 라이브�
 
 ---
 
-## 1. 머신러닝이란?
+## 1️⃣ 머신러닝이란?
 
 - **명시적인 프로그래밍 없이** 데이터에서 패턴을 학습하는 기술
 - **지도학습(Supervised Learning)**, **비지도학습(Unsupervised Learning)**, **강화학습(Reinforcement Learning)** 으로 구분
@@ -13,7 +13,7 @@ Python에서는 **Scikit-Learn**, **TensorFlow**, **PyTorch** 등의 라이브�
 
 ---
 
-## 2. 머신러닝의 종류
+## 2️⃣ 머신러닝의 종류
 
 ### 1) 지도학습 (Supervised Learning)
 - **입력(X)과 정답(Y)이 주어진 데이터**를 학습하여 새로운 데이터 예측
@@ -48,26 +48,26 @@ Python에서는 **Scikit-Learn**, **TensorFlow**, **PyTorch** 등의 라이브�
 
 ---
 
-## 3. 머신러닝 프로세스
+## 3️⃣ 머신러닝 프로세스
 
-1️⃣ **데이터 수집** → CSV, 데이터베이스, API 등에서 데이터 가져오기  
-2️⃣ **데이터 전처리** → 결측값 처리, 이상치 제거, 데이터 정규화  
-3️⃣ **특징 엔지니어링** → 의미 있는 데이터 변환 및 선택  
-4️⃣ **모델 선택** → 적절한 알고리즘 선택 (선형 회귀, 의사결정 트리 등)  
-5️⃣ **모델 학습(Training)** → 데이터로 학습 진행  
-6️⃣ **모델 평가(Evaluation)** → 정확도, RMSE, F1-score 등 성능 평가  
-7️⃣ **모델 배포(Deployment)** → 웹 서비스, 앱, API로 활용  
+1. **데이터 수집** → CSV, 데이터베이스, API 등에서 데이터 가져오기  
+2. **데이터 전처리** → 결측값 처리, 이상치 제거, 데이터 정규화  
+3. **특징 엔지니어링** → 의미 있는 데이터 변환 및 선택  
+4. **모델 선택** → 적절한 알고리즘 선택 (선형 회귀, 의사결정 트리 등)  
+5. **모델 학습(Training)** → 데이터로 학습 진행  
+6. **모델 평가(Evaluation)** → 정확도, RMSE, F1-score 등 성능 평가  
+7. **모델 배포(Deployment)** → 웹 서비스, 앱, API로 활용  
 
 ---
 
-## 4. Scikit-Learn을 활용한 머신러닝 구현
+## 4️⃣ Scikit-Learn을 활용한 머신러닝 구현
 
-### Scikit-Learn 설치
+#### 1. Scikit-Learn 설치
 ```sh
 pip install scikit-learn
 ```
 
-### 데이터 불러오기
+#### 2. 데이터 불러오기
 ```python
 from sklearn.datasets import load_iris
 
@@ -112,7 +112,7 @@ print(f"모델 정확도: {accuracy:.2f}")
 
 ---
 
-## 5. 주요 머신러닝 알고리즘
+## 5️⃣ 주요 머신러닝 알고리즘
 
 ### 1) 회귀 (Regression)
 | 알고리즘 | 설명 | 활용 사례 |
@@ -139,7 +139,7 @@ print(f"모델 정확도: {accuracy:.2f}")
 
 ---
 
-## 6. 머신러닝 모델 평가 지표
+## 6️⃣ 머신러닝 모델 평가 지표
 
 | 평가 지표 | 설명 |
 |---------|------|
