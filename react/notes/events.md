@@ -1,29 +1,29 @@
-# 🔲 이벤트 처리
+# 🔲 React 이벤트 처리
 
 React에서는 **DOM 이벤트를 다루기 위해 이벤트 핸들러를 설정**할 수 있습니다.  
 JSX 문법을 사용하여 **HTML과 유사한 방식**으로 이벤트를 바인딩할 수 있지만, 일부 차이점이 있습니다.
 
 ---
 
-## 1. React 이벤트의 특징
+## 1️⃣ React 이벤트의 특징
 
-### CamelCase 문법 사용
+#### 1. CamelCase 문법 사용
 `onclick` → `onClick`, `onchange` → `onChange`
 
-### 이벤트 핸들러에 함수 전달 (문자열 X)
+#### 2. 이벤트 핸들러에 함수 전달 (문자열 X)
 HTML: `<button onclick="handleClick()">클릭</button>` ❌  
 React: `<button onClick={handleClick}>클릭</button>` ✅
 
-### SyntheticEvent 사용
+#### 3. SyntheticEvent 사용
 React는 브라우저의 네이티브 이벤트를 감싸서 `SyntheticEvent` 객체로 제공  
 
 ✔ 이벤트 핸들러 내부에서 `this` 문제 해결 필요 (클래스형 컴포넌트의 경우)  
 
 ---
 
-## 2. 기본 이벤트 핸들링
+## 2️⃣ 기본 이벤트 핸들링
 
-### 함수형 컴포넌트에서 이벤트 처리
+### 1) 함수형 컴포넌트에서 이벤트 처리
 ```jsx
 function ButtonClick() {
   const handleClick = () => {
@@ -39,7 +39,7 @@ export default ButtonClick;
 
 ---
 
-### 클래스형 컴포넌트에서 이벤트 처리
+### 2) 클래스형 컴포넌트에서 이벤트 처리
 ```jsx
 import React, { Component } from "react";
 
@@ -59,7 +59,7 @@ export default ButtonClick;
 
 ---
 
-## 3. 이벤트 객체 사용 (`event`)
+## 3️⃣ 이벤트 객체 사용 (`event`)
 
 이벤트 핸들러에서 **이벤트 객체를 활용**할 수 있습니다.
 
@@ -76,11 +76,11 @@ function InputField() {
 
 ---
 
-## 4. 이벤트 핸들러에 매개변수 전달
+## 4️⃣ 이벤트 핸들러에 매개변수 전달
 
 매개변수를 전달할 경우 화살표 함수 또는 `bind()`를 사용해야 합니다.
 
-### 함수형 컴포넌트에서 매개변수 전달
+### 1) 함수형 컴포넌트에서 매개변수 전달
 ```jsx
 function GreetingButton() {
   const sayHello = (name) => {
@@ -94,7 +94,7 @@ function GreetingButton() {
 
 ---
 
-### 클래스형 컴포넌트에서 매개변수 전달
+### 2) 클래스형 컴포넌트에서 매개변수 전달
 ```jsx
 import React, { Component } from "react";
 
@@ -114,7 +114,7 @@ export default GreetingButton;
 
 ---
 
-## 5. `this` 바인딩 문제 (클래스형 컴포넌트)
+## 5️⃣ `this` 바인딩 문제 (클래스형 컴포넌트)
 
 클래스형 컴포넌트에서는 `this`를 명시적으로 바인딩해야 합니다.
 
@@ -168,7 +168,7 @@ class Counter extends Component {
 
 ---
 
-## 6. 기본 이벤트 방지 (`preventDefault`)
+## 6️⃣ 기본 이벤트 방지 (`preventDefault`)
 
 이벤트 기본 동작을 막으려면 `event.preventDefault()`를 사용합니다.
 
@@ -190,7 +190,7 @@ function Form() {
 
 ---
 
-## 7. 이벤트 버블링 중지 (`stopPropagation`)
+## 7️⃣ 이벤트 버블링 중지 (`stopPropagation`)
 
 이벤트 버블링을 막으려면 `event.stopPropagation()`을 사용합니다.
 
@@ -213,7 +213,7 @@ function EventExample() {
 
 ---
 
-## 8. 여러 이벤트 핸들러 사용 (onMouseEnter, onFocus 등)
+## 8️⃣ 여러 이벤트 핸들러 사용 (onMouseEnter, onFocus 등)
 
 React에서는 다양한 이벤트를 지원합니다.
 
