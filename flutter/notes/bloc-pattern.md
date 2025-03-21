@@ -1,32 +1,30 @@
-# 🔄 BLoC 패턴
+# 🔄 Flutter BLoC 패턴
 
 **BLoC (Business Logic Component)** 패턴은 **Flutter에서 상태를 효율적으로 관리하는 아키텍처 패턴**입니다.  
 BLoC 패턴은 **이벤트(Event)와 상태(State)를 기반으로 동작**하며, **대규모 애플리케이션에서 강력한 상태 관리**를 제공합니다.
 
 ---
 
-## 1. BLoC 패턴이란?
+## 1️⃣ BLoC 패턴이란?
 
 - 이벤트(Event) → 비즈니스 로직(BLoC) → 새로운 상태(State)를 UI에 반영하는 구조.
-- **Streams(스트림)**을 기반으로 동작하여 비동기 처리에 강함.
+- **Streams(스트림)** 을 기반으로 동작하여 비동기 처리에 강함.
 - **단방향 데이터 흐름**을 유지하여 코드 유지보수성이 높아짐.
 
 ---
 
-## 2. BLoC 패턴의 흐름
-
-1. **사용자가 이벤트(Event)를 발생** (ex: 버튼 클릭)
-2. **BLoC에서 이벤트를 수신하고 상태(State)를 변경**
-3. **UI는 새로운 상태(State)를 감지하고 업데이트**
-
-✔ **BLoC 흐름도**
+## 2️⃣ BLoC 패턴의 흐름
+#### BLoC 흐름도
 ```
 User Action (이벤트 발생) → Bloc (이벤트 처리) → State 변경 → UI 업데이트
 ```
+#### 1. 사용자가 이벤트(Event)를 발생 (ex: 버튼 클릭)
+#### 2. BLoC에서 이벤트를 수신하고 상태(State)를 변경
+#### 3. UI는 새로운 상태(State)를 감지하고 업데이트
 
 ---
 
-## 3. BLoC 패키지 설치
+## 3️⃣ BLoC 패키지 설치
 
 Flutter에서 BLoC 패턴을 쉽게 구현하기 위해 **flutter_bloc 패키지를 사용**합니다.
 
@@ -51,9 +49,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 ---
 
-## 4. BLoC 기본 구조
+## 4️⃣ BLoC 기본 구조
 
-### `Event` 정의 (사용자의 액션)
+### 1) `Event` 정의 (사용자의 액션)
 
 이벤트는 **사용자가 실행하는 동작**을 의미합니다.
 
@@ -66,7 +64,7 @@ class DecrementEvent extends CounterEvent {} // 감소 버튼 클릭
 
 ---
 
-### `State` 정의 (UI의 상태)
+### 2) `State` 정의 (UI의 상태)
 
 상태는 **UI의 현재 상태를 나타냅니다**.
 
@@ -87,7 +85,7 @@ class CounterUpdated extends CounterState {
 
 ---
 
-### `Bloc` 구현 (이벤트 처리 및 상태 관리)
+### 3) `Bloc` 구현 (이벤트 처리 및 상태 관리)
 
 `Bloc` 클래스는 **이벤트를 받아서 상태를 변경하는 로직을 포함**합니다.
 
@@ -110,9 +108,9 @@ class CounterBloc extends Bloc<CounterEvent, CounterState> {
 
 ---
 
-## 5. UI 에서 BLoC 사용하기
+## 5️⃣ UI 에서 BLoC 사용하기
 
-### `BlocProvider`로 BLoC 제공
+### 1) `BlocProvider`로 BLoC 제공
 
 **BLoC을 `BlocProvider`로 감싸서 위젯 트리에 제공**합니다.
 
@@ -129,7 +127,7 @@ void main() {
 
 ---
 
-### `BlocBuilder`로 상태 감지 및 UI 업데이트
+### 2) `BlocBuilder`로 상태 감지 및 UI 업데이트
 
 **BlocBuilder**를 사용하여 UI를 상태(State)에 따라 변경합니다.
 
@@ -170,9 +168,8 @@ class CounterScreen extends StatelessWidget {
 
 ---
 
-## 6. `BlocListener` 사용 (이벤트 기반 UI 변경)
-
-- 특정 이벤트가 발생했을 때 **스낵바(Snackbar) 표시** 등의 효과를 줄 때 사용.
+## 6️⃣ `BlocListener` 사용 (이벤트 기반 UI 변경)
+특정 이벤트가 발생했을 때 **스낵바(Snackbar) 표시** 등의 효과를 줄 때 사용.
 
 ```dart
 BlocListener<CounterBloc, CounterState>(
@@ -189,8 +186,7 @@ BlocListener<CounterBloc, CounterState>(
 
 ---
 
-## 7. `MultiBlocProvider` (여러 BLoC 사용)
-
+## 7️⃣ `MultiBlocProvider` (여러 BLoC 사용)
 `MultiBlocProvider`를 사용하면 **여러 개의 BLoC을 한 번에 제공**할 수 있습니다.
 
 ```dart
@@ -211,8 +207,7 @@ void main() {
 
 ---
 
-## 8. `BlocObserver` (디버깅 및 로깅)
-
+## 8️⃣ `BlocObserver` (디버깅 및 로깅)
 **모든 BLoC의 상태 변화를 감지**하고 디버깅할 수 있습니다.
 
 ```dart
