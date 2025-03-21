@@ -5,11 +5,10 @@ React 프로젝트를 시작하기 위해 환경을 설정하는 방법을 정�
 
 ---
 
-## 1. React 개발 환경 준비
+## 1️⃣ React 개발 환경 준비
 
-### Node.js 설치
+#### Node.js 설치
 React를 실행하려면 **Node.js**가 필요합니다.  
-아래 명령어로 **설치 여부**를 확인하세요.
 
 ```sh
 node -v  # Node.js 버전 확인
@@ -20,9 +19,9 @@ npm -v   # npm (Node 패키지 매니저) 버전 확인
 
 ---
 
-## 2. React 프로젝트 생성 방법
+## 2️⃣ React 프로젝트 생성 방법
 
-### CRA(Create React App) 사용
+### 1) CRA(Create React App) 사용
 ```sh
 npx create-react-app my-app
 cd my-app
@@ -32,7 +31,9 @@ npm start
 - **my-app**: 프로젝트 폴더명 (원하는 이름으로 변경 가능)
 - **npm start**: 개발 서버 실행 (`http://localhost:3000`)
 
-### Vite 사용
+---
+
+### 2) Vite 사용
 ```sh
 npm create vite@latest my-app --template react
 cd my-app
@@ -44,9 +45,9 @@ npm run dev
 
 ---
 
-## 3. 프로젝트 구조 이해
+## 3️⃣ 프로젝트 구조 이해
 
-### 기본 폴더 구조 (CRA 기준)
+#### 기본 폴더 구조 (CRA 기준)
 ```
 my-app/
 ├── node_modules/    # 설치된 패키지
@@ -63,7 +64,7 @@ my-app/
 
 ---
 
-## 4. 주요 명령어
+## 4️⃣ 주요 명령어
 
 | 명령어 | 설명 |
 |--------|------|
@@ -75,16 +76,16 @@ my-app/
 
 ---
 
-## 5. ESLint & Prettier 설정 (코드 스타일 정리)
+## 5️⃣ ESLint & Prettier 설정 (코드 스타일 정리)
 
-### ESLint 설치
+#### 1. ESLint 설치
 ```sh
 npm install eslint --save-dev
 npx eslint --init
 ```
 ✔ 설정 파일을 생성하고 원하는 스타일을 선택하세요.
 
-### Prettier 설치
+#### 2. Prettier 설치
 ```sh
 npm install --save-dev prettier eslint-config-prettier eslint-plugin-prettier
 ```
@@ -92,7 +93,7 @@ npm install --save-dev prettier eslint-config-prettier eslint-plugin-prettier
 
 ---
 
-## 6. React 프로젝트 실행 확인
+## 6️⃣ React 프로젝트 실행 확인
 `npm start` 또는 `npm run dev` 실행 후 브라우저에서 확인하세요.
 - CRA: `http://localhost:3000`
 - Vite: `http://localhost:5173`
