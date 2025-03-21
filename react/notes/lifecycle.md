@@ -1,4 +1,4 @@
-# 🔲 컴포넌트 라이프사이클
+# 🔲 React 컴포넌트 라이프사이클
 
 React 컴포넌트는 **생성(Mount), 업데이트(Update), 소멸(Unmount)** 단계를 거칩니다.  
 React에서는 **함수형 컴포넌트 + `useEffect` 훅**을 사용하여 라이프사이클을 제어할 수 있으며,  
@@ -6,7 +6,7 @@ React에서는 **함수형 컴포넌트 + `useEffect` 훅**을 사용하여 라�
 
 ---
 
-## 1. React 컴포넌트의 라이프사이클 단계
+## 1️⃣ React 컴포넌트의 라이프사이클 단계
 
 | 단계 | 설명 | 함수형 컴포넌트 (`useEffect`) | 클래스형 컴포넌트 |
 |------|------|-----------------------------|------------------|
@@ -16,12 +16,12 @@ React에서는 **함수형 컴포넌트 + `useEffect` 훅**을 사용하여 라�
 
 ---
 
-## 2. Mount (마운트: 컴포넌트가 처음 렌더링될 때)
+## 2️⃣ Mount (마운트: 컴포넌트가 처음 렌더링될 때)
 
 - 컴포넌트가 생성되고 DOM에 추가됨  
 - API 호출, 이벤트 리스너 등록 등의 초기화 작업 수행  
 
-### 함수형 컴포넌트에서 `useEffect` 사용
+### 1) 함수형 컴포넌트에서 `useEffect` 사용
 ```jsx
 import { useEffect } from "react";
 
@@ -43,7 +43,7 @@ export default Component;
 
 ---
 
-### 클래스형 컴포넌트에서 `componentDidMount`
+### 2) 클래스형 컴포넌트에서 `componentDidMount`
 ```jsx
 import React, { Component } from "react";
 
@@ -63,12 +63,12 @@ export default ComponentExample;
 
 ---
 
-## 3. Update (업데이트: 상태 또는 Props 변경 시 실행)
+## 3️⃣ Update (업데이트: 상태 또는 Props 변경 시 실행)
 
 - State 또는 Props가 변경되면 실행됨  
 - 렌더링이 다시 수행되며, 변경된 값이 반영됨  
 
-### 함수형 컴포넌트에서 `useEffect` 사용
+### 1) 함수형 컴포넌트에서 `useEffect` 사용
 ```jsx
 import { useState, useEffect } from "react";
 
@@ -93,7 +93,7 @@ export default Counter;
 
 ---
 
-### 클래스형 컴포넌트에서 `componentDidUpdate`
+### 2) 클래스형 컴포넌트에서 `componentDidUpdate`
 ```jsx
 import React, { Component } from "react";
 
@@ -122,12 +122,12 @@ export default Counter;
 
 ---
 
-## 4. Unmount (언마운트: 컴포넌트가 제거될 때)
+## 4️⃣ Unmount (언마운트: 컴포넌트가 제거될 때)
 
 - 컴포넌트가 DOM에서 제거될 때 실행됨  
 - 이벤트 리스너 제거, 타이머 정리, API 구독 해제 등의 작업 수행  
 
-### 함수형 컴포넌트에서 `useEffect` 정리 함수 사용
+### 1) 함수형 컴포넌트에서 `useEffect` 정리 함수 사용
 ```jsx
 import { useEffect } from "react";
 
@@ -152,7 +152,7 @@ export default Timer;
 
 ---
 
-### 클래스형 컴포넌트에서 `componentWillUnmount`
+### 2) 클래스형 컴포넌트에서 `componentWillUnmount`
 ```jsx
 import React, { Component } from "react";
 
@@ -179,7 +179,7 @@ export default Timer;
 
 ---
 
-## 5. `useEffect`와 라이프사이클 메서드 비교
+## 5️⃣ `useEffect`와 라이프사이클 메서드 비교
 
 | 단계 | 클래스형 컴포넌트 | 함수형 컴포넌트 (`useEffect`) |
 |------|------------------|-----------------------------|
