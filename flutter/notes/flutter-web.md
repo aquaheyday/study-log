@@ -1,11 +1,11 @@
-# 🚀 멀티플랫폼 개발 가이드
+# 🚀 Flutter 멀티플랫폼 개발 가이드
 
 Flutter는 **모바일(Android, iOS), 웹, 데스크톱(Windows, macOS, Linux), 임베디드** 플랫폼을 하나의 코드베이스로 개발할 수 있는 프레임워크입니다.  
 멀티플랫폼 개발 시 고려해야 할 사항과 설정 방법을 정리합니다.
 
 ---
 
-## 1. Flutter 멀티플랫폼 지원
+## 1️⃣ Flutter 멀티플랫폼 지원
 
 | 플랫폼 | 지원 상태 | 주요 특징 |
 |--------|---------|----------|
@@ -22,16 +22,16 @@ Flutter는 **모바일(Android, iOS), 웹, 데스크톱(Windows, macOS, Linux), 
 
 ---
 
-## 2. 프로젝트 설정
+## 2️⃣ 프로젝트 설정
 
-### 프로젝트 생성
+#### 1. 프로젝트 생성
 Flutter에서 멀티플랫폼 프로젝트를 생성하려면 다음 명령어를 사용합니다.
 
 ```sh
 flutter create my_app
 ```
 
-### 멀티플랫폼 지원 활성화
+#### 2. 멀티플랫폼 지원 활성화
 Flutter는 기본적으로 Android와 iOS를 지원하지만, 웹과 데스크톱을 활성화해야 합니다.
 
 ```sh
@@ -45,7 +45,7 @@ flutter config --enable-linux-desktop
 
 ---
 
-## 3. 플랫폼별 실행 방법
+## 3️⃣ 플랫폼별 실행 방법
 
 | 플랫폼 | 실행 명령어 |
 |--------|-----------|
@@ -63,9 +63,9 @@ flutter devices
 
 ---
 
-## 4. 플랫폼별 UI 대응
+## 4️⃣ 플랫폼별 UI 대응
 
-### `Platform.is`를 사용한 분기 처리 (`dart:io`)
+### 1) `Platform.is`를 사용한 분기 처리 (`dart:io`)
 `dart:io` 패키지를 사용하여 플랫폼별 UI를 다르게 설정할 수 있습니다.
 
 ```dart
@@ -92,7 +92,7 @@ class PlatformText extends StatelessWidget {
 
 ---
 
-### `Theme.of(context).platform`을 활용한 플랫폼 감지
+### 2) `Theme.of(context).platform`을 활용한 플랫폼 감지
 
 ```dart
 import 'package:flutter/material.dart';
@@ -114,7 +114,7 @@ class PlatformAwareButton extends StatelessWidget {
 
 ---
 
-## 5. 패키지 호환성 확인
+## 5️⃣ 패키지 호환성 확인
 
 ### 패키지별 멀티플랫폼 지원 여부
 Flutter에서 사용할 패키지가 특정 플랫폼에서 지원되는지 확인해야 합니다.
@@ -123,8 +123,7 @@ Flutter에서 사용할 패키지가 특정 플랫폼에서 지원되는지 확�
 flutter pub outdated
 ```
 
-### 웹과 호환되지 않는 패키지 예시
-
+#### 웹과 호환되지 않는 패키지 예시
 | 패키지 | Android/iOS | Web | 대체 가능 패키지 |
 |--------|------------|-----|-----------------|
 | `path_provider` | ✅ | ❌ | `universal_io` |
@@ -136,7 +135,7 @@ flutter pub outdated
 
 ---
 
-## 6. 웹과 모바일의 차이점
+## 6️⃣ 웹과 모바일의 차이점
 
 | 기능 | 모바일(Android/iOS) | 웹 |
 |------|----------------|----|
@@ -149,7 +148,7 @@ flutter pub outdated
 
 ---
 
-## 7. `platform_channel` (네이티브 코드 연동)
+## 7️⃣ `platform_channel` (네이티브 코드 연동)
 
 플랫폼별로 네이티브 기능을 추가해야 할 경우 `MethodChannel`을 사용할 수 있습니다.
 
@@ -186,35 +185,45 @@ class MainActivity: FlutterActivity() {
 
 ---
 
-## 8. 플랫폼별 빌드 및 배포
+## 8️⃣ 플랫폼별 빌드 및 배포
 
-### Android 빌드
+### 1) Android 빌드
 ```sh
 flutter build apk
 flutter build appbundle
 ```
 
-### iOS 빌드
+---
+
+### 2) iOS 빌드
 ```sh
 flutter build ios
 ```
 
-### 웹 빌드
+---
+
+### 3) 웹 빌드
 ```sh
 flutter build web
 ```
 
-### Windows 빌드
+---
+
+### 4) Windows 빌드
 ```sh
 flutter build windows
 ```
 
-### macOS 빌드
+---
+
+### 5) macOS 빌드
 ```sh
 flutter build macos
 ```
 
-### Linux 빌드
+---
+
+### 6) Linux 빌드
 ```sh
 flutter build linux
 ```
