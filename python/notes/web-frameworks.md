@@ -5,7 +5,7 @@ Python을 사용하여 웹 애플리케이션을 개발하는 방법을 설명�
 
 ---
 
-## 1. 웹 개발이란?
+## 1️⃣ 웹 개발이란?
 
 웹 개발(Web Development)이란, **웹 애플리케이션(Web Application)** 을 만들고 실행하는 과정입니다.  
 Python을 사용하면 백엔드 서버를 구축하고 클라이언트 요청을 처리할 수 있습니다.
@@ -19,7 +19,7 @@ Python은 주로 **백엔드 개발**에 사용되며, 대표적인 프레임워
 
 ---
 
-## 2. Flask vs Django 비교
+## 2️⃣ Flask vs Django 비교
 
 | 프레임워크 | 특징 |
 |-----------|------------------------------------------------|
@@ -31,14 +31,16 @@ Python은 주로 **백엔드 개발**에 사용되며, 대표적인 프레임워
 
 ---
 
-## 3. Flask 기본 사용법
+## 3️⃣ Flask 기본 사용법
 
-### Flask 설치
+### 1) Flask 설치
 ```sh
 pip install flask
 ```
 
-### 기본 웹 서버 만들기
+---
+
+### 2) 기본 웹 서버 만들기
 ```python
 from flask import Flask
 
@@ -57,7 +59,7 @@ if __name__ == "__main__":
 
 ---
 
-### 라우팅 (URL 관리)
+### 3) 라우팅 (URL 관리)
 ```python
 @app.route("/hello/<name>")
 def hello(name):
@@ -67,7 +69,7 @@ def hello(name):
 
 ---
 
-### HTML 템플릿 사용 (`render_template`)
+### 4) HTML 템플릿 사용 (`render_template`)
 ```sh
 mkdir templates
 ```
@@ -81,7 +83,7 @@ mkdir templates
 </body>
 </html>
 ```
-**Flask에서 HTML 렌더링:**
+#### Flask에서 HTML 렌더링
 ```python
 from flask import render_template
 
@@ -93,14 +95,16 @@ def greet(name):
 
 ---
 
-## 4. Django 기본 사용법
+## 4️⃣ Django 기본 사용법
 
-### Django 설치
+### 1) Django 설치
 ```sh
 pip install django
 ```
 
-### 프로젝트 생성 및 실행
+---
+
+### 2) 프로젝트 생성 및 실행
 ```sh
 django-admin startproject myproject
 cd myproject
@@ -111,7 +115,7 @@ python manage.py runserver
 
 ---
 
-### 앱 생성 및 라우팅 설정
+### 3) 앱 생성 및 라우팅 설정
 ```sh
 python manage.py startapp myapp
 ```
@@ -137,7 +141,7 @@ urlpatterns = [
 
 ---
 
-### 모델 및 데이터베이스 설정
+### 4) 모델 및 데이터베이스 설정
 
 Django는 기본적으로 **SQLite 데이터베이스**를 사용합니다.  
 모델을 정의하면 자동으로 데이터베이스 테이블이 생성됩니다.
@@ -153,7 +157,7 @@ class Post(models.Model):
 ```
 ✔ `CharField`, `TextField`, `DateTimeField` 등 다양한 필드 제공  
 
-**마이그레이션 및 데이터베이스 적용**
+#### 마이그레이션 및 데이터베이스 적용
 ```sh
 python manage.py makemigrations
 python manage.py migrate
@@ -163,16 +167,18 @@ python manage.py migrate
 
 ---
 
-## 5. REST API 구축
+## 5️⃣ REST API 구축
 
 웹 애플리케이션에서 **REST API** 를 제공하려면 Flask 또는 Django REST Framework를 사용할 수 있습니다.
 
-### Flask REST API (`Flask-RESTful` 사용)
+### 1) Flask REST API (`Flask-RESTful` 사용)
 ```sh
 pip install flask flask-restful
 ```
 
-**API 엔드포인트 만들기**
+---
+
+#### API 엔드포인트 만들기
 ```python
 from flask import Flask, jsonify
 from flask_restful import Api, Resource
@@ -193,12 +199,12 @@ if __name__ == "__main__":
 
 ---
 
-### Django REST API (`Django REST Framework` 사용)
+### 2) Django REST API (`Django REST Framework` 사용)
 ```sh
 pip install djangorestframework
 ```
 
-**`myapp/views.py`**
+#### `myapp/views.py`
 ```python
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
@@ -207,7 +213,7 @@ from rest_framework.decorators import api_view
 def hello_api(request):
     return Response({"message": "Hello, Django REST API!"})
 ```
-**`myproject/urls.py`**
+#### `myproject/urls.py`
 ```python
 from django.urls import path
 from myapp.views import hello_api
@@ -220,9 +226,9 @@ urlpatterns = [
 
 ---
 
-## 6. 웹 서버 배포
+## 6️⃣ 웹 서버 배포
 
-### Flask 배포 (Gunicorn + Nginx)
+### 1) Flask 배포 (Gunicorn + Nginx)
 ```sh
 pip install gunicorn
 gunicorn -w 4 -b 0.0.0.0:5000 app:app
@@ -231,7 +237,7 @@ gunicorn -w 4 -b 0.0.0.0:5000 app:app
 
 ---
 
-### Django 배포 (Gunicorn + Nginx)
+### 2) Django 배포 (Gunicorn + Nginx)
 ```sh
 pip install gunicorn
 gunicorn myproject.wsgi:application --bind 0.0.0.0:8000
