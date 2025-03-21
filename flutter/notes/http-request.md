@@ -1,11 +1,10 @@
-# 🌍 HTTP 통신
+# 🌍 Flutter HTTP 통신
 
 Flutter에서 API와 통신하기 위해 `http` 및 `dio` 패키지를 활용하여 HTTP 요청을 수행할 수 있습니다. 두 패키지를 이용한 API 호출 방법을 정리합니다.
 
 ---
 
-## 1. 패키지 설치
-
+## 1️⃣ 패키지 설치
 Flutter 프로젝트에서 `http` 및 `dio` 패키지를 추가해야 합니다.
 
 ```sh
@@ -30,9 +29,9 @@ flutter pub get
 
 ---
 
-## 2. `http` 패키지를 이용한 API 호출
+## 2️⃣ `http` 패키지를 이용한 API 호출
 
-### GET 요청
+### 1) GET 요청
 
 ```dart
 import 'package:http/http.dart' as http;
@@ -55,7 +54,7 @@ Future<void> fetchData() async {
 
 ---
 
-### POST 요청
+### 2) POST 요청
 
 ```dart
 Future<void> sendData() async {
@@ -83,7 +82,7 @@ Future<void> sendData() async {
 
 ---
 
-### PUT 요청 (데이터 수정)
+### 3) PUT 요청 (데이터 수정)
 
 ```dart
 Future<void> updateData() async {
@@ -110,7 +109,7 @@ Future<void> updateData() async {
 
 ---
 
-### DELETE 요청 (데이터 삭제)
+### 4) DELETE 요청 (데이터 삭제)
 
 ```dart
 Future<void> deleteData() async {
@@ -128,9 +127,9 @@ Future<void> deleteData() async {
 
 ---
 
-## 3. `dio` 패키지를 이용한 API 호출
+## 3️⃣ `dio` 패키지를 이용한 API 호출
 
-### Dio 설정
+### 1) Dio 설정
 
 ```dart
 import 'package:dio/dio.dart';
@@ -149,7 +148,7 @@ final Dio dio = Dio(BaseOptions(
 
 ---
 
-### GET 요청
+### 2) GET 요청
 
 ```dart
 Future<void> fetchDataWithDio() async {
@@ -167,7 +166,7 @@ Future<void> fetchDataWithDio() async {
 
 ---
 
-### POST 요청
+### 3) POST 요청
 
 ```dart
 Future<void> sendDataWithDio() async {
@@ -192,7 +191,7 @@ Future<void> sendDataWithDio() async {
 
 ---
 
-### PUT 요청 (데이터 수정)
+### 4) PUT 요청 (데이터 수정)
 
 ```dart
 Future<void> updateDataWithDio() async {
@@ -217,7 +216,7 @@ Future<void> updateDataWithDio() async {
 
 ---
 
-### DELETE 요청 (데이터 삭제)
+### 5) DELETE 요청 (데이터 삭제)
 
 ```dart
 Future<void> deleteDataWithDio() async {
@@ -234,7 +233,7 @@ Future<void> deleteDataWithDio() async {
 
 ---
 
-## 4. `http` vs `dio` 비교
+## 4️⃣ `http` vs `dio` 비교
 
 | 기능  | `http` 패키지 | `dio` 패키지 |
 |-------|-------------|-------------|
