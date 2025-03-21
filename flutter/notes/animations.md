@@ -1,10 +1,10 @@
-# 🚀 애니메이션 기본
+# 🚀 Flutter 애니메이션 기본
 
 Flutter에서 애니메이션을 사용하면 UI를 더 생동감 있게 만들 수 있습니다.
 
 ---
 
-## 1. 애니메이션의 종류
+## 1️⃣ 애니메이션의 종류
 
 Flutter에서 제공하는 애니메이션 방식은 다음과 같습니다.
 
@@ -17,9 +17,9 @@ Flutter에서 제공하는 애니메이션 방식은 다음과 같습니다.
 
 ---
 
-## 2. Implicit Animation (간단한 애니메이션)
+## 2️⃣ Implicit Animation (간단한 애니메이션)
 
-### `AnimatedContainer`
+### 1) `AnimatedContainer`
 `AnimatedContainer`는 크기, 색상, 모양 등을 부드럽게 변화시킬 때 사용합니다.
 
 ```dart
@@ -78,7 +78,7 @@ class _AnimatedContainerExampleState extends State<AnimatedContainerExample> {
 
 ---
 
-### `AnimatedOpacity`
+### 2) `AnimatedOpacity`
 위젯의 투명도를 부드럽게 변경할 때 사용합니다.
 
 ```dart
@@ -93,9 +93,9 @@ AnimatedOpacity(
 
 ---
 
-## 3. Explicit Animation (컨트롤 가능한 애니메이션)
+## 3️⃣ Explicit Animation (컨트롤 가능한 애니메이션)
 
-### `AnimationController`와 `Tween`
+### 1) `AnimationController`와 `Tween`
 `AnimationController`를 사용하면 애니메이션을 세밀하게 제어할 수 있습니다.
 
 ```dart
@@ -167,9 +167,9 @@ class _ExplicitAnimationExampleState extends State<ExplicitAnimationExample> wit
 
 ---
 
-## 4. Hero 애니메이션 (페이지 전환)
+## 4️⃣ Hero 애니메이션 (페이지 전환)
 
-### `Hero`
+### 1) `Hero`
 화면 전환 시 부드러운 이동 효과를 제공합니다.
 
 ```dart
@@ -206,7 +206,7 @@ Hero(
 
 ---
 
-## 5. AnimatedList (리스트 애니메이션)
+## 5️⃣ AnimatedList (리스트 애니메이션)
 
 ```dart
 AnimatedList(
@@ -224,15 +224,15 @@ AnimatedList(
 
 ---
 
-## 6. Lottie 애니메이션
+## 6️⃣ Lottie 애니메이션
 
-### 패키지 설치
+#### 1. 패키지 설치
 
 ```sh
 flutter pub add lottie
 ```
 
-### JSON 애니메이션 적용
+#### 2. JSON 애니메이션 적용
 
 ```dart
 import 'package:flutter/material.dart';
