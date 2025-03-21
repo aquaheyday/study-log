@@ -5,7 +5,7 @@
 
 ---
 
-## 1. 딥러닝이란?
+## 1️⃣ 딥러닝이란?
 
 - **인공신경망(ANN, Artificial Neural Network)** 을 기반으로 한 학습 방법
 - 데이터에서 **고차원적인 패턴을 자동으로 학습** 가능
@@ -16,7 +16,7 @@
 
 ---
 
-## 2. 머신러닝 vs 딥러닝 차이점
+## 2️⃣ 머신러닝 vs 딥러닝 차이점
 
 | 구분 | 머신러닝 (ML) | 딥러닝 (DL) |
 |------|-------------|-------------|
@@ -30,13 +30,15 @@
 
 ---
 
-## 3. 인공신경망(ANN) 기본 개념
+## 3️⃣ 인공신경망(ANN) 기본 개념
 
-### 뉴런(Neuron)
+### 1) 뉴런(Neuron)
 - **입력 → 가중치 적용 → 활성화 함수 → 출력** 과정을 거치는 단위
 - 여러 뉴런이 연결되어 **레이어(Layer)를 형성**함.
 
-### 신경망 구조
+---
+
+### 2) 신경망 구조
 - **입력층(Input Layer)** → 데이터를 받아들이는 층
 - **은닉층(Hidden Layer)** → 특징을 학습하는 층 (1개 이상 존재)
 - **출력층(Output Layer)** → 최종 결과를 출력하는 층
@@ -45,7 +47,7 @@
 
 ---
 
-## 4. 딥러닝 활성화 함수 (Activation Function)
+## 4️⃣ 딥러닝 활성화 함수 (Activation Function)
 
 | 활성화 함수 | 수식 | 특징 |
 |------------|------|------|
@@ -57,20 +59,20 @@
 
 ---
 
-## 5. 딥러닝 학습 과정
+## 5️⃣ 딥러닝 학습 과정
 
-1️⃣ **순전파(Forward Propagation)** → 입력 데이터가 신경망을 통과하여 예측값 생성  
-2️⃣ **손실 계산(Loss Calculation)** → 예측값과 실제값의 차이를 손실 함수로 계산  
-3️⃣ **역전파(Backpropagation)** → 손실을 줄이기 위해 가중치 업데이트  
-4️⃣ **최적화(Optimization)** → 경사 하강법(Gradient Descent)으로 모델 학습  
+1. **순전파(Forward Propagation)** → 입력 데이터가 신경망을 통과하여 예측값 생성  
+2. **손실 계산(Loss Calculation)** → 예측값과 실제값의 차이를 손실 함수로 계산  
+3. **역전파(Backpropagation)** → 손실을 줄이기 위해 가중치 업데이트  
+4. **최적화(Optimization)** → 경사 하강법(Gradient Descent)으로 모델 학습  
 
 ✔ 이 과정을 반복하면서 모델의 정확도가 점점 향상됨.  
 
 ---
 
-## 6. 딥러닝 라이브러리 (TensorFlow & Keras)
+## 6️⃣ 딥러닝 라이브러리 (TensorFlow & Keras)
 
-### TensorFlow/Keras 설치
+#### TensorFlow/Keras 설치
 ```sh
 pip install tensorflow keras
 ```
@@ -80,9 +82,9 @@ pip install tensorflow keras
 
 ---
 
-## 7. 첫 번째 딥러닝 모델 만들기 (Keras)
+## 7️⃣ 첫 번째 딥러닝 모델 만들기 (Keras)
 
-### 데이터 준비 (MNIST 숫자 손글씨 데이터)
+### 1) 데이터 준비 (MNIST 숫자 손글씨 데이터)
 ```python
 import tensorflow as tf
 from tensorflow import keras
@@ -97,11 +99,11 @@ X_train, X_test = X_train / 255.0, X_test / 255.0
 ```
 
 ✔ **MNIST 데이터셋** → 28x28 크기의 숫자 이미지 (0~9)  
-✔ **픽셀 값을 0~1 사이로 정규화** → 학습 속도 향상  
+✔ **픽셀 값을 0 ~ 1 사이로 정규화** → 학습 속도 향상  
 
 ---
 
-### 모델 생성 (신경망 설계)
+### 2) 모델 생성 (신경망 설계)
 ```python
 model = keras.Sequential([
     keras.layers.Flatten(input_shape=(28, 28)),  # 입력층 (Flatten: 1D 변환)
@@ -116,7 +118,7 @@ model = keras.Sequential([
 
 ---
 
-### 모델 컴파일
+### 3) 모델 컴파일
 ```python
 model.compile(optimizer="adam",
               loss="sparse_categorical_crossentropy",
@@ -128,7 +130,7 @@ model.compile(optimizer="adam",
 
 ---
 
-### 모델 학습 (Training)
+### 4) 모델 학습 (Training)
 ```python
 model.fit(X_train, y_train, epochs=5)
 ```
@@ -136,7 +138,7 @@ model.fit(X_train, y_train, epochs=5)
 
 ---
 
-### 모델 평가 (테스트 데이터 성능 확인)
+### 5) 모델 평가 (테스트 데이터 성능 확인)
 ```python
 test_loss, test_acc = model.evaluate(X_test, y_test)
 print(f"테스트 정확도: {test_acc:.4f}")
@@ -144,7 +146,7 @@ print(f"테스트 정확도: {test_acc:.4f}")
 
 ---
 
-## 8. 딥러닝 성능 개선 방법
+## 8️⃣ 딥러닝 성능 개선 방법
 
 ### 1) 데이터 증강 (Augmentation)
 ```python
