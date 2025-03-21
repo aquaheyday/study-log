@@ -5,7 +5,7 @@
 
 ---
 
-## 1. Riverpod이란?
+## 1️⃣ Riverpod이란?
 
 - Flutter 공식 상태 관리 라이브러리 (`Provider`의 개선 버전)
 - 전역 상태 관리 가능
@@ -13,7 +13,7 @@
 - `notifyListeners()` 없이 자동으로 상태 업데이트
 - 의존성 주입 가능 (Dependency Injection)
 
-✔ **Provider vs Riverpod 차이점**
+#### Provider vs Riverpod 차이점
 | 특징 | Provider | Riverpod |
 |------|----------|----------|
 | `ChangeNotifier` 사용 | ✅ 사용 | ❌ 사용하지 않음 |
@@ -23,7 +23,7 @@
 
 ---
 
-## 2. Riverpod 설치
+## 2️⃣ Riverpod 설치
 
 ```sh
 flutter pub add flutter_riverpod
@@ -46,11 +46,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 ---
 
-## 3. Riverpod 기본 사용법
+## 3️⃣ Riverpod 기본 사용법
 
 Riverpod에서 상태를 관리하려면 `Provider`를 생성해야 합니다.
 
-### `Provider` (읽기 전용 상태)
+### 1) `Provider` (읽기 전용 상태)
 
 **변하지 않는 상태를 관리**할 때 사용합니다.
 
@@ -60,7 +60,7 @@ final helloProvider = Provider<String>((ref) {
 });
 ```
 
-✔ **사용법**
+#### 사용법
 ```dart
 Consumer(
   builder: (context, ref, child) {
@@ -72,7 +72,7 @@ Consumer(
 
 ---
 
-### `StateProvider` (기본적인 상태 관리)
+### 2) `StateProvider` (기본적인 상태 관리)
 
 **간단한 상태 값 변경**(예: 카운터)을 관리할 때 사용합니다.
 
@@ -80,7 +80,7 @@ Consumer(
 final counterProvider = StateProvider<int>((ref) => 0);
 ```
 
-✔ **UI에서 사용**
+#### UI에서 사용
 ```dart
 Consumer(
   builder: (context, ref, child) {
@@ -103,12 +103,11 @@ Consumer(
 
 ---
 
-## 4. `StateNotifierProvider` (복잡한 상태 관리)
+## 4️⃣ `StateNotifierProvider` (복잡한 상태 관리)
 
 **클래스 기반 상태 관리** (`ChangeNotifier` 대체) 이며, 여러 개의 값을 가진 **복잡한 상태**를 관리할 때 사용합니다.
 
-
-### `StateNotifier` 상태 클래스 만들기
+#### 1. `StateNotifier` 상태 클래스 만들기
 ```dart
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -123,9 +122,7 @@ final counterNotifierProvider =
     StateNotifierProvider<CounterNotifier, int>((ref) => CounterNotifier());
 ```
 
----
-
-### UI 에서 사용
+#### 2. UI 에서 사용
 ```dart
 Consumer(
   builder: (context, ref, child) {
@@ -152,11 +149,11 @@ Consumer(
 
 ---
 
-## 5. `FutureProvider` (비동기 데이터 관리)
+## 5️⃣ `FutureProvider` (비동기 데이터 관리)
 
 API 호출과 같은 **비동기 작업**을 처리할 때 사용합니다.
 
-### `FutureProvider` 선언
+#### 1. `FutureProvider` 선언
 ```dart
 final dataProvider = FutureProvider<String>((ref) async {
   await Future.delayed(Duration(seconds: 2)); // 2초 후 데이터 반환
@@ -164,9 +161,7 @@ final dataProvider = FutureProvider<String>((ref) async {
 });
 ```
 
----
-
-### UI 에서 사용
+#### 2. UI 에서 사용
 ```dart
 Consumer(
   builder: (context, ref, child) {
@@ -188,20 +183,18 @@ Consumer(
 
 ---
 
-## 6. `StreamProvider` (실시간 데이터)
+## 6️⃣ `StreamProvider` (실시간 데이터)
 
 Firebase 등 **실시간 데이터를 관리**할 때 사용합니다.
 
-### `StreamProvider` 선언
+#### 1. `StreamProvider` 선언
 ```dart
 final counterStreamProvider = StreamProvider<int>((ref) {
   return Stream.periodic(Duration(seconds: 1), (count) => count);
 });
 ```
 
----
-
-### UI 에서 사용
+#### 2. UI 에서 사용
 ```dart
 Consumer(
   builder: (context, ref, child) {
@@ -220,7 +213,7 @@ Consumer(
 
 ---
 
-## 7. `ProviderScope` (전역 Provider 관리)
+## 7️⃣ `ProviderScope` (전역 Provider 관리)
 
 Riverpod을 사용하려면 `ProviderScope`를 최상위 위젯에 추가해야 합니다.
 
