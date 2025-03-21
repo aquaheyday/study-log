@@ -1,11 +1,11 @@
-# 🔲 네비게이션
+# 🔲 Flutter 네비게이션
 
 Flutter에서 **네비게이션(Navigation)** 은 화면(페이지) 간 이동을 관리하는 중요한 개념입니다.  
 Flutter의 네비게이션 시스템은 `Navigator`를 기반으로 하며, **페이지 이동(push/pop), 네임드 라우트(named routes), 탭 네비게이션(Tab Navigation), Drawer(사이드바 메뉴)** 등을 지원합니다.
 
 ---
 
-## 1. Flutter 네비게이션 개념
+## 1️⃣ Flutter 네비게이션 개념
 
 - Flutter는 **스택(Stack) 기반 네비게이션**을 사용합니다.
 - `Navigator.push()` → 새 화면을 스택에 추가 (페이지 이동)
@@ -13,9 +13,9 @@ Flutter의 네비게이션 시스템은 `Navigator`를 기반으로 하며, **�
 
 ---
 
-## 2. 기본 네비게이션 (`Navigator` 사용)
+## 2️⃣ 기본 네비게이션 (`Navigator` 사용)
 
-### `Navigator.push()` (새 페이지로 이동)
+### 1) `Navigator.push()` (새 페이지로 이동)
 
 ```dart
 Navigator.push(
@@ -29,7 +29,7 @@ Navigator.push(
 
 ---
 
-### `Navigator.pop()` (이전 페이지로 이동)
+### 2) `Navigator.pop()` (이전 페이지로 이동)
 
 ```dart
 Navigator.pop(context);
@@ -39,11 +39,15 @@ Navigator.pop(context);
 
 ---
 
-## 3. 네임드 라우트 (`Named Routes`)
+## 3️⃣ 네임드 라우트 (`Named Routes`)
 
 Flutter는 **경로(URL) 기반의 네비게이션**을 지원하며, **네임드 라우트(named routes)**를 사용할 수 있습니다.
 
-### 네임드 라우트 설정 (`MaterialApp`에 등록)
+#### 네임드 라우트 사용 시의 장점
+- 여러 화면을 이동할 때 경로(URL) 기반으로 관리 가능
+- 유지보수 및 코드 가독성이 좋아짐
+  
+### 1) 네임드 라우트 설정 (`MaterialApp`에 등록)
 
 ```dart
 void main() {
@@ -57,27 +61,27 @@ void main() {
 }
 ```
 
-### `Navigator.pushNamed()`로 페이지 이동
+---
+
+### 2)`Navigator.pushNamed()`로 페이지 이동
 
 ```dart
 Navigator.pushNamed(context, '/second');
 ```
 
-### `Navigator.pop()`으로 뒤로가기
+---
+
+### 3) `Navigator.pop()`으로 뒤로가기
 
 ```dart
 Navigator.pop(context);
 ```
 
-✔ **네임드 라우트 사용 시의 장점**
-- 여러 화면을 이동할 때 경로(URL) 기반으로 관리 가능
-- 유지보수 및 코드 가독성이 좋아짐
-
 ---
 
-## 4. 데이터 전달하기
+## 4️⃣ 데이터 전달하기
 
-### `push()`로 데이터 전달
+### 1) `push()`로 데이터 전달
 
 ```dart
 Navigator.push(
@@ -88,7 +92,7 @@ Navigator.push(
 );
 ```
 
-**SecondPage.dart**
+#### SecondPage.dart
 ```dart
 class SecondPage extends StatelessWidget {
   final String data;
@@ -107,7 +111,7 @@ class SecondPage extends StatelessWidget {
 
 ---
 
-### `pushNamed()`로 데이터 전달 (arguments 사용)
+### 2) `pushNamed()`로 데이터 전달 (arguments 사용)
 ```dart
 Navigator.pushNamed(
   context,
@@ -116,7 +120,7 @@ Navigator.pushNamed(
 );
 ```
 
-**SecondPage.dart**
+#### SecondPage.dart
 ```dart
 class SecondPage extends StatelessWidget {
   @override
@@ -135,7 +139,7 @@ class SecondPage extends StatelessWidget {
 
 ---
 
-## 5. `Navigator.pushReplacement()` (현재 페이지 대체)
+## 5️⃣ `Navigator.pushReplacement()` (현재 페이지 대체)
 
 현재 페이지를 새로운 페이지로 대체하고, 이전 페이지를 **스택에서 제거**.
 
@@ -150,7 +154,7 @@ Navigator.pushReplacement(
 
 ---
 
-## 6. `Navigator.pushAndRemoveUntil()` (이전 페이지 삭제)
+## 6️⃣ `Navigator.pushAndRemoveUntil()` (이전 페이지 삭제)
 
 - 특정 조건이 충족될 때까지 모든 이전 페이지를 제거하고 새 페이지로 이동.
 
@@ -166,7 +170,7 @@ Navigator.pushAndRemoveUntil(
 
 ---
 
-## 7. `BottomNavigationBar` (하단 탭 네비게이션)
+## 7️⃣ `BottomNavigationBar` (하단 탭 네비게이션)
 
 앱 하단에 **탭바(Tab Bar)** 를 추가하여 여러 화면을 쉽게 전환할 수 있음.
 
@@ -213,7 +217,7 @@ class _BottomNavExampleState extends State<BottomNavExample> {
 
 ---
 
-## 8. `Drawer` (사이드 네비게이션 메뉴)
+## 8️⃣ `Drawer` (사이드 네비게이션 메뉴)
 
 왼쪽에서 열리는 **사이드바 메뉴 (햄버거 메뉴)** 를 추가할 수 있음.
 
