@@ -1,11 +1,11 @@
-# 🔲 폼과 입력 필드
+# 🔲 Flutter 폼과 입력 필드
 
 Flutter에서 **폼(Form)과 입력 필드(Input Fields)** 는 **사용자의 입력을 처리하는 핵심 요소**입니다.  
 사용자가 텍스트를 입력하거나, 버튼을 눌러 데이터를 제출하는 기능을 구현할 수 있습니다.
 
 ---
 
-## 1. 폼(Form)이란?
+## 1️⃣ 폼(Form)이란?
 
 - `Form` 위젯을 사용하여 여러 개의 입력 필드를 그룹화할 수 있습니다.
 - `TextFormField`를 사용하면 **입력값 검증(Validation)** 이 가능합니다.
@@ -13,10 +13,11 @@ Flutter에서 **폼(Form)과 입력 필드(Input Fields)** 는 **사용자의 �
 
 ---
 
-## 2. 기본 입력 필드 (TextField)
+## 2️⃣ 기본 입력 필드 (`TextField`)
 
 Flutter에서 가장 기본적인 입력 필드는 `TextField`입니다.
 
+#### 예제
 ```dart
 TextField(
   decoration: InputDecoration(
@@ -27,7 +28,7 @@ TextField(
 )
 ```
 
-✔ **TextField 주요 속성**
+#### TextField 주요 속성
 | 속성 | 설명 |
 |------|------|
 | `controller` | 입력된 값을 제어 |
@@ -38,7 +39,7 @@ TextField(
 
 ---
 
-## 3. `TextEditingController`를 활용한 입력값 가져오기
+## 3️⃣ `TextEditingController`를 활용한 입력값 가져오기
 
 `TextEditingController`를 사용하면 입력된 값을 가져올 수 있습니다.
 
@@ -64,7 +65,7 @@ ElevatedButton(
 
 ---
 
-## 4. 폼 (`Form`)과 입력값 검증 (`TextFormField`)
+## 4️⃣ 폼 (`Form`)과 입력값 검증 (`TextFormField`)
 
 `TextFormField`는 `Form` 위젯과 함께 사용하여 **입력 검증(Validation)**이 가능합니다.
 
@@ -97,15 +98,15 @@ Form(
 )
 ```
 
-✔ **폼 검증(Validation)**
+#### 폼 검증(Validation)
 - `validator` → 입력값을 확인하고, 오류 메시지를 반환할 수 있음.
 - `_formKey.currentState!.validate()` → 폼이 유효한지 검사.
 
 ---
 
-## 5. 다양한 입력 필드 종류
+## 5️⃣ 다양한 입력 필드 종류
 
-### `keyboardType` (숫자 입력)
+### 1) `keyboardType` (숫자 입력)
 ```dart
 TextField(
   keyboardType: TextInputType.number,
@@ -113,7 +114,9 @@ TextField(
 )
 ```
 
-### `obscureText` (비밀번호 입력)
+---
+
+### 2) `obscureText` (비밀번호 입력)
 ```dart
 TextField(
   obscureText: true,
@@ -121,7 +124,9 @@ TextField(
 )
 ```
 
-### `maxLines` (다중 줄 입력)
+---
+
+### 3) `maxLines` (다중 줄 입력)
 ```dart
 TextField(
   maxLines: 3, // 여러 줄 입력 가능
@@ -131,7 +136,7 @@ TextField(
 
 ---
 
-## 6. 입력 필드 디자인 커스텀
+## 6️⃣ 입력 필드 디자인 커스텀
 
 입력 필드를 스타일링하려면 `InputDecoration`을 활용합니다.
 
@@ -149,7 +154,7 @@ TextField(
 )
 ```
 
-✔ **주요 속성**
+#### 주요 속성
 | 속성 | 설명 |
 |------|------|
 | `labelText` | 필드 위에 표시되는 라벨 |
@@ -161,9 +166,9 @@ TextField(
 
 ---
 
-## 7. 체크박스, 라디오 버튼, 스위치
+## 7️⃣ 체크박스, 라디오 버튼, 스위치
 
-### `Checkbox` (체크박스)
+### 1) `Checkbox` (체크박스)
 ```dart
 bool _isChecked = false;
 
@@ -179,7 +184,7 @@ Checkbox(
 
 ---
 
-### `Radio` (라디오 버튼)
+### 2) `Radio` (라디오 버튼)
 ```dart
 String _selectedGender = "남성";
 
@@ -213,7 +218,7 @@ Column(
 
 ---
 
-### `Switch` (스위치)
+### 3) `Switch` (스위치)
 ```dart
 bool _isSwitched = false;
 
@@ -229,7 +234,7 @@ Switch(
 
 ---
 
-## 8. `DropdownButton` (드롭다운 버튼)
+## 8️⃣ `DropdownButton` (드롭다운 버튼)
 
 사용자가 목록에서 하나를 선택할 수 있는 드롭다운 메뉴입니다.
 
