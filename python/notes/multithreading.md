@@ -5,7 +5,7 @@ Python에서 **멀티스레딩(Multithreading)** 을 사용하면 **여러 작�
 
 ---
 
-## 1. 멀티스레딩이란?
+## 1️⃣ 멀티스레딩이란?
 
 - **멀티스레딩(Multithreading)** 은 **하나의 프로세스에서 여러 개의 작업(스레드)을 동시에 실행**하는 기법입니다.
 - CPU를 활용하는 작업보다는 **I/O 작업(파일 처리, 네트워크 요청 등)에 적합**합니다.
@@ -16,11 +16,11 @@ Python에서 **멀티스레딩(Multithreading)** 을 사용하면 **여러 작�
 
 ---
 
-## 2. `threading` 모듈로 멀티스레드 구현
+## 2️⃣ `threading` 모듈로 멀티스레드 구현
 
 Python에서 기본 제공하는 `threading` 모듈을 사용하여 멀티스레드를 실행할 수 있습니다.
 
-### 기본적인 스레드 생성 (`threading.Thread`)
+#### 기본적인 스레드 생성 (`threading.Thread`)
 ```python
 import threading
 
@@ -40,7 +40,7 @@ print("메인 스레드 실행 완료!")
 
 ---
 
-## 3. 여러 개의 스레드 실행
+## 3️⃣ 여러 개의 스레드 실행
 
 여러 개의 스레드를 실행하면 동시에 여러 작업을 수행할 수 있습니다.
 
@@ -71,12 +71,12 @@ print("모든 스레드 종료!")
 
 ---
 
-## 4. 스레드 동기화 (`Lock` 사용)
+## 4️⃣ 스레드 동기화 (`Lock` 사용)
 
 멀티스레딩 환경에서는 **여러 스레드가 동시에 자원(변수, 파일 등)을 변경하면 충돌**이 발생할 수 있습니다.  
 이를 방지하기 위해 **`Lock` (뮤텍스, Mutex)** 을 사용하여 **한 번에 하나의 스레드만 특정 코드 블록을 실행**하도록 할 수 있습니다.
 
-### `Lock`을 사용한 동기화 예제
+#### 예제
 ```python
 import threading
 
@@ -107,11 +107,11 @@ print("최종 카운터 값:", counter)
 
 ---
 
-## 5. `ThreadPoolExecutor`를 사용한 간편한 멀티스레딩
+## 5️⃣ `ThreadPoolExecutor`를 사용한 간편한 멀티스레딩
 
 Python의 **`concurrent.futures.ThreadPoolExecutor`** 를 사용하면 **더 간편하게 멀티스레딩을 구현**할 수 있습니다.
 
-### `ThreadPoolExecutor` 사용 예제
+#### 예제
 ```python
 import concurrent.futures
 import time
@@ -131,7 +131,7 @@ for result in results:
 
 ---
 
-## 6. GIL (Global Interpreter Lock) 이슈
+## 6️⃣ GIL (Global Interpreter Lock) 이슈
 
 - Python은 **GIL(Global Interpreter Lock)** 이 존재하여 **멀티코어 CPU를 활용한 병렬 처리에 제한**이 있음.
 - GIL은 **한 번에 하나의 스레드만 Python 바이트코드를 실행하도록 강제**함.
@@ -142,7 +142,7 @@ for result in results:
 
 ---
 
-## 7. 멀티스레딩 vs 멀티프로세싱
+## 7️⃣ 멀티스레딩 vs 멀티프로세싱
 
 멀티스레딩(`threading`)과 멀티프로세싱(`multiprocessing`)은 목적이 다릅니다.
 
