@@ -1,11 +1,11 @@
-# 🔄 Redux 기본 개념
+# 🔄 React Redux 기본 개념
 
 **Redux**는 **React 애플리케이션에서 상태를 효율적으로 관리하기 위한 상태 관리 라이브러리**입니다.  
 Redux를 사용하면 **전역 상태(Global State)를 관리**하고, 컴포넌트 간의 **데이터 흐름을 예측 가능하게** 만들 수 있습니다.
 
 ---
 
-## 1. Redux란?
+## 1️⃣ Redux란?
 
 - 중앙 집중식 상태 관리 (전역 상태 저장소 `Store` 활용)  
 - 단방향 데이터 흐름 (Flux 패턴) → State → View → Action → Reducer  
@@ -13,7 +13,7 @@ Redux를 사용하면 **전역 상태(Global State)를 관리**하고, 컴포넌
 
 ---
 
-## 2. Redux 동작 흐름
+## 2️⃣ Redux 동작 흐름
 
 ```plaintext
 사용자 이벤트 → Action → Reducer → Store 업데이트 → UI 리렌더링
@@ -21,23 +21,23 @@ Redux를 사용하면 **전역 상태(Global State)를 관리**하고, 컴포넌
 
 Redux는 3가지 핵심 개념을 기반으로 작동합니다.
 
-### Store (저장소)
+#### 1. Store (저장소)
 - 애플리케이션의 전역 상태를 저장
 - `createStore()`를 사용하여 생성
 
-### Action (액션)
+#### 2. Action (액션)
 - 상태(State)를 변경하는 이벤트 객체
 - `{ type: "INCREMENT" }` 형태로 사용
 
-### Reducer (리듀서)
+#### 3. Reducer (리듀서)
 - `Action`을 받아 새로운 State를 반환하는 함수
 - `switch(action.type)`을 사용하여 상태 변경
 
 ---
 
-## 3. Redux 설치 및 설정
+## 3️⃣ Redux 설치 및 설정
 
-### Redux 설치
+#### Redux 설치
 ```sh
 npm install redux react-redux
 ```
@@ -46,9 +46,9 @@ npm install redux react-redux
 
 ---
 
-## 4. Redux 기본 코드 구조
+## 4️⃣ Redux 기본 코드 구조
 
-### `store.js` - 전역 상태 저장소 생성
+#### 1. `store.js` - 전역 상태 저장소 생성
 ```jsx
 import { createStore } from "redux";
 import counterReducer from "./counterReducer";
@@ -58,9 +58,7 @@ export default store;
 ```
 ✔ `createStore(reducer)` → Redux 스토어 생성  
 
----
-
-### `counterReducer.js` - 리듀서 정의
+#### 2. `counterReducer.js` - 리듀서 정의
 ```jsx
 const initialState = { count: 0 };
 
@@ -79,18 +77,14 @@ export default counterReducer;
 ```
 ✔ `action.type`에 따라 **State를 변경**  
 
----
-
-### `actions.js` - 액션 생성
+#### 3. `actions.js` - 액션 생성
 ```jsx
 export const increment = () => ({ type: "INCREMENT" });
 export const decrement = () => ({ type: "DECREMENT" });
 ```
 ✔ 액션 객체 `{ type: "INCREMENT" }` 반환  
 
----
-
-### 4-4. `index.js` - React와 Redux 연결
+#### 4. `index.js` - React와 Redux 연결
 ```jsx
 import React from "react";
 import ReactDOM from "react-dom";
@@ -107,9 +101,7 @@ ReactDOM.render(
 ```
 ✔ `<Provider store={store}>` → **Redux Store를 React에 연결**  
 
----
-
-### `Counter.js` - Redux 상태 사용하기
+#### 5. `Counter.js` - Redux 상태 사용하기
 ```jsx
 import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement } from "./actions";
@@ -134,7 +126,7 @@ export default Counter;
 
 ---
 
-## 5. Redux의 핵심 원칙
+## 5️⃣ Redux의 핵심 원칙
 
 | 원칙 | 설명 |
 |------|------|
@@ -144,7 +136,7 @@ export default Counter;
 
 ---
 
-## 6. Redux 사용 시 장점과 단점
+## 6️⃣ Redux 사용 시 장점과 단점
 
 ### ✅ **Redux의 장점**
 ✔ **컴포넌트 간 상태 공유가 쉬움**  
@@ -158,7 +150,7 @@ export default Counter;
 
 ---
 
-## 7. Redux vs Context API 비교
+## 7️⃣ Redux vs Context API 비교
 
 | 특징 | Redux | Context API |
 |------|-------|------------|
@@ -172,16 +164,16 @@ export default Counter;
 
 ---
 
-## 8. Redux DevTools 설정 (디버깅 도구)
+## 8️⃣ Redux DevTools 설정 (디버깅 도구)
 
 Redux 개발을 편리하게 하기 위해 `Redux DevTools`를 사용하면 상태 변경 내역을 쉽게 추적 가능합니다.
 
-### Redux DevTools 설치
+#### 1. Redux DevTools 설치
 ```sh
 npm install redux-devtools-extension
 ```
 
-### `store.js`에서 설정 추가
+#### 2. `store.js`에서 설정 추가
 ```jsx
 import { createStore } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
