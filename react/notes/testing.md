@@ -1,10 +1,10 @@
-# 🛠️ Jest와 React Testing Library
+# 🛠️ React Jest와 React Testing Library
 
 React에서 **Jest와 React Testing Library(RTL)** 를 활용하여 컴포넌트를 효과적으로 테스트하는 방법을 정리했습니다.
 
 ---
 
-## 1. Jest & React Testing Library란?
+## 1️⃣ Jest & React Testing Library란?
 
 - `Jest`: JavaScript 테스팅 프레임워크로 React와 함께 사용하기 좋음
 - `React Testing Library (RTL)`: React 컴포넌트를 실제 사용자 관점에서 테스트하는 라이브러리
@@ -13,14 +13,14 @@ React에서 **Jest와 React Testing Library(RTL)** 를 활용하여 컴포넌트
 
 ---
 
-## 2. Jest & React Testing Library 설치하기
+## 2️⃣ Jest & React Testing Library 설치하기
 
-### Jest & RTL 설치
+#### 1. Jest & RTL 설치
 ```sh
 npm install --save-dev jest @testing-library/react @testing-library/jest-dom
 ```
 
-### `package.json` 설정 추가
+#### 2. `package.json` 설정 추가
 ```json
 {
   "scripts": {
@@ -31,7 +31,7 @@ npm install --save-dev jest @testing-library/react @testing-library/jest-dom
 
 ---
 
-## 3. React Testing Library 기본 개념
+## 3️⃣ React Testing Library 기본 개념
 - `render()` → 컴포넌트를 가상 DOM에 렌더링  
 - `screen` → 렌더링된 요소를 찾을 때 사용  
 - `fireEvent` / `userEvent` → 이벤트를 시뮬레이션  
@@ -40,9 +40,9 @@ npm install --save-dev jest @testing-library/react @testing-library/jest-dom
 
 ---
 
-## 4. 기본적인 컴포넌트 테스트
+## 4️⃣ 기본적인 컴포넌트 테스트
 
-### 렌더링 테스트
+#### 렌더링 테스트
 ```jsx
 // components/Hello.js
 import React from 'react';
@@ -65,9 +65,9 @@ test('Hello 컴포넌트가 올바르게 렌더링되는지 테스트', () => {
 
 ---
 
-## 5. 이벤트 핸들링 테스트
+## 5️⃣ 이벤트 핸들링 테스트
 
-### 버튼 클릭 테스트
+#### 버튼 클릭 테스트
 ```jsx
 // components/Counter.js
 import React, { useState } from 'react';
@@ -103,7 +103,7 @@ test('버튼 클릭 시 카운트가 증가하는지 테스트', async () => {
 
 ---
 
-## 6. 비동기 코드 테스트
+## 6️⃣ 비동기 코드 테스트
 
 API 호출을 포함한 컴포넌트 테스트 방법
 
@@ -151,9 +151,9 @@ test('API 데이터를 불러와서 렌더링하는지 테스트', async () => {
 
 ---
 
-## 7. React Router와 Redux 상태 테스트
-React Router 테스트
+## 7️⃣ React Router와 Redux 상태 테스트
 
+#### React Router 테스트
 ```jsx
 // components/Home.js
 import React from 'react';
@@ -189,7 +189,7 @@ test('Home 페이지가 올바르게 렌더링되는지 테스트', () => {
 
 ---
 
-## 8. Jest & RTL을 활용한 테스트 팁
+## 8️⃣ Jest & RTL을 활용한 테스트 팁
 - 가능한 한 사용자의 실제 행동을 시뮬레이션
 - React Testing Library의 쿼리 메서드를 적절히 활용 (`getByText`, `getByRole`)
 - 비동기 테스트 시 `waitFor()`를 활용하여 데이터 로딩을 기다림
