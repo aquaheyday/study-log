@@ -1,4 +1,4 @@
-# 🔲 폼과 입력 관리
+# 🔲 React 폼과 입력 관리
 
 React에서 폼(Form) 요소는 HTML과 유사하지만,  
 입력값을 관리하고 상태(State)를 활용하는 방식이 다릅니다.  
@@ -8,7 +8,7 @@ React에서는 **Controlled Component (제어 컴포넌트)** 를 사용하여
 
 ---
 
-## 1. HTML 폼과의 차이점
+## 1️⃣ HTML 폼과의 차이점
 
 | 특징 | HTML (기본) | React (Controlled) |
 |------|------------|-------------------|
@@ -20,11 +20,11 @@ React에서는 **Controlled Component (제어 컴포넌트)** 를 사용하여
 
 ---
 
-## 2. Controlled Component (제어 컴포넌트)
+## 2️⃣ Controlled Component (제어 컴포넌트)
 
 React에서는 **폼 요소의 상태를 `state`로 관리**하는 방식을 사용합니다.
 
-### 단일 입력 필드 관리
+### 1) 단일 입력 필드 관리
 ```jsx
 import { useState } from "react";
 
@@ -50,7 +50,7 @@ export default TextInput;
 
 ---
 
-### 여러 개의 입력 필드 관리
+### 2) 여러 개의 입력 필드 관리
 여러 개의 `input` 필드를 관리할 경우, `name` 속성을 활용합니다.
 
 ```jsx
@@ -79,7 +79,7 @@ export default UserForm;
 
 ---
 
-### 체크박스 (Checkbox) 입력 관리
+### 3) 체크박스 (Checkbox) 입력 관리
 ```jsx
 import { useState } from "react";
 
@@ -104,7 +104,7 @@ export default CheckboxExample;
 
 ---
 
-### 라디오 버튼 (Radio) 입력 관리
+### 4) 라디오 버튼 (Radio) 입력 관리
 ```jsx
 import { useState } from "react";
 
@@ -136,7 +136,7 @@ export default RadioExample;
 
 ---
 
-### 드롭다운 (Select) 입력 관리
+### 5) 드롭다운 (Select) 입력 관리
 ```jsx
 import { useState } from "react";
 
@@ -165,7 +165,7 @@ export default SelectExample;
 
 ---
 
-## 3. Form 제출 이벤트 (`onSubmit`)
+## 3️⃣ Form 제출 이벤트 (`onSubmit`)
 
 React에서는 `onSubmit`을 사용하여 **폼 제출 이벤트를 처리**할 수 있습니다.
 
@@ -195,7 +195,7 @@ export default FormSubmit;
 
 ---
 
-## 4. Uncontrolled Component (비제어 컴포넌트)
+## 4️⃣ Uncontrolled Component (비제어 컴포넌트)
 폼 요소의 값을 **React `state`가 아닌 `ref`를 통해 직접 제어**하는 방식입니다.
 
 ```jsx
