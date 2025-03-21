@@ -28,7 +28,7 @@ TextField(
 )
 ```
 
-#### TextField 주요 속성
+#### `TextField` 주요 속성
 | 속성 | 설명 |
 |------|------|
 | `controller` | 입력된 값을 제어 |
