@@ -5,7 +5,7 @@
 
 ---
 
-## 1. 데이터 시각화란?
+## 1️⃣ 데이터 시각화란?
 
 - 데이터를 시각적으로 표현하여 **트렌드와 패턴을 쉽게 이해**할 수 있음.
 - 데이터 분석, 보고서 작성, 머신러닝 결과 해석 등에 필수적.
@@ -16,14 +16,14 @@
 
 ---
 
-## 2. 라이브러리 설치 및 불러오기
+## 2️⃣ 라이브러리 설치 및 불러오기
 
-### 설치
+### 1) 설치
 ```sh
 pip install matplotlib seaborn
 ```
 
-### 라이브러리 불러오기
+### 2) 라이브러리 불러오기
 ```python
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -36,9 +36,9 @@ import pandas as pd
 
 ---
 
-## 3. Matplotlib 기본 사용법
+## 3️⃣ Matplotlib 기본 사용법
 
-### 선 그래프(Line Plot) 그리기
+### 1) 선 그래프(Line Plot) 그리기
 ```python
 x = [1, 2, 3, 4, 5]
 y = [10, 20, 25, 30, 40]
@@ -59,7 +59,7 @@ plt.show()
 
 ---
 
-### 막대 그래프(Bar Chart)
+### 2) 막대 그래프(Bar Chart)
 ```python
 categories = ["A", "B", "C", "D"]
 values = [3, 7, 5, 8]
@@ -76,7 +76,7 @@ plt.show()
 
 ---
 
-### 히스토그램(Histogram)
+### 3) 히스토그램(Histogram)
 ```python
 data = np.random.randn(1000)  # 정규분포 데이터 생성
 
@@ -91,7 +91,7 @@ plt.show()
 
 ---
 
-### 산점도(Scatter Plot)
+### 4) 산점도(Scatter Plot)
 ```python
 x = np.random.rand(50)
 y = np.random.rand(50)
@@ -106,11 +106,11 @@ plt.show()
 
 ---
 
-## 4. Seaborn을 활용한 고급 그래프
+## 4️⃣ Seaborn을 활용한 고급 그래프
 
 Seaborn은 Matplotlib을 기반으로 더욱 **미려한 스타일과 통계 분석 기능**을 제공하는 라이브러리입니다.
 
-### Seaborn 스타일 설정
+### 1) Seaborn 스타일 설정
 ```python
 sns.set_theme(style="darkgrid")  # 스타일 적용
 ```
@@ -118,7 +118,7 @@ sns.set_theme(style="darkgrid")  # 스타일 적용
 
 ---
 
-### Seaborn 막대 그래프 (`barplot`)
+### 2) Seaborn 막대 그래프 (`barplot`)
 ```python
 tips = sns.load_dataset("tips")  # 예제 데이터셋 불러오기
 sns.barplot(x="day", y="total_bill", data=tips, palette="pastel")
@@ -130,7 +130,7 @@ plt.show()
 
 ---
 
-### Seaborn 히스토그램 (`histplot`)
+### 3) Seaborn 히스토그램 (`histplot`)
 ```python
 sns.histplot(tips["total_bill"], bins=30, kde=True, color="blue")
 plt.title("Seaborn 히스토그램")
@@ -140,7 +140,7 @@ plt.show()
 
 ---
 
-### Seaborn 박스 플롯(Box Plot)
+### 4) Seaborn 박스 플롯(Box Plot)
 ```python
 sns.boxplot(x="day", y="total_bill", data=tips, palette="coolwarm")
 plt.title("Seaborn 박스 플롯")
@@ -150,7 +150,7 @@ plt.show()
 
 ---
 
-### Seaborn 산점도 + 회귀선 (`regplot`)
+### 5) Seaborn 산점도 + 회귀선 (`regplot`)
 ```python
 sns.regplot(x="total_bill", y="tip", data=tips)
 plt.title("Seaborn 회귀선 그래프")
@@ -160,11 +160,11 @@ plt.show()
 
 ---
 
-## 5. Pandas 데이터 시각화 (`plot` 사용)
+## 5️⃣ Pandas 데이터 시각화 (`plot` 사용)
 
 Pandas의 DataFrame에서도 직접 시각화가 가능합니다.
 
-### Pandas 선 그래프
+### 1) Pandas 선 그래프
 ```python
 df = pd.DataFrame({
     "월": ["1월", "2월", "3월", "4월"],
@@ -179,20 +179,20 @@ plt.show()
 
 ---
 
-## 6. 그래프 스타일 & 꾸미기
+## 6️⃣ 그래프 스타일 & 꾸미기
 
-### 그래프 크기 설정 (`figsize`)
+### 1) 그래프 크기 설정 (`figsize`)
 ```python
 plt.figure(figsize=(10, 5))  # 가로 10, 세로 5 크기 설정
 ```
 
-### 눈금(font 크기 조정)
+### 2) 눈금(font 크기 조정)
 ```python
 plt.xticks(fontsize=12)
 plt.yticks(fontsize=12)
 ```
 
-### 여러 개의 그래프 그리기 (`subplot`)
+### 3) 여러 개의 그래프 그리기 (`subplot`)
 ```python
 fig, axes = plt.subplots(1, 2, figsize=(12, 5))
 
