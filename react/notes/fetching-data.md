@@ -1,11 +1,11 @@
-# 🌍 데이터 Fetching
+# 🌍 React 데이터 Fetching
 
 **React 에서 데이터 Fetching (데이터 가져오기)** 은 서버나 API에서 데이터를 요청하고 받아오는 과정입니다.  
 주로 `fetch()`, `axios`, `React Query`, `SWR` 등을 사용하여 데이터를 가져옵니다.
 
 ---
 
-## 1. 데이터 Fetching의 필요성
+## 1️⃣ 데이터 Fetching의 필요성
 
 - 클라이언트에서 서버 API 데이터를 요청 및 사용 가능
 - 비동기 요청을 통해 사용자 경험 개선
@@ -14,7 +14,7 @@
 
 ---
 
-## 2. Fetch API 사용 (기본 방법)
+## 2️⃣ Fetch API 사용 (기본 방법)
 
 ```jsx
 import { useEffect, useState } from "react";
@@ -57,7 +57,7 @@ export default App;
 
 ---
 
-## 3. Axios 사용 (더 간결한 HTTP 요청)
+## 3️⃣ Axios 사용 (더 간결한 HTTP 요청)
 
 ```sh
 npm install axios
@@ -99,7 +99,7 @@ export default App;
 
 ---
 
-## 4. React Query 사용 (비동기 상태 관리)
+## 4️⃣ React Query 사용 (비동기 상태 관리)
 
 ```sh
 npm install @tanstack/react-query
@@ -131,7 +131,7 @@ export default App;
 
 ---
 
-## 5. SWR 사용 (React Query와 유사)
+## 5️⃣ SWR 사용 (React Query와 유사)
 
 ```sh
 npm install swr
@@ -160,7 +160,7 @@ export default App;
 
 ---
 
-## 6. 데이터 Fetching 방식 비교
+## 6️⃣ 데이터 Fetching 방식 비교
 
 | 방법 | 캐싱 지원 | 추가 패키지 필요 | 사용 난이도 |
 |------|---------|----------------|------------|
