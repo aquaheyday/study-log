@@ -50,7 +50,7 @@
 ## 🌍 웹 개발
 | 번호 | 주제 | 파일명 | 설명 |
 |---|---|---|---|
-| 13 | 폼 처리 및 검증 | [form-handling.md](./notes/form-handling.md) | GET, POST 요청 처리, 필터링 |
+| 13 | 폼 처리 및 입력 검증 | [form-handling.md](./notes/form-handling.md) | GET, POST 요청 처리, 필터링 |
 | 14 | HTTP 요청 및 API 연동 | [http-api.md](./notes/http-api.md) | cURL, file_get_contents 활용 |
 | 15 | PHP와 JavaScript 연동 | [php-js.md](./notes/php-js.md) | AJAX, JSON, WebSocket |
 
