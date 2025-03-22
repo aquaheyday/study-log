@@ -9,8 +9,8 @@
 
 ### 1) Windows
 
-- [https://getcomposer.org/](https://getcomposer.org/)에서 설치 프로그램 다운로드 후 실행  
-- 설치 중 PHP 경로를 물어보면 `php.exe` 경로 선택
+#### 1. [https://getcomposer.org/](https://getcomposer.org/)에서 설치 프로그램 다운로드 후 실행  
+#### 2. 설치 중 PHP 경로를 물어보면 `php.exe` 경로 선택
 
 ---
 
@@ -50,7 +50,7 @@ composer -V
 composer init
 ```
 
-- 프로젝트 이름, 설명, 라이선스, 패키지 의존성 등을 입력하면 자동으로 `composer.json` 파일이 생성됩니다.
+✔ 프로젝트 이름, 설명, 라이선스, 패키지 의존성 등을 입력하면 자동으로 `composer.json` 파일이 생성됩니다.  
 
 ---
 
