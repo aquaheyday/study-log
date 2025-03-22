@@ -15,21 +15,61 @@
 
 ---
 
-## 📋 개념 정리 목록
+## 📋 Go 언어 개념 정리 목록
 
+### 📌 기본 개념
 | 번호 | 주제 | 파일명 | 설명 |
 |---|---|---|---|
-| 01 | 기본 문법 | [basic-syntax.md](./notes/basic-syntax.md) | 변수, 자료형, 제어문 등 기초 문법 정리 |
-| 02 | 함수와 메서드 | [functions.md](./notes/functions.md) | 함수 선언, 리턴값, 메서드 정의 및 활용법 |
-| 03 | 패키지와 모듈 | [packages.md](./notes/packages.md) | Go 모듈 관리, 패키지 구성법 |
-| 04 | 배열과 슬라이스 | [slices.md](./notes/slices.md) | 배열과 슬라이스 차이, 슬라이스 다루기 |
-| 05 | 맵(Map)과 구조체 | [maps-structs.md](./notes/maps-structs.md) | 맵과 구조체 활용법 |
-| 06 | 에러 처리 패턴 | [error-handling.md](./notes/error-handling.md) | 기본 에러 처리부터 커스텀 에러까지 |
-| 07 | 동시성 기본 | [concurrency.md](./notes/concurrency.md) | Goroutine, 채널, WaitGroup |
-| 08 | 파일 입출력 | [file-io.md](./notes/file-io.md) | 파일 읽기/쓰기, 에러 처리 패턴 |
-| 09 | HTTP 서버 만들기 | [http-server.md](./notes/http-server.md) | net/http로 간단한 서버 구현 |
-| 10 | 테스트와 벤치마크 | [testing.md](./notes/testing.md) | Go 기본 테스트 패턴 및 성능 테스트 |
-| 11 | 성능 최적화 팁 | [performance.md](./notes/performance.md) | 메모리 프로파일링, GC 튜닝 등 |
+| 01 | Go 언어 개요 | [go-intro.md](./notes/go-intro.md) | Go의 특징, 장점, 사용 사례 |
+| 02 | 개발 환경 설정 | [setup-go.md](./notes/setup-go.md) | Go 설치, GOPATH, 모듈 관리 |
+| 03 | 변수와 데이터 타입 | [variables.md](./notes/variables.md) | 기본 타입, 상수, 타입 추론 |
+| 04 | 연산자와 제어문 | [operators-control.md](./notes/operators-control.md) | 조건문, 반복문, switch 등 |
+| 05 | 배열, 슬라이스, 맵 | [collections.md](./notes/collections.md) | 컬렉션 타입 및 사용법 |
+
+### 🧱 함수와 구조체
+| 번호 | 주제 | 파일명 | 설명 |
+|---|---|---|---|
+| 06 | 함수 선언과 호출 | [functions.md](./notes/functions.md) | 다중 반환값, defer, 클로저 |
+| 07 | 구조체와 메서드 | [structs.md](./notes/structs.md) | 구조체 정의, 임베딩, 메서드 |
+| 08 | 인터페이스 | [interfaces.md](./notes/interfaces.md) | 인터페이스 개념과 사용법 |
+| 09 | 패키지와 모듈 | [packages.md](./notes/packages.md) | 패키지 분리, go mod 관리 |
+
+### 🔄 고급 기능
+| 번호 | 주제 | 파일명 | 설명 |
+|---|---|---|---|
+| 10 | 포인터와 메모리 | [pointers.md](./notes/pointers.md) | 포인터, new, make, 주소 연산 |
+| 11 | 고루틴과 채널 | [concurrency.md](./notes/concurrency.md) | 병렬 처리, 동기화, select |
+| 12 | 에러 처리 | [errors.md](./notes/errors.md) | error 인터페이스, custom error |
+| 13 | 제네릭 (Go 1.18+) | [generics.md](./notes/generics.md) | 제네릭 함수 및 타입 정의 |
+
+### 🌍 웹 개발
+| 번호 | 주제 | 파일명 | 설명 |
+|---|---|---|---|
+| 14 | 기본 웹 서버 | [http-server.md](./notes/http-server.md) | net/http로 웹 서버 구현 |
+| 15 | 라우팅과 핸들러 | [router.md](./notes/router.md) | URL 라우팅, 핸들러 분리 |
+| 16 | REST API 개발 | [rest-api.md](./notes/rest-api.md) | JSON 응답, CRUD API 만들기 |
+| 17 | HTML 템플릿 | [html-template.md](./notes/html-template.md) | 템플릿 렌더링, XSS 보호 |
+
+### 🗃️ 데이터 처리
+| 번호 | 주제 | 파일명 | 설명 |
+|---|---|---|---|
+| 18 | 파일 입출력 | [file-io.md](./notes/file-io.md) | os, ioutil, bufio 활용 |
+| 19 | 데이터베이스 연동 | [database.md](./notes/database.md) | sql 패키지, MySQL, PostgreSQL |
+| 20 | JSON 처리 | [json.md](./notes/json.md) | 인코딩/디코딩, struct 태그 |
+
+### 🔐 보안 및 최적화
+| 번호 | 주제 | 파일명 | 설명 |
+|---|---|---|---|
+| 21 | 인증과 세션 관리 | [auth-session.md](./notes/auth-session.md) | JWT, 쿠키, 미들웨어 |
+| 22 | 암호화와 해싱 | [crypto.md](./notes/crypto.md) | bcrypt, SHA256, TLS 인증 |
+| 23 | 성능 최적화 | [performance.md](./notes/performance.md) | 프로파일링, GOMAXPROCS |
+
+### 🛠️ 테스트 및 배포
+| 번호 | 주제 | 파일명 | 설명 |
+|---|---|---|---|
+| 24 | 단위 테스트 | [testing.md](./notes/testing.md) | `testing` 패키지, mock, benchmark |
+| 25 | 애플리케이션 빌드 | [build.md](./notes/build.md) | go build, cross compile, 버전 관리 |
+| 26 | 패키징과 배포 | [deployment.md](./notes/deployment.md) | Docker, systemd, CI/CD 배포 |
 
 ---
 
