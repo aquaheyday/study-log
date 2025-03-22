@@ -15,9 +15,9 @@
 
 ---
 
-# 📋 PHP 개념 정리 목록
+## 📋 PHP 개념 정리 목록
 
-## 📌 기본 개념
+### 📌 기본 개념
 | 번호 | 주제 | 파일명 | 설명 |
 |---|---|---|---|
 | 01 | PHP 개요 | [php-intro.md](./notes/php-intro.md) | PHP란? 특징과 장점 |
@@ -26,9 +26,7 @@
 | 04 | 연산자와 표현식 | [operators.md](./notes/operators.md) | 산술, 비교, 논리, 비트 연산자 |
 | 05 | 제어문 | [control-flow.md](./notes/control-flow.md) | if, switch, for, while 사용법 |
 
----
-
-## 🔲 함수와 객체지향 프로그래밍
+### 🔲 함수와 객체지향 프로그래밍
 | 번호 | 주제 | 파일명 | 설명 |
 |---|---|---|---|
 | 06 | 함수 사용법 | [functions.md](./notes/functions.md) | 함수 정의, 매개변수, 반환값, 익명 함수 |
@@ -36,27 +34,21 @@
 | 08 | 네임스페이스와 오토로딩 | [namespaces.md](./notes/namespaces.md) | 네임스페이스 활용, PSR-4 오토로딩 |
 | 09 | 예외 처리 | [exceptions.md](./notes/exceptions.md) | try-catch, throw, 사용자 정의 예외 |
 
----
-
-## 🔄 데이터 처리
+### 🔄 데이터 처리
 | 번호 | 주제 | 파일명 | 설명 |
 |---|---|---|---|
 | 10 | 파일 입출력 | [file-io.md](./notes/file-io.md) | 파일 읽기, 쓰기, 삭제 |
 | 11 | 데이터베이스 연동 | [database.md](./notes/database.md) | MySQL, PDO, Prepared Statement |
 | 12 | 세션과 쿠키 | [session-cookie.md](./notes/session-cookie.md) | 사용자 상태 관리, 보안 고려 사항 |
 
----
-
-## 🌍 웹 개발
+### 🌍 웹 개발
 | 번호 | 주제 | 파일명 | 설명 |
 |---|---|---|---|
 | 13 | 폼 처리 및 입력 검증 | [form-handling.md](./notes/form-handling.md) | GET, POST 요청 처리, 필터링 |
 | 14 | HTTP 요청 및 API 연동 | [http-api.md](./notes/http-api.md) | cURL, file_get_contents 활용 |
 | 15 | PHP와 JavaScript 연동 | [php-js.md](./notes/php-js.md) | AJAX, JSON, WebSocket |
 
----
-
-## 🚀 고급 개념
+### 🚀 고급 개념
 | 번호 | 주제 | 파일명 | 설명 |
 |---|---|---|---|
 | 16 | 정규 표현식 | [regex.md](./notes/regex.md) | preg_match, preg_replace 활용 |
@@ -64,27 +56,21 @@
 | 18 | 고급 함수형 프로그래밍 | [functional-programming.md](./notes/functional-programming.md) | 클로저, 콜백, 고차 함수 |
 | 19 | Composer 패키지 관리 | [composer.md](./notes/composer.md) | 의존성 관리, autoload 설정 |
 
----
-
-## 📊 PHP와 데이터 과학
+### 📊 PHP와 데이터 과학
 | 번호 | 주제 | 파일명 | 설명 |
 |---|---|---|---|
 | 20 | GD와 이미지 처리 | [gd-library.md](./notes/gd-library.md) | 이미지 생성, 조작, 썸네일 생성 |
 | 21 | PHP 데이터 분석 | [data-analysis.md](./notes/data-analysis.md) | PHP로 데이터 처리 및 시각화 |
 | 22 | PDF 및 엑셀 처리 | [pdf-excel.md](./notes/pdf-excel.md) | PHPSpreadsheet, TCPDF 활용 |
 
----
-
-## 🔒 보안 및 성능 최적화
+### 🔒 보안 및 성능 최적화
 | 번호 | 주제 | 파일명 | 설명 |
 |---|---|---|---|
 | 23 | PHP 보안 기본 | [security-basics.md](./notes/security-basics.md) | XSS, SQL Injection 방어 |
 | 24 | 해싱과 암호화 | [encryption.md](./notes/encryption.md) | password_hash, OpenSSL |
 | 25 | 캐싱과 성능 최적화 | [caching.md](./notes/caching.md) | OPcache, Redis, Memcached |
 
----
-
-## 🛠️ 테스트 및 배포
+### 🛠️ 테스트 및 배포
 | 번호 | 주제 | 파일명 | 설명 |
 |---|---|---|---|
 | 26 | 단위 테스트 | [testing.md](./notes/testing.md) | PHPUnit 활용법 |
