@@ -89,7 +89,7 @@ g.V().has('name', 'Alice').out('FRIEND').values('name')
 
 ## 🎯 정리
 
-✔ Graph DB는 **노드(개체)와 간선(관계)**로 데이터를 저장  
+✔ Graph DB는 **노드(개체)와 간선(관계)** 로 데이터를 저장  
 ✔ **복잡한 관계형 데이터 탐색에 강력한 성능** 제공  
 ✔ 소셜, 추천, 네트워크 분석 등 다양한 분야에서 활용  
 ✔ 대표 제품: Neo4j, Amazon Neptune, ArangoDB 등  
