@@ -1,10 +1,11 @@
-# Go 언어: HTTP 서버 만들기
+# 🌐 Go 언어 기본 웹 서버
 
-Go 언어에서는 `net/http` 패키지를 사용하여 간단하게 HTTP 서버를 구축할 수 있습니다.
+Go 언어에서는 `net/http` 패키지를 사용하여 간단하고 강력한 HTTP 서버를 구현할 수 있습니다.  
+이 문서는 웹 서버 작성, 요청 처리, 정적 파일 서빙, JSON 응답, 미들웨어, 보안(HTTPS), 운영 설정까지 포괄합니다.
 
 ---
 
-## 1. 기본 HTTP 서버 만들기
+## 1️⃣ 기본 HTTP 서버 만들기
 
 ```go
 package main
@@ -25,15 +26,12 @@ func main() {
 }
 ```
 
-### 주요 패턴
-- `http.HandleFunc("/", handler)`: 특정 경로에 대한 핸들러 등록
-- `http.ListenAndServe(":8080", nil)`: 8080 포트에서 서버 실행
-- `http.ResponseWriter`를 사용하여 응답 작성
+✔ `http.HandleFunc("/", handler)` : 특정 경로에 핸들러 등록  
+✔ `http.ListenAndServe(":8080", nil)` : 기본 서버 실행  
 
 ---
 
-## 2. 라우팅 (Routing)
-Go의 `http.ServeMux`를 사용하여 URL별로 핸들러를 등록할 수 있습니다.
+## 2️⃣ 라우팅 (Routing)
 
 ```go
 package main
@@ -61,14 +59,12 @@ func main() {
 }
 ```
 
-### 주요 패턴
-- `http.NewServeMux()`: HTTP 요청을 라우팅할 멀티플렉서 생성
-- `mux.HandleFunc("/route", handler)`: 경로별 핸들러 등록
+✔ `http.NewServeMux()` : 라우팅 멀티플렉서 생성  
+✔ `mux.HandleFunc("/path", handler)` : 경로별 처리  
 
 ---
 
-## 3. 요청(Request) 처리
-요청 정보를 가져오고, 쿼리 매개변수를 읽는 방법을 살펴보겠습니다.
+## 3️⃣ 요청 정보 다루기
 
 ```go
 func handler(w http.ResponseWriter, r *http.Request) {
@@ -80,14 +76,31 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 ```
 
-### 주요 패턴
-- `r.URL.Query().Get("key")`: 쿼리 매개변수 읽기
-- 기본값 처리 (`if name == "" {}`)
+✔ `r.URL.Query().Get("key")` : 쿼리 매개변수 읽기  
+✔ 기본값 처리도 손쉽게 가능
 
 ---
 
-## 4. JSON 응답 처리
-Go에서 JSON을 반환하는 방법입니다.
+## 4️⃣ POST 요청 및 폼 데이터 처리
+
+```go
+func postHandler(w http.ResponseWriter, r *http.Request) {
+    if r.Method != http.MethodPost {
+        http.Error(w, "Invalid request method", http.StatusMethodNotAllowed)
+        return
+    }
+    r.ParseForm()
+    name := r.FormValue("name")
+    fmt.Fprintf(w, "Received name: %s", name)
+}
+```
+
+✔ `r.Method`로 HTTP 메서드 확인  
+✔ `r.ParseForm()` 후 `FormValue()`로 값 추출  
+
+---
+
+## 5️⃣ JSON 응답 처리
 
 ```go
 package main
@@ -113,137 +126,95 @@ func main() {
 }
 ```
 
-### 주요 패턴
-- `w.Header().Set("Content-Type", "application/json")`: JSON 응답 설정
-- `json.NewEncoder(w).Encode(response)`: JSON 변환 및 응답
+✔ `Content-Type` 설정은 필수  
+✔ `json.NewEncoder(w).Encode()`로 직렬화  
 
 ---
 
-## 5. HTTP 요청 처리 (POST 요청 데이터 받기)
-POST 요청에서 데이터를 처리하는 방법입니다.
+## 6️⃣ 정적 파일 제공
 
 ```go
-package main
-
-import (
-    "fmt"
-    "net/http"
-)
-
-func postHandler(w http.ResponseWriter, r *http.Request) {
-    if r.Method != http.MethodPost {
-        http.Error(w, "Invalid request method", http.StatusMethodNotAllowed)
-        return
-    }
-    r.ParseForm()
-    name := r.FormValue("name")
-    fmt.Fprintf(w, "Received name: %s", name)
-}
-
 func main() {
-    http.HandleFunc("/submit", postHandler)
+    fs := http.FileServer(http.Dir("./static"))
+    http.Handle("/static/", http.StripPrefix("/static/", fs))
     http.ListenAndServe(":8080", nil)
 }
 ```
 
-### 주요 패턴
-- `r.Method != http.MethodPost`: 요청 메서드 확인
-- `r.ParseForm()`: 폼 데이터 파싱
-- `r.FormValue("key")`: POST 데이터 읽기
+✔ `http.FileServer`로 파일 서버 생성  
+✔ `http.StripPrefix`로 URL 경로 조정  
 
 ---
 
-## 6. 미들웨어 활용
-미들웨어를 사용하여 로깅이나 인증을 추가할 수 있습니다.
+## 7️⃣ 미들웨어 패턴
 
 ```go
-package main
-
-import (
-    "fmt"
-    "net/http"
-    "time"
-)
-
 func loggingMiddleware(next http.Handler) http.Handler {
     return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-        start := time.Now()
+        fmt.Printf("%s %s\n", r.Method, r.URL.Path)
         next.ServeHTTP(w, r)
-        fmt.Printf("%s %s %s\n", r.Method, r.URL.Path, time.Since(start))
     })
-}
-
-func handler(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintln(w, "Hello, Middleware!")
 }
 
 func main() {
     mux := http.NewServeMux()
-    mux.HandleFunc("/", handler)
+    mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+        fmt.Fprintln(w, "Hello with Middleware")
+    })
 
-    wrappedMux := loggingMiddleware(mux)
-    http.ListenAndServe(":8080", wrappedMux)
+    wrapped := loggingMiddleware(mux)
+    http.ListenAndServe(":8080", wrapped)
 }
 ```
 
-### 주요 패턴
-- `http.Handler`를 감싸는 미들웨어 패턴
-- 요청 시간 로깅 추가
+✔ `http.Handler`를 감싸서 기능 추가  
+✔ 로깅, 인증, 요청 제한 등 구현 가능  
 
 ---
 
-## 7. 정적 파일 제공
-정적 파일(HTML, CSS, JS)을 서빙하는 방법입니다.
+## 8️⃣ HTTPS 서버 실행
 
 ```go
-package main
-
-import "net/http"
-
 func main() {
-    fs := http.FileServer(http.Dir("./static"))
-    http.Handle("/static/", http.StripPrefix("/static/", fs))
-
-    http.ListenAndServe(":8080", nil)
-}
-```
-
-### 주요 패턴
-- `http.FileServer(http.Dir("./static"))`: 특정 디렉터리 서빙
-- `http.StripPrefix("/static/", fs)`: 경로 조정
-
----
-
-## 8. HTTPS 서버 만들기
-TLS(SSL) 인증서를 사용하여 HTTPS 서버를 실행하는 방법입니다.
-
-```go
-package main
-
-import (
-    "fmt"
-    "net/http"
-)
-
-func handler(w http.ResponseWriter, r *http.Request) {
-    fmt.Fprintf(w, "Hello, HTTPS!")
-}
-
-func main() {
-    http.HandleFunc("/", handler)
+    http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+        fmt.Fprintf(w, "Hello, HTTPS!")
+    })
     http.ListenAndServeTLS(":443", "cert.pem", "key.pem", nil)
 }
 ```
 
-### 주요 패턴
-- `http.ListenAndServeTLS(":443", "cert.pem", "key.pem", nil)`: HTTPS 서버 실행
-- `cert.pem`, `key.pem` 파일 필요
+✔ 인증서 파일(`cert.pem`, `key.pem`) 필요  
+✔ HTTPS는 기본 포트 443 사용  
 
 ---
 
-## 9. HTTP 서버 베스트 프랙티스
-**핸들러에서 `http.ResponseWriter` 설정을 먼저 수행**
-**JSON 응답 시 `Content-Type`을 `application/json`으로 설정**
-**미들웨어를 사용하여 로깅 및 인증 추가**
-**보안 강화를 위해 HTTPS 사용**
-**요청 크기 제한 및 타임아웃 설정 적용**
+## 9️⃣ 고급 서버 설정 (커스텀 http.Server)
+
+```go
+srv := &http.Server{
+    Addr:         ":8080",
+    ReadTimeout:  5 * time.Second,
+    WriteTimeout: 10 * time.Second,
+    IdleTimeout:  30 * time.Second,
+    Handler:      nil,
+}
+
+srv.ListenAndServe()
+```
+
+✔ 시간 설정으로 연결 안정성 확보  
+✔ Graceful shutdown 시에도 유용  
+
+---
+
+## 🎯 정리
+
+| 항목 | 권장 사항 |
+|------|-----------|
+| 경로별 핸들러 | `ServeMux` 또는 라우팅 프레임워크 사용 |
+| 응답 작성 | 항상 `Content-Type` 명시 |
+| JSON 응답 | `encoding/json` 사용, 구조체 명세 지정 |
+| 보안 | HTTPS 적용 (`ListenAndServeTLS`) |
+| 미들웨어 | 로깅/인증/권한 체크 시 활용 |
+| 운영 안정성 | 커스텀 서버 + 타임아웃 설정 적용 |
+| 정적 파일 | `http.StripPrefix`로 경로 매칭 조정 |
