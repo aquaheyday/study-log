@@ -1,13 +1,15 @@
-# Go 언어: 동시성(Concurrency) 기초
+# 🧵 Go 언어 고루틴(Goroutine)과 채널(Channel)
 
-Go 언어는 **고루틴(Goroutine)**과 **채널(Channel)**을 활용하여 동시성 프로그래밍을 간결하게 구현할 수 있습니다.
+Go는 **경량 스레드**인 고루틴(goroutine)과 **동기화 및 통신 수단**인 채널(channel)을 통해 간단하고 효율적인 **동시성 프로그래밍**을 제공합니다.
 
 ---
 
-## 1. 고루틴(Goroutine)
-고루틴은 Go의 경량 스레드로, `go` 키워드를 사용하여 함수를 비동기 실행할 수 있습니다.
+## 1️⃣ 고루틴(Goroutine) 이란?
 
-### 1.1 고루틴 생성
+- Go의 **경량 스레드(lightweight thread)**  
+- 함수 앞에 `go` 키워드를 붙이면 고루틴으로 실행됨
+- 수천~수만 개의 고루틴 생성 가능 (OS 스레드보다 가볍고 빠름)
+
 ```go
 package main
 
@@ -16,233 +18,150 @@ import (
     "time"
 )
 
-func printMessage(msg string) {
-    for i := 0; i < 5; i++ {
-        fmt.Println(msg, i)
-        time.Sleep(time.Millisecond * 500)
-    }
+func sayHello() {
+    fmt.Println("Hello from goroutine")
 }
 
 func main() {
-    go printMessage("Goroutine") // 고루틴 실행
-    printMessage("Main Function") // 메인 함수 실행
+    go sayHello() // 고루틴으로 실행
+    time.Sleep(time.Second) // 메인 고루틴 종료 대기
 }
 ```
 
-### 주요 패턴
-- `go 함수이름()`: 새로운 고루틴 실행
-- 메인 함수(`main()`)가 종료되면 모든 고루틴이 종료됨
-- `time.Sleep()`을 사용하여 동작을 지연할 수 있음
+✔ `go` 키워드로 새 고루틴 시작  
+✔ `main` 함수가 먼저 종료되면 고루틴도 같이 종료됨 (그래서 `Sleep` 필요)  
 
 ---
 
-## 2. 채널(Channel)
-채널을 사용하면 고루틴 간 안전한 데이터 공유 및 통신이 가능합니다.
+## 2️⃣ 고루틴 특징
 
-### 2.1 기본 채널 사용
-```go
-package main
-
-import "fmt"
-
-func sendMessage(ch chan string) {
-    ch <- "Hello, Channel!"
-}
-
-func main() {
-    ch := make(chan string) // 채널 생성
-    go sendMessage(ch) // 고루틴 실행
-    msg := <-ch // 채널에서 데이터 수신
-    fmt.Println(msg)
-}
-```
-
-### 주요 패턴
-- `ch := make(chan 타입)`: 채널 생성
-- `ch <- value`: 채널에 데이터 전송
-- `value := <-ch`: 채널에서 데이터 수신
+- **비동기 실행**: 고루틴은 독립적으로 실행되며, 메인 함수가 끝나면 모든 고루틴 종료
+- **스택 메모리 사용량 적음** (초기 2KB 수준, 필요 시 자동 증가)
+- **스케줄러**: Go 런타임이 고루틴을 자동으로 분산 처리
 
 ---
 
-## 3. 버퍼링된 채널(Buffered Channel)
-버퍼 크기를 지정하여 데이터 저장이 가능한 채널입니다.
+## 3️⃣ 채널(Channel)이란?
+
+- 고루틴 간 **데이터 통신을 위한 파이프**
+- 채널은 **타입이 지정된 통로**
+- `chan T`는 T 타입의 값을 주고받는 채널
 
 ```go
 package main
 
 import "fmt"
 
+func main() {
+    ch := make(chan int) // int형 채널 생성
+
+    go func() {
+        ch <- 42 // 채널에 값 전송
+    }()
+
+    val := <-ch // 채널에서 값 수신
+    fmt.Println("받은 값:", val)
+}
+```
+
+✔ `<-` 연산자를 사용해 **채널 송수신**  
+✔ 채널은 기본적으로 **동기적(synchronous)** 이라, 송신과 수신이 **둘 다 준비되어야 통신**이 이뤄짐  
+
+---
+
+## 4️⃣ 채널 버퍼(Buffer) 사용
+
+- 기본 채널은 **비버퍼(동기식)**  
+- 버퍼를 주면 **비동기 전송 가능**
+
+```go
 func main() {
     ch := make(chan string, 2) // 버퍼 크기 2
-    ch <- "Hello"
-    ch <- "World"
-    fmt.Println(<-ch) // Hello
-    fmt.Println(<-ch) // World
+
+    ch <- "hello"
+    ch <- "world"
+
+    fmt.Println(<-ch)
+    fmt.Println(<-ch)
 }
 ```
 
-### 주요 패턴
-- `make(chan 타입, 버퍼크기)`: 버퍼 크기가 있는 채널 생성
-- 버퍼가 가득 차면 **송신자(Sender)는 블록됨**
-- 버퍼가 비어 있으면 **수신자(Receiver)는 블록됨**
+✔ 버퍼 크기 만큼은 고루틴 없이도 송신 가능  
+✔ 버퍼가 꽉 차면 송신 시 대기, 비어있으면 수신 시 대기  
 
 ---
 
-## 4. 채널의 `close()`와 `range`
-채널을 `close()` 하면 더 이상 데이터를 보낼 수 없으며, `range`를 사용하여 반복 처리할 수 있습니다.
+## 5️⃣ 채널 닫기와 range 수신
+
+- `close(channel)`로 채널을 닫을 수 있음  
+- 닫힌 채널은 더 이상 값을 보낼 수 없음
+- `range`를 사용하면 채널에서 값이 올 때까지 반복
 
 ```go
-package main
-
-import "fmt"
-
 func main() {
-    ch := make(chan int, 3)
-    ch <- 1
-    ch <- 2
-    ch <- 3
-    close(ch) // 채널 닫기
-    
-    for v := range ch {
-        fmt.Println(v)
+    ch := make(chan int)
+
+    go func() {
+        for i := 1; i <= 3; i++ {
+            ch <- i
+        }
+        close(ch)
+    }()
+
+    for val := range ch {
+        fmt.Println(val)
     }
 }
 ```
 
-### 주요 패턴
-- `close(ch)`: 채널을 닫음
-- `for v := range ch`: 채널에서 데이터를 반복적으로 읽음
+✔ `range`는 채널이 닫힐 때까지 수신 반복  
+✔ 닫힌 채널에서 수신하면 **제로 값 반환**, 송신하면 **panic** 발생  
 
 ---
 
-## 5. `select`를 활용한 다중 채널 처리
-`select`문을 사용하면 여러 채널에서 데이터를 기다릴 수 있습니다.
+## 6️⃣ select 문
+
+- 여러 채널을 **동시에 처리**할 수 있는 switch-like 문법
+- 먼저 준비된 채널이 실행됨
 
 ```go
-package main
-
-import (
-    "fmt"
-    "time"
-)
-
 func main() {
     ch1 := make(chan string)
     ch2 := make(chan string)
-    
+
     go func() {
-        time.Sleep(2 * time.Second)
-        ch1 <- "Message from Channel 1"
+        ch1 <- "one"
     }()
-    
+
     go func() {
-        time.Sleep(1 * time.Second)
-        ch2 <- "Message from Channel 2"
+        ch2 <- "two"
     }()
-    
+
     select {
-    case msg := <-ch1:
-        fmt.Println(msg)
-    case msg := <-ch2:
-        fmt.Println(msg)
+    case msg1 := <-ch1:
+        fmt.Println("ch1:", msg1)
+    case msg2 := <-ch2:
+        fmt.Println("ch2:", msg2)
     }
 }
 ```
 
-### 주요 패턴
-- `select`를 사용하여 여러 채널을 동시에 대기
-- 먼저 도착한 데이터를 처리
+✔ 가장 먼저 준비된 채널이 실행됨  
+✔ 모든 채널이 블로킹이면 select도 대기함  
+✔ `default:` 문을 넣으면 비동기 폴링 가능  
 
 ---
 
-## 6. `sync.WaitGroup`을 활용한 동기화
-`sync.WaitGroup`을 사용하면 여러 개의 고루틴이 종료될 때까지 기다릴 수 있습니다.
+## 🎯 정리
 
-```go
-package main
+| 개념 | 설명 |
+|------|------|
+| 고루틴 | `go` 키워드로 생성하는 경량 스레드 |
+| 채널 | 고루틴 간 통신 수단, `<-` 연산자로 사용 |
+| 버퍼 채널 | 비동기 전송 가능, 버퍼 초과 시 대기 |
+| close | 채널 닫기, range 수신에 사용 |
+| select | 다중 채널 동시 처리 |
 
-import (
-    "fmt"
-    "sync"
-    "time"
-)
-
-func worker(id int, wg *sync.WaitGroup) {
-    defer wg.Done() // 작업 완료 시 WaitGroup 감소
-    fmt.Printf("Worker %d starting\n", id)
-    time.Sleep(time.Second)
-    fmt.Printf("Worker %d done\n", id)
-}
-
-func main() {
-    var wg sync.WaitGroup
-    
-    for i := 1; i <= 3; i++ {
-        wg.Add(1) // WaitGroup 증가
-        go worker(i, &wg)
-    }
-    
-    wg.Wait() // 모든 고루틴이 종료될 때까지 대기
-    fmt.Println("All workers completed")
-}
-```
-
-### 주요 패턴
-- `wg.Add(n)`: `n`개의 작업을 대기
-- `wg.Done()`: 하나의 작업이 완료됨을 알림
-- `wg.Wait()`: 모든 작업이 끝날 때까지 대기
-
----
-
-## 7. 뮤텍스(Mutex)를 활용한 공유 자원 보호
-여러 개의 고루틴이 공유 데이터를 안전하게 사용하도록 `sync.Mutex`를 활용할 수 있습니다.
-
-```go
-package main
-
-import (
-    "fmt"
-    "sync"
-    "time"
-)
-
-type SafeCounter struct {
-    mu sync.Mutex
-    value int
-}
-
-func (c *SafeCounter) Increment() {
-    c.mu.Lock()
-    c.value++
-    c.mu.Unlock()
-}
-
-func main() {
-    var counter SafeCounter
-    var wg sync.WaitGroup
-    
-    for i := 0; i < 5; i++ {
-        wg.Add(1)
-        go func() {
-            defer wg.Done()
-            counter.Increment()
-        }()
-    }
-    
-    wg.Wait()
-    fmt.Println("Final Counter Value:", counter.value)
-}
-```
-
-### 주요 패턴
-- `sync.Mutex`를 사용하여 공유 자원을 보호
-- `mu.Lock()`으로 임계 영역 보호, `mu.Unlock()`으로 해제
-
----
-
-## 8. Go 동시성 베스트 프랙티스
-**고루틴을 남발하지 말 것!** 필요할 때만 사용
-**채널을 사용하여 데이터를 안전하게 교환**
-**sync.WaitGroup과 Mutex를 적절히 활용**
-**select 문을 사용하여 다중 채널을 효과적으로 처리**
-**고루틴이 메모리 누수를 유발하지 않도록 주의**
+✔ 고루틴은 간단하게 비동기 실행을 가능하게 해줌  
+✔ 채널은 공유 메모리 대신 **메시지를 통해 통신**하는 구조  
+✔ Go는 **동시성(concurrency)** 을 직관적으로 다룰 수 있게 설계되어 있음  
