@@ -1,227 +1,183 @@
-# Go 언어: 파일 입출력(File I/O)
+# 📁 Go 언어 파일 입출력 (File I/O)
 
-Go 언어에서 파일 입출력은 `os` 및 `io/ioutil` 패키지를 사용하여 간단하게 처리할 수 있습니다.
-
----
-
-## 1. 파일 쓰기 (Write to File)
-### 1.1 기본 파일 쓰기
-```go
-package main
-
-import (
-    "fmt"
-    "os"
-)
-
-func main() {
-    content := "Hello, Go File I/O!"
-    err := os.WriteFile("example.txt", []byte(content), 0644)
-    if err != nil {
-        fmt.Println("Error:", err)
-    }
-}
-```
-
-### 1.2 파일을 열어 쓰기 (os.OpenFile)
-```go
-package main
-
-import (
-    "fmt"
-    "os"
-)
-
-func main() {
-    file, err := os.OpenFile("example.txt", os.O_CREATE|os.O_WRONLY, 0644)
-    if err != nil {
-        fmt.Println("Error:", err)
-        return
-    }
-    defer file.Close()
-
-    _, err = file.WriteString("Appending some text\n")
-    if err != nil {
-        fmt.Println("Error:", err)
-    }
-}
-```
-
-### 주요 패턴
-- `os.WriteFile(filename, []byte, perm)`: 한 번에 파일 작성
-- `os.OpenFile(filename, flags, perm)`: 파일을 열어 여러 방식으로 조작 가능
-- `file.WriteString("text")`: 문자열 쓰기
+Go에서는 `os`, `io`, `bufio`, `ioutil` 등 표준 패키지를 통해 텍스트 파일, 바이너리 파일을 손쉽게 읽고 쓸 수 있습니다.
 
 ---
 
-## 2. 파일 읽기 (Read from File)
-### 2.1 파일 전체 읽기
+## 1️⃣ 파일 열기 & 닫기
+
 ```go
-package main
-
-import (
-    "fmt"
-    "os"
-)
-
-func main() {
-    data, err := os.ReadFile("example.txt")
-    if err != nil {
-        fmt.Println("Error:", err)
-        return
-    }
-    fmt.Println("File Content:", string(data))
+file, err := os.Open("example.txt")
+if err != nil {
+    log.Fatal(err)
 }
+defer file.Close()
 ```
 
-### 2.2 파일을 한 줄씩 읽기
-```go
-package main
-
-import (
-    "bufio"
-    "fmt"
-    "os"
-)
-
-func main() {
-    file, err := os.Open("example.txt")
-    if err != nil {
-        fmt.Println("Error:", err)
-        return
-    }
-    defer file.Close()
-
-    scanner := bufio.NewScanner(file)
-    for scanner.Scan() {
-        fmt.Println(scanner.Text())
-    }
-    
-    if err := scanner.Err(); err != nil {
-        fmt.Println("Error:", err)
-    }
-}
-```
-
-### 주요 패턴
-- `os.ReadFile(filename)`: 전체 파일 읽기
-- `bufio.NewScanner(file)`: 파일을 한 줄씩 읽기
+✔ `os.Open()`은 읽기 전용  
+✔ 열었으면 반드시 `defer file.Close()`로 닫기  
 
 ---
 
-## 3. 파일 존재 여부 확인
+## 2️⃣ 파일 전체 읽기 (`ioutil` / `os.ReadFile`)
+
 ```go
-package main
-
-import (
-    "fmt"
-    "os"
-)
-
-func fileExists(filename string) bool {
-    _, err := os.Stat(filename)
-    return !os.IsNotExist(err)
+data, err := os.ReadFile("example.txt")
+if err != nil {
+    log.Fatal(err)
 }
-
-func main() {
-    filename := "example.txt"
-    if fileExists(filename) {
-        fmt.Println("File exists")
-    } else {
-        fmt.Println("File does not exist")
-    }
-}
+fmt.Println(string(data))
 ```
 
-### 주요 패턴
-- `os.Stat(filename)`: 파일 정보 조회
-- `os.IsNotExist(err)`: 파일 존재 여부 확인
+✔ Go 1.16 이후로 `ioutil.ReadFile` 대신 `os.ReadFile` 사용 권장  
+✔ 작은 텍스트 파일 읽기에 적합  
 
 ---
 
-## 4. 파일 삭제
+## 3️⃣ 파일 줄 단위로 읽기 (`bufio.Scanner`)
+
 ```go
-package main
+file, _ := os.Open("example.txt")
+defer file.Close()
 
-import (
-    "fmt"
-    "os"
-)
-
-func main() {
-    err := os.Remove("example.txt")
-    if err != nil {
-        fmt.Println("Error:", err)
-    } else {
-        fmt.Println("File deleted successfully")
-    }
+scanner := bufio.NewScanner(file)
+for scanner.Scan() {
+    fmt.Println(scanner.Text())
 }
 ```
 
-### 주요 패턴
-- `os.Remove(filename)`: 파일 삭제
+✔ 큰 파일을 줄 단위로 읽을 때 효율적  
+✔ `scanner.Text()`로 한 줄씩 출력  
 
 ---
 
-## 5. 디렉터리 생성 및 삭제
-### 5.1 디렉터리 생성
+## 4️⃣ 파일 쓰기 (새로 쓰기 & 덮어쓰기)
+
 ```go
-os.Mkdir("testdir", 0755) // 단일 디렉터리 생성
-os.MkdirAll("parent/child", 0755) // 중첩된 디렉터리 생성
-```
-
-### 5.2 디렉터리 삭제
-```go
-os.Remove("testdir") // 단일 디렉터리 삭제
-os.RemoveAll("parent") // 하위 디렉터리까지 삭제
-```
-
----
-
-## 6. 파일 복사
-```go
-package main
-
-import (
-    "fmt"
-    "io"
-    "os"
-)
-
-func copyFile(src, dst string) error {
-    sourceFile, err := os.Open(src)
-    if err != nil {
-        return err
-    }
-    defer sourceFile.Close()
-
-    destFile, err := os.Create(dst)
-    if err != nil {
-        return err
-    }
-    defer destFile.Close()
-
-    _, err = io.Copy(destFile, sourceFile)
-    return err
-}
-
-func main() {
-    err := copyFile("example.txt", "copy.txt")
-    if err != nil {
-        fmt.Println("Copy failed:", err)
-    } else {
-        fmt.Println("File copied successfully")
-    }
+content := "Hello, Go!\n"
+err := os.WriteFile("output.txt", []byte(content), 0644)
+if err != nil {
+    log.Fatal(err)
 }
 ```
 
-### 주요 패턴
-- `io.Copy(dst, src)`: 파일 내용을 복사
+✔ `os.WriteFile()`은 파일이 없으면 생성, 있으면 덮어씀  
+✔ 권한 `0644`는 읽기/쓰기 설정  
 
 ---
 
-## 7. 파일 입출력 베스트 프랙티스
-**파일을 열었으면 `defer file.Close()`로 안전하게 닫기**
-**에러 체크(`if err != nil { }`)를 철저히 하기**
-**버퍼를 사용하여 효율적으로 파일 읽기/쓰기 (`bufio` 활용)**
-**파일이 존재하는지 확인 후 작업 진행**
+## 5️⃣ 파일 이어쓰기 (`os.OpenFile` + `O_APPEND`)
+
+```go
+f, err := os.OpenFile("output.txt", os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+if err != nil {
+    log.Fatal(err)
+}
+defer f.Close()
+
+f.WriteString("추가된 내용\n")
+```
+
+✔ `os.O_APPEND`: 이어쓰기  
+✔ `os.O_CREATE`: 파일 없으면 생성  
+✔ `os.O_WRONLY`: 쓰기 전용  
+
+---
+
+## 6️⃣ 버퍼 기반 쓰기 (`bufio.Writer`)
+
+```go
+f, _ := os.Create("buffered.txt")
+defer f.Close()
+
+writer := bufio.NewWriter(f)
+writer.WriteString("버퍼에 쓰고\n")
+writer.WriteString("Flush로 실제 반영됨\n")
+writer.Flush()
+```
+
+✔ `bufio.Writer`는 내부 버퍼에 먼저 쓰고 `Flush()`로 반영  
+✔ 대용량 출력 시 효율적  
+
+---
+
+## 7️⃣ 파일 복사 (`io.Copy`)
+
+```go
+src, _ := os.Open("source.txt")
+dst, _ := os.Create("copy.txt")
+defer src.Close()
+defer dst.Close()
+
+_, err := io.Copy(dst, src)
+if err != nil {
+    log.Fatal(err)
+}
+```
+
+✔ `io.Copy(dst, src)` 한 줄로 전체 복사 가능  
+
+---
+
+## 8️⃣ 파일 삭제 / 존재 여부 확인
+
+```go
+err := os.Remove("output.txt")
+if err != nil {
+    log.Fatal(err)
+}
+```
+
+파일 존재 확인은 이렇게 처리 가능:
+
+```go
+if _, err := os.Stat("some.txt"); errors.Is(err, os.ErrNotExist) {
+    fmt.Println("파일이 존재하지 않습니다")
+}
+```
+
+✔ `os.Remove()`로 삭제  
+✔ `os.Stat()` + `os.IsNotExist(err)`로 존재 확인  
+
+---
+
+## 9️⃣ 디렉토리 만들기
+
+```go
+err := os.Mkdir("mydir", 0755)
+```
+
+하위 폴더까지 한 번에 만들기 (예: `a/b/c`):
+
+```go
+os.MkdirAll("a/b/c", 0755)
+```
+
+✔ `0755`는 읽기/쓰기/실행 권한  
+✔ `MkdirAll()`은 부모 디렉토리까지 자동 생성  
+
+---
+
+## 🔟 기능 요약
+
+| 기능 | 방법 |
+|------|------|
+| 파일 열기 | `os.Open()`, `os.OpenFile()` |
+| 전체 읽기 | `os.ReadFile()` |
+| 줄 단위 읽기 | `bufio.Scanner` |
+| 쓰기 | `os.WriteFile()`, `bufio.Writer` |
+| 이어쓰기 | `os.OpenFile(..., O_APPEND)` |
+| 복사 | `io.Copy()` |
+| 삭제 | `os.Remove()` |
+| 존재 확인 | `os.Stat()` + `errors.Is(..., os.ErrNotExist)` |
+| 디렉토리 생성 | `os.Mkdir()`, `os.MkdirAll()` |
+
+---
+
+## 🎯 정리
+
+✔ 파일 작업 전 항상 **오류 처리 필수**  
+✔ `defer file.Close()`는 빠뜨리면 리소스 누수 발생  
+✔ `WriteFile`은 항상 **덮어쓰기**, 이어쓰기할 땐 `OpenFile`  
+✔ 큰 파일은 `bufio`로 처리하는 게 메모리 효율적  
+
