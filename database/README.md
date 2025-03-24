@@ -63,7 +63,7 @@
 |---|---|---|---|  
 | 22 | 데이터베이스 성능 테스트 | [db-performance-testing.md](./notes/db-performance-testing.md) | `EXPLAIN ANALYZE`, 벤치마킹 도구 사용법 |  
 | 23 | MySQL 성능 최적화 | [mysql-performance.md](./notes/mysql-performance.md) | 쿼리 튜닝, 인덱스 최적화 |  
-| 24 | PostgreSQL 성능 튜닝 | [postgres-performance.md](./notes/postgres-performance.md) | `pg_stat_statements`, 쿼리 캐싱 |  
+| 24 | PostgreSQL 성능 최적화 | [postgres-performance.md](./notes/postgres-performance.md) | `pg_stat_statements`, 쿼리 캐싱 |  
 | 25 | 데이터베이스 모니터링 | [db-monitoring.md](./notes/db-monitoring.md) | Prometheus, Grafana를 활용한 DB 모니터링 |  
 
 ---
