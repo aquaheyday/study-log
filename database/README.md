@@ -24,7 +24,7 @@
 | 02 | SQL 기본 문법 | [sql-basics.md](./notes/sql-basics.md) | SELECT, INSERT, UPDATE, DELETE 문법 |  
 | 03 | 관계형 데이터베이스 | [rdbms.md](./notes/rdbms.md) | 관계형 데이터베이스의 기본 개념과 특징 |  
 | 04 | NoSQL 개요 | [nosql-intro.md](./notes/nosql-intro.md) | NoSQL의 개념 및 종류 (Key-Value, Document, Column, Graph) |  
-| 05 | 데이터 모델링 | [data-modeling.md](./notes/data-modeling.md) | ERD(Entity Relationship Diagram) 작성 방법 |  
+| 05 | 데이터 모델링 | [data-modeling.md](./notes/data-modeling.md) | 데이터 모델링 개요 |  
 
 ### 🔲 SQL 문법 및 고급 쿼리  
 | 번호 | 주제 | 파일명 | 설명 |  
