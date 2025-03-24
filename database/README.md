@@ -39,7 +39,7 @@
 | 번호 | 주제 | 파일명 | 설명 |  
 |---|---|---|---|  
 | 11 | Redis 개요 | [redis.md](./notes/redis.md) | Key-Value 저장소, 캐싱 전략 |  
-| 12 | MongoDB 개요 | [mongodb-basics.md](./notes/mongodb-basics.md) | 문서형 데이터베이스 기본 개념 및 CRUD |  
+| 12 | MongoDB 개요 | [mongodb-basics.md](./notes/mongodb.md) | 문서형 데이터베이스 기본 개념 및 CRUD |  
 | 13 | Cassandra 개요 | [cassandra.md](./notes/cassandra.md) | 분산형 컬럼 기반 데이터베이스 |  
 | 14 | Graph DB 개념 | [graph-db.md](./notes/graph-db.md) | Graph 데이터베이스 (Neo4j) 개요 및 활용 |  
 
