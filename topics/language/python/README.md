@@ -11,7 +11,6 @@
 |---|---|
 | [notes](./notes) | 개념 정리 및 학습 노트 |
 | [examples](./examples) | 주요 기능별 예제 코드 |
-| [projects](./projects) | 미니 프로젝트 및 실습 프로젝트 |
 
 ---
 
@@ -89,14 +88,6 @@
 | 10 | 반복문 | [loops.py](./examples/loops.py) | for 및 while 반복문 예제 |
 | 11 | 함수 | [functions.py](./examples/functions.py) | 함수 정의, 매개변수, 반환값 예제 |
 | 12 | 리스트 컴프리헨션 | [list_comprehension.py](./examples/list_comprehension.py) | 리스트 컴프리헨션 활용 예제 |
-
----
-
-## 📋 프로젝트 목록
-
-| 번호 | 프로젝트명 | 폴더명 | 설명 |
-|---|---|---|---|
-| 01 | 택배/요금제/문의 관리 | [delivery-api-server](./projects/delivery-api-server) | 택배사 정보, 요금제, 문의사항을 관리하는 FastAPI 기반 서비스 |
 
 ---
 
