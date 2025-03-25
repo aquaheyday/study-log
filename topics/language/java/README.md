@@ -20,7 +20,7 @@
 | 주제 | 파일명 | 설명 |
 |---|---|---|
 | Java 란? | [intro.md](./notes/intro.md) | 특징, 플랫폼 독립성, JVM 개요 |
-| 개발 환경 구성 | [setup.md](./notes/setup.md) | JDK 설치, 컴파일/실행 구조 |
+| 개발 환경 설정 | [setup.md](./notes/setup.md) | JDK 설치, 컴파일/실행 구조 |
 | 변수와 타입 | [variables.md](./notes/variables.md) | 원시 타입, 참조 타입 |
 | 제어문 | [control.md](./notes/control.md) | 조건문, 반복문, switch 사용 |
 
