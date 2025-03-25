@@ -11,7 +11,6 @@
 |---|---|
 | [notes](./notes) | 개념 정리 및 학습 노트 |
 | [examples](./examples) | 주요 기능별 예제 코드 (컴포넌트, 상태관리 등) |
-| [projects](./projects) | 미니 프로젝트 및 실습 프로젝트 |
 
 ---
 
@@ -75,14 +74,6 @@
 | 05 | Props 전달 | [props-example.jsx](./examples/props-example.jsx) | 부모→자식 데이터 전달 패턴 |
 | 06 | 폼 입력 처리 | [form-handling.jsx](./examples/form-handling.jsx) | Form 상태 관리 및 제출 처리 |
 | 07 | API 호출 및 데이터 표시 | [fetch-data.jsx](./examples/fetch-data.jsx) | useEffect+fetch로 데이터 요청 및 표시 |
-
----
-
-## 📋 프로젝트 목록
-
-| 번호 | 프로젝트명 | 폴더명 | 설명 |
-|---|---|---|---|
-| 01 | 관리자 사이트 | [vite-ts-scss-admin-dashboard](./projects/vite-ts-scss-admin-dashboard) | CRUD 기능을 갖춘 관리자 사이트  |
 
 ---
 
