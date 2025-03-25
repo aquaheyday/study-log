@@ -11,7 +11,6 @@
 |---|---|
 | [notes](./notes) | 개념 정리 및 학습 노트 |
 | [examples](./examples) | 주요 기능별 예제 코드 |
-| [projects](./projects) | 미니 프로젝트 및 실습 프로젝트 |
 
 ---
 
@@ -94,14 +93,6 @@
 | 15 | HTTP 서버 | [http_server.go](./examples/http_server.go) | 기본 HTTP 서버 구현 |
 | 16 | 유닛 테스트 | [unit_example_test.go](./examples/unit_example_test.go) | 기본 테스트 코드 작성 |
 | 17 | 벤치마크 테스트 | [benchmark_test.go](./examples/benchmark_test.go) | 성능 테스트 예제 |
-
----
-
-## 📋 프로젝트 목록
-
-| 번호 | 프로젝트명 | 폴더명 | 설명 |
-|---|---|---|---|
-| 01 | RESTful 관리자 CRUD API + Swagger | [restful-admin-crud](./projects/restful-admin-crud) | 관리자 CRUD + 스웨거 적용한 RESTful API |
 
 ---
 
