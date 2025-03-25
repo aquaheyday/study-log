@@ -11,7 +11,6 @@
 |---|---|
 | [notes](./notes) | 개념 정리 및 학습 노트 |
 | [examples](./examples) | 주요 기능별 예제 코드 |
-| [projects](./projects) | 미니 프로젝트 및 실습 프로젝트 |
 
 ---
 
@@ -92,15 +91,6 @@
 | 08 | 세션과 쿠키 | [session-cookie.php](./examples/session-cookie.php) | 세션 관리 및 쿠키 설정 예제 |
 | 09 | 예외 처리 | [exceptions.php](./examples/exceptions.php) | try-catch, 사용자 정의 예외 |
 | 10 | 데이터베이스 연동 | [database.php](./examples/database.php) | PDO로 DB 연결 및 쿼리 실행 예제 |
-
----
-
-## 📋 프로젝트 목록
-
-| 번호 | 프로젝트명 |  폴더명 |설명 |
-|---|---|---|---|
-| 01 | 대기표 발급 및 호출 시스템 | [queue-ticket](./projects/queue-ticket) | 키오스크에서 대기표를 접수하고, 관리자가 고객번호를 호출하면 대기실 모니터 화면에 호출된 번호가 표시되는 시스템 |
-| 02 | 메뉴 접수 API | [menu-order-api](./projects/menu-order-api) | 방을 생성하여 개인 메뉴를 접수하는 RESTful API |
 
 ---
 
