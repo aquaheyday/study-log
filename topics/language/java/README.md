@@ -67,14 +67,14 @@
 
 | 주제 | 파일명 | 설명 |
 |---|---|---|
-| 변수와 연산자 | [Variables.java](./examples/Variables.java) | 변수 선언, 기본 연산 |
-| 제어문 | [ControlFlow.java](./examples/ControlFlow.java) | 조건문, 반복문 |
+| 변수와 연산자 | [VariableAndOperator.java](./examples/VariableAndOperator.java) | 변수 선언, 기본 연산 |
+| 제어문 | [ControlStatement.java](./examples/ControlStatement.java) | 조건문, 반복문 |
 | 클래스 정의 | [ClassExample.java](./examples/ClassExample.java) | 필드, 생성자, 메서드 |
-| 상속 & 오버라이딩 | [Inheritance.java](./examples/Inheritance.java) | extends, super 사용 |
+| 상속 & 오버라이딩 | [InheritanceExample.java](./examples/InheritanceExample.java) | extends, super 사용 |
 | 인터페이스 구현 | [InterfaceExample.java](./examples/InterfaceExample.java) | 다형성과 추상화 예시 |
-| 예외 처리 | [TryCatch.java](./examples/TryCatch.java) | checked / unchecked 예외 |
+| 예외 처리 | [ExceptionHandlingExample.java](./examples/ExceptionHandlingExample.java) | checked / unchecked 예외 |
 | ArrayList 사용 | [ArrayListExample.java](./examples/ArrayListExample.java) | 자료구조 활용 예제 |
-| 파일 읽기/쓰기 | [FileIO.java](./examples/FileIO.java) | BufferedReader, FileWriter 사용 |
+| 파일 읽기/쓰기 | [FileIOExample.java](./examples/FileIOExample.java) | BufferedReader, FileWriter 사용 |
 | 멀티스레드 | [ThreadExample.java](./examples/ThreadExample.java) | Thread, Runnable |
 | Spring REST API | [RestApiExample.java](./examples/RestApiExample.java) | Controller, @GetMapping 예제 |
 
