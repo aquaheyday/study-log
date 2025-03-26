@@ -68,7 +68,7 @@
 | 클로저 & 스코프 | [closure.js](./examples/closure.js) | 클로저 기본 구조 |
 | Promise 사용 | [promise.js](./examples/promise.js) | 비동기 then/catch 패턴 |
 | async/await 예제 | [async-await.js](./examples/async-await.js) | fetch와 함께 쓰기 |
-| DOM 조작 | [dom.js](./examples/dom.js) | 요소 생성/삽입/삭제 |
+| DOM 조작 | [dom.html](./examples/dom.html) | 요소 생성/삽입/삭제 |
 | 이벤트 처리 | [event.js](./examples/event.js) | 클릭 핸들러 등록/제거 |
 
 ---
@@ -78,12 +78,10 @@
 - [MDN JavaScript](https://developer.mozilla.org/ko/docs/Web/JavaScript) – 공식 JS 문서  
 - [You Don’t Know JS (book series)](https://github.com/getify/You-Dont-Know-JS) – JS 심화 개념  
 - [JavaScript.info](https://javascript.info/) – JS 기초부터 고급까지  
-- 『모던 JavaScript Deep Dive』 – 이웅모 저  
 
 ---
 
 ## 📢 업데이트 로그
 
 - 2025-03-25: 초기 구성
-- examples / notes 내용 정리 시작
-- 실습 프로젝트 추가 예정
+- 2025-03-26: examples 추가
