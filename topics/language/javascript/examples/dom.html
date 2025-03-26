@@ -1,0 +1,79 @@
+<!-- ✅ DOM 조작 예제 코드 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>DOM 조작 예제</title>
+  <style>
+    .highlight {
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title">안녕하세요!</h1>
+  <p class="desc">이 문단은 JavaScript로 바뀔 거예요.</p>
+  <button id="changeTextBtn">텍스트 변경</button>
+  <button id="addItemBtn">아이템 추가</button>
+  <ul id="itemList">
+    <li>첫 번째 아이템</li>
+  </ul>
+
+  <script>
+    // ---------------------------
+    // 1️⃣ 요소 선택
+    // ---------------------------
+    const title = document.getElementById("title");
+    const desc = document.querySelector(".desc");
+    const list = document.querySelector("#itemList");
+
+    // ---------------------------
+    // 2️⃣ 텍스트 변경
+    // ---------------------------
+    const changeTextBtn = document.getElementById("changeTextBtn");
+    changeTextBtn.addEventListener("click", () => {
+      title.textContent = "Hello, DOM!";
+      desc.innerHTML = "<strong>텍스트가 변경되었습니다!</strong>";
+    });
+
+    // ---------------------------
+    // 3️⃣ 속성 조작
+    // ---------------------------
+    title.setAttribute("title", "타이틀에 마우스를 올려보세요!");
+
+    // ---------------------------
+    // 4️⃣ 스타일 조작
+    title.style.color = "blue";
+    title.style.fontSize = "2em";
+
+    // ---------------------------
+    // 5️⃣ 클래스 추가/제거/토글
+    title.classList.add("highlight");
+    setTimeout(() => {
+      title.classList.toggle("highlight");
+    }, 2000);
+
+    // ---------------------------
+    // 6️⃣ 요소 생성 & 추가
+    const addItemBtn = document.getElementById("addItemBtn");
+    let count = 2;
+
+    addItemBtn.addEventListener("click", () => {
+      const li = document.createElement("li");
+      li.textContent = `${count++} 번째 아이템`;
+      list.appendChild(li);
+    });
+
+    // ---------------------------
+    // 7️⃣ 요소 삭제 예시
+    // 5초 후 첫 번째 아이템 삭제
+    setTimeout(() => {
+      const firstItem = document.querySelector("#itemList li");
+      if (firstItem) {
+        firstItem.remove();
+      }
+    }, 5000);
+  </script>
+</body>
+</html>
