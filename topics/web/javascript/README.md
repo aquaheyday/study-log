@@ -1,44 +1,53 @@
-# 💻 JavaScript (for Web) - 브라우저 환경 중심 JS 정리
 
-이 디렉토리는 브라우저 환경에서 사용하는 JavaScript 기능들을 정리합니다.  
-언어 문법이 아닌, **DOM 조작, 이벤트 처리, 브라우저 API, 비동기 처리**와 같은 웹 중심 기능에 초점을 맞춥니다.
+# 📜 JavaScript (웹 개발 중심)
 
----
-
-### 🌳 DOM (Document Object Model)
-| 주제 | 파일명 | 설명 |
-|------|--------|------|
-| DOM이란? | [what-is-dom.md](./what-is-dom.md) | 브라우저에서 HTML 문서를 객체로 표현하는 구조 |
-| DOM 선택자 | [selectors.md](./selectors.md) | getElementById, querySelector 등 요소 선택 |
-| DOM 조작 | [dom-manipulation.md](./dom-manipulation.md) | 텍스트, 속성, 클래스 추가/수정 |
-| DOM 노드 트리 | [dom-tree.md](./dom-tree.md) | 부모-자식-형제 관계 이해 |
+이 폴더는 **JavaScript 학습 과정 웹 개발 중심**으로 정리한 자료, 예제 코드를 보관하는 공간입니다.  
+기본 문법부터 함수형 프로그래밍, 비동기 처리, 브라우저 동작 이해, 웹 개발에 활용되는 JS의 다양한 개념들을 정리합니다.
 
 ---
 
-### 🖱️ 이벤트 처리
-| 주제 | 파일명 | 설명 |
-|------|--------|------|
-| 이벤트 모델 | [event-model.md](./event-model.md) | 캡처링, 버블링, 이벤트 위임 개념 |
-| 이벤트 리스너 등록 | [event-listener.md](./event-listener.md) | addEventListener와 인라인 방식 비교 |
-| 마우스 & 키보드 이벤트 | [mouse-keyboard.md](./mouse-keyboard.md) | click, keydown, input 등 주요 이벤트 |
-| 이벤트 객체 | [event-object.md](./event-object.md) | target, currentTarget, preventDefault 등 |
+## 📂 디렉토리 구성
+
+| 폴더명 | 설명 |
+|---|---|
+| [notes](./notes) | 문법, 개념 정리 및 학습 노트 |
+| [examples](./examples) | 주요 기능별 예제 코드 |
 
 ---
 
-### 🌀 비동기 & 타이머
+## 📋 JavaScript 개념 정리 목록
+
+### 🌐 웹 개발과 브라우저
 | 주제 | 파일명 | 설명 |
-|------|--------|------|
-| setTimeout / setInterval | [timer.md](./timer.md) | 타이머 기반 비동기 처리 |
-| 이벤트 루프 이해 | [event-loop.md](./event-loop.md) | 태스크 큐, 콜스택, 마이크로태스크 |
-| fetch & XMLHttpRequest | [fetch.md](./fetch.md) | Ajax 요청 방식과 예제 |
-| async/await 기초 | [async-await.md](./async-await.md) | 비동기 코드를 동기처럼 작성하는 방식 |
+|---|---|---|
+| DOM 조작 | [dom.md](./notes/dom.md) | 요소 선택, 조작, 속성 변경 |
+| 이벤트 처리 | [event.md](./notes/event.md) | addEventListener, 이벤트 위임 |
+| 브라우저 BOM | [bom.md](./notes/bom.md) | window, location, history 등 |
+| 스토리지 | [storage.md](./notes/storage.md) | localStorage, sessionStorage |
+| 쿠키 | [cookies.md](./notes/cookies.md) | 인증, 세션 관리, 만료 설정 등 |
+| IndexedDB | [indexeddb.md](./notes/indexeddb.md) | 구조화된 대용량 데이터 저장 |
+| 모듈 시스템 | [modules.md](./notes/modules.md) | ES 모듈, CommonJS, import/export |
 
 ---
 
-### 🌐 브라우저 API & 객체 모델
+## 📋 예제 목록
+
 | 주제 | 파일명 | 설명 |
-|------|--------|------|
-| BOM이란? | [what-is-bom.md](./what-is-bom.md) | window, navigator, screen, location 객체 |
-| localStorage / sessionStorage | [storage.md](./storage.md) | 브라우저 저장소 API |
-| location & history 객체 | [location-history.md](./location-history.md) | URL 조작 및 브라우저 히스토리 관리 |
-| alert, prompt, confirm | [dialog.md](./dialog.md) | 브라우저 기본 팝업 처리 방법 |
+|---|---|---|
+| DOM 조작 | [dom.html](./examples/dom.html) | 요소 생성/삽입/삭제 |
+| 이벤트 처리 | [event.html](./examples/event.html) | 클릭 핸들러 등록/제거 |
+
+---
+
+## 📚 참고 자료
+
+- [MDN JavaScript](https://developer.mozilla.org/ko/docs/Web/JavaScript) – 공식 JS 문서  
+- [You Don’t Know JS (book series)](https://github.com/getify/You-Dont-Know-JS) – JS 심화 개념  
+- [JavaScript.info](https://javascript.info/) – JS 기초부터 고급까지  
+
+---
+
+## 📢 업데이트 로그
+
+- 2025-03-25: 초기 구성
+- 2025-03-26: examples 추가
