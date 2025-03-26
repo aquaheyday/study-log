@@ -50,6 +50,8 @@
 | 이벤트 처리 | [event.md](./notes/event.md) | addEventListener, 이벤트 위임 |
 | 브라우저 BOM | [bom.md](./notes/bom.md) | window, location, history 등 |
 | 스토리지 | [storage.md](./notes/storage.md) | localStorage, sessionStorage |
+| 쿠키 | [cookies.md](./notes/cookies.md) | 인증, 세션 관리, 만료 설정 등 |
+| IndexedDB | [indexeddb.md](./notes/indexeddb.md) | 구조화된 대용량 데이터 저장 |
 | 모듈 시스템 | [modules.md](./notes/modules.md) | ES 모듈, CommonJS, import/export |
 
 ---
