@@ -69,7 +69,7 @@
 | Promise 사용 | [promise.js](./examples/promise.js) | 비동기 then/catch 패턴 |
 | async/await 예제 | [async-await.js](./examples/async-await.js) | fetch와 함께 쓰기 |
 | DOM 조작 | [dom.html](./examples/dom.html) | 요소 생성/삽입/삭제 |
-| 이벤트 처리 | [event.js](./examples/event.js) | 클릭 핸들러 등록/제거 |
+| 이벤트 처리 | [event.html](./examples/event.html) | 클릭 핸들러 등록/제거 |
 
 ---
 
