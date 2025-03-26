@@ -1,7 +1,7 @@
 
-# 📜 JavaScript
+# 📜 JavaScript (언어 중심)
 
-이 폴더는 **JavaScript 학습 과정**에서 정리한 자료, 예제 코드, 실습 프로젝트를 보관하는 공간입니다.  
+이 폴더는 **JavaScript 학습 과정 언어 중심**으로 정리한 자료, 예제 코드, 실습 프로젝트를 보관하는 공간입니다.  
 기본 문법부터 함수형 프로그래밍, 비동기 처리, 브라우저 동작 이해, 웹 개발에 활용되는 JS의 다양한 개념들을 정리합니다.
 
 ---
@@ -43,17 +43,6 @@
 | async / await | [async-await.md](./notes/async-await.md) | 비동기 코드를 동기처럼 작성 |
 | 이벤트 루프 | [event-loop.md](./notes/event-loop.md) | 큐, 콜스택, 마이크로태스크 설명 |
 
-### 🌐 웹 개발과 브라우저
-| 주제 | 파일명 | 설명 |
-|---|---|---|
-| DOM 조작 | [dom.md](./notes/dom.md) | 요소 선택, 조작, 속성 변경 |
-| 이벤트 처리 | [event.md](./notes/event.md) | addEventListener, 이벤트 위임 |
-| 브라우저 BOM | [bom.md](./notes/bom.md) | window, location, history 등 |
-| 스토리지 | [storage.md](./notes/storage.md) | localStorage, sessionStorage |
-| 쿠키 | [cookies.md](./notes/cookies.md) | 인증, 세션 관리, 만료 설정 등 |
-| IndexedDB | [indexeddb.md](./notes/indexeddb.md) | 구조화된 대용량 데이터 저장 |
-| 모듈 시스템 | [modules.md](./notes/modules.md) | ES 모듈, CommonJS, import/export |
-
 ---
 
 ## 📋 예제 목록
@@ -68,8 +57,6 @@
 | 클로저 & 스코프 | [closure.js](./examples/closure.js) | 클로저 기본 구조 |
 | Promise 사용 | [promise.js](./examples/promise.js) | 비동기 then/catch 패턴 |
 | async/await 예제 | [async-await.js](./examples/async-await.js) | fetch와 함께 쓰기 |
-| DOM 조작 | [dom.html](./examples/dom.html) | 요소 생성/삽입/삭제 |
-| 이벤트 처리 | [event.html](./examples/event.html) | 클릭 핸들러 등록/제거 |
 
 ---
 
