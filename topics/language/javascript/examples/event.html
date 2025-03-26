@@ -1,0 +1,97 @@
+<!-- ✅ JavaScript 이벤트 처리 예제 -->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>이벤트 처리 예제</title>
+  <style>
+    #box {
+      width: 200px;
+      height: 100px;
+      background: lightblue;
+      margin: 20px 0;
+      line-height: 100px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>이벤트 처리 실습</h1>
+
+  <!-- 클릭 이벤트 -->
+  <button id="clickBtn">클릭하세요</button>
+
+  <!-- 입력 이벤트 -->
+  <input type="text" id="nameInput" placeholder="이름을 입력하세요" />
+
+  <!-- 마우스 이벤트 -->
+  <div id="box">마우스를 올려보세요</div>
+
+  <!-- 키보드 이벤트 -->
+  <input type="text" id="keyInput" placeholder="키보드 입력 테스트" />
+
+  <!-- 기본 동작 방지 -->
+  <a href="https://www.google.com" id="myLink">구글로 이동 (막기)</a>
+
+  <script>
+    // ---------------------------
+    // 1️⃣ 클릭 이벤트
+    // ---------------------------
+    const clickBtn = document.getElementById("clickBtn");
+    clickBtn.addEventListener("click", function () {
+      alert("버튼이 클릭되었습니다!");
+    });
+
+    // ---------------------------
+    // 2️⃣ 입력 이벤트
+    // ---------------------------
+    const nameInput = document.getElementById("nameInput");
+    nameInput.addEventListener("input", function (event) {
+      console.log("입력된 값:", event.target.value);
+    });
+
+    // ---------------------------
+    // 3️⃣ 마우스 이벤트
+    // ---------------------------
+    const box = document.getElementById("box");
+    box.addEventListener("mouseenter", () => {
+      box.style.background = "lightgreen";
+      box.textContent = "마우스 들어옴!";
+    });
+    box.addEventListener("mouseleave", () => {
+      box.style.background = "lightblue";
+      box.textContent = "마우스를 올려보세요";
+    });
+
+    // ---------------------------
+    // 4️⃣ 키보드 이벤트
+    // ---------------------------
+    const keyInput = document.getElementById("keyInput");
+    keyInput.addEventListener("keydown", (e) => {
+      console.log(`눌린 키: ${e.key} (코드: ${e.code})`);
+    });
+
+    // ---------------------------
+    // 5️⃣ 기본 동작 방지
+    // ---------------------------
+    const link = document.getElementById("myLink");
+    link.addEventListener("click", function (e) {
+      e.preventDefault(); // 기본 이동 막기
+      alert("링크 이동이 막혔습니다!");
+    });
+
+    // ---------------------------
+    // 6️⃣ 이벤트 전파(stopPropagation)
+    // ---------------------------
+    document.body.addEventListener("click", () => {
+      console.log("📌 body 클릭됨 (버블링)");
+    });
+
+    clickBtn.addEventListener("click", function (e) {
+      e.stopPropagation(); // body까지 이벤트가 퍼지지 않음
+      console.log("📌 버튼 클릭 - 전파 중단됨");
+    });
+  </script>
+</body>
+</html>
