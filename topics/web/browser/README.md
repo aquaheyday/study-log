@@ -17,7 +17,7 @@ HTML/CSS/JS 파싱 및 렌더링 흐름, 이벤트 루프, 브라우저 보안 �
 ### 🎨 렌더링 과정 & DOM 구성
 | 주제 | 파일명 | 설명 |
 |------|--------|------|
-| 렌더링 파이프라인 | [rendering-pipeline.md](./notes/rendering-pipeline.md) | HTML → DOM → Style → Layout → Paint → Composite |
+| 렌더링 파이프라인 | [rendering-pipeline.md](./notes/rendering-pipeline.md) | DOM → CSSOM → Render Tree → Layout → Paint → Composite |
 | DOM & CSSOM | [dom-cssom.md](./notes/dom-cssom.md) | 브라우저가 HTML/CSS를 객체로 구성하는 방식 |
 | Reflow & Repaint | [reflow-repaint.md](./notes/reflow-repaint.md) | 레이아웃 계산과 화면 다시 그리기의 차이점 |
 
