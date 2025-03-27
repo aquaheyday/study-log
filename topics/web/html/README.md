@@ -37,6 +37,7 @@
 ### ♿ 접근성과 메타 정보
 | 주제 | 파일명 | 설명 |
 |------|--------|------|
+| WCAG 가이드라인 | [wcag.md](./notes/wcag.md) | 웹 접근성 표준, POUR 원칙, 준수 레벨(A, AA, AAA) 등 정리 |
 | 접근성을 위한 마크업 | [a11y.md](./notes/a11y.md) | alt, label, role, aria-* 속성 |
 | 메타 태그 | [meta-tags.md](./notes/meta-tags.md) | SEO, charset, viewport, description 등 |
 | 문서 구조 & outline | [document-outline.md](./notes/document-outline.md) | 시멘틱 구조와 스크린리더 활용 흐름 |
