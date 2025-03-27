@@ -27,7 +27,7 @@ HTML/CSS/JS 파싱 및 렌더링 흐름, 이벤트 루프, 브라우저 보안 �
 | 주제 | 파일명 | 설명 |
 |------|--------|------|
 | 자바스크립트 엔진 개요 | [js-engine.md](./notes/js-engine.md) | V8 등 JS 코드를 처리하는 엔진 구조 |
-| 이벤트 루프와 큐 | [event-loop.md](./notes/event-loop.md) | 콜스택, 태스크 큐, 마이크로태스크 큐 동작 원리 |
+| 이벤트 루프, 큐, 렌더링 | [event-loop.md](./notes/event-loop.md) | 콜스택, 태스크 큐, 마이크로태스크 큐, 렌더링 동작 원리 |
 | setTimeout vs Promise | [event-loop-example.md](./notes/event-loop-example.md) | 비동기 코드의 실행 순서 비교 |
 
 ---
