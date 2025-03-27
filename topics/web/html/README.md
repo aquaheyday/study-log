@@ -29,7 +29,7 @@
 | 주제 | 파일명 | 설명 |
 |------|--------|------|
 | 폼 요소 개요 | [form-elements.md](./notes/form-elements.md) | form, input, textarea, select 등 기본 구성 |
-| input 속성 정리 | [input-types.md](./notes/input-types.md) | type="text", "email", "number", "file" 등 |
+| input 속성 | [input-types.md](./notes/input-types.md) | type="text", "email", "number", "file" 등 |
 | 폼 유효성 검사 | [form-validation.md](./notes/form-validation.md) | required, pattern, min/max 등 기본 검증 속성 |
 
 ---
