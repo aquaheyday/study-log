@@ -39,6 +39,5 @@
 ### 🛡️ 기타 보안 주제
 | 주제 | 파일명 | 설명 |
 |------|--------|------|
-| 브라우저 보안 메커니즘 | [browser-security.md](./notes/browser-security.md) | SOP, sandbox, iframe 보안 등 |
 | 입력 검증과 필터링 | [input-sanitization.md](./notes/input-sanitization.md) | 사용자 입력 유효성 검사 및 정규화 |
 | Referrer Policy | [referrer-policy.md](./notes/referrer-policy.md) | 요청 시 참조 헤더 포함 여부 제어 |
