@@ -28,6 +28,6 @@
 | 주제 | 파일명 | 설명 |
 |------|--------|------|
 | 브루트포스 공격 | [brute-force.md](./notes/brute-force.md) | 무작위 대입 방식의 인증 우회 시도 |
-| 사전 공격 | [dictionary-attack.md](./notes/ictionary-attack.md) | 일반적인 패스워드 조합을 사용하는 공격 |
+| 사전 공격 | [dictionary-attack.md](./notes/dictionary-attack.md) | 일반적인 패스워드 조합을 사용하는 공격 |
 | 리플레이 공격 | [replay-attack.md](./notes/replay-attack.md) | 이전의 유효 요청을 재전송하는 공격 방식 |
 | 사회공학 공격 | [social-engineering.md](./notes/social-engineering.md) | 사람의 심리를 이용한 보안 우회 기법 |
