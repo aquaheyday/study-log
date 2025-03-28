@@ -22,6 +22,8 @@
 | Content Security Policy (CSP) | [csp.md](./notes/csp.md) | XSS 방지를 위한 리소스 로딩 제한 정책 |
 | 보안 헤더 설정 | [security-headers.md](./snotes/ecurity-headers.md) | X-Frame-Options, HSTS, Referrer-Policy 등 |
 | 브라우저 Same-Origin Policy | [same-origin.md](./notes/same-origin.md) | 도메인/포트/프로토콜 기준 리소스 접근 제한 |
+| 브라우저 저장소 보안 | [storage-security.md](./notes/storage-security.md) | localStorage, sessionStorage, 쿠키 보안 이슈 |
+| sandbox & iframe 보안 | [sandbox.md](./notes/sandbox.md) | iframe 분리, 속성 설정으로 보안 격리 |
 
 ---
 
