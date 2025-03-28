@@ -1,7 +1,7 @@
 # 🧭 Browser Internals - 브라우저 동작 원리
 
 이 디렉토리는 웹 브라우저의 내부 구조와 작동 방식을 정리합니다.  
-HTML/CSS/JS 파싱 및 렌더링 흐름, 이벤트 루프, 브라우저 보안 정책, 멀티 프로세스 아키텍처 등 웹 개발자가 꼭 알아야 할 브라우저 지식을 포함합니다.
+HTML/CSS/JS 파싱 및 렌더링 흐름, 이벤트 루프, 멀티 프로세스 아키텍처 등 브라우저 지식을 포함합니다.
 
 ---
 
@@ -30,19 +30,6 @@ HTML/CSS/JS 파싱 및 렌더링 흐름, 이벤트 루프, 브라우저 보안 �
 | 이벤트 루프, 큐, 렌더링 | [event-loop.md](./notes/event-loop.md) | 콜스택, 태스크 큐, 마이크로태스크 큐, 렌더링 동작 원리 |
 | setTimeout vs Promise | [event-loop-example.md](./notes/event-loop-example.md) | 비동기 코드의 실행 순서 비교 |
 | 브라우저 vs Node.js 이벤트 루프 | [browser-vs-node-event-loop.md](./notes/browser-vs-node-event-loop.md) | 각 환경의 이벤트 루프 구조 차이 비교 |
-
----
-
-### 🔐 브라우저 보안과 제약
-| 주제 | 파일명 | 설명 |
-|------|--------|------|
-| SOP (Same-Origin Policy) | [same-origin.md](./notes/same-origin.md) | 보안상의 출처 제약 개념 |
-| CORS (Cross-Origin Resource Sharing) | [cors.md](./notes/cors.md) | 교차 출처 요청의 허용/제한 원리 |
-| sandbox & iframe 보안 | [sandbox.md](./notes/sandbox.md) | iframe 분리, 속성 설정으로 보안 격리 |
-| 브라우저 저장소 보안 | [storage-security.md](./notes/storage-security.md) | localStorage, sessionStorage, 쿠키 보안 이슈 |
-| XSS (Cross-Site Scripting) | [xss.md](./notes/xss.md) | 입력 → 실행으로 이어지는 보안 취약점과 방어 방법 |
-| CSP (Content Security Policy)	| [csp.md](./notes/csp.md) | 인라인 스크립트 제한, 출처 제어를 통한 XSS 방어 |
-| CSRF (Cross-Site Request Forgery) | [csrf.md](./notes/csrf.md) | 인증 쿠키를 악용한 요청 위조 공격 및 대응 방안 |
 
 ---
 
