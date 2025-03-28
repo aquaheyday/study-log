@@ -29,6 +29,7 @@ HTML/CSS/JS 파싱 및 렌더링 흐름, 이벤트 루프, 브라우저 보안 �
 | 자바스크립트 엔진 개요 | [js-engine.md](./notes/js-engine.md) | V8 등 JS 코드를 처리하는 엔진 구조 |
 | 이벤트 루프, 큐, 렌더링 | [event-loop.md](./notes/event-loop.md) | 콜스택, 태스크 큐, 마이크로태스크 큐, 렌더링 동작 원리 |
 | setTimeout vs Promise | [event-loop-example.md](./notes/event-loop-example.md) | 비동기 코드의 실행 순서 비교 |
+| 브라우저 vs Node.js 이벤트 루프 | [browser-vs-node-event-loop.md](./notes/browser-vs-node-event-loop.md) | 각 환경의 이벤트 루프 구조 차이 비교 |
 
 ---
 
@@ -39,6 +40,9 @@ HTML/CSS/JS 파싱 및 렌더링 흐름, 이벤트 루프, 브라우저 보안 �
 | CORS 작동 방식 | [cors.md](./notes/cors.md) | 교차 출처 요청의 허용/제한 원리 |
 | sandbox & iframe 보안 | [sandbox.md](./notes/sandbox.md) | iframe 분리, 속성 설정으로 보안 격리 |
 | 브라우저 저장소 보안 | [storage-security.md](./notes/storage-security.md) | localStorage, sessionStorage, 쿠키 보안 이슈 |
+| XSS (Cross-Site Scripting) | [xss.md](./notes/xss.md) | 입력 → 실행으로 이어지는 보안 취약점과 방어 방법 |
+| Content Security Policy	| [csp.md](./notes/csp.md) | 인라인 스크립트 제한, 출처 제어를 통한 XSS 방어 |
+| CSRF 이해와 방어 | [csrf.md](./notes/csrf.md) | 인증 쿠키를 악용한 요청 위조 공격 및 대응 방안 |
 
 ---
 
@@ -48,3 +52,6 @@ HTML/CSS/JS 파싱 및 렌더링 흐름, 이벤트 루프, 브라우저 보안 �
 | 브라우저 캐시 동작 | [browser-cache.md](./notes/browser-cache.md) | HTTP 캐시 정책과 브라우저 캐싱 메커니즘 |
 | 사용자 입력 처리 흐름 | [input-processing.md](./notes/input-processing.md) | 키 입력, 클릭 등이 DOM에 반영되는 과정 |
 | Web API와 Window 객체 | [web-api.md](./notes/web-api.md) | 브라우저가 제공하는 API와 BOM 개요 |
+| Progressive Web App	| [pwa.md](./notes/pwa.md) | 설치형 웹앱 구조, Service Worker, manifest 등 |
+| Execution Context & Scope	| [execution-context.md](./notes/execution-context.md) | JS 실행 컨텍스트, this, 스코프 구조 이해 |
+| 브라우저에서의 렌더 최적화	| [render-optimization.md](./notes/render-optimization.md) | 스타일 계산/레이아웃 병목과 성능 최적화 방법 |
