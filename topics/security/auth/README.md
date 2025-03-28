@@ -19,7 +19,6 @@
 |------|--------|------|
 | 세션 기반 인증 | [session-auth.md](./notes/session-auth.md) | 서버에 사용자 상태를 저장하는 인증 방식 |
 | 쿠키 개념과 보안 설정 | [cookie.md](./notes/cookie.md) | Secure, HttpOnly, SameSite 속성 설명 |
-| CSRF 대응 전략 | [csrf.md](./notes/csrf.md) | 세션 기반 인증에서의 위협 및 방어법 |
 
 ---
 
