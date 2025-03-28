@@ -41,7 +41,7 @@ HTML/CSS/JS 파싱 및 렌더링 흐름, 이벤트 루프, 브라우저 보안 �
 | sandbox & iframe 보안 | [sandbox.md](./notes/sandbox.md) | iframe 분리, 속성 설정으로 보안 격리 |
 | 브라우저 저장소 보안 | [storage-security.md](./notes/storage-security.md) | localStorage, sessionStorage, 쿠키 보안 이슈 |
 | XSS (Cross-Site Scripting) | [xss.md](./notes/xss.md) | 입력 → 실행으로 이어지는 보안 취약점과 방어 방법 |
-| Content Security Policy	| [csp.md](./notes/csp.md) | 인라인 스크립트 제한, 출처 제어를 통한 XSS 방어 |
+| CSP (Content Security Policy)	| [csp.md](./notes/csp.md) | 인라인 스크립트 제한, 출처 제어를 통한 XSS 방어 |
 | CSRF 이해와 방어 | [csrf.md](./notes/csrf.md) | 인증 쿠키를 악용한 요청 위조 공격 및 대응 방안 |
 
 ---
