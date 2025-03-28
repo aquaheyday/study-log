@@ -36,8 +36,8 @@ HTML/CSS/JS 파싱 및 렌더링 흐름, 이벤트 루프, 브라우저 보안 �
 ### 🔐 브라우저 보안과 제약
 | 주제 | 파일명 | 설명 |
 |------|--------|------|
-| Same-Origin Policy | [same-origin.md](./notes/same-origin.md) | 보안상의 출처 제약 개념 |
-| CORS 작동 방식 | [cors.md](./notes/cors.md) | 교차 출처 요청의 허용/제한 원리 |
+| SOP (Same-Origin Policy) | [same-origin.md](./notes/same-origin.md) | 보안상의 출처 제약 개념 |
+| CORS (Cross-Origin Resource Sharing) | [cors.md](./notes/cors.md) | 교차 출처 요청의 허용/제한 원리 |
 | sandbox & iframe 보안 | [sandbox.md](./notes/sandbox.md) | iframe 분리, 속성 설정으로 보안 격리 |
 | 브라우저 저장소 보안 | [storage-security.md](./notes/storage-security.md) | localStorage, sessionStorage, 쿠키 보안 이슈 |
 | XSS (Cross-Site Scripting) | [xss.md](./notes/xss.md) | 입력 → 실행으로 이어지는 보안 취약점과 방어 방법 |
