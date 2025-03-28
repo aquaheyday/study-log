@@ -52,6 +52,6 @@ HTML/CSS/JS 파싱 및 렌더링 흐름, 이벤트 루프, 브라우저 보안 �
 | 브라우저 캐시 동작 | [browser-cache.md](./notes/browser-cache.md) | HTTP 캐시 정책과 브라우저 캐싱 메커니즘 |
 | 사용자 입력 처리 흐름 | [input-processing.md](./notes/input-processing.md) | 키 입력, 클릭 등이 DOM에 반영되는 과정 |
 | Web API와 Window 객체 | [web-api.md](./notes/web-api.md) | 브라우저가 제공하는 API와 BOM 개요 |
-| Progressive Web App	| [pwa.md](./notes/pwa.md) | 설치형 웹앱 구조, Service Worker, manifest 등 |
+| PWA (Progressive Web App)	| [pwa.md](./notes/pwa.md) | 설치형 웹앱 구조, Service Worker, manifest 등 |
 | Execution Context & Scope	| [execution-context.md](./notes/execution-context.md) | JS 실행 컨텍스트, this, 스코프 구조 이해 |
 | 브라우저에서의 렌더 최적화	| [render-optimization.md](./notes/render-optimization.md) | 스타일 계산/레이아웃 병목과 성능 최적화 방법 |
