@@ -40,3 +40,7 @@ HTML/CSS/JS 파싱 및 렌더링 흐름, 이벤트 루프, 멀티 프로세스 �
 | 사용자 입력 처리 흐름 | [input-processing.md](./notes/input-processing.md) | 키 입력, 클릭 등이 DOM에 반영되는 과정 |
 | Web API와 Window 객체 | [web-api.md](./notes/web-api.md) | 브라우저가 제공하는 API와 BOM 개요 |
 | PWA (Progressive Web App)	| [pwa.md](./notes/pwa.md) | 설치형 웹앱 구조, Service Worker, manifest 등 |
+
+---
+
+🔐 브라우저 보안 정책 및 공격 기법(XSS, CSRF 등)은 별도 디렉토리인 [`security/web-security`](../../security/web-security/README.md) 에 정리되어 있습니다.
