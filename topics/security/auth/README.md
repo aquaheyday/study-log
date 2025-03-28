@@ -27,7 +27,7 @@
 |------|--------|------|
 | JWT 개요 | [jwt.md](./notes/jwt.md) | JSON Web Token의 구조와 활용법 |
 | JWT vs 세션 | [jwt-vs-session.md](./notes/jwt-vs-session.md) | 토큰 기반과 상태 기반 인증 비교 |
-| 토큰 저장 위치 | [token-storage.md](./notes/token-storage.md) | 로컬스토리지 vs 쿠키 보안 비교 |
+| 토큰 저장 위치 | [token-storage.md](./notes/token-storage.md) | 로컬스토리지 vs 쿠키 vs 세션스토리지 보안 비교 |
 | 리프레시 토큰 전략 | [refresh-token.md](./notes/refresh-token.md) | 액세스 토큰 갱신 및 보안 고려사항 |
 
 ---
