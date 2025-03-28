@@ -55,10 +55,10 @@ Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 
 - 콘텐츠 타입 스니핑 방지  
 - 브라우저가 응답 MIME 타입을 **추측하지 못하도록** 설정
+- 예: HTML 파일을 JS로 실행하는 위험 차단
 ```
 X-Content-Type-Options: nosniff
 ```
-- 예: HTML 파일을 JS로 실행하는 위험 차단
 
 ---
 
