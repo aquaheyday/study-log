@@ -10,6 +10,7 @@
 
 | 폴더명 | 설명 |
 |---|---|
+| [template](./template) | 템플릿 |
 | [common](./common) | 언어 공통 내용 (Git, Docker, 알고리즘 등) |
 | [python](./python) | Python 학습 및 실습 자료 |
 | [java](./java) | Java 학습 및 실습 자료 |
