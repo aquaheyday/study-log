@@ -37,5 +37,6 @@
 |------|--------|------|
 | OAuth2 개요 | [oauth2.md](./notes/oauth2.md) | 제3자 인증을 위한 프로토콜 개요 |
 | Authorization Code Flow | [auth-code-flow.md](./notes/auth-code-flow.md) | 서버 사이드 앱에서 주로 사용되는 흐름 |
-| Implicit & PKCE Flow | [pkce.md](./notes/pkce.md) | 모바일, SPA 환경에서 사용되는 보안 흐름 |
+| Implicit Flow |	[implicit.md](./notes/implicit.md) | 주로 SPA에서 사용되던 간편하지만 보안에 취약한 방식 (현재는 비추천) |
+| PKCE Flow | [pkce.md](./notes/pkce.md) | 모바일, SPA 환경에서 권장되는 보안 강화 흐름 |
 | OpenID Connect | [openid.md](./notes/openid.md) | OAuth 위에 인증을 추가한 표준 프로토콜 |
