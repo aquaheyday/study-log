@@ -1,0 +1,26 @@
+version: '3.3'
+
+services:
+  nextjs-app-blue:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nextjs-app-blue
+    ports:
+      - "6960:3000"
+    networks:
+      - nextjs-blue-green-network
+
+  nextjs-app-green:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nextjs-app-green
+    ports:
+      - "6961:3000"
+    networks:
+      - nextjs-blue-green-network
+
+networks:
+  nextjs-blue-green-network:
+    driver: bridge
