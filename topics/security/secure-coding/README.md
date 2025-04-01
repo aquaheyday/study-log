@@ -29,8 +29,8 @@ OWASP Top 10을 포함한 주요 공격 벡터에 대한 대응 전략, 입력 �
 |------|--------|------|
 | XSS 대응 | [xss.md](./notes/xss.md) | DOM 기반/Reflected/Persistent XSS 방지 |
 | SQL Injection 대응 | [sql-injection.md](./notes/sql-injection.md) | Prepared Statement, ORM 사용 전략 |
-| Command Injection | [command-injection.md](./notes/command-injection.md) | 쉘 명령어 실행 시 입력 검증 필요성 |
-| Open Redirect | [open-redirect.md](./notes/open-redirect.md) | 외부 URL 리디렉션 취약점과 방어 방법 |
+| Command Injection 대응 | [command-injection.md](./notes/command-injection.md) | 쉘 명령어 실행 시 입력 검증 필요성 |
+| Open Redirect 대응 | [open-redirect.md](./notes/open-redirect.md) | 외부 URL 리디렉션 취약점과 방어 방법 |
 
 ---
 
