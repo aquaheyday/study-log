@@ -42,8 +42,8 @@ function bfs(graph, start) {
 
 ## 3️⃣ 예시
 
-```text
-그래프 형태:
+#### 그래프 형태:
+```
     A
    / \
   B   C
