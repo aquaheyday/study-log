@@ -5,6 +5,13 @@
 
 ---
 
+### 📐 분할 정복 (Divide & Conquer)
+| 주제 | 파일명 | 설명 |
+|------|--------|------|
+| 거듭제곱 계산 | [power.md](./notes-conquer/power.md) | O(log n)으로 xⁿ 계산 |
+
+---
+
 ### 🔢 정렬 (Sorting)
 | 주제 | 파일명 | 설명 |
 |------|--------|------|
@@ -24,15 +31,6 @@
 | 이진 탐색 (Binary Search) | [binary-search.md](./notes/binary-search.md) | 정렬된 배열에서 중간값을 기준으로 탐색 |
 | BFS (너비 우선 탐색) | [bfs.md](./notes/bfs.md) | 큐를 사용한 그래프 탐색 |
 | DFS (깊이 우선 탐색) | [dfs.md](./notes/dfs.md) | 스택/재귀를 이용한 깊이 우선 그래프 탐색 |
-
----
-
-### 📐 분할 정복 (Divide & Conquer)
-| 주제 | 파일명 | 설명 |
-|------|--------|------|
-| 병합 정렬 | [merge-sort.md](./notes/merge-sort.md) | 분할 후 정복 단계에서 병합 |
-| 퀵 정렬 | [quick-sort.md](./notes/quick-sort.md) | 분할 후 각 파티션을 정렬 |
-| 거듭제곱 계산 | [power.md](./notes-conquer/power.md) | O(log n)으로 xⁿ 계산 |
 
 ---
 
