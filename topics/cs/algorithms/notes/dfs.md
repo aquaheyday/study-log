@@ -35,6 +35,8 @@ function dfs(graph, node, visited = new Set()) {
 
 ## 3️⃣ 예시
 
+#### 그래프 형태:
+
 ```
     A
    / \
