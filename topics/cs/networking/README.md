@@ -49,7 +49,7 @@ OSI 7계층, 프로토콜, 보안, 성능 최적화까지 아우릅니다.
 | HTTP & HTTPS | [http.md](./notes/http.md) | 웹 통신 프로토콜 및 보안 |
 | HTTP/1.1 vs HTTP/2 vs HTTP/3 | [http-versions.md](./notes/http-versions.md) | HTTP 프로토콜 진화 비교 |
 | 쿠키, 세션, 캐시 | [cookie-session-cache.md](./notes/cookie-session-cache.md) | 상태 유지 및 성능 향상 전략 |
-| DNS 시스템 | [dns.md](./notes/dns.md) | 도메인 → IP 주소 매핑 시스템 |
+| DNS (Domain Name System) | [dns.md](./notes/dns.md) | 도메인 → IP 주소 매핑 시스템 |
 | URL 구조 & 인코딩 | [url.md](./notes/url.md) | URI, URL, 인코딩 방식 |
 
 ---
