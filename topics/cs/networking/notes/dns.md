@@ -1,4 +1,4 @@
-# 🌐 DNS 시스템 정리
+# 🌐 DNS (Domain Name System)
 
 **DNS(Domain Name System)는 사람이 이해하기 쉬운 도메인 주소를 컴퓨터가 이해할 수 있는 IP 주소로 변환해주는 시스템입니다.**  
 웹사이트 접속 시, `www.example.com` → `93.184.216.34` 로 변환하는 것이 DNS의 역할입니다.
