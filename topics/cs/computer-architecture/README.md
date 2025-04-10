@@ -40,7 +40,7 @@ CPU, 메모리, 연산 장치, 버스 구조, 캐시, 파이프라인 등 시스
 |------|--------|------|
 | I/O 시스템 | [io-system.md](./notes/io-system.md) | 입출력 장치와 제어 방식 |
 | 버스 구조 | [bus.md](./notes/bus.md) | 데이터, 주소, 제어 버스 설명 |
-| 인터럽트 | [interrupt.md](./inotes/nterrupt.md) | CPU가 처리하는 비동기 이벤트 |
+| 인터럽트 | [interrupt.md](./notes/interrupt.md) | CPU가 처리하는 비동기 이벤트 |
 
 ---
 
