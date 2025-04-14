@@ -66,9 +66,3 @@
 - [You Don’t Know JS (book series)](https://github.com/getify/You-Dont-Know-JS) – JS 심화 개념  
 - [JavaScript.info](https://javascript.info/) – JS 기초부터 고급까지  
 
----
-
-## 📢 업데이트 로그
-
-- 2025-03-25: 초기 구성
-- 2025-03-26: examples 추가
