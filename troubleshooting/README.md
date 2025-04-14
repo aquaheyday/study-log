@@ -8,5 +8,5 @@
 
 | 폴더/파일 | 설명 |
 |-----------|------|
-| [docker-image-disk-full.md](./docker/docker-image-disk-full.md) | 도커 blue-green 배포시 이미지 용량 초과 문제 해결 |
+| [docker-image-disk-full.md](./docker/docker-image-disk-full.md) | Docker로 Blue/Green 배포시 no space left on device 오류 |
 
