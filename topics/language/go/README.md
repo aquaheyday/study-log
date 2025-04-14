@@ -57,7 +57,7 @@
 | JSON 처리 | [json.md](./notes/json.md) | 인코딩/디코딩, struct 태그 |
 
 ### 🔐 보안 및 최적화
-| 번호 | 주제 | 파일명 | 설명 |
+| 주제 | 파일명 | 설명 |
 |---|---|---|
 | 인증과 세션 관리 | [auth-session.md](./notes/auth-session.md) | JWT, 쿠키, 미들웨어 |
 | 암호화와 해싱 | [crypto.md](./notes/crypto.md) | bcrypt, SHA256, TLS 인증 |
