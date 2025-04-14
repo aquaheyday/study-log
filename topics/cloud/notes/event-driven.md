@@ -77,7 +77,7 @@
 
 ## 🎯 정리 요약
 
-✔ **Event-driven Architecture**는 시스템을 이벤트 흐름으로 설계하여 **비동기 처리, 확장성, 유연성**을 확보할 수 있는 구조
+✔ **Event-driven Architecture**는 시스템을 이벤트 흐름으로 설계하여 **비동기 처리, 확장성, 유연성**을 확보할 수 있는 구조  
 ✔ 핵심 구성: **Producer, Broker, Consumer**  
 ✔ Kafka, SNS, SQS, EventBridge 등 다양한 메시징 도구 사용  
 
