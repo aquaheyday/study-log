@@ -8,5 +8,5 @@
 
 | 폴더/파일 | 설명 |
 |-----------|------|
-| [docker-image-disk-full.md](./docker/docker-image-disk-full.md) | Docker로 Blue/Green 배포시 no space left on device 오류 |
+| [docker-image-disk-full.md](./docker/docker-image-disk-full.md) | Docker로 Blue/Green 배포시 `no space left on device` 오류 |
 
