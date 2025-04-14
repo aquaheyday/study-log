@@ -74,25 +74,25 @@
 
 ## 📋 예제 목록
 
-| 번호 | 주제 | 파일명 | 설명 |
-|---|---|---|---|
-| 01 | 변수와 자료형 | [variables.go](./examples/variables.go) | 변수 선언, 상수, 타입 변환 |
-| 02 | 제어문 | [control_flow.go](./examples/control_flow.go) | 조건문(if/switch) & 반복문(for) |
-| 03 | 함수 | [functions.go](./examples/functions.go) | 함수 선언, 다중 리턴, 익명 함수 |
-| 04 | 포인터 | [pointers.go](./examples/pointers.go) | 포인터 개념과 활용법 |
-| 05 | 슬라이스 | [slices.go](./examples/slices.go) | 슬라이스 생성, 추가, 복사 |
-| 06 | 맵(Map) | [maps.go](./examples/maps.go) | 맵 생성, 조회, 수정, 삭제 |
-| 07 | 구조체 | [structs.go](./examples/structs.go) | 구조체 정의 및 활용 |
-| 08 | 인터페이스 | [interfaces.go](./examples/interfaces.go) | 인터페이스 개념 및 다형성 |
-| 09 | 기본 입출력 | [basic_io.go](./examples/basic_io.go) | 터미널에서 입력/출력 처리 |
-| 10 | 파일 입출력 | [file_io.go](./examples/file_io.go) | 파일 읽기/쓰기, 에러 처리 |
-| 11 | JSON 처리 | [json_parsing.go](./examples/json_parsing.go) | JSON 인코딩/디코딩 예제 |
-| 12 | Goroutine | [goroutine.go](./examples/goroutine.go) | 기본 Goroutine 사용법 |
-| 13 | 채널 | [channels.go](./examples/channels.go) | 채널을 활용한 동시성 제어 |
-| 14 | WaitGroup | [waitgroup.go](./examples/waitgroup.go) | 여러 Goroutine 동기화 |
-| 15 | HTTP 서버 | [http_server.go](./examples/http_server.go) | 기본 HTTP 서버 구현 |
-| 16 | 유닛 테스트 | [unit_example_test.go](./examples/unit_example_test.go) | 기본 테스트 코드 작성 |
-| 17 | 벤치마크 테스트 | [benchmark_test.go](./examples/benchmark_test.go) | 성능 테스트 예제 |
+| 주제 | 파일명 | 설명 |
+|---|---|---|
+| 변수와 자료형 | [variables.go](./examples/variables.go) | 변수 선언, 상수, 타입 변환 |
+| 제어문 | [control_flow.go](./examples/control_flow.go) | 조건문(if/switch) & 반복문(for) |
+| 함수 | [functions.go](./examples/functions.go) | 함수 선언, 다중 리턴, 익명 함수 |
+| 포인터 | [pointers.go](./examples/pointers.go) | 포인터 개념과 활용법 |
+| 슬라이스 | [slices.go](./examples/slices.go) | 슬라이스 생성, 추가, 복사 |
+| 맵(Map) | [maps.go](./examples/maps.go) | 맵 생성, 조회, 수정, 삭제 |
+| 구조체 | [structs.go](./examples/structs.go) | 구조체 정의 및 활용 |
+| 인터페이스 | [interfaces.go](./examples/interfaces.go) | 인터페이스 개념 및 다형성 |
+| 기본 입출력 | [basic_io.go](./examples/basic_io.go) | 터미널에서 입력/출력 처리 |
+| 파일 입출력 | [file_io.go](./examples/file_io.go) | 파일 읽기/쓰기, 에러 처리 |
+| JSON 처리 | [json_parsing.go](./examples/json_parsing.go) | JSON 인코딩/디코딩 예제 |
+| Goroutine | [goroutine.go](./examples/goroutine.go) | 기본 Goroutine 사용법 |
+| 채널 | [channels.go](./examples/channels.go) | 채널을 활용한 동시성 제어 |
+| WaitGroup | [waitgroup.go](./examples/waitgroup.go) | 여러 Goroutine 동기화 |
+| HTTP 서버 | [http_server.go](./examples/http_server.go) | 기본 HTTP 서버 구현 |
+| 유닛 테스트 | [unit_example_test.go](./examples/unit_example_test.go) | 기본 테스트 코드 작성 |
+| 벤치마크 테스트 | [benchmark_test.go](./examples/benchmark_test.go) | 성능 테스트 예제 |
 
 ---
 
