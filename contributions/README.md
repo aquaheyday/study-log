@@ -18,7 +18,7 @@
 
 | 번호 | 주제 | 파일명 | 설명 |
 |---|---|---|---|
-| 01 | GitHub Actions Not Working | [sanga-1-fix-github-action-not-working.md](./contributions/issues/sanga-1-fix-github-action-not-working.md) | 깃허브 엑션이 동작하지않는 이슈 해결 |
+| 01 | GitHub Actions Not Working | [sanga-1-fix-github-action-not-working.md](./issues/sanga-1-fix-github-action-not-working.md) | 깃허브 엑션이 동작하지않는 이슈 해결 |
 
 ---
 
