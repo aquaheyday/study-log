@@ -43,3 +43,4 @@
 ## 📋 Machine Learning Project 목록
 | 번호 | 주제 | 기술 스택 | 파일명 |
 |---|---|---|---|
+| 1 | MNIST 손글씨 숫자 분류 CNN | TensorFlow, Keras, CNN, Data Augmentation, Matplotlib | [mnist_cnn_model](./machine-learning/mnist_cnn_model) |
