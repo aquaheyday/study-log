@@ -19,18 +19,24 @@
 
 | 번호 | 주제 | 기술 스택 | 파일명 |
 |---|---|---|---|
-| 01 | 배달 주문 서비스의 백엔드 API 서버 구현 | Node.js, Express, MongoDB | [delivery-api-server](./application/delivery-api-server) |
-| 02 | 커피 주문 시스템 백엔드 | Nginx, Laravel, MySQL | [menu-order-api](./application/menu-order-api) |
-| 03 | 커피 주문 시스템 프론트엔드 | Nginx, Flutter | [menu-order-web-front](./application/menu-order-web-front) |
-| 04 | 대기열 기반 티켓 발급 시스템 | Laravel | [queue-ticket](./application/queue-ticket) | 
-| 05 | 관리자 CRUD RESTful API | Go | [restful-admin-crud](./application/restful-admin-crud) |
-| 06 | 관리자 대시보드 프론트엔드 | Vite, TypeScript, SCSS | [vite-ts-scss-admin-dashboard](./application/vite-ts-scss-admin-dashboard) | 
+| 1 | 배달 주문 서비스의 백엔드 API 서버 구현 | Node.js, Express, MongoDB | [delivery-api-server](./application/delivery-api-server) |
+| 2 | 커피 주문 시스템 백엔드 | Nginx, Laravel, MySQL | [menu-order-api](./application/menu-order-api) |
+| 3 | 커피 주문 시스템 프론트엔드 | Nginx, Flutter | [menu-order-web-front](./application/menu-order-web-front) |
+| 4 | 대기열 기반 티켓 발급 시스템 | Laravel | [queue-ticket](./application/queue-ticket) | 
+| 5 | 관리자 CRUD RESTful API | Go | [restful-admin-crud](./application/restful-admin-crud) |
+| 6 | 관리자 대시보드 프론트엔드 | Vite, TypeScript, SCSS | [vite-ts-scss-admin-dashboard](./application/vite-ts-scss-admin-dashboard) | 
 
 ---
 
 ## 📋 Docker Project 목록
 | 번호 | 주제 | 기술 스택 | 파일명 |
 |---|---|---|---|
+| 1    | Go API 서버 구성            | Go, Dockerfile, Docker Compose      | `golang-api` |
+| 2    | Laravel + MySQL 통합 환경   | Laravel, MySQL, PHP, Docker Compose | `laravel-mysql` |
+| 3    | Next.js Green-Blue 배포     | Next.js, Nginx, Docker Compose      | `nextjs-green-blue-deploy` |
+| 4    | Next.js 개발 컨테이너       | Next.js, Node.js, Docker Compose    | `nextjs` |
+| 5    | React 개발 컨테이너         | React, Node.js, Docker Compose      | `react` |
+| 6    | Redis 단독 실행 테스트 환경 | Redis, Docker Compose               | `redis` |
 
 ---
 
