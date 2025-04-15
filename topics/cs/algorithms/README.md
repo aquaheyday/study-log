@@ -9,6 +9,8 @@
 | 주제 | 파일명 | 설명 |
 |------|--------|------|
 | 거듭제곱 계산 | [power.md](./notes/power.md) | O(log n)으로 xⁿ 계산 |
+| 최대/최소값 찾기 | [max-min.md](./notes/max-min.md) | 배열을 분할하여 최대값/최소값 계산 |
+| Karatsuba 곱셈 | [karatsuba.md](./notes/karatsuba.md) | 큰 수 곱셈을 log 시간에 처리하는 알고리즘 |
 
 ---
 
