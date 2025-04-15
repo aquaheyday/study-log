@@ -5,13 +5,28 @@
 
 ---
 
-## 📁 프로젝트 목록
+## 📂 디렉토리 구성
 
-| 프로젝트명 | 설명 | 기술 스택 |
-|------------|------|------------|
-| [delivery-api-server](./delivery-api-server) | 배달 주문 서비스의 백엔드 API 서버 구현 | Node.js, Express, MongoDB |
-| [menu-order-api](./menu-order-api) | 식당 메뉴 주문 백엔드 시스템 | NestJS, PostgreSQL |
-| [menu-order-web-front](./menu-order-web-front) | 주문 시스템의 프론트엔드 페이지 | React, TypeScript, TailwindCSS |
-| [queue-ticket](./queue-ticket) | 대기열 기반 티켓 발급 시스템 | Express, Redis, Socket.IO |
-| [restful-admin-crud](./restful-admin-crud) | 관리자용 CRUD 기능 REST API | Spring Boot, MySQL |
-| [vite-ts-scss-admin-dashboard](./vite-ts-scss-admin-dashboard) | Vite 기반 관리자 대시보드 UI | Vite, TypeScript, SCSS, Chart.js |
+| 폴더명 | 설명 |
+|---|---|
+| [app-projects](./app-projects) | 어플리케이션 프로젝트 기록 |
+| [docker-porject](./docker-proejct) | 도커 프로젝트 기록 |
+
+---
+
+## 📋 App Project 목록
+
+| 번호 | 주제 | 기술 스택 | 파일명 |
+|---|---|---|---|
+| 01 | 배달 주문 서비스의 백엔드 API 서버 구현 | Node.js, Express, MongoDB | [delivery-api-server](./app-projects/delivery-api-server) |
+| 02 | 커피 주문 시스템 백엔드 | Nginx, Laravel, MySQL | [menu-order-api](./app-projects/menu-order-api) |
+| 03 | 커피 주문 시스템 프론트엔드 | Nginx, Flutter | [menu-order-web-front](./app-projects/menu-order-web-front) |
+| 04 | 대기열 기반 티켓 발급 시스템 | Laravel | [queue-ticket](./app-projects/queue-ticket) | 
+| 05 | 관리자 CRUD RESTful API | Go | [restful-admin-crud](./app-projects/restful-admin-crud) |
+| 06 | 관리자 대시보드 프론트엔드 | Vite, TypeScript, SCSS | [vite-ts-scss-admin-dashboard](./app-projects/vite-ts-scss-admin-dashboard) | 
+
+---
+
+## 📋 Docker Project 목록
+| 번호 | 주제 | 기술 스택 | 파일명 |
+|---|---|---|---|
