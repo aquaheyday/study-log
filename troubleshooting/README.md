@@ -9,9 +9,11 @@
 | 폴더/파일 | 설명 |
 |-----------|------|
 | [docker](./docker) | 해결한 Docker Troubleshooting 기록 |
+| [nextjs](./nextjs) | 해결한 Next.js Troubleshooting 기록 |
 
 
 ### 📋 Troubleshooting 목록
 | 주제 | 파일명 | 설명 |
 |---|---|---|
 | Docker `no space left on device` | [docker-image-disk-full.md](./docker/docker-image-disk-full.md) | Docker로 Blue/Green 배포시 `no space left on device` 오류 |
+| Next.js + Apache Revers Proxy `CORS` | [nextjs-api-cors-error.md](./nextjs/nextjs-api-cors-error.md) | Next.js + Apache Reverse Proxy 환경에서 CORS 오류 |
