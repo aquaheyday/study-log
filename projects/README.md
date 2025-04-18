@@ -31,12 +31,12 @@
 ## 📋 Docker Project 목록
 | 번호 | 주제 | 기술 스택 | 파일명 |
 |---|---|---|---|
-| 1    | Go API 서버 구성            | Go, Dockerfile, Docker Compose      | `golang-api` |
-| 2    | Laravel + MySQL 통합 환경   | Laravel, MySQL, PHP, Docker Compose | `laravel-mysql` |
-| 3    | Next.js Green-Blue 배포     | Next.js, Nginx, Docker Compose      | `nextjs-green-blue-deploy` |
-| 4    | Next.js 개발 컨테이너       | Next.js, Node.js, Docker Compose    | `nextjs` |
-| 5    | React 개발 컨테이너         | React, Node.js, Docker Compose      | `react` |
-| 6    | Redis 단독 실행 테스트 환경 | Redis, Docker Compose               | `redis` |
+| 1    | Go API 서버 구성            | Go, Dockerfile, Docker Compose      | [golang-api](./docker/golang-api) |
+| 2    | Laravel + MySQL 통합 환경   | Laravel, MySQL, PHP, Docker Compose | [laravel-mysql](./docker/laravel-mysql) |
+| 3    | Next.js Green-Blue 배포     | Next.js, Nginx, Docker Compose      | [nextjs-green-blue-deploy](./docker/nextjs-green-blue-deploy) |
+| 4    | Next.js 개발 컨테이너       | Next.js, Node.js, Docker Compose    | [nextjs](./docker/nextjs) |
+| 5    | React 개발 컨테이너         | React, Node.js, Docker Compose      | [react](./docker/react) |
+| 6    | Redis 단독 실행 테스트 환경 | Redis, Docker Compose               | [redis](./docker/redis) |
 
 ---
 
