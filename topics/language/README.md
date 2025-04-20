@@ -9,7 +9,6 @@
 | 폴더명 | 설명 |
 |--------|------|
 | [javascript](./javascript) | JavaScript 기본 문법, DOM 조작, 비동기 처리 등 |
-| [typescript](./typescript) | 타입 시스템 기반의 JavaScript 확장 (※ 추가 예정) |
 | [python](./python) | 파이썬 문법, 자료구조, 파일 처리, 웹 개발 등 |
 | [java](./java) | 자바의 객체지향 개념, 예외 처리, 스프링 기초 |
 | [go](./go) | Go 언어 문법, 고루틴, REST API 개발 등 |
