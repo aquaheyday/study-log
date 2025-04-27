@@ -87,7 +87,7 @@
 ### 1. 클론 및 환경 설정
 
 ```bash
-git clone https://github.com/aquaheyday/language-archive.git language-archive/php/projects/menu-order-api/
+git clone https://github.com/aquaheyday/study-log.git study-log/projects/application/menu-order-api
 cd menu-order-api
 cp .env.example .env
 ```
