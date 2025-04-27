@@ -1,5 +1,5 @@
 services:
-  nestjs:
+  nextjs:
     build:
       context: .
       dockerfile: Dockerfile
