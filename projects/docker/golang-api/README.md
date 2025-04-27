@@ -18,7 +18,7 @@ docker-compose --version
 ### 2. 프로젝트 클론
 
 ```bash
-git clone  https://github.com/aquaheyday/study-log.git study-log/projects/docker/golang-api/
+git clone https://github.com/aquaheyday/study-log.git study-log/projects/docker/golang-api/
 cd golang-api
 ```
 
