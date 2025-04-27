@@ -17,3 +17,4 @@
 |---|---|---|
 | Docker `no space left on device` | [docker-image-disk-full.md](./docker/docker-image-disk-full.md) | Docker로 Blue/Green 배포시 `no space left on device` 오류 |
 | Next.js + Apache Revers Proxy `CORS` | [nextjs-api-cors-error.md](./nextjs/nextjs-api-cors-error.md) | Next.js + Apache Reverse Proxy 환경에서 CORS 오류 |
+| `Apache` 로그 파일 용량 폭주 문제 | [log-overgrowth-and-rotatelogs.md](./apache/log-overgrowth-and-rotatelogs.md) | Apache access_log, error_log 등의 로그 파일이 지속적으로 증가하는 이슈 |
