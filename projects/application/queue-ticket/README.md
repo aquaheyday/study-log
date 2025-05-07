@@ -24,7 +24,7 @@
 |---|---|
 | Framework | Laravel 8 |
 | Frontend | Blade |
-| Database | MySQL |
+| Database | MariaDB |
 
 ---
 
