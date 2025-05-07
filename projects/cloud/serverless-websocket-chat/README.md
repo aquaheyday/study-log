@@ -1,6 +1,8 @@
-# Serverless WebSocket Chat with AWS Lambda, DynamoDB, and API Gateway
+# Serverless WebSocket Chat with AWS Lambda, DynamoDB, API Gateway
 
-이 프로젝트는 **AWS Lambda**, **DynamoDB**, **API Gateway(WebSocket)** 를 활용하여 서버리스 환경에서 실시간 채팅 시스템을 구축한 예제입니다.
+**Lambda**, **DynamoDB**, **API Gateway(WebSocket)** 를 활용하여 서버리스 환경에서 실시간 채팅 시스템을 구축한 예제입니다.
+
+---
 
 ## 🔧 주요 기능
 
@@ -36,20 +38,8 @@
 
 ## 📹 시연 영상
 
-![WebSocket Chat Demo](./web-demo.gif)
+### Web Demo
+<img src="./web-demo.gif" width="800" alt="WebSocket Chat Web Demo">
 
----
-
-## 🛠️ 기술 스택
-
-- AWS Lambda
-- Amazon DynamoDB
-- Amazon API Gateway (WebSocket)
-- AWS IAM, CloudWatch 등
-
----
-
-## 📁 기타
-
-`.gitignore`, `serverless.yml`, Lambda 함수 코드 등도 프로젝트에 포함되어 있습니다.
-
+### Cmd Demo
+<img src="./cmd-demo.gif" width="800" alt="WebSocket Chat Cmd Demo">
