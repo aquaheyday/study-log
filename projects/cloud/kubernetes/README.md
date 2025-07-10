@@ -169,12 +169,3 @@ sudo kubeadm join <MASTER_IP>:6443 \
 kubectl get nodes
 ```
 
----
-
-## 🧩 후속 작업 제안
-
-- Go API 배포: Deployment + Service 구성
-- Ingress 설정: 도메인 연결 또는 리버스 프록시 구성
-- 모니터링: Prometheus + Grafana (Helm 설치 권장)
-- 인증서 관리: cert-manager + Let's Encrypt
-- GitOps/CD: TeamCity 또는 ArgoCD 기반 자동화 구성
