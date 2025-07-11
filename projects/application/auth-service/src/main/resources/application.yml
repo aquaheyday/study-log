@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/micro_db
+    username: micro_user
+    password: micro_pass
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8088
+
+jwt:
+  secret: pLxq59PaBQdlQoVxBt9LZga0AKq2cBhgM2AKmLm1qf8=
+
+#logging:
+#  level:
+#    root: DEBUG
