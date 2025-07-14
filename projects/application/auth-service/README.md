@@ -54,23 +54,3 @@ Content-Type: application/json
   "token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6..."
 }
 ```
-
-
----
-
-### ✅ 3. 올릴 때 주의할 점
-
-- `.gitignore`에 `build/`, `.idea/`, `.gradle/`, `*.iml` 등 추가
-- `application.yml`에서 비밀 키는 숨기기 (예: `application-example.yml`로 대체)
-- 커밋 메시지 깔끔하게 정리
-
----
-
-### ✅ 깃허브 업로드 예시 커밋 순서
-
-```bash
-git init
-git add .
-git commit -m "feat: Add JWT-based auth service with signup/login"
-git remote add origin https://github.com/yourname/auth-service.git
-git push -u origin main
